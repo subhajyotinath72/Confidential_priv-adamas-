@@ -33,3 +33,4 @@ yarn-error.log*
 .specstory/
 .DS_Store
 Thumbs.db
+node_modules

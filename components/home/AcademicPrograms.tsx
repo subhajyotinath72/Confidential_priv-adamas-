@@ -7,116 +7,140 @@ import { ACADEMIC_PROGRAMS, SPECIALIZATION_CHIPS } from "@/data/programs";
 import { GraduationCap, Clock, Award, ArrowRight, CheckCircle, Sparkles, BookOpen } from "lucide-react";
 
 export const AcademicPrograms: React.FC = () => {
+  const [selectedDegree, setSelectedDegree] = React.useState<"btech" | "mtech" | "phd">("btech");
+
+  const currentProgram = ACADEMIC_PROGRAMS.find((p) => p.id.startsWith(selectedDegree)) || ACADEMIC_PROGRAMS[0];
+
   return (
-    <section id="programs" className="py-20 bg-white relative border-b border-slate-200">
-      
+    <section id="programs" className="bg-[#F8F5EE] py-12 lg:py-20 border-b border-[#E2DDD3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Title */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-bold text-adamas-gold-dark uppercase tracking-widest">
-            Degree Offerings & Specializations
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 tracking-tight">
-            Academic Programs in Biomedical Engineering
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-2">
-            AICTE-approved undergraduate, postgraduate, and doctoral curricula housed under the School of Engineering & Technology (SET), Adamas University.
-          </p>
+        {/* Gold Eyebrow */}
+        <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
+          APPLICATION CYCLE 2025–26
         </div>
 
-        {/* 3 Large Featured Program Image Cards (Site A Pattern) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {ACADEMIC_PROGRAMS.map((program, idx) => (
-            <motion.div
-              key={program.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.15 }}
-              className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-md hover:border-teal-500 hover:shadow-xl transition-all flex flex-col group"
-            >
-              {/* Program Card Header Strip */}
-              <div className="bg-slate-50 px-6 py-4 border-b border-slate-200 flex items-center justify-between">
-                <div className="flex items-center space-x-2">
-                  <GraduationCap className="w-5 h-5 text-amber-600" />
-                  <span className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                    {program.degree} • {program.level}
-                  </span>
-                </div>
-                <span className="text-[11px] font-semibold text-slate-700 bg-slate-200/70 px-2.5 py-1 rounded-md">
-                  {program.duration}
-                </span>
-              </div>
+        {/* Title */}
+        <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#1B365D] tracking-tight leading-[1.15]">
+          Admissions & Eligibility
+        </h2>
 
-              {/* Program Card Body */}
-              <div className="p-6 flex-1 flex flex-col justify-between space-y-5">
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-teal-700 transition-colors leading-snug">
-                    {program.title}
-                  </h3>
-                  <p className="text-xs text-slate-500 mt-1">
-                    {program.intake} | {program.affiliation}
-                  </p>
-                  <p className="text-xs text-slate-600 mt-3 leading-relaxed">
-                    {program.shortDesc}
-                  </p>
-                </div>
+        {/* Subtitle */}
+        <p className="text-sm sm:text-base text-slate-600 mt-1 mb-8 font-sans">
+          Direct admission pathways for undergraduate B.Tech, M.Tech, and Ph.D. programs.
+        </p>
 
-                {/* Highlights List */}
-                <div className="space-y-2 pt-2 border-t border-slate-100">
-                  <div className="text-[11px] font-semibold text-adamas-gold-dark uppercase tracking-wider">
-                    Program Highlights:
-                  </div>
-                  {program.highlights.slice(0, 3).map((h, i) => (
-                    <div key={i} className="flex items-start space-x-2 text-xs text-slate-700">
-                      <CheckCircle className="w-3.5 h-3.5 text-teal-600 flex-shrink-0 mt-0.5" />
-                      <span className="line-clamp-1">{h}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Action Link */}
-                <div className="pt-2">
-                  <Link
-                    href={`/programs#${program.id}`}
-                    className="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-xl font-semibold text-xs text-white bg-adamas-navy hover:bg-slate-800 transition-colors shadow-md group-hover:shadow-lg"
-                  >
-                    <span>View Curriculum & Admission</span>
-                    <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                  </Link>
-                </div>
-              </div>
-
-            </motion.div>
-          ))}
+        {/* Degree Selection Tabs */}
+        <div className="flex space-x-2 mb-6 border-b border-[#E2DDD3] pb-3">
+          <button
+            onClick={() => setSelectedDegree("btech")}
+            className={`px-4 py-1.5 rounded-md text-xs font-bold uppercase tracking-wider transition-colors ${
+              selectedDegree === "btech"
+                ? "bg-[#1B365D] text-white"
+                : "bg-[#EFECE6] text-slate-700 hover:bg-[#E2DDD3]"
+            }`}
+          >
+            B.Tech (Undergraduate)
+          </button>
+          <button
+            onClick={() => setSelectedDegree("mtech")}
+            className={`px-4 py-1.5 rounded-md text-xs font-bold uppercase tracking-wider transition-colors ${
+              selectedDegree === "mtech"
+                ? "bg-[#1B365D] text-white"
+                : "bg-[#EFECE6] text-slate-700 hover:bg-[#E2DDD3]"
+            }`}
+          >
+            M.Tech (Postgraduate)
+          </button>
+          <button
+            onClick={() => setSelectedDegree("phd")}
+            className={`px-4 py-1.5 rounded-md text-xs font-bold uppercase tracking-wider transition-colors ${
+              selectedDegree === "phd"
+                ? "bg-[#1B365D] text-white"
+                : "bg-[#EFECE6] text-slate-700 hover:bg-[#E2DDD3]"
+            }`}
+          >
+            Ph.D. (Doctoral)
+          </button>
         </div>
 
-        {/* Compact Program Specialization Chips Row (Site A Pattern) */}
-        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center space-x-2">
-              <Sparkles className="w-4 h-4 text-amber-600" />
-              <span className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                Elective Specialization Modules Offered
-              </span>
+        {/* 2 Side-by-Side Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
+          {/* Left Card: Program Details */}
+          <div className="lg:col-span-7">
+            <div className="bg-[#EFECE6] p-6 rounded-2xl border border-[#E2DDD3] shadow-sm flex flex-col justify-between h-full">
+              <div className="space-y-4">
+                <div className="text-[10px] font-bold text-[#B58A28] uppercase tracking-wider">
+                  {currentProgram.level.toUpperCase()}
+                </div>
+                
+                <h3 className="text-2xl font-serif font-bold text-[#1B365D]">
+                  {currentProgram.title}
+                </h3>
+
+                <ul className="space-y-2 text-xs sm:text-sm text-slate-700 font-sans">
+                  <li>
+                    <strong className="text-[#1B365D]">• Duration:</strong> {currentProgram.duration}
+                  </li>
+                  <li>
+                    <strong className="text-[#1B365D]">• Eligibility:</strong> {currentProgram.eligibility}
+                  </li>
+                  <li>
+                    <strong className="text-[#1B365D]">• Entrance:</strong> Adamas AUAT / WBJEE / JEE Main
+                  </li>
+                </ul>
+              </div>
+
+              <div className="pt-6">
+                <a
+                  href="https://adamasuniversity.ac.in/adamas-university/#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#1B365D] hover:bg-[#162E50] shadow-sm transition-all"
+                >
+                  APPLY FOR {currentProgram.degree} <span className="ml-2">→</span>
+                </a>
+              </div>
             </div>
-            <span className="text-xs text-slate-500 hidden sm:inline">
-              Integrated across B.Tech & M.Tech tracks
-            </span>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-            {SPECIALIZATION_CHIPS.map((chip, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-3 rounded-xl border border-slate-200 hover:border-teal-400 hover:bg-teal-50/50 transition-colors shadow-xs"
-              >
-                <div className="text-xs font-bold text-slate-900">{chip.name}</div>
-                <div className="text-[10px] text-slate-500 mt-0.5">{chip.desc}</div>
+          {/* Right Card: Important Schedule & Deadlines */}
+          <div className="lg:col-span-5">
+            <div className="bg-[#EFECE6] p-6 rounded-2xl border border-[#E2DDD3] shadow-sm flex flex-col justify-between h-full space-y-6">
+              <div className="space-y-4">
+                <div className="text-[10px] font-bold text-[#B58A28] uppercase tracking-wider">
+                  IMPORTANT SCHEDULE
+                </div>
+                
+                <h3 className="text-2xl font-serif font-bold text-[#1B365D]">
+                  Intake Deadlines
+                </h3>
+
+                <div className="space-y-3">
+                  <div className="bg-[#F8F5EE] p-3 rounded-lg border border-[#E2DDD3]">
+                    <div className="text-xs font-bold text-[#1B365D]">Phase 1 Counseling:</div>
+                    <div className="text-xs text-slate-600">June 15, 2025</div>
+                  </div>
+
+                  <div className="bg-[#F8F5EE] p-3 rounded-lg border border-[#E2DDD3]">
+                    <div className="text-xs font-bold text-[#1B365D]">Phase 2 Applications:</div>
+                    <div className="text-xs text-slate-600">July 20, 2025 (Rolling review)</div>
+                  </div>
+                </div>
               </div>
-            ))}
+
+              <div>
+                <a
+                  href="/admission#syllabus"
+                  className="w-full inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-[#1B365D] bg-[#F8F5EE] border border-[#D5D0C5] hover:bg-[#E5E0D5] transition-all"
+                >
+                  DOWNLOAD SYLLABUS & PROSPECTUS
+                </a>
+              </div>
+            </div>
           </div>
+
         </div>
 
       </div>

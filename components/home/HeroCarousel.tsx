@@ -45,163 +45,97 @@ const HERO_SLIDES = [
 ];
 
 export const HeroCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const handleNext = () => setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-  const handlePrev = () => setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
-
-  const slide = HERO_SLIDES[currentSlide];
+  const labGridItems = [
+    {
+      title: "NEURAL IMAGING & AI",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600",
+    },
+    {
+      title: "NEURO-PROSTHETICS LAB",
+      image: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80&w=600",
+    },
+    {
+      title: "3D CELLULAR BIOPRINTING",
+      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600",
+    },
+    {
+      title: "MICROFLUIDIC BIOSENSORS",
+      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=600",
+    },
+  ];
 
   return (
-    <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center bg-adamas-navy-dark overflow-hidden">
-      
-      {/* Background Image Carousel with Overlay */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={slide.id}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${slide.bgImage})` }}
-        >
-          {/* Multi-layer gradient overlays for high contrast */}
-          <div className="absolute inset-0 bg-gradient-to-r from-adamas-navy-dark via-adamas-navy/95 to-adamas-navy/70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-adamas-navy-dark via-transparent to-adamas-navy-dark/60" />
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Floating Decorative Glow Spheres */}
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-adamas-gold/15 rounded-full blur-3xl pointer-events-none animate-pulse-slow" />
-      <div className="absolute bottom-10 right-10 w-80 h-80 bg-adamas-crimson/20 rounded-full blur-3xl pointer-events-none" />
-
-      {/* Hero Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 text-white w-full">
-        <div className="max-w-3xl space-y-6">
+    <section className="bg-[#F8F5EE] text-[#1A1A1A] py-12 lg:py-20 border-b border-[#E2DDD3]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Breadcrumb Tag / Badge */}
-          <motion.div
-            key={`tag-${slide.id}`}
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-adamas-navy-dark/90 border border-adamas-gold/50 text-adamas-gold text-xs font-extrabold backdrop-blur-md shadow-md"
-          >
-            <Activity className="w-3.5 h-3.5 text-adamas-gold" />
-            <span>{slide.tag}</span>
-          </motion.div>
+          {/* Left Hero Content */}
+          <div className="lg:col-span-6 space-y-6">
+            
+            {/* Gold Eyebrow */}
+            <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase">
+              SCHOOL OF ENGINEERING AND TECHNOLOGY
+            </div>
 
-          {/* Main Title & Subtitle */}
-          <motion.div
-            key={`title-${slide.id}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="space-y-2"
-          >
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-white">
-              {slide.title}
+            {/* Serif Main Heading */}
+            <h1 className="text-4xl sm:text-6xl font-serif font-semibold text-[#1B365D] tracking-tight leading-[1.1]">
+              Biomedical <br />
+              Engineering
             </h1>
-            <p className="text-lg sm:text-2xl font-bold text-adamas-gold">
-              {slide.subtitle}
+
+            {/* Subtitle */}
+            <p className="text-lg sm:text-xl font-serif italic text-[#3A495E]">
+              Bridging Engineering, Biology & Healthcare.
             </p>
-          </motion.div>
 
-          {/* Paragraph Description */}
-          <motion.p
-            key={`desc-${slide.id}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm sm:text-base text-slate-200 leading-relaxed font-normal max-w-2xl"
-          >
-            {slide.description}
-          </motion.p>
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <a
+                href="https://adamasuniversity.ac.in/adamas-university/#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#1B365D] hover:bg-[#162E50] shadow-sm transition-all"
+              >
+                APPLY FOR ADMISSIONS <span className="ml-2">→</span>
+              </a>
 
-          {/* Dual Action Buttons - Adamas Crimson & Gold */}
-          <motion.div
-            key={`cta-${slide.id}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap items-center gap-4 pt-4"
-          >
-            <a
-              href="https://adamasuniversity.ac.in/adamas-university/#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-extrabold text-sm text-white bg-adamas-crimson hover:bg-adamas-crimson-dark shadow-lg hover:shadow-crimson transition-all transform hover:-translate-y-0.5"
-            >
-              <span>Apply Now 2026</span>
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </a>
-
-            <Link
-              href={slide.primaryCtaLink}
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-bold text-sm text-adamas-navy-dark bg-adamas-gold hover:bg-amber-400 shadow-md hover:shadow-glow transition-all transform hover:-translate-y-0.5"
-            >
-              <BookOpen className="w-4 h-4 mr-2" />
-              <span>{slide.primaryCtaText}</span>
-            </Link>
-          </motion.div>
-
-          {/* Key Accreditation Badges Pill */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="pt-6 flex flex-wrap items-center gap-6 text-xs text-slate-200"
-          >
-            <div className="flex items-center space-x-2">
-              <ShieldCheck className="w-4 h-4 text-adamas-gold" />
-              <span className="font-bold">NAAC A+ Accredited • AICTE Approved</span>
+              <Link
+                href="/gallery"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-[#1B365D] bg-[#EFECE6] border border-[#D5D0C5] hover:bg-[#E5E0D5] transition-all"
+              >
+                VIEW DEPARTMENT GALLERY
+              </Link>
             </div>
-            <div className="flex items-center space-x-2">
-              <Sparkles className="w-4 h-4 text-adamas-gold" />
-              <span>State-of-the-Art Bio-Labs</span>
+          </div>
+
+          {/* Right 2x2 Lab Grid Card Container */}
+          <div className="lg:col-span-6">
+            <div className="bg-[#EFECE6] p-4 sm:p-6 rounded-2xl border border-[#E2DDD3] shadow-sm">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                {labGridItems.map((lab, idx) => (
+                  <div
+                    key={idx}
+                    className="relative group overflow-hidden rounded-xl h-36 sm:h-44 bg-slate-200 border border-[#D5D0C5]"
+                  >
+                    <img
+                      src={lab.image}
+                      alt={lab.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1B365D]/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-2 left-2 right-2">
+                      <span className="inline-block px-2 py-1 bg-[#1B365D]/90 text-[9px] font-bold text-white uppercase tracking-wider rounded backdrop-blur-sm border border-white/10">
+                        {lab.title}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-          </motion.div>
+          </div>
+
         </div>
       </div>
-
-      {/* Carousel Controls */}
-      <div className="absolute bottom-8 right-8 z-20 flex items-center space-x-3">
-        <button
-          onClick={handlePrev}
-          className="p-2.5 rounded-full bg-adamas-navy-dark/80 text-white hover:bg-adamas-gold/30 border border-white/20 transition-colors backdrop-blur-md"
-          aria-label="Previous Slide"
-        >
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-        <div className="flex space-x-2 px-2">
-          {HERO_SLIDES.map((s, idx) => (
-            <button
-              key={s.id}
-              onClick={() => setCurrentSlide(idx)}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                idx === currentSlide ? "w-8 bg-adamas-gold" : "w-2 bg-white/40 hover:bg-white"
-              }`}
-              aria-label={`Go to slide ${idx + 1}`}
-            />
-          ))}
-        </div>
-        <button
-          onClick={handleNext}
-          className="p-2.5 rounded-full bg-adamas-navy-dark/80 text-white hover:bg-adamas-gold/30 border border-white/20 transition-colors backdrop-blur-md"
-          aria-label="Next Slide"
-        >
-          <ChevronRight className="w-5 h-5" />
-        </button>
-      </div>
-
     </section>
   );
 };

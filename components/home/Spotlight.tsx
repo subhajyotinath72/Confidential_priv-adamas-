@@ -7,72 +7,101 @@ import { Sparkles, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const Spotlight: React.FC = () => {
+  const facultyMentors = [
+    {
+      initials: "AB",
+      name: "Prof. (Dr.) Semanti Chakraborty",
+      designation: "Head of Dept",
+      specialization: "Microfluidics & Point-of-Care Biosensors",
+      href: "/people#fac-1",
+    },
+    {
+      initials: "SM",
+      name: "Prof. (Dr.) Howa Begum",
+      designation: "Assoc. Prof",
+      specialization: "Orthopedic Biomechanics & Gait Analysis",
+      href: "/people#fac-2",
+    },
+    {
+      initials: "PB",
+      name: "Prof. (Dr.) Sayanti Chowdhury",
+      designation: "Asst. Prof",
+      specialization: "Medical Image AI & Brain MRI Reconstruction",
+      href: "/people#fac-3",
+    },
+    {
+      initials: "RG",
+      name: "Prof. (Dr.) Animesh Halder",
+      designation: "Senior Fellow",
+      specialization: "Biomaterials & Injectable Tissue Scaffolds",
+      href: "/people#fac-4",
+    },
+  ];
+
   return (
-    <section className="py-20 bg-white relative border-b border-slate-200">
+    <section id="faculty" className="bg-[#F8F5EE] py-12 lg:py-16 border-b border-[#E2DDD3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
-        <div className="flex items-center justify-between mb-12">
+        {/* Header */}
+        <div className="flex items-end justify-between mb-8">
           <div>
-            <span className="text-xs font-bold text-adamas-gold-dark uppercase tracking-widest">
-              Department Highlights
-            </span>
-            <h2 className="text-3xl font-extrabold text-slate-900 mt-1 tracking-tight">
-              In The Spotlight
+            <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
+              DEPARTMENT ARCHIVE & FACILITIES
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#1B365D] tracking-tight">
+              Faculty & Research Mentors
             </h2>
           </div>
           <Link
-            href="/contact"
-            className="text-xs font-bold text-teal-700 hover:text-teal-900 flex items-center hidden sm:flex"
+            href="/people"
+            className="text-xs font-bold text-[#1B365D] uppercase tracking-wider hover:underline"
           >
-            <span>Explore All Facilities</span>
-            <ArrowRight className="w-3.5 h-3.5 ml-1" />
+            Core Faculty Profiles
           </Link>
         </div>
 
-        {/* 4 Spotlight Cards Grid */}
+        {/* 4 Faculty Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {SPOTLIGHT_ITEMS.map((item, idx) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:border-teal-500 hover:shadow-lg transition-all flex flex-col justify-between group"
+          {facultyMentors.map((f, idx) => (
+            <div
+              key={idx}
+              className="bg-[#EFECE6] rounded-2xl overflow-hidden border border-[#E2DDD3] shadow-xs flex flex-col justify-between group hover:border-[#1B365D] transition-colors"
             >
-              <div>
-                <div className="relative h-48 overflow-hidden bg-slate-100">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <span className="absolute top-3 left-3 bg-white/95 text-teal-800 text-[10px] font-bold px-2.5 py-1 rounded-md border border-teal-200 shadow-xs">
-                    {item.category}
+              {/* Top Navy Blue Box with Avatar Initials */}
+              <div className="bg-[#1B365D] p-6 text-center space-y-3 relative">
+                <div className="w-16 h-16 rounded-full bg-[#F8F5EE] text-[#1B365D] font-serif font-bold text-lg flex items-center justify-center mx-auto shadow-md">
+                  {f.initials}
+                </div>
+                <div className="text-sm font-serif font-bold text-white line-clamp-1">
+                  {f.name}
+                </div>
+                <div className="absolute bottom-2 right-2">
+                  <span className="px-2 py-0.5 bg-white/10 text-[9px] font-bold text-[#C59B27] rounded border border-white/10 uppercase">
+                    {f.designation}
                   </span>
                 </div>
+              </div>
 
-                <div className="p-5 space-y-2">
-                  <h3 className="text-base font-bold text-slate-900 group-hover:text-teal-700 transition-colors leading-snug">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
-                    {item.description}
-                  </p>
+              {/* Bottom Details */}
+              <div className="p-4 space-y-2 text-center flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="text-xs font-serif font-bold text-[#1B365D]">
+                    {f.name}
+                  </div>
+                  <div className="text-[11px] text-slate-600 font-sans mt-1">
+                    {f.specialization}
+                  </div>
+                </div>
+                <div className="pt-2">
+                  <Link
+                    href={f.href}
+                    className="text-[11px] font-bold text-[#1B365D] uppercase tracking-wider hover:text-[#B58A28]"
+                  >
+                    View Profile →
+                  </Link>
                 </div>
               </div>
-
-              <div className="p-5 pt-0">
-                <Link
-                  href="/programs"
-                  className="inline-flex items-center text-xs font-bold text-adamas-gold-dark hover:text-slate-900 transition-colors"
-                >
-                  <span>{item.linkText}</span>
-                  <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

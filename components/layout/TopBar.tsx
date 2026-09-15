@@ -26,7 +26,7 @@ export const TopBar: React.FC = () => {
             className="flex items-center hover:text-white transition-colors"
           >
             <Phone className="w-3.5 h-3.5 mr-1 text-adamas-teal-accent" />
-            Toll Free: 1800-419-7423
+            Toll Free: 012436986
           </a>
           <a
             href="mailto:biomedical@adamasuniversity.ac.in"

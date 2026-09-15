@@ -9,6 +9,7 @@ import { NewsAndEvents } from "@/components/home/NewsAndEvents";
 import { Testimonials } from "@/components/home/Testimonials";
 import { Spotlight } from "@/components/home/Spotlight";
 import { ApplyNowBanner } from "@/components/home/ApplyNowBanner";
+import { ContactSection } from "@/components/home/ContactSection";
 
 export default function Home() {
   return (
@@ -16,32 +17,36 @@ export default function Home() {
       {/* 1. Hero Section */}
       <HeroCarousel />
 
-      {/* 2. 4 Stat/USP Tiles */}
-      <USPTiles />
-
-      {/* 3. HoD Pull-Quote Block (Site A Layout Style) */}
+      {/* 2. HoD Leadership & Vision Section */}
       <HoDQuote />
 
-      {/* 4. Research Areas (01 / 02 / 03 Numbered Expandable Panels) */}
-      <ResearchAreas />
-
-      {/* 5. Academic Programs (Large Cards + Specialization Chips) */}
+      {/* 3. Academic Programs & Admissions Section */}
       <AcademicPrograms />
 
-      {/* 6. Interdisciplinary Platforms & Centers Grid */}
-      <ResearchCenters />
+      {/* 4. USP Tiles / Hospital & Industry Partners */}
+      <USPTiles />
 
-      {/* 7. News & Events (3 Cards + Coming Up Sidebar) */}
+      {/* 5. Apply Now / Student Welfare Banner */}
+      <ApplyNowBanner />
+
+      {/* 6. News & Events Section */}
       <NewsAndEvents />
 
-      {/* 8. Student & Alumni Testimonials */}
-      <Testimonials />
-
-      {/* 9. Department Spotlight Grid */}
+      {/* 7. Faculty & Research Mentors Spotlight */}
       <Spotlight />
 
-      {/* 10. Apply Now Banner */}
-      <ApplyNowBanner />
+      {/* 8. Student Projects & Research Areas */}
+      <ResearchAreas />
+
+      {/* 9. Biomedical Research Laboratories */}
+      <ResearchCenters />
+
+      {/* 10. Our Memories / Testimonials Gallery */}
+      <Testimonials />
+
+      {/* 11. Connect with Department & Inquiry */}
+      <ContactSection />
     </div>
   );
 }
+

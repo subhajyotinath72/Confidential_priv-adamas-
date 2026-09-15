@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Inter, Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { TopBar } from "@/components/layout/TopBar";
 import { Navbar } from "@/components/layout/Navbar";
@@ -14,6 +14,12 @@ const inter = Inter({
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -48,16 +54,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${outfit.variable} scroll-smooth bg-slate-50 text-slate-900`}
+      className={`${inter.variable} ${outfit.variable} ${playfair.variable} scroll-smooth bg-[#F8F5EE] text-[#1A1A1A]`}
       suppressHydrationWarning
     >
       <body
-        className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans antialiased selection:bg-adamas-teal selection:text-white"
+        className="min-h-screen flex flex-col bg-[#F8F5EE] text-[#1A1A1A] font-sans antialiased selection:bg-[#1B365D] selection:text-white"
         suppressHydrationWarning
       >
         <TopBar />
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow bg-[#F8F5EE]">{children}</main>
         <Footer />
       </body>
     </html>

@@ -1,13 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { RECENT_NEWS, UPCOMING_EVENTS } from "@/data/newsEvents";
 import { Calendar, Clock, MapPin, ArrowRight, Bell, Tag, Sparkles } from "lucide-react";
 import Link from "next/link";
 
 export const NewsAndEvents: React.FC = () => {
-  const newsList = [
+  const [items, setItems] = useState<any[]>([
     {
       day: "05",
       month: "AUG",
@@ -35,10 +35,33 @@ export const NewsAndEvents: React.FC = () => {
       linkText: "View Schedule →",
       href: "/news#robotics",
     },
-  ];
+  ]);
+
+  useEffect(() => {
+    fetch("/api/admin/content")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.news && Array.isArray(data.news) && data.news.length > 0) {
+          const mapped = data.news.slice(0, 5).map((n: any) => {
+            const dateParts = n.date ? n.date.split(" ") : ["AUG", "15"];
+            return {
+              day: dateParts[1]?.replace(",", "") || "15",
+              month: (dateParts[0] || "AUG").substring(0, 3).toUpperCase(),
+              tag: (n.category || "NEWS").toUpperCase(),
+              title: n.title,
+              desc: n.summary,
+              linkText: "Read Report →",
+              href: `/news#${n.id}`,
+            };
+          });
+          setItems(mapped);
+        }
+      })
+      .catch((err) => console.error("Could not fetch live news data:", err));
+  }, []);
 
   return (
-    <section id="news" className="bg-[#F8F5EE] py-12 lg:py-16 border-b border-[#E2DDD3]">
+    <section id="news" className="bg-white py-12 lg:py-16 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -47,13 +70,13 @@ export const NewsAndEvents: React.FC = () => {
             <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
               UPDATES & COLLOQUIA
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#1B365D] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
               News & Events
             </h2>
           </div>
           <Link
             href="/news"
-            className="text-xs font-bold text-[#1B365D] uppercase tracking-wider hover:underline"
+            className="text-xs font-bold text-[#103E3B] uppercase tracking-wider hover:underline"
           >
             VIEW ARCHIVE →
           </Link>
@@ -61,16 +84,16 @@ export const NewsAndEvents: React.FC = () => {
 
         {/* Stacked Cards */}
         <div className="space-y-4">
-          {newsList.map((item, idx) => (
+          {items.map((item, idx) => (
             <div
               key={idx}
-              className="bg-[#EFECE6] p-5 rounded-xl border border-[#E2DDD3] shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-[#1B365D] transition-colors"
+              className="bg-slate-50 p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-[#103E3B] transition-colors"
             >
               <div className="flex items-start sm:items-center space-x-4">
                 {/* Date Block */}
-                <div className="bg-[#F8F5EE] border border-[#D5D0C5] rounded-lg p-2 text-center w-14 flex-shrink-0">
-                  <div className="text-xs text-slate-500 font-bold uppercase">{item.month}</div>
-                  <div className="text-lg font-serif font-bold text-[#1B365D] leading-none">{item.day}</div>
+                <div className="bg-white border border-slate-200 rounded-lg p-2 text-center w-14 flex-shrink-0">
+                  <div className="text-xs text-[#103E3B]/70 font-bold uppercase">{item.month}</div>
+                  <div className="text-lg font-serif font-bold text-[#103E3B] leading-none">{item.day}</div>
                 </div>
 
                 {/* Details */}

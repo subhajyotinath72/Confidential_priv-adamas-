@@ -2,9 +2,7 @@ import React from "react";
 import { HeroCarousel } from "@/components/home/HeroCarousel";
 import { USPTiles } from "@/components/home/USPTiles";
 import { HoDQuote } from "@/components/home/HoDQuote";
-import { ResearchAreas } from "@/components/home/ResearchAreas";
 import { AcademicPrograms } from "@/components/home/AcademicPrograms";
-import { ResearchCenters } from "@/components/home/ResearchCenters";
 import { NewsAndEvents } from "@/components/home/NewsAndEvents";
 import { Testimonials } from "@/components/home/Testimonials";
 import { Spotlight } from "@/components/home/Spotlight";
@@ -13,7 +11,7 @@ import { ContactSection } from "@/components/home/ContactSection";
 
 export default function Home() {
   return (
-    <div className="space-y-0">
+    <div className="bg-white text-[#103E3B] space-y-0">
       {/* 1. Hero Section */}
       <HeroCarousel />
 
@@ -32,19 +30,13 @@ export default function Home() {
       {/* 6. News & Events Section */}
       <NewsAndEvents />
 
-      {/* 7. Faculty & Research Mentors Spotlight */}
+      {/* 7. Faculty Spotlight */}
       <Spotlight />
 
-      {/* 8. Student Projects & Research Areas */}
-      <ResearchAreas />
-
-      {/* 9. Biomedical Research Laboratories */}
-      <ResearchCenters />
-
-      {/* 10. Our Memories / Testimonials Gallery */}
+      {/* 8. Our Memories / Testimonials Gallery */}
       <Testimonials />
 
-      {/* 11. Connect with Department & Inquiry */}
+      {/* 9. Connect with Department & Inquiry */}
       <ContactSection />
     </div>
   );

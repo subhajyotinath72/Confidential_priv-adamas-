@@ -15,12 +15,12 @@ export const ApplyNowBanner: React.FC = () => {
             {/* Left Content */}
             <div className="space-y-3 max-w-3xl">
               <div>
-                <span className="px-2.5 py-1 bg-[#1B365D] text-[9px] font-bold text-white uppercase tracking-wider rounded">
+                <span className="px-2.5 py-1 bg-[#103E3B] text-[9px] font-bold text-white uppercase tracking-wider rounded">
                   STUDENT WELFARE
                 </span>
               </div>
 
-              <h2 className="text-2xl sm:text-4xl font-serif font-semibold text-[#1B365D] tracking-tight">
+              <h2 className="text-2xl sm:text-4xl font-serif font-semibold text-[#103E3B] tracking-tight">
                 Student Grievance Redressal Portal
               </h2>
 
@@ -33,14 +33,14 @@ export const ApplyNowBanner: React.FC = () => {
             <div className="flex flex-wrap items-center gap-3 flex-shrink-0 w-full lg:w-auto">
               <Link
                 href="/grievances"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#1B365D] hover:bg-[#162E50] shadow-sm transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#103E3B] hover:bg-[#0D3330] shadow-sm transition-all"
               >
                 LODGE A GRIEVANCE <span className="ml-2">→</span>
               </Link>
 
               <Link
                 href="/grievances#policy"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-[#1B365D] bg-[#F8F5EE] border border-[#D5D0C5] hover:bg-[#E5E0D5] transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-[#103E3B] bg-white border border-slate-300 hover:bg-slate-100 transition-all"
               >
                 VIEW POLICY
               </Link>

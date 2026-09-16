@@ -65,7 +65,7 @@ export const HeroCarousel: React.FC = () => {
   ];
 
   return (
-    <section className="bg-[#F8F5EE] text-[#1A1A1A] py-12 lg:py-20 border-b border-[#E2DDD3]">
+    <section className="bg-white text-[#103E3B] py-12 lg:py-20 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -78,13 +78,13 @@ export const HeroCarousel: React.FC = () => {
             </div>
 
             {/* Serif Main Heading */}
-            <h1 className="text-4xl sm:text-6xl font-serif font-semibold text-[#1B365D] tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-6xl font-serif font-semibold text-[#103E3B] tracking-tight leading-[1.1]">
               Biomedical <br />
               Engineering
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl font-serif italic text-[#3A495E]">
+            <p className="text-lg sm:text-xl font-serif italic text-[#103E3B]/80">
               Bridging Engineering, Biology & Healthcare.
             </p>
 

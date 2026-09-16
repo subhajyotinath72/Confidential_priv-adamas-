@@ -1,16 +1,10 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
-import { Activity, MapPin, Phone, Mail, Award, ShieldCheck, ExternalLink, Globe, Sparkles } from "lucide-react";
+import { Activity } from "lucide-react";
 
 export const Footer: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
-    <footer className="bg-[#1B365D] text-slate-300 border-t border-white/10 pt-12 pb-8">
+    <footer className="bg-[#103E3B] text-[#F7D6C8] border-t border-white/10 pt-12 pb-8 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
         {/* Main Footer Row */}
@@ -19,11 +13,11 @@ export const Footer: React.FC = () => {
           {/* Brand Info (Left 6 cols) */}
           <div className="md:col-span-6 space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-9 h-9 rounded-md bg-[#C59B27]/20 p-1 border border-[#C59B27]/50 flex items-center justify-center">
-                <Activity className="w-5 h-5 text-[#C59B27]" />
+              <div className="w-9 h-9 rounded-md bg-[#F7D6C8]/20 p-1 border border-[#F7D6C8]/40 flex items-center justify-center">
+                <Activity className="w-5 h-5 text-[#F7D6C8]" />
               </div>
               <div>
-                <span className="text-[9px] font-bold tracking-widest text-[#C59B27] uppercase block">
+                <span className="text-[9px] font-bold tracking-widest text-[#F7D6C8] uppercase block">
                   ADAMAS UNIVERSITY
                 </span>
                 <span className="text-base font-serif font-semibold text-white">
@@ -32,7 +26,7 @@ export const Footer: React.FC = () => {
               </div>
             </div>
 
-            <p className="text-xs text-slate-300 leading-relaxed max-w-md font-sans">
+            <p className="text-xs text-[#F7D6C8]/80 leading-relaxed max-w-md font-sans">
               Advancing clinical diagnostics, medical robotics, 3D bioprinting, and biosensors through integrated engineering education.
             </p>
           </div>
@@ -44,22 +38,22 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs font-sans">
               <li>
-                <Link href="/admission" className="hover:text-[#C59B27] transition-colors">
+                <Link href="/admission" className="hover:text-white transition-colors text-[#F7D6C8]">
                   Admissions
                 </Link>
               </li>
               <li>
-                <Link href="/partnerships" className="hover:text-[#C59B27] transition-colors">
+                <Link href="/partnerships" className="hover:text-white transition-colors text-[#F7D6C8]">
                   Hospital Partners
                 </Link>
               </li>
               <li>
-                <Link href="/opportunities" className="hover:text-[#C59B27] transition-colors">
+                <Link href="/opportunities" className="hover:text-white transition-colors text-[#F7D6C8]">
                   Internships & Placement
                 </Link>
               </li>
               <li>
-                <Link href="/#gallery" className="hover:text-[#C59B27] transition-colors">
+                <Link href="/#gallery" className="hover:text-white transition-colors text-[#F7D6C8]">
                   Visual Showcase & Gallery
                 </Link>
               </li>
@@ -73,27 +67,22 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs font-sans">
               <li>
-                <Link href="/grievances" className="hover:text-[#C59B27] transition-colors">
-                  Student Grievances
-                </Link>
-              </li>
-              <li>
-                <Link href="/news" className="hover:text-[#C59B27] transition-colors">
+                <Link href="/news" className="hover:text-white transition-colors text-[#F7D6C8]">
                   News & Events
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-[#C59B27] transition-colors">
+                <Link href="/contact" className="hover:text-white transition-colors text-[#F7D6C8]">
                   Contact Department
                 </Link>
               </li>
               <li>
-                <button
-                  onClick={scrollToTop}
-                  className="hover:text-[#C59B27] transition-colors text-left flex items-center"
+                <a
+                  href="#top"
+                  className="hover:text-white transition-colors text-left flex items-center text-[#F7D6C8]"
                 >
                   Back to Top ↑
-                </button>
+                </a>
               </li>
             </ul>
           </div>
@@ -101,7 +90,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Copyright Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 font-sans">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#F7D6C8]/70 font-sans">
           <p>
             © 2025 Department of Biomedical Engineering, Adamas University. All rights reserved.
           </p>

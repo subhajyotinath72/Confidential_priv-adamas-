@@ -54,16 +54,33 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${outfit.variable} ${playfair.variable} scroll-smooth bg-[#F8F5EE] text-[#1A1A1A]`}
+      className={`${inter.variable} ${outfit.variable} ${playfair.variable} scroll-smooth bg-white text-[#103E3B]`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('error', function(e) {
+                if (e && e.message && (e.message.indexOf('Loading chunk') !== -1 || e.message.indexOf('ChunkLoadError') !== -1)) {
+                  if (!window.sessionStorage.getItem('chunk_load_retried')) {
+                    window.sessionStorage.setItem('chunk_load_retried', 'true');
+                    window.location.reload();
+                  }
+                }
+              });
+            `,
+          }}
+        />
+      </head>
       <body
-        className="min-h-screen flex flex-col bg-[#F8F5EE] text-[#1A1A1A] font-sans antialiased selection:bg-[#1B365D] selection:text-white"
+        id="top"
+        className="min-h-screen flex flex-col bg-white text-[#103E3B] font-sans antialiased selection:bg-[#103E3B] selection:text-white"
         suppressHydrationWarning
       >
         <TopBar />
         <Navbar />
-        <main className="flex-grow bg-[#F8F5EE]">{children}</main>
+        <main className="flex-grow bg-white text-[#103E3B]">{children}</main>
         <Footer />
       </body>
     </html>

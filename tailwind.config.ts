@@ -9,12 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        deepTeal: {
+          DEFAULT: "#103E3B",
+          dark: "#0D3330",
+          light: "#175753",
+        },
+        darkTeal: "#0D3330",
         adamas: {
           navy: {
-            DEFAULT: "#1B365D",
-            dark: "#0F2137",
-            light: "#25467A",
-            hover: "#172E4E",
+            DEFAULT: "#103E3B",
+            dark: "#0D3330",
+            light: "#175753",
+            hover: "#0D3330",
           },
           gold: {
             DEFAULT: "#B58A28",
@@ -23,10 +29,10 @@ const config: Config = {
             accent: "#D4AF37",
           },
           slate: {
-            DEFAULT: "#F8F5EE",
-            card: "#EFECE6",
-            muted: "#5A6578",
-            border: "#E2DDD3",
+            DEFAULT: "#FFFFFF",
+            card: "#F8FAF9",
+            muted: "#103E3B",
+            border: "#E2E8F0",
           },
         },
       },
@@ -36,10 +42,10 @@ const config: Config = {
         serif: ["var(--font-serif)", "Georgia", "Cambria", "Times New Roman", "serif"],
       },
       boxShadow: {
-        glass: "0 8px 32px 0 rgba(15, 33, 55, 0.08)",
-        glow: "0 0 25px -5px rgba(13, 148, 136, 0.3)",
-        card: "0 4px 20px -2px rgba(15, 33, 55, 0.06)",
-        "card-hover": "0 12px 30px -4px rgba(15, 33, 55, 0.12)",
+        glass: "0 8px 32px 0 rgba(16, 62, 59, 0.08)",
+        glow: "0 0 25px -5px rgba(16, 62, 59, 0.3)",
+        card: "0 4px 20px -2px rgba(16, 62, 59, 0.06)",
+        "card-hover": "0 12px 30px -4px rgba(16, 62, 59, 0.12)",
       },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

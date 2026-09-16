@@ -39,7 +39,7 @@ export const Spotlight: React.FC = () => {
   ];
 
   return (
-    <section id="faculty" className="bg-[#F8F5EE] py-12 lg:py-16 border-b border-[#E2DDD3]">
+    <section id="faculty" className="bg-white py-12 lg:py-16 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -48,13 +48,13 @@ export const Spotlight: React.FC = () => {
             <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
               DEPARTMENT ARCHIVE & FACILITIES
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#1B365D] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
               Faculty & Research Mentors
             </h2>
           </div>
           <Link
             href="/people"
-            className="text-xs font-bold text-[#1B365D] uppercase tracking-wider hover:underline"
+            className="text-xs font-bold text-[#103E3B] uppercase tracking-wider hover:underline"
           >
             Core Faculty Profiles
           </Link>

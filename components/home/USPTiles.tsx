@@ -69,7 +69,7 @@ export const USPTiles: React.FC = () => {
     <div className="space-y-0">
       
       {/* 1. Hospital & Industry Partners */}
-      <section className="bg-[#F8F5EE] py-12 lg:py-16 border-b border-[#E2DDD3]">
+      <section className="bg-white py-12 lg:py-16 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="flex flex-wrap items-end justify-between mb-8 gap-4">
@@ -77,11 +77,11 @@ export const USPTiles: React.FC = () => {
               <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
                 CLINICAL & INDUSTRIAL COLLABORATION
               </div>
-              <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#1B365D] tracking-tight">
+              <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
                 Hospital & Industry Partners
               </h2>
             </div>
-            <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <div className="text-xs font-bold text-[#103E3B]/70 uppercase tracking-wider">
               Active MoUs & Joint Laboratories
             </div>
           </div>
@@ -90,12 +90,12 @@ export const USPTiles: React.FC = () => {
             {partners.map((p, idx) => (
               <div
                 key={idx}
-                className="bg-[#EFECE6] p-5 rounded-xl border border-[#E2DDD3] shadow-xs text-center space-y-2 hover:border-[#1B365D] transition-colors"
+                className="bg-slate-50 p-5 rounded-xl border border-slate-200 shadow-xs text-center space-y-2 hover:border-[#103E3B] transition-colors"
               >
-                <div className="text-sm font-serif font-bold text-[#1B365D]">
+                <div className="text-sm font-serif font-bold text-[#103E3B]">
                   {p.name}
                 </div>
-                <div className="text-xs text-slate-600 font-sans">
+                <div className="text-xs text-[#103E3B]/80 font-sans">
                   {p.desc}
                 </div>
               </div>
@@ -106,7 +106,7 @@ export const USPTiles: React.FC = () => {
       </section>
 
       {/* 2. Internships & Placements */}
-      <section className="bg-[#F8F5EE] py-12 lg:py-16 border-b border-[#E2DDD3]">
+      <section className="bg-white py-12 lg:py-16 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="mb-8">

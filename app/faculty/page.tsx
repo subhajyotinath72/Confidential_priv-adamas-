@@ -1,16 +1,28 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FACULTY_MEMBERS, Faculty } from "@/data/faculty";
 import { Users, Search, Mail, Phone, MapPin, Award, BookOpen, ExternalLink, Filter, Sparkles } from "lucide-react";
 import { Modal } from "@/components/ui/Modal";
 
 export default function FacultyPage() {
+  const [facultyList, setFacultyList] = useState<Faculty[]>(FACULTY_MEMBERS);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTrack, setSelectedTrack] = useState<string>("all");
   const [selectedFaculty, setSelectedFaculty] = useState<Faculty | null>(null);
 
-  const filteredFaculty = FACULTY_MEMBERS.filter((fac) => {
+  useEffect(() => {
+    fetch("/api/admin/content")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.faculty && Array.isArray(data.faculty)) {
+          setFacultyList(data.faculty);
+        }
+      })
+      .catch((err) => console.error("Could not fetch live faculty data:", err));
+  }, []);
+
+  const filteredFaculty = facultyList.filter((fac) => {
     const matchesSearch =
       fac.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       fac.specialization.toLowerCase().includes(searchQuery.toLowerCase()) ||

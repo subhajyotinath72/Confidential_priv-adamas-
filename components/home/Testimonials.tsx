@@ -58,12 +58,12 @@ export const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section id="gallery" className="bg-[#F8F5EE] py-12 lg:py-16 border-b border-[#E2DDD3]">
+    <section id="gallery" className="bg-white py-12 lg:py-16 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="mb-8">
-          <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#1B365D] tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
             Our Memories
           </h2>
         </div>

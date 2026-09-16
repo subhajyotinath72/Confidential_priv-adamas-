@@ -5,15 +5,24 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    background-color: #ffffff;
+    color: #103E3B;
   }
 
   body {
-    @apply bg-[#F8F5EE] text-slate-900 font-sans antialiased selection:bg-adamas-navy selection:text-white;
+    @apply bg-white text-[#103E3B] font-sans antialiased selection:bg-[#103E3B] selection:text-white;
+    background-color: #ffffff;
+    color: #103E3B;
+  }
+
+  /* Global Headings & Paragraphs color fallback */
+  h1, h2, h3, h4, h5, h6 {
+    color: #103E3B;
   }
 
   /* Accessibility focus states */
   *:focus-visible {
-    @apply outline-none ring-2 ring-[#B58A28] ring-offset-2 ring-offset-white;
+    @apply outline-none ring-2 ring-[#103E3B] ring-offset-2 ring-offset-white;
   }
 }
 
@@ -28,17 +37,17 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0D9488;
+  background: #103E3B;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0F766E;
+  background: #0B2D2B;
 }
 
 /* Micro animation utility classes */
 .shadow-glow {
-  box-shadow: 0 0 25px -5px rgba(13, 148, 136, 0.25);
+  box-shadow: 0 0 25px -5px rgba(16, 62, 59, 0.25);
 }
 
 .shadow-gold {

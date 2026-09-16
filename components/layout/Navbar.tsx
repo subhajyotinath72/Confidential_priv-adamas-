@@ -61,8 +61,8 @@ export const Navbar: React.FC = () => {
       ],
     },
     {
-      name: "Partnerships",
-      href: "/partnerships",
+      name: "Collaboration",
+      href: "/collaboration",
       dropdown: [
         { name: "Hospital Clinical MoUs", href: "/partnerships#hospitals", desc: "Super-Specialty Hospital Networks" },
         { name: "MedTech Industry Leaders", href: "/partnerships#industry", desc: "Siemens, GE, Philips & Medtronic" },

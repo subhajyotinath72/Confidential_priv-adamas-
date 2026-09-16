@@ -170,30 +170,6 @@
       "featuredPublications": [
         "Chakraborty, S. (2023). Regulatory Strategy for AI-Enabled Software as a Medical Device (SaMD) in South Asia. Healthcare Regulation Standard."
       ]
-    },
-    {
-      "id": "fac-8",
-      "name": "Dr. Ritu Chatterji",
-      "designation": "Assistant Professor",
-      "trackId": "02",
-      "degrees": "Ph.D. in Nanobiotechnology (Calcutta Univ)",
-      "almaMater": "Adamas University",
-      "specialization": "Nanoparticle Therapeutics, Biosensors, Biomimetic Surfaces",
-      "email": "ritu.chatterji@adamasuniversity.ac.in",
-      "phone": "+91 (033) 2587-9008",
-      "room": "SET Building, Room 322",
-      "bio": "Dr. Ritu Chatterji researches antimicrobial nanocoatings for surgical implants and targeted drug carriers for oncological applications.",
-      "researchFocus": [
-        "Antimicrobial Nanocoatings",
-        "Targeted Cancer Nanomedicine",
-        "Bio-Surface Functionalization"
-      ],
-      "publicationsCount": 30,
-      "patentsCount": 2,
-      "avatar": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=400",
-      "featuredPublications": [
-        "Chatterji, R. et al. (2024). Silver Nanoparticle Functionalized Titanium Implants for Bacterial Biofilm Inhibition. Journal of Nanobiotechnology."
-      ]
     }
   ],
   "news": [

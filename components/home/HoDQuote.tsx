@@ -66,7 +66,7 @@ export const HoDQuote: React.FC = () => {
             {/* Signature & Button */}
             <div className="pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-[#E2DDD3]">
               <div>
-                <div className="font-serif font-bold italic text-[#1B365D] text-lg">
+                <div className="font-serif font-bold italic text-[#103E3B] text-lg">
                   Dr. Semanti Chakraborty
                 </div>
                 <div className="text-[11px] text-slate-500 uppercase tracking-wider">
@@ -76,7 +76,7 @@ export const HoDQuote: React.FC = () => {
 
               <Link
                 href="/people#fac-1"
-                className="inline-flex items-center justify-center px-5 py-2.5 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#1B365D] hover:bg-[#162E50] transition-all"
+                className="inline-flex items-center justify-center px-5 py-2.5 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#103E3B] hover:bg-[#0D3330] transition-all"
               >
                 READ RESEARCH VISION →
               </Link>

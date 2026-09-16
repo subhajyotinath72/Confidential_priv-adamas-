@@ -1,4 +1,5 @@
 import React from "react";
+import { FrontVideo } from "@/components/home/FrontVideo";
 import { HeroCarousel } from "@/components/home/HeroCarousel";
 import { USPTiles } from "@/components/home/USPTiles";
 import { HoDQuote } from "@/components/home/HoDQuote";
@@ -12,6 +13,9 @@ import { ContactSection } from "@/components/home/ContactSection";
 export default function Home() {
   return (
     <div className="bg-white text-[#103E3B] space-y-0">
+      {/* 0. Front Page Auto-Playing Video Section */}
+      <FrontVideo />
+
       {/* 1. Hero Section */}
       <HeroCarousel />
 

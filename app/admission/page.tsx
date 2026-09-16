@@ -30,30 +30,10 @@ export default function AdmissionPage() {
             Admissions & Academic Curricula 2026
           </h1>
           <p className="text-sm sm:text-base text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Apply to AICTE-approved B.Tech, M.Tech, and Doctoral Research Fellowships at the Department of Biomedical Engineering.
+            Apply to the AICTE-approved B.Tech in Biomedical Engineering at the Department of Biomedical Engineering.
           </p>
         </div>
       </section>
-
-      {/* Program Selector Tabs */}
-      <div className="sticky top-20 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200 py-4 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center space-x-2 sm:space-x-4 overflow-x-auto">
-          {ACADEMIC_PROGRAMS.map((prog) => (
-            <a
-              key={prog.id}
-              href={`#${prog.id}`}
-              onClick={() => setSelectedProgramId(prog.id)}
-              className={`px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap ${
-                selectedProgramId === prog.id
-                  ? "bg-teal-600 text-white shadow-md"
-                  : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-              }`}
-            >
-              {prog.degree} ({prog.level})
-            </a>
-          ))}
-        </div>
-      </div>
 
       {/* Main Content Area */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 space-y-16">

@@ -65,11 +65,11 @@ export const Spotlight: React.FC = () => {
           {facultyMentors.map((f, idx) => (
             <div
               key={idx}
-              className="bg-[#EFECE6] rounded-2xl overflow-hidden border border-[#E2DDD3] shadow-xs flex flex-col justify-between group hover:border-[#1B365D] transition-colors"
+              className="bg-[#EFECE6] rounded-2xl overflow-hidden border border-[#E2DDD3] shadow-xs flex flex-col justify-between group hover:border-[#103E3B] transition-colors"
             >
               {/* Top Navy Blue Box with Avatar Initials */}
-              <div className="bg-[#1B365D] p-6 text-center space-y-3 relative">
-                <div className="w-16 h-16 rounded-full bg-[#F8F5EE] text-[#1B365D] font-serif font-bold text-lg flex items-center justify-center mx-auto shadow-md">
+              <div className="bg-[#103E3B] p-6 text-center space-y-3 relative">
+                <div className="w-16 h-16 rounded-full bg-[#F8F5EE] text-[#103E3B] font-serif font-bold text-lg flex items-center justify-center mx-auto shadow-md">
                   {f.initials}
                 </div>
                 <div className="text-sm font-serif font-bold text-white line-clamp-1">
@@ -85,7 +85,7 @@ export const Spotlight: React.FC = () => {
               {/* Bottom Details */}
               <div className="p-4 space-y-2 text-center flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="text-xs font-serif font-bold text-[#1B365D]">
+                  <div className="text-xs font-serif font-bold text-[#103E3B]">
                     {f.name}
                   </div>
                   <div className="text-[11px] text-slate-600 font-sans mt-1">
@@ -95,7 +95,7 @@ export const Spotlight: React.FC = () => {
                 <div className="pt-2">
                   <Link
                     href={f.href}
-                    className="text-[11px] font-bold text-[#1B365D] uppercase tracking-wider hover:text-[#B58A28]"
+                    className="text-[11px] font-bold text-[#103E3B] uppercase tracking-wider hover:text-[#B58A28]"
                   >
                     View Profile →
                   </Link>

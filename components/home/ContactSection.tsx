@@ -58,18 +58,18 @@ export const ContactSection: React.FC = () => {
           {/* Right Form Card */}
           <div className="lg:col-span-5">
             <div className="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs space-y-5">
-              <h3 className="text-xl font-serif font-bold text-[#1B365D]">
+              <h3 className="text-xl font-serif font-bold text-[#103E3B]">
                 Quick Department Inquiry
               </h3>
 
               {submitted ? (
-                <div className="bg-[#1B365D] text-white p-4 rounded-xl text-center text-xs font-bold uppercase tracking-wider">
+                <div className="bg-[#103E3B] text-white p-4 rounded-xl text-center text-xs font-bold uppercase tracking-wider">
                   ✓ Inquiry Received! We will respond shortly.
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#1B365D] mb-1">
+                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#103E3B] mb-1">
                       YOUR NAME
                     </label>
                     <input
@@ -78,12 +78,12 @@ export const ContactSection: React.FC = () => {
                       placeholder="Full Name"
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      className="w-full px-3 py-2 bg-[#F8F5EE] border border-[#D5D0C5] rounded-md text-xs text-slate-800 focus:outline-none focus:border-[#1B365D]"
+                      className="w-full px-3 py-2 bg-[#F8F5EE] border border-[#D5D0C5] rounded-md text-xs text-slate-800 focus:outline-none focus:border-[#103E3B]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#1B365D] mb-1">
+                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#103E3B] mb-1">
                       EMAIL ADDRESS
                     </label>
                     <input
@@ -92,18 +92,18 @@ export const ContactSection: React.FC = () => {
                       placeholder="you@domain.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3 py-2 bg-[#F8F5EE] border border-[#D5D0C5] rounded-md text-xs text-slate-800 focus:outline-none focus:border-[#1B365D]"
+                      className="w-full px-3 py-2 bg-[#F8F5EE] border border-[#D5D0C5] rounded-md text-xs text-slate-800 focus:outline-none focus:border-[#103E3B]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#1B365D] mb-1">
+                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#103E3B] mb-1">
                       INQUIRY TYPE
                     </label>
                     <select
                       value={formData.inquiryType}
                       onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
-                      className="w-full px-3 py-2 bg-[#F8F5EE] border border-[#D5D0C5] rounded-md text-xs text-slate-800 focus:outline-none focus:border-[#1B365D]"
+                      className="w-full px-3 py-2 bg-[#F8F5EE] border border-[#D5D0C5] rounded-md text-xs text-slate-800 focus:outline-none focus:border-[#103E3B]"
                     >
                       <option value="Admissions & Eligibility">Admissions & Eligibility</option>
                       <option value="Hospital & Industry Collaboration">Hospital & Industry Collaboration</option>
@@ -114,7 +114,7 @@ export const ContactSection: React.FC = () => {
 
                   <button
                     type="submit"
-                    className="w-full py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#1B365D] hover:bg-[#162E50] shadow-sm transition-all"
+                    className="w-full py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#103E3B] hover:bg-[#0D3330] shadow-sm transition-all"
                   >
                     SUBMIT INQUIRY →
                   </button>

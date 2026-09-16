@@ -113,7 +113,7 @@ export const USPTiles: React.FC = () => {
             <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
               CAREER PATHWAYS
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#1B365D] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
               Internships & Placements
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-1 max-w-3xl font-sans">
@@ -125,10 +125,10 @@ export const USPTiles: React.FC = () => {
             
             {/* Card 01 */}
             <div className="bg-[#EFECE6] p-6 rounded-2xl border border-[#E2DDD3] shadow-xs space-y-4">
-              <div className="w-10 h-10 rounded-lg bg-[#F8F5EE] border border-[#D5D0C5] flex items-center justify-center text-xs font-bold text-[#1B365D]">
+              <div className="w-10 h-10 rounded-lg bg-[#F8F5EE] border border-[#D5D0C5] flex items-center justify-center text-xs font-bold text-[#103E3B]">
                 01
               </div>
-              <h3 className="text-lg font-serif font-bold text-[#1B365D]">
+              <h3 className="text-lg font-serif font-bold text-[#103E3B]">
                 Hospital Clinical Rotations
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-sans">
@@ -138,10 +138,10 @@ export const USPTiles: React.FC = () => {
 
             {/* Card 02 */}
             <div className="bg-[#EFECE6] p-6 rounded-2xl border border-[#E2DDD3] shadow-xs space-y-4">
-              <div className="w-10 h-10 rounded-lg bg-[#F8F5EE] border border-[#D5D0C5] flex items-center justify-center text-xs font-bold text-[#1B365D]">
+              <div className="w-10 h-10 rounded-lg bg-[#F8F5EE] border border-[#D5D0C5] flex items-center justify-center text-xs font-bold text-[#103E3B]">
                 02
               </div>
-              <h3 className="text-lg font-serif font-bold text-[#1B365D]">
+              <h3 className="text-lg font-serif font-bold text-[#103E3B]">
                 Industry Internships
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-sans">
@@ -151,15 +151,15 @@ export const USPTiles: React.FC = () => {
 
             {/* Card 03 */}
             <div className="bg-[#EFECE6] p-6 rounded-2xl border border-[#E2DDD3] shadow-xs space-y-4">
-              <div className="w-10 h-10 rounded-lg bg-[#F8F5EE] border border-[#D5D0C5] flex items-center justify-center text-xs font-bold text-[#1B365D]">
+              <div className="w-10 h-10 rounded-lg bg-[#F8F5EE] border border-[#D5D0C5] flex items-center justify-center text-xs font-bold text-[#103E3B]">
                 03
               </div>
-              <h3 className="text-lg font-serif font-bold text-[#1B365D]">
+              <h3 className="text-lg font-serif font-bold text-[#103E3B]">
                 Key Recruiting Sectors
               </h3>
               <div className="flex flex-wrap gap-2 pt-1">
                 {recruiters.map((r, i) => (
-                  <span key={i} className="px-2.5 py-1 bg-[#F8F5EE] text-[10px] font-bold text-[#1B365D] border border-[#D5D0C5] rounded">
+                  <span key={i} className="px-2.5 py-1 bg-[#F8F5EE] text-[10px] font-bold text-[#103E3B] border border-[#D5D0C5] rounded">
                     {r}
                   </span>
                 ))}

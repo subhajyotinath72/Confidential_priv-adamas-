@@ -94,14 +94,14 @@ export const HeroCarousel: React.FC = () => {
                 href="https://adamasuniversity.ac.in/adamas-university/#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#1B365D] hover:bg-[#162E50] shadow-sm transition-all"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#103E3B] hover:bg-[#0D3330] shadow-sm transition-all"
               >
                 APPLY FOR ADMISSIONS <span className="ml-2">→</span>
               </a>
 
               <Link
                 href="/gallery"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-[#1B365D] bg-[#EFECE6] border border-[#D5D0C5] hover:bg-[#E5E0D5] transition-all"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-[#103E3B] bg-[#EFECE6] border border-[#D5D0C5] hover:bg-[#E5E0D5] transition-all"
               >
                 VIEW DEPARTMENT GALLERY
               </Link>
@@ -122,9 +122,9 @@ export const HeroCarousel: React.FC = () => {
                       alt={lab.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1B365D]/80 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#103E3B]/80 via-transparent to-transparent" />
                     <div className="absolute bottom-2 left-2 right-2">
-                      <span className="inline-block px-2 py-1 bg-[#1B365D]/90 text-[9px] font-bold text-white uppercase tracking-wider rounded backdrop-blur-sm border border-white/10">
+                      <span className="inline-block px-2 py-1 bg-[#103E3B]/90 text-[9px] font-bold text-white uppercase tracking-wider rounded backdrop-blur-sm border border-white/10">
                         {lab.title}
                       </span>
                     </div>

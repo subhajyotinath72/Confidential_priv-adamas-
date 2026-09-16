@@ -35,10 +35,7 @@ export const Navbar: React.FC = () => {
       name: "Admission",
       href: "/admission",
       dropdown: [
-        { name: "B.Tech in Biomedical Eng.", href: "/admission#btech-bme", desc: "4-Year Undergraduate Honors" },
-        { name: "M.Tech in Biomedical Eng.", href: "/admission#mtech-bme", desc: "2-Year Postgraduate R&D" },
-        { name: "Ph.D. Doctoral Fellowships", href: "/admission#phd-bme", desc: "Research Doctorate Fellowships" },
-        { name: "AUAT Admission 2026", href: "https://adamasuniversity.ac.in/adamas-university/#", desc: "Official Online Application Portal" },
+        { name: "B.Tech in Biomedical Eng.", href: "/admission#btech-bme", desc: "4-Year Undergraduate Honors Program" },
       ],
     },
     {
@@ -81,28 +78,41 @@ export const Navbar: React.FC = () => {
           : "bg-[#103E3B] text-[#F7D6C8] py-3.5 border-b border-white/10"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+      <div className="w-full px-2 sm:px-4 lg:px-6">
+        <div className="flex items-center justify-between gap-2 lg:gap-4">
           
           {/* Brand Logo */}
-          <Link href="/" className="flex items-center space-x-3 group flex-shrink-0">
-            <div className="w-9 h-9 rounded-md bg-[#F7D6C8]/20 p-1 border border-[#F7D6C8]/40 flex items-center justify-center group-hover:scale-105 transition-transform">
-              <div className="w-full h-full bg-[#103E3B] rounded flex items-center justify-center">
-                <Activity className="w-5 h-5 text-[#F7D6C8]" />
-              </div>
+          <Link href="/" className="flex items-center space-x-2 group flex-shrink-0">
+            {/* Adamas NAAC Grade A Logo */}
+            <div className="h-10 sm:h-12 px-2 rounded-md bg-white p-0.5 border border-[#F7D6C8]/40 flex items-center justify-center group-hover:scale-105 transition-transform shadow-sm">
+              <img
+                src="/adamas-naac-logo.png"
+                alt="Adamas University NAAC Grade A Logo"
+                className="h-full w-auto object-contain rounded-xs"
+              />
             </div>
+
+            {/* BME Emblem */}
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-md overflow-hidden bg-black/30 p-0.5 border border-[#F7D6C8]/40 flex items-center justify-center group-hover:scale-105 transition-transform shadow-sm">
+              <img
+                src="/bme-logo.png"
+                alt="Department of Biomedical Engineering Logo"
+                className="w-full h-full object-contain rounded"
+              />
+            </div>
+
             <div className="flex flex-col">
-              <span className="text-[9px] font-bold tracking-widest text-[#F7D6C8] uppercase">
+              <span className="text-[8.5px] font-bold tracking-widest text-[#F7D6C8] uppercase leading-tight">
                 ADAMAS UNIVERSITY
               </span>
-              <span className="text-sm font-serif font-semibold text-white tracking-tight leading-tight group-hover:text-[#F7D6C8] transition-colors">
+              <span className="text-xs sm:text-sm font-serif font-semibold text-white tracking-tight leading-tight group-hover:text-[#F7D6C8] transition-colors whitespace-nowrap">
                 Department of Biomedical Engineering
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center space-x-0.5 xl:space-x-1.5 flex-shrink">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
 
@@ -116,19 +126,19 @@ export const Navbar: React.FC = () => {
                   >
                     <Link
                       href={link.href}
-                      className={`flex items-center px-3 py-1.5 rounded text-[11px] font-bold tracking-wider uppercase transition-colors ${
+                      className={`flex items-center px-2 xl:px-3 py-1.5 rounded text-[10px] xl:text-[11px] font-bold tracking-wider uppercase transition-colors whitespace-nowrap ${
                         isActive
                           ? "text-[#103E3B] bg-[#F7D6C8]"
                           : "text-[#F7D6C8] hover:text-white hover:bg-white/10"
                       }`}
                     >
                       <span>{link.name}</span>
-                      <ChevronDown className="w-3 h-3 ml-1 text-[#F7D6C8]" />
+                      <ChevronDown className="w-2.5 h-2.5 ml-0.5 xl:ml-1 text-[#F7D6C8]" />
                     </Link>
 
                     {/* Mega-menu Dropdown */}
                     {activeDropdown === link.name && (
-                      <div className="absolute left-0 top-full pt-2 w-72 animate-in fade-in slide-in-from-top-2 duration-200">
+                      <div className="absolute left-0 top-full pt-2 w-72 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
                         <div className="bg-[#103E3B] border border-white/20 rounded-xl shadow-2xl p-2.5 backdrop-blur-xl">
                           <div className="text-[10px] font-bold text-[#F7D6C8] uppercase px-2 py-1 mb-1 border-b border-white/10">
                             {link.name} Options
@@ -158,7 +168,7 @@ export const Navbar: React.FC = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-3 py-1.5 rounded text-[11px] font-bold tracking-wider uppercase transition-colors ${
+                  className={`px-2 xl:px-3 py-1.5 rounded text-[10px] xl:text-[11px] font-bold tracking-wider uppercase transition-colors whitespace-nowrap ${
                     isActive
                       ? "text-[#103E3B] bg-[#F7D6C8]"
                       : "text-[#F7D6C8] hover:text-white hover:bg-white/10"
@@ -171,10 +181,10 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Desktop Right CTA Button */}
-          <div className="hidden lg:flex items-center space-x-2">
+          <div className="hidden lg:flex items-center space-x-2 flex-shrink-0">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-4 py-1.5 text-xs font-bold tracking-wider text-[#103E3B] bg-[#F7D6C8] hover:bg-[#FCECE4] rounded-full shadow-md uppercase transition-all"
+              className="inline-flex items-center justify-center px-3 xl:px-4 py-1.5 text-[11px] xl:text-xs font-bold tracking-wider text-[#103E3B] bg-[#F7D6C8] hover:bg-[#FCECE4] rounded-full shadow-md uppercase transition-all whitespace-nowrap"
             >
               CONTACT US
             </Link>

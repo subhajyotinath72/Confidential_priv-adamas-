@@ -3,8 +3,8 @@ import { Phone, Mail, MapPin, ExternalLink, Award } from "lucide-react";
 
 export const TopBar: React.FC = () => {
   return (
-    <div className="bg-[#0D3330] text-[#F7D6C8] text-xs py-2 px-4 border-b border-white/10 hidden md:block font-sans">
-      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+    <div className="bg-[#0D3330] text-[#F7D6C8] text-xs py-2 border-b border-white/10 hidden md:block font-sans">
+      <div className="w-full px-2 sm:px-4 lg:px-6 flex flex-wrap items-center justify-between gap-4">
         {/* Left: Institution context & location */}
         <div className="flex items-center space-x-6">
           <span className="flex items-center text-[#F7D6C8] font-bold">

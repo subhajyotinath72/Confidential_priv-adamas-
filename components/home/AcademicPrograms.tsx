@@ -7,9 +7,7 @@ import { ACADEMIC_PROGRAMS, SPECIALIZATION_CHIPS } from "@/data/programs";
 import { GraduationCap, Clock, Award, ArrowRight, CheckCircle, Sparkles, BookOpen } from "lucide-react";
 
 export const AcademicPrograms: React.FC = () => {
-  const [selectedDegree, setSelectedDegree] = React.useState<"btech" | "mtech" | "phd">("btech");
-
-  const currentProgram = ACADEMIC_PROGRAMS.find((p) => p.id.startsWith(selectedDegree)) || ACADEMIC_PROGRAMS[0];
+  const currentProgram = ACADEMIC_PROGRAMS[0];
 
   return (
     <section id="programs" className="bg-white py-12 lg:py-20 border-b border-slate-200">
@@ -27,42 +25,8 @@ export const AcademicPrograms: React.FC = () => {
 
         {/* Subtitle */}
         <p className="text-sm sm:text-base text-[#103E3B]/80 mt-1 mb-8 font-sans">
-          Direct admission pathways for undergraduate B.Tech, M.Tech, and Ph.D. programs.
+          Direct admission pathways for B.Tech in Biomedical Engineering.
         </p>
-
-        {/* Degree Selection Tabs */}
-        <div className="flex space-x-2 mb-6 border-b border-slate-200 pb-3">
-          <button
-            onClick={() => setSelectedDegree("btech")}
-            className={`px-4 py-1.5 rounded-md text-xs font-bold uppercase tracking-wider transition-colors ${
-              selectedDegree === "btech"
-                ? "bg-[#103E3B] text-white"
-                : "bg-slate-100 text-[#103E3B] hover:bg-slate-200"
-            }`}
-          >
-            B.Tech (Undergraduate)
-          </button>
-          <button
-            onClick={() => setSelectedDegree("mtech")}
-            className={`px-4 py-1.5 rounded-md text-xs font-bold uppercase tracking-wider transition-colors ${
-              selectedDegree === "mtech"
-                ? "bg-[#103E3B] text-white"
-                : "bg-slate-100 text-[#103E3B] hover:bg-slate-200"
-            }`}
-          >
-            M.Tech (Postgraduate)
-          </button>
-          <button
-            onClick={() => setSelectedDegree("phd")}
-            className={`px-4 py-1.5 rounded-md text-xs font-bold uppercase tracking-wider transition-colors ${
-              selectedDegree === "phd"
-                ? "bg-[#103E3B] text-white"
-                : "bg-slate-100 text-[#103E3B] hover:bg-slate-200"
-            }`}
-          >
-            Ph.D. (Doctoral)
-          </button>
-        </div>
 
         {/* 2 Side-by-Side Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">

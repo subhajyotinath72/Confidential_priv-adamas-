@@ -104,7 +104,7 @@ export const NewsAndEvents: React.FC = () => {
                       {item.tag}
                     </span>
                   </div>
-                  <h3 className="text-base font-serif font-bold text-[#1B365D]">
+                  <h3 className="text-base font-serif font-bold text-[#103E3B]">
                     {item.title}
                   </h3>
                   <p className="text-xs text-slate-600 font-sans line-clamp-1 max-w-2xl">
@@ -117,7 +117,7 @@ export const NewsAndEvents: React.FC = () => {
               <div className="flex-shrink-0 pt-2 sm:pt-0">
                 <Link
                   href={item.href}
-                  className="text-xs font-bold text-[#1B365D] hover:text-[#B58A28] transition-colors"
+                  className="text-xs font-bold text-[#103E3B] hover:text-[#B58A28] transition-colors"
                 >
                   {item.linkText}
                 </Link>

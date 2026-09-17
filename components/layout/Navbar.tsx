@@ -76,9 +76,9 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between gap-2 lg:gap-4">
 
           {/* Brand Logo */}
-          <Link href="/" className="flex items-center space-x-2.5 sm:space-x-3 group flex-shrink-0">
+          <Link href="/" className="flex items-center space-x-3 sm:space-x-4 group flex-shrink-0">
             {/* Adamas NAAC Grade A Logo */}
-            <div className="h-11 sm:h-13 md:h-14 py-0.5 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <div className="h-14 sm:h-16 md:h-20 py-0.5 flex items-center justify-center group-hover:scale-105 transition-transform">
               <img
                 src="/adamas-logo-light.png"
                 alt="Adamas University NAAC Grade A Logo"

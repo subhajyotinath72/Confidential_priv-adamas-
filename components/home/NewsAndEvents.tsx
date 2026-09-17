@@ -122,8 +122,12 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
   const marqueeItems = [...items, ...items];
 
   return (
-    <section id="news" className="bg-white py-12 lg:py-16 border-b border-slate-200 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="news" className="bg-gradient-to-br from-slate-100/80 via-white to-teal-50/30 py-12 lg:py-16 border-b border-slate-200 overflow-hidden relative">
+      {/* Background Glass Ambient Blobs */}
+      <div className="absolute top-1/2 right-0 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="flex items-end justify-between mb-8">
@@ -156,7 +160,7 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
                 <Link
                   key={idx}
                   href="/news"
-                  className="w-[300px] sm:w-[360px] flex-shrink-0 bg-slate-50/80 backdrop-blur-md hover:bg-white/95 p-5 rounded-2xl border border-slate-200/90 hover:border-[#103E3B]/40 shadow-xs hover:shadow-xl transition-all duration-300 cursor-pointer group space-y-3"
+                  className="w-[300px] sm:w-[360px] flex-shrink-0 glass-slate p-5 rounded-2xl cursor-pointer group space-y-3"
                 >
                   <div className="flex items-center justify-between">
                     <div className="bg-white border border-slate-200 rounded-lg px-3 py-1 flex items-center space-x-2">

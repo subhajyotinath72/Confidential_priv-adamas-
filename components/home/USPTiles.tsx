@@ -69,8 +69,12 @@ export const USPTiles: React.FC = () => {
     <div className="space-y-0">
       
       {/* 2. Internships & Placements */}
-      <section className="bg-white py-12 lg:py-16 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-slate-50 via-teal-50/30 to-amber-50/20 py-12 lg:py-16 border-b border-slate-200 relative overflow-hidden">
+        {/* Glowing Glass Ambient Orbs */}
+        <div className="absolute top-10 left-10 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           <div className="mb-8">
             <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
@@ -105,7 +109,7 @@ export const USPTiles: React.FC = () => {
               ]).map((card, index) => (
                 <div
                   key={index}
-                  className="w-[300px] sm:w-[360px] flex-shrink-0 bg-[#EFECE6]/80 backdrop-blur-md hover:bg-[#EFECE6]/95 p-6 rounded-2xl border border-[#E2DDD3] hover:border-[#103E3B]/40 shadow-xs hover:shadow-xl transition-all duration-300 space-y-4"
+                  className="w-[300px] sm:w-[360px] flex-shrink-0 glass-card p-6 rounded-2xl space-y-4"
                 >
                   <div className="w-10 h-10 rounded-lg bg-[#F8F5EE] border border-[#D5D0C5] flex items-center justify-center text-xs font-bold text-[#103E3B]">
                     {card.id}

@@ -49,17 +49,9 @@ export const Navbar: React.FC = () => {
         { name: "Distinguished Alumni", href: "/people#alumni", desc: "MedTech & Academia Leaders" },
       ],
     },
+
     {
-      name: "Opportunities",
-      href: "/opportunities",
-      dropdown: [
-        { name: "Student Fellowships & Grants", href: "/opportunities#fellowships", desc: "DST & University Seed Grants" },
-        { name: "Clinical Internships", href: "/opportunities#internships", desc: "Kolkata Hospital Rotations" },
-        { name: "Career & Research Openings", href: "/opportunities#careers", desc: "RA, JRF & Postdoc Positions" },
-      ],
-    },
-    {
-      name: "Collaboration",
+      name: "Reserach & Collaboration",
       href: "/collaboration",
       dropdown: [
         { name: "Hospital Clinical MoUs", href: "/partnerships#hospitals", desc: "Super-Specialty Hospital Networks" },

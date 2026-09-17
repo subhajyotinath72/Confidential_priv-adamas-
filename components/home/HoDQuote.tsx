@@ -63,8 +63,8 @@ export const HoDQuote: React.FC = () => {
               Through immersive hands-on training across advanced cleanrooms, bio-MEMS sensors, medical robotics, and direct clinical internships in top-tier hospital wards, our scholars bridge theory with bedside clinical impact. We invite you to explore our vibrant labs, collaborate on translational discoveries, and shape the next horizon of healthcare engineering.
             </p>
 
-            {/* Signature & Button */}
-            <div className="pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-[#E2DDD3]">
+            {/* Signature */}
+            <div className="pt-4 border-t border-[#E2DDD3]">
               <div>
                 <div className="font-serif font-bold italic text-[#103E3B] text-lg">
                   Dr. Semanti Chakraborty
@@ -73,13 +73,6 @@ export const HoDQuote: React.FC = () => {
                   Biomedical Innovation Complex, Adamas University
                 </div>
               </div>
-
-              <Link
-                href="/people#fac-1"
-                className="inline-flex items-center justify-center px-5 py-2.5 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#103E3B] hover:bg-[#0D3330] transition-all"
-              >
-                READ RESEARCH VISION →
-              </Link>
             </div>
 
           </div>

@@ -76,9 +76,9 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between gap-2 lg:gap-4">
 
           {/* Brand Logo */}
-          <Link href="/" className="flex items-center space-x-2 group flex-shrink-0">
+          <Link href="/" className="flex items-center space-x-2.5 sm:space-x-3 group flex-shrink-0">
             {/* Adamas NAAC Grade A Logo */}
-            <div className="h-10 sm:h-12 px-2 rounded-md bg-white p-0.5 border border-[#F7D6C8]/40 flex items-center justify-center group-hover:scale-105 transition-transform shadow-sm">
+            <div className="h-11 sm:h-13 md:h-14 px-2 sm:px-2.5 rounded-lg bg-white p-1 border border-[#F7D6C8]/40 flex items-center justify-center group-hover:scale-105 transition-transform shadow-md">
               <img
                 src="/adamas-naac-logo.png"
                 alt="Adamas University NAAC Grade A Logo"
@@ -86,10 +86,12 @@ export const Navbar: React.FC = () => {
               />
             </div>
 
-
             <div className="flex flex-col">
-              <span className="text-[12px] font-bold tracking-widest text-[#F7D6C8] uppercase leading-tight">
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-extrabold tracking-wider text-[#F7D6C8] uppercase leading-tight whitespace-nowrap">
                 ADAMAS UNIVERSITY
+              </span>
+              <span className="text-[9px] sm:text-[10px] md:text-[11px] font-bold tracking-widest text-[#F7D6C8]/80 uppercase leading-none whitespace-nowrap hidden sm:block">
+                Department of Biomedical Engineering
               </span>
             </div>
           </Link>

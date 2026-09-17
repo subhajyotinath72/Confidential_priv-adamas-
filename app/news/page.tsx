@@ -25,7 +25,7 @@ export default function NewsPage() {
       </section>
 
       {/* News & Events Component */}
-      <NewsAndEvents />
+      <NewsAndEvents showFullArchive={true} />
 
     </div>
   );

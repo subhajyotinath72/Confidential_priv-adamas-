@@ -111,19 +111,19 @@ export const Navbar: React.FC = () => {
                   >
                     <Link
                       href={link.href}
-                      className={`flex items-center px-2 xl:px-3 py-1.5 rounded text-[10px] xl:text-[11px] font-bold tracking-wider uppercase transition-colors whitespace-nowrap ${isActive
-                        ? "text-[#103E3B] bg-[#F7D6C8]"
-                        : "text-white hover:text-white hover:bg-white/10"
+                      className={`flex items-center px-2.5 xl:px-3 py-1.5 rounded-lg text-[10px] xl:text-[11px] font-bold tracking-wider uppercase transition-all duration-200 whitespace-nowrap ${isActive
+                        ? "text-white bg-white/20 backdrop-blur-md border border-white/30 shadow-xs"
+                        : "text-white/90 hover:text-white hover:bg-white/15 hover:backdrop-blur-md border border-transparent hover:border-white/20"
                         }`}
                     >
                       <span>{link.name}</span>
-                      <ChevronDown className="w-2.5 h-2.5 ml-0.5 xl:ml-1 text-white" />
+                      <ChevronDown className="w-2.5 h-2.5 ml-0.5 xl:ml-1 text-white/80 group-hover:text-white" />
                     </Link>
 
                     {/* Mega-menu Dropdown */}
                     {activeDropdown === link.name && (
                       <div className="absolute left-0 top-full pt-2 w-72 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
-                        <div className="bg-[#103E3B] border border-white/20 rounded-xl shadow-2xl p-2.5 backdrop-blur-xl">
+                        <div className="bg-[#103E3B]/95 border border-white/20 rounded-xl shadow-2xl p-2.5 backdrop-blur-xl">
                           <div className="text-[10px] font-bold text-white uppercase px-2 py-1 mb-1 border-b border-white/10">
                             {link.name} Options
                           </div>
@@ -131,7 +131,7 @@ export const Navbar: React.FC = () => {
                             <a
                               key={item.name}
                               href={item.href}
-                              className="block p-2 rounded-lg hover:bg-white/10 transition-colors group"
+                              className="block p-2 rounded-lg hover:bg-white/15 hover:backdrop-blur-md transition-all duration-200 group border border-transparent hover:border-white/15"
                             >
                               <div className="text-xs font-bold text-white group-hover:text-white">
                                 {item.name}
@@ -152,9 +152,9 @@ export const Navbar: React.FC = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-2 xl:px-3 py-1.5 rounded text-[10px] xl:text-[11px] font-bold tracking-wider uppercase transition-colors whitespace-nowrap ${isActive
-                    ? "text-[#103E3B] bg-[#F7D6C8]"
-                    : "text-white hover:text-white hover:bg-white/10"
+                  className={`px-2.5 xl:px-3 py-1.5 rounded-lg text-[10px] xl:text-[11px] font-bold tracking-wider uppercase transition-all duration-200 whitespace-nowrap ${isActive
+                    ? "text-white bg-white/20 backdrop-blur-md border border-white/30 shadow-xs"
+                    : "text-white/90 hover:text-white hover:bg-white/15 hover:backdrop-blur-md border border-transparent hover:border-white/20"
                     }`}
                 >
                   {link.name}
@@ -167,7 +167,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-2 flex-shrink-0">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-3 xl:px-4 py-1.5 text-[11px] xl:text-xs font-bold tracking-wider text-[#103E3B] bg-[#F7D6C8] hover:bg-[#FCECE4] rounded-full shadow-md uppercase transition-all whitespace-nowrap"
+              className="inline-flex items-center justify-center px-3.5 xl:px-4.5 py-1.5 text-[11px] xl:text-xs font-bold tracking-wider text-white bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/25 hover:border-white/40 rounded-full shadow-md uppercase transition-all duration-200 whitespace-nowrap hover:shadow-lg hover:scale-[1.02]"
             >
               CONTACT US
             </Link>
@@ -177,7 +177,7 @@ export const Navbar: React.FC = () => {
           <div className="flex lg:hidden items-center space-x-2">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none"
+              className="p-2 rounded-lg text-white hover:bg-white/15 hover:backdrop-blur-md border border-transparent hover:border-white/20 transition-all duration-200 focus:outline-none"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -188,37 +188,44 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#103E3B] border-b border-white/10 px-4 pt-2 pb-6 space-y-2 animate-in slide-in-from-top duration-200">
-          {navLinks.map((link) => (
-            <div key={link.name}>
-              <Link
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-2 rounded-md text-sm font-bold text-white hover:bg-white/10 uppercase tracking-wider"
-              >
-                {link.name}
-              </Link>
-              {link.dropdown && (
-                <div className="pl-4 space-y-1 mt-1 border-l border-white/10 ml-2">
-                  {link.dropdown.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block px-3 py-1 rounded-md text-xs text-white/80 hover:text-white"
-                    >
-                      • {item.name}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
+        <div className="lg:hidden bg-[#103E3B]/95 backdrop-blur-xl border-b border-white/10 px-4 pt-2 pb-6 space-y-2 animate-in slide-in-from-top duration-200">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <div key={link.name}>
+                <Link
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`block px-3 py-2 rounded-lg text-sm font-bold uppercase tracking-wider transition-all duration-200 ${
+                    isActive
+                      ? "text-white bg-white/20 backdrop-blur-md border border-white/30"
+                      : "text-white/90 hover:text-white hover:bg-white/15 hover:backdrop-blur-md border border-transparent hover:border-white/20"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+                {link.dropdown && (
+                  <div className="pl-4 space-y-1 mt-1 border-l border-white/10 ml-2">
+                    {link.dropdown.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block px-3 py-1 rounded-md text-xs text-white/80 hover:text-white hover:bg-white/10 hover:backdrop-blur-sm transition-colors"
+                      >
+                        • {item.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
           <div className="pt-3 border-t border-white/10">
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center block py-2.5 text-xs font-bold text-[#103E3B] bg-[#F7D6C8] rounded-full shadow-md uppercase tracking-wider"
+              className="w-full text-center block py-2.5 text-xs font-bold text-white bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/25 hover:border-white/40 rounded-full shadow-md uppercase tracking-wider transition-all duration-200"
             >
               CONTACT US
             </Link>

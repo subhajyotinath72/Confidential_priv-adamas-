@@ -90,9 +90,6 @@ export const Navbar: React.FC = () => {
               <span className="text-[8.5px] font-bold tracking-widest text-[#F7D6C8] uppercase leading-tight">
                 ADAMAS UNIVERSITY
               </span>
-              <span className="text-xs sm:text-sm font-serif font-semibold text-white tracking-tight leading-tight group-hover:text-[#F7D6C8] transition-colors whitespace-nowrap">
-                Department of Biomedical Engineering
-              </span>
             </div>
           </Link>
 

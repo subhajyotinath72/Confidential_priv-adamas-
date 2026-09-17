@@ -34,14 +34,9 @@ export const ProgramDetailView: React.FC = () => {
     { id: "about", label: "About" },
     { id: "vision-mission", label: "Vision & Mission" },
     { id: "faculty-members", label: "Faculty Members" },
-    { id: "technical-assistants", label: "Technical Assistants" },
-     { id: "cos-bme", label: "All COs of BME" },
     { id: "courses-offered", label: "Courses Offered" },
-    { id: "lesson-plan", label: "Lesson Plan" },
     { id: "laboratories", label: "Laboratories" },
-    { id: "projects-consultancy", label: "Projects & Consultancy" },
     { id: "events-activities", label: "Events and Activities" },
-    { id: "interaction", label: "Interaction" },
     { id: "awards-honours", label: "Awards & Honours" },
     { id: "sriti-alumni", label: "SRITI - Alumni Reunion" },
   ];
@@ -327,28 +322,6 @@ export const ProgramDetailView: React.FC = () => {
               </div>
             </div>
 
-            {/* 5. Course Outcomes (COs) Card */}
-            <div
-              id="cos-bme"
-              className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm space-y-4 scroll-mt-24 text-slate-800"
-            >
-              <h2 className="text-2xl font-bold text-slate-900 font-serif">
-                All COs of BME (Course Outcomes)
-              </h2>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Our curriculum follows Outcome-Based Education (OBE) guidelines mandated by AICTE & NBA. Every course has mapped Course Outcomes (COs) assessing technical competence, ethical design, and clinical problem-solving.
-              </p>
-              
-              <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-xs space-y-2">
-                <div className="font-bold text-slate-900">Key Outcome Competencies:</div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-700">
-                  <div>✓ CO1: Design bio-instrumentation hardware</div>
-                  <div>✓ CO2: Apply signal processing algorithms</div>
-                  <div>✓ CO3: Formulate biocompatible polymers</div>
-                  <div>✓ CO4: Evaluate clinical device compliance</div>
-                </div>
-              </div>
-            </div>
 
             {/* 6. Laboratories Section */}
             <div

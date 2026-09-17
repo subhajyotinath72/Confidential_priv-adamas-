@@ -33,7 +33,7 @@ export const ProgramDetailView: React.FC = () => {
   const quickLinks = [
     { id: "about", label: "About" },
     { id: "vision-mission", label: "Vision & Mission" },
-    { id: "faculty-members", label: "Faculty Members" },
+    { id: "faculty-members", label: "Faculty Members", href: "/people" },
     { id: "courses-offered", label: "Courses Offered" },
     { id: "laboratories", label: "Laboratories" },
     { id: "events-activities", label: "Events and Activities" },
@@ -71,6 +71,28 @@ export const ProgramDetailView: React.FC = () => {
               <div className="divide-y divide-slate-100 text-xs text-slate-700">
                 {quickLinks.map((link) => {
                   const isActive = activeSection === link.id;
+                  if (link.href) {
+                    return (
+                      <Link
+                        key={link.id}
+                        href={link.href}
+                        className={`w-full px-5 py-3.5 flex items-center justify-between text-left transition-all group ${
+                          isActive
+                            ? "bg-teal-50 text-[#103E3B] font-bold border-l-4 border-[#103E3B]"
+                            : "hover:bg-slate-50 hover:text-slate-900"
+                        }`}
+                      >
+                        <span className="font-medium">{link.label}</span>
+                        <ExternalLink
+                          className={`w-3.5 h-3.5 transition-colors ${
+                            isActive
+                              ? "text-[#103E3B]"
+                              : "text-slate-400 group-hover:text-slate-600"
+                          }`}
+                        />
+                      </Link>
+                    );
+                  }
                   return (
                     <button
                       key={link.id}

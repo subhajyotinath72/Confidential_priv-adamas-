@@ -105,7 +105,7 @@ export const USPTiles: React.FC = () => {
               ]).map((card, index) => (
                 <div
                   key={index}
-                  className="w-[300px] sm:w-[360px] flex-shrink-0 bg-[#EFECE6] p-6 rounded-2xl border border-[#E2DDD3] shadow-xs space-y-4"
+                  className="w-[300px] sm:w-[360px] flex-shrink-0 bg-[#EFECE6]/80 backdrop-blur-md hover:bg-[#EFECE6]/95 p-6 rounded-2xl border border-[#E2DDD3] hover:border-[#103E3B]/40 shadow-xs hover:shadow-xl transition-all duration-300 space-y-4"
                 >
                   <div className="w-10 h-10 rounded-lg bg-[#F8F5EE] border border-[#D5D0C5] flex items-center justify-center text-xs font-bold text-[#103E3B]">
                     {card.id}

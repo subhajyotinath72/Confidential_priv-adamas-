@@ -156,7 +156,7 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
                 <Link
                   key={idx}
                   href="/news"
-                  className="w-[300px] sm:w-[360px] flex-shrink-0 bg-slate-50 hover:bg-slate-100 p-5 rounded-2xl border border-slate-200 hover:border-[#103E3B] shadow-xs space-y-3 transition-all cursor-pointer group"
+                  className="w-[300px] sm:w-[360px] flex-shrink-0 bg-slate-50/80 backdrop-blur-md hover:bg-white/95 p-5 rounded-2xl border border-slate-200/90 hover:border-[#103E3B]/40 shadow-xs hover:shadow-xl transition-all duration-300 cursor-pointer group space-y-3"
                 >
                   <div className="flex items-center justify-between">
                     <div className="bg-white border border-slate-200 rounded-lg px-3 py-1 flex items-center space-x-2">

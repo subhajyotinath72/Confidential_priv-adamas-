@@ -53,3 +53,20 @@
 .shadow-gold {
   box-shadow: 0 0 25px -5px rgba(217, 119, 6, 0.25);
 }
+
+@keyframes scrollVertical {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-vertical-ticker {
+  animation: scrollVertical 22s linear infinite;
+}
+
+.animate-vertical-ticker:hover {
+  animation-play-state: paused;
+}

@@ -1,11 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
-import { MapPin, Navigation, ExternalLink, Compass } from "lucide-react";
+import React from "react";
+import { MapPin, Navigation, ExternalLink } from "lucide-react";
 
 export const CustomMap: React.FC = () => {
-  const [isMapLoaded, setIsMapLoaded] = useState(false);
-
   const BING_MAP_URL =
     "https://www.bing.com/maps/search?name=Adamas+University&trfc=&mepi=0%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&ss=id.ypid%3AYNB328D7AD71F2FCAD&q=Adamas+University&ppois=22.73830795288086_88.45661926269531_Adamas+University&cp=22.738308%7E88.456619&lvl=15";
 
@@ -39,34 +37,12 @@ export const CustomMap: React.FC = () => {
         </a>
       </div>
 
-      {/* Live Map Container with Instant Loading Skeleton */}
-      <div className="relative w-full h-80 sm:h-96 rounded-xl bg-slate-900 border border-slate-200 overflow-hidden shadow-inner flex items-center justify-center">
-        
-        {/* Instant Animated Loading Skeleton (Visible until iframe fires onLoad) */}
-        {!isMapLoaded && (
-          <div className="absolute inset-0 bg-slate-900 flex flex-col items-center justify-center text-white z-10 space-y-3 animate-pulse">
-            <div className="p-3.5 rounded-full bg-teal-500/20 border border-teal-500/30 text-teal-300">
-              <Compass className="w-8 h-8 animate-spin" />
-            </div>
-            <div className="text-center space-y-1">
-              <div className="text-xs font-bold text-white uppercase tracking-wider">
-                Loading Live Campus Map...
-              </div>
-              <div className="text-[10px] text-slate-400">
-                Adamas University • Barasat, Kolkata (24 Parganas North)
-              </div>
-            </div>
-          </div>
-        )}
-
+      {/* Direct Native Live Map Display */}
+      <div className="relative w-full h-80 sm:h-96 rounded-xl bg-slate-100 border border-slate-200 overflow-hidden shadow-inner">
         <iframe
           title="Adamas University Live Campus Location Map"
           src={LIVE_MAP_EMBED_SRC}
-          className={`w-full h-full border-0 rounded-xl transition-opacity duration-500 ${
-            isMapLoaded ? "opacity-100" : "opacity-0"
-          }`}
-          loading="eager"
-          onLoad={() => setIsMapLoaded(true)}
+          className="w-full h-full border-0 rounded-xl"
           allowFullScreen
         />
       </div>
@@ -86,6 +62,7 @@ export const CustomMap: React.FC = () => {
     </div>
   );
 };
+
 
 
 

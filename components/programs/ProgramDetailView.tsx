@@ -36,7 +36,7 @@ export const ProgramDetailView: React.FC = () => {
     { id: "faculty-members", label: "Faculty Members", href: "/people" },
     { id: "courses-offered", label: "Courses Offered" },
     { id: "laboratories", label: "Laboratories" },
-    { id: "events-activities", label: "Events and Activities" },
+    { id: "events-activities", label: "Events and Activities", href: "/news" },
     { id: "awards-honours", label: "Awards & Honours" },
     { id: "sriti-alumni", label: "SRITI - Alumni Reunion" },
   ];

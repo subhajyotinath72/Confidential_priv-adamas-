@@ -4,7 +4,7 @@ import React from "react";
 import { ProgramDetailView } from "@/components/programs/ProgramDetailView";
 import { GraduationCap } from "lucide-react";
 
-export default function ProgramsPage() {
+export default function DynamicProgramPage() {
   return (
     <div className="bg-slate-50 min-h-screen">
       
@@ -16,10 +16,10 @@ export default function ProgramsPage() {
             <span>School of Engineering & Technology • Adamas University</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-serif">
-            Academic Programs & Curriculum
+            B.Tech in Biomedical Engineering
           </h1>
           <p className="text-xs sm:text-sm text-[#F7D6C8]/90 max-w-3xl mx-auto leading-relaxed">
-            Pioneering clinical-oriented biomedical education in Eastern India. Explore our AICTE-approved 4-Year B.Tech in Biomedical Engineering.
+            4-Year AICTE Approved Undergraduate Honors Degree • Department of Biomedical Engineering
           </p>
         </div>
       </section>
@@ -30,4 +30,3 @@ export default function ProgramsPage() {
     </div>
   );
 }
-

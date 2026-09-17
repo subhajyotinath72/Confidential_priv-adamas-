@@ -1,8 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import { Activity } from "lucide-react";
+import { Activity, MapPin } from "lucide-react";
 
 export const Footer: React.FC = () => {
+  const BING_MAP_URL =
+    "https://www.bing.com/maps/search?name=Adamas+University&trfc=&mepi=0%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&ss=id.ypid%3AYNB328D7AD71F2FCAD&q=Adamas+University&ppois=22.73830795288086_88.45661926269531_Adamas+University&cp=22.738308%7E88.456619&lvl=15";
+
   return (
     <footer className="bg-[#103E3B] text-[#F7D6C8] border-t border-white/10 pt-12 pb-8 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
@@ -108,12 +111,19 @@ export const Footer: React.FC = () => {
           <p>
             © 2025 Department of Biomedical Engineering, Adamas University. All rights reserved.
           </p>
-          <p>
-            Barasat–Barrackpore Road, Kolkata 700126
-          </p>
+          <a
+            href={BING_MAP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center hover:text-white transition-colors text-[#F7D6C8]"
+          >
+            <MapPin className="w-3.5 h-3.5 mr-1.5 text-[#F7D6C8]" />
+            <span>Barasat–Barrackpore Road, Kolkata 700126 (View Map ↗)</span>
+          </a>
         </div>
 
       </div>
     </footer>
   );
 };
+

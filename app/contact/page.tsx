@@ -222,8 +222,6 @@ export default function ContactPage() {
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:border-teal-600 focus:bg-white focus:outline-none"
                   >
                     <option>B.Tech in Biomedical Engineering (4 Years)</option>
-                    <option>M.Tech in Biomedical Engineering (2 Years)</option>
-                    <option>Ph.D. Doctoral Fellowship</option>
                   </select>
                 </div>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { FrontVideo } from "@/components/home/FrontVideo";
+import { RollingTicker } from "@/components/home/RollingTicker";
 import { HeroCarousel } from "@/components/home/HeroCarousel";
 import { USPTiles } from "@/components/home/USPTiles";
 import { HoDQuote } from "@/components/home/HoDQuote";
@@ -15,6 +16,9 @@ export default function Home() {
     <div className="bg-white text-[#103E3B] space-y-0">
       {/* 0. Front Page Auto-Playing Video Section */}
       <FrontVideo />
+
+      {/* 0.5 Linear Infinite Text Motion Ticker */}
+      <RollingTicker />
 
       {/* 1. Hero Section */}
       <HeroCarousel />

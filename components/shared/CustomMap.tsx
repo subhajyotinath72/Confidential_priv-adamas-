@@ -1,125 +1,59 @@
 "use client";
 
-import React, { useState } from "react";
-import { MapPin, Navigation, Compass, ExternalLink, Building2, Hospital, Layers } from "lucide-react";
+import React from "react";
+import { MapPin, Navigation, ExternalLink } from "lucide-react";
 
 export const CustomMap: React.FC = () => {
-  const [selectedPoint, setSelectedPoint] = useState<string>("set");
+  const BING_MAP_URL =
+    "https://www.bing.com/maps/search?name=Adamas+University&trfc=&mepi=0%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&ss=id.ypid%3AYNB328D7AD71F2FCAD&q=Adamas+University&ppois=22.73830795288086_88.45661926269531_Adamas+University&cp=22.738308%7E88.456619&lvl=15";
 
-  const campusPoints = [
-    {
-      id: "set",
-      name: "School of Engineering & Technology (SET Building)",
-      type: "Academic Hub",
-      desc: "Houses the Department of Biomedical Engineering, Bio-Electronics Labs, Cleanrooms, and Faculty Offices.",
-      coords: { x: "48%", y: "42%" },
-      icon: Building2,
-    },
-    {
-      id: "hospital",
-      name: "Clinical Immersion Partner Hospital",
-      type: "Clinical Partner",
-      desc: "Primary location for B.Tech & M.Tech hospital rotations, radiology equipment practice, and ICU monitoring studies.",
-      coords: { x: "72%", y: "30%" },
-      icon: Hospital,
-    },
-    {
-      id: "bioprint",
-      name: "3D Bioprinting & Tissue Culture Center",
-      type: "Advanced R&D Lab",
-      desc: "Class-1000 cleanroom suite for polymer scaffold formulation and cell incubator facilities.",
-      coords: { x: "32%", y: "65%" },
-      icon: Layers,
-    },
-  ];
-
-  const active = campusPoints.find((p) => p.id === selectedPoint) || campusPoints[0];
+  // Fast Google Maps embed for coordinates 22.738308, 88.456619 (Adamas University)
+  const LIVE_MAP_EMBED_SRC =
+    "https://maps.google.com/maps?q=22.738308,88.456619&hl=en&z=15&output=embed";
 
   return (
-    <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-md p-6 relative text-slate-900">
+    <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm p-4 sm:p-6 relative text-slate-900">
       
       {/* Map Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-200 mb-4">
         <div>
-          <span className="text-[10px] font-bold text-amber-700 uppercase tracking-widest">
-            Interactive Campus Map
+          <span className="text-[10px] font-bold text-amber-700 uppercase tracking-widest block mb-0.5">
+            Campus Live Location
           </span>
-          <h3 className="text-lg font-bold text-slate-900 flex items-center">
-            <Compass className="w-5 h-5 mr-2 text-teal-600" />
-            Adamas University Campus • Kolkata (24 Parganas North)
+          <h3 className="text-base sm:text-lg font-bold text-slate-900 flex items-center">
+            <MapPin className="w-5 h-5 mr-2 text-teal-600 flex-shrink-0" />
+            Adamas University Campus • Barasat, Kolkata
           </h3>
         </div>
+
         <a
-          href="https://maps.google.com/?q=Adamas+University+Barasat+Barrackpore+Road+Kolkata"
+          href={BING_MAP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-xs font-bold text-teal-700 hover:underline"
+          className="inline-flex items-center text-xs font-bold px-3.5 py-2 rounded-xl bg-teal-50 text-teal-800 border border-teal-200 hover:bg-teal-100 transition-colors shadow-2xs self-start sm:self-auto"
         >
-          <span>Open in Google Maps</span>
-          <ExternalLink className="w-3.5 h-3.5 ml-1" />
+          <span>Open in Bing Maps</span>
+          <ExternalLink className="w-3.5 h-3.5 ml-1.5" />
         </a>
       </div>
 
-      {/* SVG Canvas Map Representation */}
-      <div className="relative w-full h-80 sm:h-96 rounded-xl bg-slate-900 border border-slate-800 overflow-hidden flex items-center justify-center">
-        
-        {/* Styled Background Grid Lines */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#0d948820_1px,transparent_1px),linear-gradient(to_bottom,#0d948820_1px,transparent_1px)] bg-[size:32px_32px]" />
-        
-        {/* Campus Road Paths SVG */}
-        <svg className="absolute inset-0 w-full h-full stroke-teal-500/30 fill-none" strokeWidth="3">
-          <path d="M 50 300 Q 200 150 400 200 T 800 100" strokeDasharray="6 6" />
-          <path d="M 200 50 Q 250 200 500 350" />
-        </svg>
-
-        {/* Interactive Pin Markers */}
-        {campusPoints.map((pt) => {
-          const isSelected = pt.id === selectedPoint;
-          const Icon = pt.icon;
-          return (
-            <button
-              key={pt.id}
-              onClick={() => setSelectedPoint(pt.id)}
-              style={{ left: pt.coords.x, top: pt.coords.y }}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 group focus:outline-none z-20"
-            >
-              <div
-                className={`p-3 rounded-full border-2 transition-all ${
-                  isSelected
-                    ? "bg-amber-500 border-white text-slate-900 shadow-lg scale-125"
-                    : "bg-slate-900 border-teal-400 text-teal-300 hover:scale-110"
-                }`}
-              >
-                <Icon className="w-5 h-5" />
-              </div>
-              <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 bg-slate-900/95 text-white text-[10px] font-bold px-2 py-0.5 rounded border border-slate-700 whitespace-nowrap shadow-md">
-                {pt.name.split(" ")[0]}
-              </span>
-            </button>
-          );
-        })}
-
-        {/* Selected Marker Detail Card Box overlay */}
-        <div className="absolute bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:w-80 bg-slate-900/95 backdrop-blur-md p-4 rounded-xl border border-teal-500/40 shadow-2xl z-30 space-y-2 text-white">
-          <div className="flex items-center justify-between">
-            <span className="text-[10px] font-bold text-adamas-gold uppercase px-2 py-0.5 rounded bg-adamas-gold/20">
-              {active.type}
-            </span>
-            <span className="text-[10px] text-slate-400">Click pins to view</span>
-          </div>
-          <h4 className="text-sm font-bold text-white">{active.name}</h4>
-          <p className="text-xs text-slate-300 leading-relaxed">{active.desc}</p>
-        </div>
-
+      {/* Direct Native Live Map Display */}
+      <div className="relative w-full h-80 sm:h-96 rounded-xl bg-slate-100 border border-slate-200 overflow-hidden shadow-inner">
+        <iframe
+          title="Adamas University Live Campus Location Map"
+          src={LIVE_MAP_EMBED_SRC}
+          className="w-full h-full border-0 rounded-xl"
+          allowFullScreen
+        />
       </div>
 
-      {/* Address Text Summary below map */}
+      {/* Address & Direction Info Footer */}
       <div className="mt-4 pt-4 border-t border-slate-200 text-xs text-slate-600 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <div className="flex items-center space-x-2">
           <MapPin className="w-4 h-4 text-amber-600 flex-shrink-0" />
           <span>Barasat–Barrackpore Road, Barbaria, P.O Jagannathpur, Kolkata – 700126, West Bengal</span>
         </div>
-        <div className="flex items-center space-x-1 text-teal-700 font-semibold">
+        <div className="flex items-center space-x-1 text-teal-800 font-semibold">
           <Navigation className="w-3.5 h-3.5" />
           <span>15km from Netaji Subhash Chandra Bose Int'l Airport</span>
         </div>
@@ -128,3 +62,7 @@ export const CustomMap: React.FC = () => {
     </div>
   );
 };
+
+
+
+

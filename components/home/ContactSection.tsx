@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { CustomMap } from "@/components/shared/CustomMap";
 
 export const ContactSection: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -18,7 +19,7 @@ export const ContactSection: React.FC = () => {
 
   return (
     <section id="contact" className="bg-white py-12 lg:py-16 border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
@@ -125,7 +126,13 @@ export const ContactSection: React.FC = () => {
 
         </div>
 
+        {/* Map View of College at Bottom Section */}
+        <div id="campus-map" className="pt-4">
+          <CustomMap />
+        </div>
+
       </div>
     </section>
   );
 };
+

@@ -58,6 +58,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link rel="preconnect" href="https://maps.google.com" />
+        <link rel="dns-prefetch" href="https://maps.google.com" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

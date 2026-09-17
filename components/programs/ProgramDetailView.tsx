@@ -350,25 +350,94 @@ export const ProgramDetailView: React.FC = () => {
               id="laboratories"
               className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm space-y-6 scroll-mt-24 text-slate-800"
             >
-              <h2 className="text-2xl font-bold text-slate-900 font-serif">
-                Department Laboratories & Cleanrooms
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-1">
-                  <h4 className="font-bold text-slate-900">1. Bio-Electronics & Sensors Lab</h4>
-                  <p className="text-slate-600">ECG, EEG, EMG telemetry kits, DSO oscilloscopes, and FPGA bio-amplifiers.</p>
+              <div>
+                <span className="text-[10px] font-bold text-teal-700 uppercase tracking-widest block">
+                  Advanced Facility Infrastructure
+                </span>
+                <h2 className="text-2xl font-bold text-slate-900 font-serif">
+                  Department Laboratories & Cleanrooms
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs">
+                {/* Lab 1 */}
+                <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-3 hover:border-teal-500 transition-colors group">
+                  <div className="relative h-44 w-full rounded-xl overflow-hidden bg-slate-200 border border-slate-200 shadow-xs">
+                    <img
+                      src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=600"
+                      alt="Bio-Electronics & Sensors Lab"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-2 left-2">
+                      <span className="px-2.5 py-1 bg-[#103E3B] text-[9px] font-bold text-white uppercase tracking-wider rounded border border-white/20">
+                        Lab 01
+                      </span>
+                    </div>
+                  </div>
+                  <div className="space-y-1">
+                    <h4 className="text-sm font-bold text-slate-900 font-serif">1. Bio-Electronics & Sensors Lab</h4>
+                    <p className="text-xs text-slate-600 leading-relaxed">ECG, EEG, EMG telemetry kits, DSO oscilloscopes, and FPGA bio-amplifiers.</p>
+                  </div>
                 </div>
-                <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-1">
-                  <h4 className="font-bold text-slate-900">2. 3D Bioprinting & Biomaterials Suite</h4>
-                  <p className="text-slate-600">Extrusion bioprinters, hydrogel formulation, and CO2 incubator facilities.</p>
+
+                {/* Lab 2 */}
+                <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-3 hover:border-teal-500 transition-colors group">
+                  <div className="relative h-44 w-full rounded-xl overflow-hidden bg-slate-200 border border-slate-200 shadow-xs">
+                    <img
+                      src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600"
+                      alt="3D Bioprinting & Biomaterials Suite"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-2 left-2">
+                      <span className="px-2.5 py-1 bg-[#103E3B] text-[9px] font-bold text-white uppercase tracking-wider rounded border border-white/20">
+                        Lab 02
+                      </span>
+                    </div>
+                  </div>
+                  <div className="space-y-1">
+                    <h4 className="text-sm font-bold text-slate-900 font-serif">2. 3D Bioprinting & Biomaterials Suite</h4>
+                    <p className="text-xs text-slate-600 leading-relaxed">Extrusion bioprinters, hydrogel formulation, and CO2 incubator facilities.</p>
+                  </div>
                 </div>
-                <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-1">
-                  <h4 className="font-bold text-slate-900">3. Medical Imaging & PACS Simulation</h4>
-                  <p className="text-slate-600">DICOM processing workstations, ultrasound phantoms, and MATLAB imaging suites.</p>
+
+                {/* Lab 3 */}
+                <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-3 hover:border-teal-500 transition-colors group">
+                  <div className="relative h-44 w-full rounded-xl overflow-hidden bg-slate-200 border border-slate-200 shadow-xs">
+                    <img
+                      src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600"
+                      alt="Medical Imaging & PACS Simulation"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-2 left-2">
+                      <span className="px-2.5 py-1 bg-[#103E3B] text-[9px] font-bold text-white uppercase tracking-wider rounded border border-white/20">
+                        Lab 03
+                      </span>
+                    </div>
+                  </div>
+                  <div className="space-y-1">
+                    <h4 className="text-sm font-bold text-slate-900 font-serif">3. Medical Imaging & PACS Simulation</h4>
+                    <p className="text-xs text-slate-600 leading-relaxed">DICOM processing workstations, ultrasound phantoms, and MATLAB imaging suites.</p>
+                  </div>
                 </div>
-                <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-1">
-                  <h4 className="font-bold text-slate-900">4. Clinical Virtual ICU Simulator</h4>
-                  <p className="text-slate-600">Multi-para monitors, defibrillator testers, and patient simulation mannequins.</p>
+
+                {/* Lab 4 */}
+                <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-3 hover:border-teal-500 transition-colors group">
+                  <div className="relative h-44 w-full rounded-xl overflow-hidden bg-slate-200 border border-slate-200 shadow-xs">
+                    <img
+                      src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80&w=600"
+                      alt="Clinical Virtual ICU Simulator"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-2 left-2">
+                      <span className="px-2.5 py-1 bg-[#103E3B] text-[9px] font-bold text-white uppercase tracking-wider rounded border border-white/20">
+                        Lab 04
+                      </span>
+                    </div>
+                  </div>
+                  <div className="space-y-1">
+                    <h4 className="text-sm font-bold text-slate-900 font-serif">4. Clinical Virtual ICU Simulator</h4>
+                    <p className="text-xs text-slate-600 leading-relaxed">Multi-para monitors, defibrillator testers, and patient simulation mannequins.</p>
+                  </div>
                 </div>
               </div>
             </div>

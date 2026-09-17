@@ -90,7 +90,7 @@ export const Navbar: React.FC = () => {
               <span className="text-xs sm:text-sm md:text-base font-extrabold tracking-wider text-white uppercase leading-tight whitespace-nowrap">
                 ADAMAS UNIVERSITY
               </span>
-              <span className="text-[8px] sm:text-[9px] md:text-[10px] font-extrabold tracking-widest text-white/90 uppercase leading-none whitespace-nowrap hidden sm:block">
+              <span className="text-[8px] sm:text-[9px] md:text-[10px] font-extrabold tracking-widest text-[#ff7844] uppercase leading-none whitespace-nowrap hidden sm:block">
                 Department of Biomedical Engineering
               </span>
             </div>
@@ -196,11 +196,10 @@ export const Navbar: React.FC = () => {
                 <Link
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block px-3 py-2 rounded-lg text-sm font-bold uppercase tracking-wider transition-all duration-200 ${
-                    isActive
-                      ? "text-white bg-white/20 backdrop-blur-md border border-white/30"
-                      : "text-white/90 hover:text-white hover:bg-white/15 hover:backdrop-blur-md border border-transparent hover:border-white/20"
-                  }`}
+                  className={`block px-3 py-2 rounded-lg text-sm font-bold uppercase tracking-wider transition-all duration-200 ${isActive
+                    ? "text-white bg-white/20 backdrop-blur-md border border-white/30"
+                    : "text-white/90 hover:text-white hover:bg-white/15 hover:backdrop-blur-md border border-transparent hover:border-white/20"
+                    }`}
                 >
                   {link.name}
                 </Link>

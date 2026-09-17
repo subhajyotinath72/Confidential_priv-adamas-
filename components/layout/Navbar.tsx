@@ -68,8 +68,8 @@ export const Navbar: React.FC = () => {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
-        ? "bg-[#103E3B]/95 text-[#F7D6C8] backdrop-blur-md shadow-xl py-1.5 border-b border-white/10"
-        : "bg-[#103E3B] text-[#F7D6C8] py-2 border-b border-white/10"
+        ? "bg-[#103E3B]/95 text-white backdrop-blur-md shadow-xl py-1.5 border-b border-white/10"
+        : "bg-[#103E3B] text-white py-2 border-b border-white/10"
         }`}
     >
       <div className="w-full px-2 sm:px-4 lg:px-6">
@@ -87,10 +87,10 @@ export const Navbar: React.FC = () => {
             </div>
 
             <div className="flex flex-col">
-              <span className="text-xs sm:text-sm md:text-base font-extrabold tracking-wider text-[#fcfefe] uppercase leading-tight whitespace-nowrap">
+              <span className="text-xs sm:text-sm md:text-base font-extrabold tracking-wider text-white uppercase leading-tight whitespace-nowrap">
                 ADAMAS UNIVERSITY
               </span>
-              <span className="text-[8px] sm:text-[9px] md:text-[10px] font-extrabold tracking-widest text-[#ffc93c]/80 uppercase leading-none whitespace-nowrap hidden sm:block">
+              <span className="text-[8px] sm:text-[9px] md:text-[10px] font-extrabold tracking-widest text-white/90 uppercase leading-none whitespace-nowrap hidden sm:block">
                 Department of Biomedical Engineering
               </span>
             </div>
@@ -113,18 +113,18 @@ export const Navbar: React.FC = () => {
                       href={link.href}
                       className={`flex items-center px-2 xl:px-3 py-1.5 rounded text-[10px] xl:text-[11px] font-bold tracking-wider uppercase transition-colors whitespace-nowrap ${isActive
                         ? "text-[#103E3B] bg-[#F7D6C8]"
-                        : "text-[#F7D6C8] hover:text-white hover:bg-white/10"
+                        : "text-white hover:text-white hover:bg-white/10"
                         }`}
                     >
                       <span>{link.name}</span>
-                      <ChevronDown className="w-2.5 h-2.5 ml-0.5 xl:ml-1 text-[#F7D6C8]" />
+                      <ChevronDown className="w-2.5 h-2.5 ml-0.5 xl:ml-1 text-white" />
                     </Link>
 
                     {/* Mega-menu Dropdown */}
                     {activeDropdown === link.name && (
                       <div className="absolute left-0 top-full pt-2 w-72 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
                         <div className="bg-[#103E3B] border border-white/20 rounded-xl shadow-2xl p-2.5 backdrop-blur-xl">
-                          <div className="text-[10px] font-bold text-[#F7D6C8] uppercase px-2 py-1 mb-1 border-b border-white/10">
+                          <div className="text-[10px] font-bold text-white uppercase px-2 py-1 mb-1 border-b border-white/10">
                             {link.name} Options
                           </div>
                           {link.dropdown.map((item) => (
@@ -133,10 +133,10 @@ export const Navbar: React.FC = () => {
                               href={item.href}
                               className="block p-2 rounded-lg hover:bg-white/10 transition-colors group"
                             >
-                              <div className="text-xs font-bold text-white group-hover:text-[#F7D6C8]">
+                              <div className="text-xs font-bold text-white group-hover:text-white">
                                 {item.name}
                               </div>
-                              <div className="text-[10px] text-[#F7D6C8]/70 line-clamp-1 mt-0.5">
+                              <div className="text-[10px] text-white/80 line-clamp-1 mt-0.5">
                                 {item.desc}
                               </div>
                             </a>
@@ -154,7 +154,7 @@ export const Navbar: React.FC = () => {
                   href={link.href}
                   className={`px-2 xl:px-3 py-1.5 rounded text-[10px] xl:text-[11px] font-bold tracking-wider uppercase transition-colors whitespace-nowrap ${isActive
                     ? "text-[#103E3B] bg-[#F7D6C8]"
-                    : "text-[#F7D6C8] hover:text-white hover:bg-white/10"
+                    : "text-white hover:text-white hover:bg-white/10"
                     }`}
                 >
                   {link.name}
@@ -177,7 +177,7 @@ export const Navbar: React.FC = () => {
           <div className="flex lg:hidden items-center space-x-2">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-[#F7D6C8] hover:text-white hover:bg-white/10 focus:outline-none"
+              className="p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -205,7 +205,7 @@ export const Navbar: React.FC = () => {
                       key={item.name}
                       href={item.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block px-3 py-1 rounded-md text-xs text-[#F7D6C8]/80 hover:text-[#F7D6C8]"
+                      className="block px-3 py-1 rounded-md text-xs text-white/80 hover:text-white"
                     >
                       • {item.name}
                     </a>

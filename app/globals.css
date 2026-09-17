@@ -6,11 +6,11 @@
   html {
     scroll-behavior: smooth;
     background-color: #000000;
-    color: #eaf6f6;
+    color: #00204a;
   }
 
   body {
-    @apply bg-black text-[#eaf6f6] font-sans antialiased selection:bg-[#103E3B] selection:text-[#eaf6f6];
+    @apply bg-black text-[#00204a] font-sans antialiased selection:bg-[#103E3B] selection:text-[#eaf6f6];
     background-color: #000000;
     color: #eaf6f6;
   }
@@ -22,11 +22,11 @@
   h4,
   h5,
   h6 {
-    color: #fcfefe;
+    color: #ffc93c;
   }
 
   p {
-    color: #fdfdfd;
+    color: #e0ff59;
   }
 
   /* Accessibility focus states */

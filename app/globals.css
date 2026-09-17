@@ -70,3 +70,20 @@
 .animate-vertical-ticker:hover {
   animation-play-state: paused;
 }
+
+@keyframes scrollHorizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-horizontal-ticker {
+  animation: scrollHorizontal 30s linear infinite;
+}
+
+.animate-horizontal-ticker:hover {
+  animation-play-state: paused;
+}

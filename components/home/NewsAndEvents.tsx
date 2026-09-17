@@ -122,7 +122,7 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
   const marqueeItems = [...items, ...items];
 
   return (
-    <section id="news" className="bg-gradient-to-br from-slate-100/80 via-white to-teal-50/30 py-12 lg:py-16 border-b border-slate-200 overflow-hidden relative">
+    <section id="news" className="bg-gradient-to-br from-black via-[#081a19] to-black py-12 lg:py-16 border-b border-white/10 overflow-hidden relative">
       {/* Background Glass Ambient Blobs */}
       <div className="absolute top-1/2 right-0 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -135,16 +135,16 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
             <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
               UPDATES & COLLOQUIA
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#eaf6f6] tracking-tight">
               News & Events Overview
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1">
+            <p className="text-xs sm:text-sm text-[#eaf6f6]/70 mt-1">
               Click on any event card to open the complete News & Events section.
             </p>
           </div>
           <Link
             href="/news"
-            className="text-xs font-bold text-[#103E3B] uppercase tracking-wider hover:underline flex items-center space-x-1"
+            className="text-xs font-bold text-[#eaf6f6] uppercase tracking-wider hover:text-white flex items-center space-x-1"
           >
             <span>VIEW ARCHIVE</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -160,14 +160,14 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
                 <Link
                   key={idx}
                   href="/news"
-                  className="w-[300px] sm:w-[360px] flex-shrink-0 glass-slate p-5 rounded-2xl cursor-pointer group space-y-3"
+                  className="w-[300px] sm:w-[360px] flex-shrink-0 glass-dark p-5 rounded-2xl cursor-pointer group space-y-3"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="bg-white border border-slate-200 rounded-lg px-3 py-1 flex items-center space-x-2">
-                      <span className="text-xs font-bold text-[#103E3B]/70 uppercase">{item.month}</span>
-                      <span className="text-sm font-serif font-bold text-[#103E3B]">{item.day}</span>
+                    <div className="bg-white/10 border border-white/20 rounded-lg px-3 py-1 flex items-center space-x-2">
+                      <span className="text-xs font-bold text-[#eaf6f6]/70 uppercase">{item.month}</span>
+                      <span className="text-sm font-serif font-bold text-[#eaf6f6]">{item.day}</span>
                     </div>
-                    <div className="w-8 h-8 rounded-full bg-[#103E3B]/10 text-[#103E3B] group-hover:bg-[#103E3B] group-hover:text-white transition-colors flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-white/10 text-[#eaf6f6] group-hover:bg-[#103E3B] group-hover:text-white transition-colors flex items-center justify-center">
                       <Icon className="w-4 h-4" />
                     </div>
                   </div>
@@ -179,15 +179,15 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
                         {item.tag}
                       </span>
                     </div>
-                    <h3 className="text-base font-serif font-bold text-[#103E3B] line-clamp-1 group-hover:text-[#B58A28] transition-colors">
+                    <h3 className="text-base font-serif font-bold text-[#eaf6f6] line-clamp-1 group-hover:text-[#B58A28] transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-slate-600 font-sans line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-[#eaf6f6]/70 font-sans line-clamp-2 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
 
-                  <div className="pt-1 flex items-center text-xs font-bold text-[#103E3B] group-hover:text-[#B58A28] transition-colors">
+                  <div className="pt-1 flex items-center text-xs font-bold text-[#eaf6f6] group-hover:text-[#B58A28] transition-colors">
                     <span>Read Event Details</span>
                     <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform group-hover:translate-x-1" />
                   </div>

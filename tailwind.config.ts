@@ -9,6 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        iceMint: {
+          DEFAULT: "#eaf6f6",
+          light: "#f4fafb",
+          dark: "#d1eded",
+        },
         deepTeal: {
           DEFAULT: "#103E3B",
           dark: "#0D3330",

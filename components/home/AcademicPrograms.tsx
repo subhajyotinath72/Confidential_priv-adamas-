@@ -10,7 +10,7 @@ export const AcademicPrograms: React.FC = () => {
   const currentProgram = ACADEMIC_PROGRAMS[0];
 
   return (
-    <section id="programs" className="bg-gradient-to-br from-white via-slate-50 to-teal-50/20 py-12 lg:py-20 border-b border-slate-200 relative overflow-hidden">
+    <section id="programs" className="bg-gradient-to-br from-black via-[#081a19] to-black py-12 lg:py-20 border-b border-white/10 relative overflow-hidden">
       {/* Background Ambient Orbs */}
       <div className="absolute top-10 right-10 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -20,10 +20,10 @@ export const AcademicPrograms: React.FC = () => {
           <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
             ACADEMIC EXCELLENCE
           </div>
-          <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#eaf6f6] tracking-tight">
             Programs & Curriculum
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 mt-1 max-w-3xl font-sans">
+          <p className="text-sm sm:text-base text-[#eaf6f6]/70 mt-1 max-w-3xl font-sans">
             Rigorous undergraduate and doctoral training engineered for clinical diagnostics, medical hardware, and healthcare computing.
           </p>
         </div>
@@ -32,9 +32,9 @@ export const AcademicPrograms: React.FC = () => {
           
           {/* Left Main Card: B.Tech Program Details */}
           <div className="lg:col-span-7">
-            <div className="glass-card p-6 sm:p-8 rounded-2xl h-full space-y-6 flex flex-col justify-between">
+            <div className="glass-dark p-6 sm:p-8 rounded-2xl h-full space-y-6 flex flex-col justify-between">
               <div className="space-y-4">
-                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200/80 pb-4">
+                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-4">
                   <span className="px-3 py-1 rounded bg-[#103E3B] text-white text-[10px] font-bold uppercase tracking-wider">
                     {currentProgram.duration}
                   </span>
@@ -43,22 +43,22 @@ export const AcademicPrograms: React.FC = () => {
                   </span>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#103E3B]">
+                <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#eaf6f6]">
                   {currentProgram.degree}
                 </h3>
 
-                <p className="text-sm text-slate-700 leading-relaxed font-sans">
-                  {currentProgram.description}
+                <p className="text-sm text-[#eaf6f6]/80 leading-relaxed font-sans">
+                  {currentProgram.shortDesc}
                 </p>
 
                 <div className="space-y-2 pt-2">
-                  <div className="text-xs font-bold text-[#103E3B] uppercase tracking-wider">
+                  <div className="text-xs font-bold text-[#eaf6f6] uppercase tracking-wider">
                     Key Specialization Tracks:
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {currentProgram.highlights.map((h, idx) => (
-                      <div key={idx} className="flex items-center space-x-2 text-xs text-slate-700 bg-white/80 p-2.5 rounded-lg border border-slate-200/80 backdrop-blur-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#103E3B]" />
+                      <div key={idx} className="flex items-center space-x-2 text-xs text-[#eaf6f6]/85 bg-white/5 p-2.5 rounded-lg border border-white/10 backdrop-blur-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-teal-400" />
                         <span>{h}</span>
                       </div>
                     ))}
@@ -66,7 +66,7 @@ export const AcademicPrograms: React.FC = () => {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-200/80">
+              <div className="pt-4 border-t border-white/10">
                 <a
                   href="https://adamasuniversity.ac.in/adamas-university/#"
                   target="_blank"
@@ -81,25 +81,25 @@ export const AcademicPrograms: React.FC = () => {
 
           {/* Right Card: Important Schedule & Deadlines */}
           <div className="lg:col-span-5">
-            <div className="glass-beige p-6 rounded-2xl shadow-sm flex flex-col justify-between h-full space-y-6">
+            <div className="glass-dark p-6 rounded-2xl shadow-sm flex flex-col justify-between h-full space-y-6">
               <div className="space-y-4">
                 <div className="text-[10px] font-bold text-[#B58A28] uppercase tracking-wider">
                   IMPORTANT SCHEDULE
                 </div>
                 
-                <h3 className="text-2xl font-serif font-bold text-[#103E3B]">
+                <h3 className="text-2xl font-serif font-bold text-[#eaf6f6]">
                   Intake Deadlines
                 </h3>
 
                 <div className="space-y-3">
-                  <div className="bg-white p-3 rounded-lg border border-slate-200">
-                    <div className="text-xs font-bold text-[#103E3B]">Phase 1 Counseling:</div>
-                    <div className="text-xs text-slate-600">June 15, 2025</div>
+                  <div className="bg-white/5 p-3 rounded-lg border border-white/10">
+                    <div className="text-xs font-bold text-[#eaf6f6]">Phase 1 Counseling:</div>
+                    <div className="text-xs text-[#eaf6f6]/70">June 15, 2025</div>
                   </div>
 
-                  <div className="bg-white p-3 rounded-lg border border-slate-200">
-                    <div className="text-xs font-bold text-[#103E3B]">Phase 2 Applications:</div>
-                    <div className="text-xs text-slate-600">July 20, 2025 (Rolling review)</div>
+                  <div className="bg-white/5 p-3 rounded-lg border border-white/10">
+                    <div className="text-xs font-bold text-[#eaf6f6]">Phase 2 Applications:</div>
+                    <div className="text-xs text-[#eaf6f6]/70">July 20, 2025 (Rolling review)</div>
                   </div>
                 </div>
               </div>
@@ -107,7 +107,7 @@ export const AcademicPrograms: React.FC = () => {
               <div>
                 <a
                   href="/admission#syllabus"
-                  className="w-full inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-[#103E3B] bg-white border border-slate-300 hover:bg-slate-100 transition-all"
+                  className="w-full inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-[#eaf6f6] bg-white/10 border border-white/20 hover:bg-white/20 transition-all"
                 >
                   DOWNLOAD SYLLABUS & PROSPECTUS
                 </a>

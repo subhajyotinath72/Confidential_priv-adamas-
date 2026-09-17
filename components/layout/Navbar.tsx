@@ -68,8 +68,8 @@ export const Navbar: React.FC = () => {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-[#103E3B]/95 text-[#F7D6C8] backdrop-blur-md shadow-xl py-1.5 border-b border-white/10"
-          : "bg-[#103E3B] text-[#F7D6C8] py-2 border-b border-white/10"
+        ? "bg-[#103E3B]/95 text-[#F7D6C8] backdrop-blur-md shadow-xl py-1.5 border-b border-white/10"
+        : "bg-[#103E3B] text-[#F7D6C8] py-2 border-b border-white/10"
         }`}
     >
       <div className="w-full px-2 sm:px-4 lg:px-6">
@@ -87,10 +87,10 @@ export const Navbar: React.FC = () => {
             </div>
 
             <div className="flex flex-col">
-              <span className="text-xs sm:text-sm md:text-base font-extrabold tracking-wider text-[#F7D6C8] uppercase leading-tight whitespace-nowrap">
+              <span className="text-xs sm:text-sm md:text-base font-extrabold tracking-wider text-[#fcfefe] uppercase leading-tight whitespace-nowrap">
                 ADAMAS UNIVERSITY
               </span>
-              <span className="text-[8px] sm:text-[9px] md:text-[10px] font-bold tracking-widest text-[#F7D6C8]/80 uppercase leading-none whitespace-nowrap hidden sm:block">
+              <span className="text-[8px] sm:text-[9px] md:text-[10px] font-extrabold tracking-widest text-[#ffc93c]/80 uppercase leading-none whitespace-nowrap hidden sm:block">
                 Department of Biomedical Engineering
               </span>
             </div>
@@ -112,8 +112,8 @@ export const Navbar: React.FC = () => {
                     <Link
                       href={link.href}
                       className={`flex items-center px-2 xl:px-3 py-1.5 rounded text-[10px] xl:text-[11px] font-bold tracking-wider uppercase transition-colors whitespace-nowrap ${isActive
-                          ? "text-[#103E3B] bg-[#F7D6C8]"
-                          : "text-[#F7D6C8] hover:text-white hover:bg-white/10"
+                        ? "text-[#103E3B] bg-[#F7D6C8]"
+                        : "text-[#F7D6C8] hover:text-white hover:bg-white/10"
                         }`}
                     >
                       <span>{link.name}</span>
@@ -153,8 +153,8 @@ export const Navbar: React.FC = () => {
                   key={link.name}
                   href={link.href}
                   className={`px-2 xl:px-3 py-1.5 rounded text-[10px] xl:text-[11px] font-bold tracking-wider uppercase transition-colors whitespace-nowrap ${isActive
-                      ? "text-[#103E3B] bg-[#F7D6C8]"
-                      : "text-[#F7D6C8] hover:text-white hover:bg-white/10"
+                    ? "text-[#103E3B] bg-[#F7D6C8]"
+                    : "text-[#F7D6C8] hover:text-white hover:bg-white/10"
                     }`}
                 >
                   {link.name}

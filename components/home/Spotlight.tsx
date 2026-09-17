@@ -39,7 +39,7 @@ export const Spotlight: React.FC = () => {
   ];
 
   return (
-    <section id="faculty" className="bg-white py-12 lg:py-16 border-b border-slate-200">
+    <section id="faculty" className="bg-black text-[#eaf6f6] py-12 lg:py-16 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -48,13 +48,13 @@ export const Spotlight: React.FC = () => {
             <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
               DEPARTMENT ARCHIVE & FACILITIES
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#eaf6f6] tracking-tight">
               Faculty & Research Mentors
             </h2>
           </div>
           <Link
             href="/people"
-            className="text-xs font-bold text-[#103E3B] uppercase tracking-wider hover:underline"
+            className="text-xs font-bold text-[#eaf6f6] uppercase tracking-wider hover:text-white"
           >
             Core Faculty Profiles
           </Link>
@@ -65,14 +65,14 @@ export const Spotlight: React.FC = () => {
           {facultyMentors.map((f, idx) => (
             <div
               key={idx}
-              className="bg-[#EFECE6] rounded-2xl overflow-hidden border border-[#E2DDD3] shadow-xs flex flex-col justify-between group hover:border-[#103E3B] transition-colors"
+              className="bg-white/5 rounded-2xl overflow-hidden border border-white/10 shadow-xs flex flex-col justify-between group hover:border-teal-400 transition-colors"
             >
               {/* Top Navy Blue Box with Avatar Initials */}
-              <div className="bg-[#103E3B] p-6 text-center space-y-3 relative">
-                <div className="w-16 h-16 rounded-full bg-[#F8F5EE] text-[#103E3B] font-serif font-bold text-lg flex items-center justify-center mx-auto shadow-md">
+              <div className="bg-[#0D3330] p-6 text-center space-y-3 relative">
+                <div className="w-16 h-16 rounded-full bg-white/10 text-[#eaf6f6] font-serif font-bold text-lg flex items-center justify-center mx-auto shadow-md">
                   {f.initials}
                 </div>
-                <div className="text-sm font-serif font-bold text-white line-clamp-1">
+                <div className="text-sm font-serif font-bold text-[#eaf6f6] line-clamp-1">
                   {f.name}
                 </div>
                 <div className="absolute bottom-2 right-2">
@@ -85,17 +85,17 @@ export const Spotlight: React.FC = () => {
               {/* Bottom Details */}
               <div className="p-4 space-y-2 text-center flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="text-xs font-serif font-bold text-[#103E3B]">
+                  <div className="text-xs font-serif font-bold text-[#eaf6f6]">
                     {f.name}
                   </div>
-                  <div className="text-[11px] text-slate-600 font-sans mt-1">
+                  <div className="text-[11px] text-[#eaf6f6]/70 font-sans mt-1">
                     {f.specialization}
                   </div>
                 </div>
                 <div className="pt-2">
                   <Link
                     href={f.href}
-                    className="text-[11px] font-bold text-[#103E3B] uppercase tracking-wider hover:text-[#B58A28]"
+                    className="text-[11px] font-bold text-[#eaf6f6] uppercase tracking-wider hover:text-[#B58A28]"
                   >
                     View Profile →
                   </Link>

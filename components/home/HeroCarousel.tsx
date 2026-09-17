@@ -65,7 +65,7 @@ export const HeroCarousel: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white text-[#103E3B] py-12 lg:py-20 border-b border-slate-200">
+    <section className="bg-black text-[#eaf6f6] py-12 lg:py-20 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -78,13 +78,13 @@ export const HeroCarousel: React.FC = () => {
             </div>
 
             {/* Serif Main Heading */}
-            <h1 className="text-4xl sm:text-6xl font-serif font-semibold text-[#103E3B] tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-6xl font-serif font-semibold text-[#eaf6f6] tracking-tight leading-[1.1]">
               Biomedical <br />
               Engineering
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl font-serif italic text-[#103E3B]/80">
+            <p className="text-lg sm:text-xl font-serif italic text-[#eaf6f6]/80">
               Bridging Engineering, Biology & Healthcare.
             </p>
 
@@ -101,7 +101,7 @@ export const HeroCarousel: React.FC = () => {
 
               <Link
                 href="/gallery"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-[#103E3B] bg-[#EFECE6] border border-[#D5D0C5] hover:bg-[#E5E0D5] transition-all"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-[#eaf6f6] bg-white/10 border border-white/20 hover:bg-white/20 transition-all"
               >
                 VIEW DEPARTMENT GALLERY
               </Link>
@@ -110,7 +110,7 @@ export const HeroCarousel: React.FC = () => {
 
           {/* Right 2x2 Lab Grid Card Container */}
           <div className="lg:col-span-6">
-            <div className="bg-[#EFECE6]/85 backdrop-blur-md p-4 sm:p-6 rounded-2xl border border-[#E2DDD3]/90 shadow-md">
+            <div className="bg-white/5 backdrop-blur-md p-4 sm:p-6 rounded-2xl border border-white/10 shadow-md">
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {labGridItems.map((lab, idx) => (
                   <div

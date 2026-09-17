@@ -1,6 +1,6 @@
 # Adamas University — Department of Biomedical Engineering Website
 
-Production-quality Next.js (App Router) website for the **Department of Biomedical Engineering**, housed under the **School of Engineering & Technology (SET)** at **Adamas University**, Kolkata, West Bengal.
+Production-quality Next.js (App Router) website for the **Department of Biomedical Engineering**, housed under the **School of Engineering & Technology (SOET)** at **Adamas University**, Kolkata, West Bengal.
 
 All branding, text, faculty profiles, and contact details are **100% Adamas University** — containing **ZERO** mentions of IIT Madras, AMBE, Chennai, or IIT maroon color schemes.
 

@@ -87,7 +87,7 @@ export const Navbar: React.FC = () => {
 
 
             <div className="flex flex-col">
-              <span className="text-[8.5px] font-bold tracking-widest text-[#F7D6C8] uppercase leading-tight">
+              <span className="text-[12px] font-bold tracking-widest text-[#F7D6C8] uppercase leading-tight">
                 ADAMAS UNIVERSITY
               </span>
             </div>

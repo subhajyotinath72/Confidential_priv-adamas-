@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { FlaskConical, Plus, Trash2, Edit, X, Search } from "lucide-react";
+import { FlaskConical, Plus, Trash2, Edit, X, Search, Image as ImageIcon } from "lucide-react";
 
 export default function AdminResearchPage() {
   const [centers, setCenters] = useState<any[]>([]);
@@ -18,6 +18,7 @@ export default function AdminResearchPage() {
     funding: "",
     icon: "Activity",
     specs: "",
+    image: "",
   });
 
   const fetchContent = async () => {
@@ -49,6 +50,7 @@ export default function AdminResearchPage() {
       funding: "DST-SERB, Govt. of India",
       icon: "Activity",
       specs: "High-speed bioprinters, biosensor testing suites",
+      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=600",
     });
     setIsModalOpen(true);
   };
@@ -63,6 +65,7 @@ export default function AdminResearchPage() {
       funding: item.funding || "",
       icon: item.icon || "Activity",
       specs: Array.isArray(item.specs) ? item.specs.join(", ") : item.specs || "",
+      image: item.image || "",
     });
     setIsModalOpen(true);
   };
@@ -173,19 +176,31 @@ export default function AdminResearchPage() {
                 key={item.id}
                 className="p-5 flex flex-col sm:flex-row items-start justify-between gap-4 hover:bg-slate-50/80 transition-colors"
               >
-                <div className="space-y-1">
-                  <span className="text-[10px] font-bold text-[#C59B27] bg-[#C59B27]/10 px-2 py-0.5 rounded-md">
-                    Center #{item.code}
-                  </span>
-                  <h3 className="text-sm font-bold text-slate-900 font-serif">
-                    {item.name}
-                  </h3>
-                  <p className="text-xs text-slate-600">
-                    {item.focus}
-                  </p>
-                  <div className="text-[10px] text-slate-400 flex items-center space-x-3 pt-1">
-                    <span>Lead: {item.lead}</span>
-                    <span>• Funding: {item.funding}</span>
+                <div className="flex items-start space-x-4">
+                  {item.image ? (
+                    <div className="w-20 h-16 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 flex-shrink-0">
+                      <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                    </div>
+                  ) : (
+                    <div className="w-20 h-16 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center flex-shrink-0 text-slate-400">
+                      <ImageIcon className="w-6 h-6" />
+                    </div>
+                  )}
+
+                  <div className="space-y-1">
+                    <span className="text-[10px] font-bold text-[#C59B27] bg-[#C59B27]/10 px-2 py-0.5 rounded-md">
+                      Center #{item.code}
+                    </span>
+                    <h3 className="text-sm font-bold text-slate-900 font-serif">
+                      {item.name}
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      {item.focus}
+                    </p>
+                    <div className="text-[10px] text-slate-400 flex items-center space-x-3 pt-1">
+                      <span>Lead: {item.lead}</span>
+                      <span>• Funding: {item.funding}</span>
+                    </div>
                   </div>
                 </div>
 
@@ -215,7 +230,7 @@ export default function AdminResearchPage() {
           <div className="bg-white max-w-lg w-full rounded-3xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
             <div className="bg-[#1B365D] text-white p-5 flex items-center justify-between">
               <h2 className="text-sm font-bold uppercase tracking-wider">
-                {editingId ? "Edit Center" : "Add Research Center"}
+                {editingId ? "Edit Center / Lab Facility" : "Add Research Center / Lab"}
               </h2>
               <button onClick={() => setIsModalOpen(false)} className="p-1 rounded-lg text-slate-300 hover:text-white">
                 <X className="w-5 h-5" />
@@ -224,7 +239,7 @@ export default function AdminResearchPage() {
 
             <form onSubmit={handleSubmit} className="p-6 space-y-4">
               <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1">Center Name</label>
+                <label className="block text-xs font-semibold text-slate-700 mb-1">Center / Lab Name</label>
                 <input
                   type="text"
                   required
@@ -235,7 +250,28 @@ export default function AdminResearchPage() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1">Research Focus</label>
+                <label className="block text-xs font-semibold text-slate-700 mb-1">Facility / Lab Image URL</label>
+                <div className="flex items-center space-x-3">
+                  <input
+                    type="url"
+                    placeholder="https://images.unsplash.com/... or /uploads/lab.jpg"
+                    value={formData.image}
+                    onChange={(e) => setFormData({ ...formData, image: e.target.value })}
+                    className="flex-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:border-[#1B365D]"
+                  />
+                  {formData.image && (
+                    <div className="w-10 h-10 rounded-lg overflow-hidden border border-slate-200 flex-shrink-0 bg-slate-100">
+                      <img src={formData.image} alt="Preview" className="w-full h-full object-cover" />
+                    </div>
+                  )}
+                </div>
+                <p className="text-[10px] text-slate-400 mt-1">
+                  Enter an image URL or image path from Media Manager to display in the lab facility cards.
+                </p>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-slate-700 mb-1">Research Focus & Specs</label>
                 <textarea
                   rows={2}
                   required

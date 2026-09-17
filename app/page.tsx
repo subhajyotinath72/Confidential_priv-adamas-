@@ -8,7 +8,6 @@ import { AcademicPrograms } from "@/components/home/AcademicPrograms";
 import { NewsAndEvents } from "@/components/home/NewsAndEvents";
 import { Testimonials } from "@/components/home/Testimonials";
 import { Spotlight } from "@/components/home/Spotlight";
-import { ApplyNowBanner } from "@/components/home/ApplyNowBanner";
 import { ContactSection } from "@/components/home/ContactSection";
 
 export default function Home() {
@@ -32,19 +31,16 @@ export default function Home() {
       {/* 4. USP Tiles / Hospital & Industry Partners */}
       <USPTiles />
 
-      {/* 5. Apply Now / Student Welfare Banner */}
-      <ApplyNowBanner />
-
-      {/* 6. News & Events Section */}
+      {/* 5. News & Events Section */}
       <NewsAndEvents />
 
-      {/* 7. Faculty Spotlight */}
+      {/* 6. Faculty Spotlight */}
       <Spotlight />
 
-      {/* 8. Our Memories / Testimonials Gallery */}
+      {/* 7. Our Memories / Testimonials Gallery */}
       <Testimonials />
 
-      {/* 9. Connect with Department & Inquiry */}
+      {/* 8. Connect with Department & Inquiry */}
       <ContactSection />
     </div>
   );

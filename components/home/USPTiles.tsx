@@ -68,43 +68,6 @@ export const USPTiles: React.FC = () => {
   return (
     <div className="space-y-0">
       
-      {/* 1. Hospital & Industry Partners */}
-      <section className="bg-white py-12 lg:py-16 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="flex flex-wrap items-end justify-between mb-8 gap-4">
-            <div>
-              <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
-                CLINICAL & INDUSTRIAL COLLABORATION
-              </div>
-              <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
-                Hospital & Industry Partners
-              </h2>
-            </div>
-            <div className="text-xs font-bold text-[#103E3B]/70 uppercase tracking-wider">
-              Active MoUs & Joint Laboratories
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {partners.map((p, idx) => (
-              <div
-                key={idx}
-                className="bg-slate-50 p-5 rounded-xl border border-slate-200 shadow-xs text-center space-y-2 hover:border-[#103E3B] transition-colors"
-              >
-                <div className="text-sm font-serif font-bold text-[#103E3B]">
-                  {p.name}
-                </div>
-                <div className="text-xs text-[#103E3B]/80 font-sans">
-                  {p.desc}
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
       {/* 2. Internships & Placements */}
       <section className="bg-white py-12 lg:py-16 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,51 +84,52 @@ export const USPTiles: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            {/* Card 01 */}
-            <div className="bg-[#EFECE6] p-6 rounded-2xl border border-[#E2DDD3] shadow-xs space-y-4">
-              <div className="w-10 h-10 rounded-lg bg-[#F8F5EE] border border-[#D5D0C5] flex items-center justify-center text-xs font-bold text-[#103E3B]">
-                01
-              </div>
-              <h3 className="text-lg font-serif font-bold text-[#103E3B]">
-                Hospital Clinical Rotations
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed font-sans">
-                Third-year students rotate across radiology, dialysis centers, catheterization labs, and ICU maintenance divisions.
-              </p>
+          <div className="overflow-x-auto pb-4 scrollbar-thin">
+            <div className="flex w-max space-x-6 animate-horizontal-ticker py-2">
+              {[1, 2].flatMap((iteration) => [
+                {
+                  id: "01",
+                  title: "Hospital Clinical Rotations",
+                  desc: "Third-year students rotate across radiology, dialysis centers, catheterization labs, and ICU maintenance divisions.",
+                },
+                {
+                  id: "02",
+                  title: "Industry Internships",
+                  desc: "Paid summer internships in biomedical hardware assembly, signal processing pipelines, and healthcare software solutions.",
+                },
+                {
+                  id: "03",
+                  title: "Key Recruiting Sectors",
+                  recruiters: ["GE Healthcare", "Siemens Healthineers", "Apollo Hospitals", "Philips BioMed", "Medtronic"],
+                },
+              ]).map((card, index) => (
+                <div
+                  key={index}
+                  className="w-[300px] sm:w-[360px] flex-shrink-0 bg-[#EFECE6] p-6 rounded-2xl border border-[#E2DDD3] shadow-xs space-y-4"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-[#F8F5EE] border border-[#D5D0C5] flex items-center justify-center text-xs font-bold text-[#103E3B]">
+                    {card.id}
+                  </div>
+                  <h3 className="text-lg font-serif font-bold text-[#103E3B]">
+                    {card.title}
+                  </h3>
+                  {card.desc && (
+                    <p className="text-xs text-slate-600 leading-relaxed font-sans">
+                      {card.desc}
+                    </p>
+                  )}
+                  {card.recruiters && (
+                    <div className="flex flex-wrap gap-2 pt-1">
+                      {card.recruiters.map((r, i) => (
+                        <span key={i} className="px-2.5 py-1 bg-[#F8F5EE] text-[10px] font-bold text-[#103E3B] border border-[#D5D0C5] rounded">
+                          {r}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
-
-            {/* Card 02 */}
-            <div className="bg-[#EFECE6] p-6 rounded-2xl border border-[#E2DDD3] shadow-xs space-y-4">
-              <div className="w-10 h-10 rounded-lg bg-[#F8F5EE] border border-[#D5D0C5] flex items-center justify-center text-xs font-bold text-[#103E3B]">
-                02
-              </div>
-              <h3 className="text-lg font-serif font-bold text-[#103E3B]">
-                Industry Internships
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed font-sans">
-                Paid summer internships in biomedical hardware assembly, signal processing pipelines, and healthcare software solutions.
-              </p>
-            </div>
-
-            {/* Card 03 */}
-            <div className="bg-[#EFECE6] p-6 rounded-2xl border border-[#E2DDD3] shadow-xs space-y-4">
-              <div className="w-10 h-10 rounded-lg bg-[#F8F5EE] border border-[#D5D0C5] flex items-center justify-center text-xs font-bold text-[#103E3B]">
-                03
-              </div>
-              <h3 className="text-lg font-serif font-bold text-[#103E3B]">
-                Key Recruiting Sectors
-              </h3>
-              <div className="flex flex-wrap gap-2 pt-1">
-                {recruiters.map((r, i) => (
-                  <span key={i} className="px-2.5 py-1 bg-[#F8F5EE] text-[10px] font-bold text-[#103E3B] border border-[#D5D0C5] rounded">
-                    {r}
-                  </span>
-                ))}
-              </div>
-            </div>
-
           </div>
 
         </div>

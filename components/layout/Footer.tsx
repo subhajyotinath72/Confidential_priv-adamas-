@@ -25,14 +25,6 @@ export const Footer: React.FC = () => {
                 />
               </div>
 
-              {/* BME Emblem */}
-              <div className="w-9 h-9 rounded-md overflow-hidden bg-black/30 p-0.5 border border-[#F7D6C8]/40 flex items-center justify-center shadow-sm">
-                <img
-                  src="/bme-logo.png"
-                  alt="Department of Biomedical Engineering Logo"
-                  className="w-full h-full object-contain rounded"
-                />
-              </div>
               <div>
                 <span className="text-[9px] font-bold tracking-widest text-[#F7D6C8] uppercase block">
                   ADAMAS UNIVERSITY
@@ -65,8 +57,8 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/opportunities" className="hover:text-white transition-colors text-[#F7D6C8]">
-                  Internships & Placement
+                <Link href="/research" className="hover:text-white transition-colors text-[#F7D6C8]">
+                  Research & Innovation
                 </Link>
               </li>
               <li>

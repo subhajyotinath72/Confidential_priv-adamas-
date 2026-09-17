@@ -68,17 +68,17 @@ export const Navbar: React.FC = () => {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-[#103E3B]/95 text-[#F7D6C8] backdrop-blur-md shadow-xl py-2.5 border-b border-white/10"
-          : "bg-[#103E3B] text-[#F7D6C8] py-3.5 border-b border-white/10"
+          ? "bg-[#103E3B]/95 text-[#F7D6C8] backdrop-blur-md shadow-xl py-1.5 border-b border-white/10"
+          : "bg-[#103E3B] text-[#F7D6C8] py-2 border-b border-white/10"
         }`}
     >
       <div className="w-full px-2 sm:px-4 lg:px-6">
         <div className="flex items-center justify-between gap-2 lg:gap-4">
 
           {/* Brand Logo */}
-          <Link href="/" className="flex items-center space-x-3 sm:space-x-4 group flex-shrink-0">
+          <Link href="/" className="flex items-center space-x-2.5 sm:space-x-3 group flex-shrink-0">
             {/* Adamas NAAC Grade A Logo */}
-            <div className="h-14 sm:h-16 md:h-20 py-0.5 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <div className="h-9 sm:h-11 md:h-12 flex items-center justify-center group-hover:scale-105 transition-transform">
               <img
                 src="/adamas-logo-light.png"
                 alt="Adamas University NAAC Grade A Logo"
@@ -87,10 +87,10 @@ export const Navbar: React.FC = () => {
             </div>
 
             <div className="flex flex-col">
-              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-extrabold tracking-wider text-[#F7D6C8] uppercase leading-tight whitespace-nowrap">
+              <span className="text-xs sm:text-sm md:text-base font-extrabold tracking-wider text-[#F7D6C8] uppercase leading-tight whitespace-nowrap">
                 ADAMAS UNIVERSITY
               </span>
-              <span className="text-[9px] sm:text-[10px] md:text-[11px] font-bold tracking-widest text-[#F7D6C8]/80 uppercase leading-none whitespace-nowrap hidden sm:block">
+              <span className="text-[8px] sm:text-[9px] md:text-[10px] font-bold tracking-widest text-[#F7D6C8]/80 uppercase leading-none whitespace-nowrap hidden sm:block">
                 Department of Biomedical Engineering
               </span>
             </div>

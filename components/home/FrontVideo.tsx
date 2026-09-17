@@ -40,10 +40,10 @@ export const FrontVideo: React.FC<FrontVideoProps> = ({
   return (
     <section className="w-full relative overflow-hidden bg-[#103E3B] border-b border-white/10">
       {/* 2-Column Split Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 w-full items-center">
         
         {/* Left Half: Video Player Container */}
-        <div className="relative w-full h-[45vh] sm:h-[60vh] lg:h-[75vh] bg-slate-950 overflow-hidden border-r border-white/10">
+        <div className="relative w-full aspect-video bg-black overflow-hidden border-r border-white/10 flex items-center justify-center">
           <video
             ref={videoRef}
             src={src}
@@ -52,11 +52,11 @@ export const FrontVideo: React.FC<FrontVideoProps> = ({
             loop
             muted
             playsInline
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
 
           {/* Cinematic Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#103E3B]/70 via-transparent to-black/30 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#103E3B]/60 via-transparent to-black/30 pointer-events-none" />
 
           {/* Floating Badge */}
           <div className="absolute top-4 left-4 z-10">
@@ -93,7 +93,7 @@ export const FrontVideo: React.FC<FrontVideoProps> = ({
         </div>
 
         {/* Right Half: Blank Space */}
-        <div className="hidden lg:block w-full h-[75vh] bg-[#103E3B]" />
+        <div className="hidden lg:block w-full aspect-video bg-[#103E3B]" />
 
       </div>
     </section>

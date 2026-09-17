@@ -61,6 +61,7 @@ export const Navbar: React.FC = () => {
       ],
     },
     { name: "News & Events", href: "/news" },
+    { name: "Gallery", href: "/gallery" },
     { name: "Admin Portal", href: "/admin" },
   ];
 

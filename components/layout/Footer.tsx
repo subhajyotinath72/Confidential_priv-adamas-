@@ -17,11 +17,11 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-6 space-y-4">
             <div className="flex items-center space-x-2.5">
               {/* Adamas NAAC Grade A Logo */}
-              <div className="h-9 px-1 rounded-md bg-white p-0.5 border border-[#F7D6C8]/40 flex items-center justify-center shadow-sm">
+              <div className="h-10 py-0.5 flex items-center justify-center">
                 <img
-                  src="/adamas-naac-logo.png"
+                  src="/adamas-logo-light.png"
                   alt="Adamas University NAAC Grade A Logo"
-                  className="h-full w-auto object-contain rounded-xs"
+                  className="h-full w-auto object-contain"
                 />
               </div>
 

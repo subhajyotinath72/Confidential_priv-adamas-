@@ -78,11 +78,11 @@ export const Navbar: React.FC = () => {
           {/* Brand Logo */}
           <Link href="/" className="flex items-center space-x-2.5 sm:space-x-3 group flex-shrink-0">
             {/* Adamas NAAC Grade A Logo */}
-            <div className="h-11 sm:h-13 md:h-14 px-2 sm:px-2.5 rounded-lg bg-white p-1 border border-[#F7D6C8]/40 flex items-center justify-center group-hover:scale-105 transition-transform shadow-md">
+            <div className="h-11 sm:h-13 md:h-14 py-0.5 flex items-center justify-center group-hover:scale-105 transition-transform">
               <img
-                src="/adamas-naac-logo.png"
+                src="/adamas-logo-light.png"
                 alt="Adamas University NAAC Grade A Logo"
-                className="h-full w-auto object-contain rounded-xs"
+                className="h-full w-auto object-contain"
               />
             </div>
 

@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { SPOTLIGHT_ITEMS } from "@/data/testimonials";
 import { Sparkles, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -39,7 +38,7 @@ export const Spotlight: React.FC = () => {
   ];
 
   return (
-    <section id="faculty" className="bg-white py-12 lg:py-16 border-b border-slate-200 relative overflow-hidden">
+    <section id="faculty" className="bg-black text-[#eaf6f6] py-12 lg:py-16 border-b border-white/10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
@@ -54,13 +53,13 @@ export const Spotlight: React.FC = () => {
             <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
               DEPARTMENT ARCHIVE & LEADERSHIP
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#eaf6f6] tracking-tight">
               Faculty & Research Mentors
             </h2>
           </div>
           <Link
             href="/people"
-            className="text-xs font-bold text-[#103E3B] uppercase tracking-wider hover:text-[#B58A28] transition-colors flex items-center gap-1 self-start sm:self-auto"
+            className="text-xs font-bold text-[#eaf6f6] uppercase tracking-wider hover:text-amber-300 transition-colors flex items-center gap-1 self-start sm:self-auto"
           >
             <span>VIEW ALL FACULTY PROFILES</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -76,20 +75,19 @@ export const Spotlight: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-[#EFECE6] rounded-2xl overflow-hidden border border-[#E2DDD3] shadow-xs flex flex-col justify-between group hover:border-[#103E3B] hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="bg-white/5 rounded-2xl overflow-hidden border border-white/10 shadow-xs flex flex-col justify-between group hover:border-teal-400 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               {/* Top Navy Blue Box with Avatar Initials & Pulse Ring */}
-              <div className="bg-[#103E3B] p-6 text-center space-y-3 relative overflow-hidden">
-                {/* Background Ambient Spotlight on Card */}
+              <div className="bg-[#0D3330] p-6 text-center space-y-3 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-teal-400/10 rounded-full blur-2xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
 
                 <div className="relative inline-block">
-                  <div className="w-16 h-16 rounded-full bg-[#F8F5EE] text-[#103E3B] font-serif font-bold text-lg flex items-center justify-center mx-auto shadow-md ring-2 ring-white/20 group-hover:ring-4 group-hover:ring-amber-400/50 transition-all duration-300">
+                  <div className="w-16 h-16 rounded-full bg-white/10 text-[#eaf6f6] font-serif font-bold text-lg flex items-center justify-center mx-auto shadow-md ring-2 ring-white/20 group-hover:ring-4 group-hover:ring-amber-400/50 transition-all duration-300">
                     {f.initials}
                   </div>
                 </div>
 
-                <div className="text-sm font-serif font-bold text-white line-clamp-1">
+                <div className="text-sm font-serif font-bold text-[#eaf6f6] line-clamp-1">
                   {f.name}
                 </div>
                 <div className="absolute bottom-2 right-2">
@@ -100,19 +98,19 @@ export const Spotlight: React.FC = () => {
               </div>
 
               {/* Bottom Details */}
-              <div className="p-4 space-y-2 text-center flex-1 flex flex-col justify-between bg-white/60 backdrop-blur-sm">
+              <div className="p-4 space-y-2 text-center flex-1 flex flex-col justify-between bg-white/[0.02] backdrop-blur-sm">
                 <div>
-                  <div className="text-xs font-serif font-bold text-[#103E3B]">
+                  <div className="text-xs font-serif font-bold text-[#eaf6f6]">
                     {f.name}
                   </div>
-                  <div className="text-[11px] text-slate-600 font-sans mt-1">
+                  <div className="text-[11px] text-[#eaf6f6]/70 font-sans mt-1">
                     {f.specialization}
                   </div>
                 </div>
-                <div className="pt-3 border-t border-slate-200/60">
+                <div className="pt-3 border-t border-white/10">
                   <Link
                     href={f.href}
-                    className="inline-flex items-center text-[11px] font-bold text-[#103E3B] uppercase tracking-wider group-hover:text-[#B58A28] transition-colors"
+                    className="inline-flex items-center text-[11px] font-bold text-[#eaf6f6] uppercase tracking-wider group-hover:text-[#B58A28] transition-colors"
                   >
                     <span>View Profile</span>
                     <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />

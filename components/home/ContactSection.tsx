@@ -18,7 +18,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="bg-white py-12 lg:py-16 border-b border-slate-200">
+    <section id="contact" className="bg-black text-[#eaf6f6] py-12 lg:py-16 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -29,37 +29,37 @@ export const ContactSection: React.FC = () => {
               <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
                 GET IN TOUCH
               </div>
-              <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
+              <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#eaf6f6] tracking-tight">
                 Connect with the Department
               </h2>
-              <p className="text-sm sm:text-base text-[#103E3B]/80 mt-2 font-sans">
+              <p className="text-sm sm:text-base text-[#eaf6f6]/80 mt-2 font-sans">
                 Inquiries regarding student admissions, hospital collaboration, or lab facilities access:
               </p>
             </div>
 
-            <div className="space-y-3 text-xs sm:text-sm text-[#103E3B] font-sans leading-relaxed">
+            <div className="space-y-3 text-xs sm:text-sm text-[#eaf6f6]/90 font-sans leading-relaxed">
               <div>
-                <strong className="text-[#103E3B]">Location:</strong> Floor 3, School of Engineering, Adamas University Campus, Barasat, Kolkata 700126, India.
+                <strong className="text-[#eaf6f6]">Location:</strong> Floor 3, School of Engineering, Adamas University Campus, Barasat, Kolkata 700126, India.
               </div>
               <div>
-                <strong className="text-[#103E3B]">Email:</strong>{" "}
-                <a href="mailto:biomedical.dept@adamasuniversity.ac.in" className="hover:underline text-[#103E3B] font-medium">
+                <strong className="text-[#eaf6f6]">Email:</strong>{" "}
+                <a href="mailto:biomedical.dept@adamasuniversity.ac.in" className="hover:underline text-[#eaf6f6] font-medium">
                   biomedical.dept@adamasuniversity.ac.in
                 </a>
               </div>
               <div>
-                <strong className="text-[#103E3B]">Telephone:</strong> +91 33 6811 4500 (Ext. 248)
+                <strong className="text-[#eaf6f6]">Telephone:</strong> +91 33 6811 4500 (Ext. 248)
               </div>
               <div>
-                <strong className="text-[#103E3B]">Hours:</strong> Monday – Friday, 09:30 AM – 05:30 PM IST
+                <strong className="text-[#eaf6f6]">Hours:</strong> Monday – Friday, 09:30 AM – 05:30 PM IST
               </div>
             </div>
           </div>
 
           {/* Right Form Card */}
           <div className="lg:col-span-5">
-            <div className="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs space-y-5">
-              <h3 className="text-xl font-serif font-bold text-[#103E3B]">
+            <div className="bg-white/5 p-6 sm:p-8 rounded-2xl border border-white/10 shadow-xs space-y-5">
+              <h3 className="text-xl font-serif font-bold text-[#eaf6f6]">
                 Quick Department Inquiry
               </h3>
 
@@ -70,7 +70,7 @@ export const ContactSection: React.FC = () => {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#103E3B] mb-1">
+                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#eaf6f6] mb-1">
                       YOUR NAME
                     </label>
                     <input
@@ -79,12 +79,12 @@ export const ContactSection: React.FC = () => {
                       placeholder="Full Name"
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      className="w-full px-3 py-2 bg-[#F8F5EE] border border-[#D5D0C5] rounded-md text-xs text-slate-800 focus:outline-none focus:border-[#103E3B]"
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-xs text-[#eaf6f6] placeholder-[#eaf6f6]/50 focus:outline-none focus:border-teal-400"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#103E3B] mb-1">
+                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#eaf6f6] mb-1">
                       EMAIL ADDRESS
                     </label>
                     <input
@@ -93,23 +93,23 @@ export const ContactSection: React.FC = () => {
                       placeholder="you@domain.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3 py-2 bg-[#F8F5EE] border border-[#D5D0C5] rounded-md text-xs text-slate-800 focus:outline-none focus:border-[#103E3B]"
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-xs text-[#eaf6f6] placeholder-[#eaf6f6]/50 focus:outline-none focus:border-teal-400"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#103E3B] mb-1">
+                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#eaf6f6] mb-1">
                       INQUIRY TYPE
                     </label>
                     <select
                       value={formData.inquiryType}
                       onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
-                      className="w-full px-3 py-2 bg-[#F8F5EE] border border-[#D5D0C5] rounded-md text-xs text-slate-800 focus:outline-none focus:border-[#103E3B]"
+                      className="w-full px-3 py-2 bg-[#0D3330] border border-white/20 rounded-md text-xs text-[#eaf6f6] focus:outline-none focus:border-teal-400"
                     >
-                      <option value="Admissions & Eligibility">Admissions & Eligibility</option>
-                      <option value="Hospital & Industry Collaboration">Hospital & Industry Collaboration</option>
-                      <option value="Research Facilities Access">Research Facilities Access</option>
-                      <option value="General Information">General Information</option>
+                      <option value="Admissions & Eligibility" className="bg-[#0D3330] text-[#eaf6f6]">Admissions & Eligibility</option>
+                      <option value="Hospital & Industry Collaboration" className="bg-[#0D3330] text-[#eaf6f6]">Hospital & Industry Collaboration</option>
+                      <option value="Research Facilities Access" className="bg-[#0D3330] text-[#eaf6f6]">Research Facilities Access</option>
+                      <option value="General Information" className="bg-[#0D3330] text-[#eaf6f6]">General Information</option>
                     </select>
                   </div>
 

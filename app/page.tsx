@@ -10,7 +10,7 @@ import { ContactSection } from "@/components/home/ContactSection";
 
 export default function Home() {
   return (
-    <div className="bg-white text-[#103E3B] space-y-0">
+    <div className="bg-black text-[#eaf6f6] space-y-0">
       {/* 0. Front Page Auto-Playing Video Section */}
       <FrontVideo />
 

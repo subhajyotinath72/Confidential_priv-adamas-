@@ -65,10 +65,10 @@ export const HeroCarousel: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white text-[#103E3B] py-12 lg:py-20 border-b border-slate-200 relative overflow-hidden">
+    <section className="bg-black text-[#eaf6f6] py-12 lg:py-20 border-b border-white/10 relative overflow-hidden">
       {/* Subtle Ambient Background Mesh */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -83,33 +83,33 @@ export const HeroCarousel: React.FC = () => {
           >
             
             {/* Gold Eyebrow */}
-            <div className="inline-flex items-center space-x-2 text-[11px] font-bold tracking-widest text-[#B58A28] uppercase bg-amber-50/80 px-2.5 py-1 rounded-full border border-amber-200/60">
+            <div className="inline-flex items-center space-x-2 text-[11px] font-bold tracking-widest text-[#B58A28] uppercase bg-white/5 px-2.5 py-1 rounded-full border border-amber-400/30">
               <span className="w-1.5 h-1.5 rounded-full bg-[#B58A28] animate-pulse" />
               <span>SCHOOL OF ENGINEERING AND TECHNOLOGY</span>
             </div>
 
             {/* Serif Main Heading */}
-            <h1 className="text-4xl sm:text-6xl font-serif font-semibold text-[#103E3B] tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-6xl font-serif font-semibold text-[#eaf6f6] tracking-tight leading-[1.1]">
               Biomedical <br />
-              <span className="bg-gradient-to-r from-[#103E3B] via-[#175753] to-[#B58A28] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-teal-300 via-amber-300 to-[#B58A28] bg-clip-text text-transparent">
                 Engineering
               </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl font-serif italic text-[#103E3B]/80">
+            <p className="text-lg sm:text-xl font-serif italic text-[#eaf6f6]/80">
               Bridging Engineering, Biology & Healthcare.
             </p>
 
             {/* Feature Badges */}
-            <div className="flex flex-wrap gap-2 pt-1 text-xs text-slate-600 font-medium">
-              <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-[#103E3B]">
+            <div className="flex flex-wrap gap-2 pt-1 text-xs text-slate-300 font-medium">
+              <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/10 border border-white/15 text-[#eaf6f6]">
                 ✓ AICTE & UGC Recognized
               </span>
-              <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-[#103E3B]">
+              <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/10 border border-white/15 text-[#eaf6f6]">
                 ✓ 100% Hospital Clinical Rotations
               </span>
-              <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-[#103E3B]">
+              <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/10 border border-white/15 text-[#eaf6f6]">
                 ✓ Class-1000 Cleanrooms
               </span>
             </div>
@@ -127,7 +127,7 @@ export const HeroCarousel: React.FC = () => {
 
               <Link
                 href="/gallery"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-[#103E3B] bg-[#EFECE6] border border-[#D5D0C5] hover:bg-[#E5E0D5] transition-all hover:scale-[1.02]"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-[#eaf6f6] bg-white/10 border border-white/20 hover:bg-white/20 transition-all hover:scale-[1.02]"
               >
                 VIEW DEPARTMENT GALLERY
               </Link>
@@ -142,7 +142,7 @@ export const HeroCarousel: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6"
           >
-            <div className="bg-[#EFECE6]/85 backdrop-blur-md p-4 sm:p-6 rounded-2xl border border-[#E2DDD3]/90 shadow-md">
+            <div className="bg-white/5 backdrop-blur-md p-4 sm:p-6 rounded-2xl border border-white/10 shadow-md">
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {labGridItems.map((lab, idx) => (
                   <div

@@ -54,7 +54,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${outfit.variable} ${playfair.variable} scroll-smooth bg-white text-[#103E3B]`}
+      className={`${inter.variable} ${outfit.variable} ${playfair.variable} scroll-smooth bg-black text-[#eaf6f6]`}
       suppressHydrationWarning
     >
       <head>
@@ -77,12 +77,12 @@ export default function RootLayout({
       </head>
       <body
         id="top"
-        className="min-h-screen flex flex-col bg-white text-[#103E3B] font-sans antialiased selection:bg-[#103E3B] selection:text-white"
+        className="min-h-screen flex flex-col bg-black text-[#eaf6f6] font-sans antialiased selection:bg-[#103E3B] selection:text-[#eaf6f6]"
         suppressHydrationWarning
       >
         <TopBar />
         <Navbar />
-        <main className="flex-grow bg-white text-[#103E3B]">{children}</main>
+        <main className="flex-grow bg-black text-[#eaf6f6]">{children}</main>
         <Footer />
       </body>
     </html>

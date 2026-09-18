@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
-import { ChevronRight, ArrowRight, Volume2, VolumeX, Play, Pause, Radio } from "lucide-react";
+import { ChevronRight, ArrowRight, Radio } from "lucide-react";
 
 interface FrontVideoProps {
   src?: string;
@@ -46,28 +46,7 @@ export const FrontVideo: React.FC<FrontVideoProps> = ({
   src = "/adamas-virtual-tour.mp4",
   poster = "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1920",
 }) => {
-  const [isMuted, setIsMuted] = useState(true);
-  const [isPlaying, setIsPlaying] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
-
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-        setIsPlaying(false);
-      } else {
-        videoRef.current.play();
-        setIsPlaying(true);
-      }
-    }
-  };
 
   return (
     <section className="w-full relative overflow-hidden bg-[#103E3B] border-b border-white/10">
@@ -82,7 +61,7 @@ export const FrontVideo: React.FC<FrontVideoProps> = ({
             poster={poster}
             autoPlay
             loop
-            muted={isMuted}
+            muted
             playsInline
             className="w-full h-full object-contain"
           />
@@ -96,26 +75,6 @@ export const FrontVideo: React.FC<FrontVideoProps> = ({
             <span className="text-[9px] font-bold uppercase tracking-widest text-white/90">
               CAMPUS & LAB TOUR
             </span>
-          </div>
-
-          {/* Interactive Floating Quick Controls */}
-          <div className="absolute bottom-3 right-3 z-20 flex items-center space-x-2">
-            <button
-              onClick={togglePlay}
-              className="p-2 rounded-lg bg-black/60 hover:bg-black/80 text-white backdrop-blur-md border border-white/15 transition-all hover:scale-105"
-              aria-label={isPlaying ? "Pause video" : "Play video"}
-              title={isPlaying ? "Pause video" : "Play video"}
-            >
-              {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
-            </button>
-            <button
-              onClick={toggleMute}
-              className="p-2 rounded-lg bg-black/60 hover:bg-black/80 text-white backdrop-blur-md border border-white/15 transition-all hover:scale-105"
-              aria-label={isMuted ? "Unmute video" : "Mute video"}
-              title={isMuted ? "Unmute video" : "Mute video"}
-            >
-              {isMuted ? <VolumeX className="w-3.5 h-3.5 text-amber-300" /> : <Volume2 className="w-3.5 h-3.5 text-emerald-300" />}
-            </button>
           </div>
         </div>
 

@@ -144,3 +144,148 @@
 .animate-horizontal-ticker:hover {
   animation-play-state: paused;
 }
+
+/* --- MedTech & Premium UI Effects --- */
+
+/* Shimmer Sweep for High-Conversion Buttons & Badges */
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  50%, 100% {
+    transform: translateX(200%) skewX(-20deg);
+  }
+}
+
+.shine-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-sweep::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 100%
+  );
+  transform: translateX(-150%) skewX(-20deg);
+  animation: shimmerSweep 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+/* Laser Scanner Sweep for Lab Cards */
+@keyframes radarScan {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.scanner-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanner-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(181, 138, 40, 0.9),
+    rgba(255, 255, 255, 0.95),
+    rgba(181, 138, 40, 0.9),
+    transparent
+  );
+  box-shadow: 0 0 12px 2px rgba(181, 138, 40, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.scanner-card:hover::after {
+  animation: radarScan 1.8s ease-in-out infinite;
+}
+
+/* ECG Heartbeat Line Animation */
+@keyframes ecgPulse {
+  0% {
+    stroke-dashoffset: 600;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -600;
+  }
+}
+
+.animate-ecg {
+  stroke-dasharray: 600;
+  animation: ecgPulse 3.5s linear infinite;
+}
+
+/* Precision HUD Corner Brackets */
+.hud-bracket {
+  position: relative;
+}
+
+.hud-bracket::before,
+.hud-bracket::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.hud-bracket::before {
+  top: 8px;
+  left: 8px;
+  border-top: 2px solid rgba(181, 138, 40, 0.6);
+  border-left: 2px solid rgba(181, 138, 40, 0.6);
+}
+
+.hud-bracket::after {
+  bottom: 8px;
+  right: 8px;
+  border-bottom: 2px solid rgba(181, 138, 40, 0.6);
+  border-right: 2px solid rgba(181, 138, 40, 0.6);
+}
+
+/* Pulse Ring Animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.3;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}

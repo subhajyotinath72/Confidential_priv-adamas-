@@ -1,74 +1,11 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { Microscope, Hospital, Award, Globe, ArrowUpRight } from "lucide-react";
-
-const USP_ITEMS = [
-  {
-    id: 1,
-    title: "State-of-the-Art Bio Labs",
-    subtitle: "Cleanrooms & 3D Printers",
-    stat: "12+",
-    statLabel: "Specialized Research Facilities",
-    description: "Equipped with class-1000 cleanrooms, 3D bioprinters, microfluidic printers, high-speed ultrasound digitizers, and GPU bio-computing clusters.",
-    icon: Microscope,
-    color: "bg-teal-50/50 hover:bg-teal-50",
-    borderColor: "border-teal-200",
-    iconColor: "text-teal-600",
-  },
-  {
-    id: 2,
-    title: "Hospital & Clinical Exposure",
-    subtitle: "Hands-on ICU & Radiology Training",
-    stat: "8+",
-    statLabel: "Partner Medical Networks",
-    description: "Formal MoUs with Kolkata's premier super-specialty hospital networks for clinical rotations, equipment diagnostics, and doctor-mentored research.",
-    icon: Hospital,
-    color: "bg-amber-50/50 hover:bg-amber-50",
-    borderColor: "border-amber-200",
-    iconColor: "text-amber-600",
-  },
-  {
-    id: 3,
-    title: "Research & Patent Output",
-    subtitle: "High-Impact Publications",
-    stat: "60+",
-    statLabel: "Peer-Reviewed Journals & Patents",
-    description: "Active research grants funded by DST-SERB, ICMR, and CSIR. Faculty and students frequently publish in top IEEE & Elsevier journals.",
-    icon: Award,
-    color: "bg-blue-50/50 hover:bg-blue-50",
-    borderColor: "border-blue-200",
-    iconColor: "text-blue-600",
-  },
-  {
-    id: 4,
-    title: "Global Exchanges & Placements",
-    subtitle: "Overseas Fellowships & MedTech R&D",
-    stat: "95%+",
-    statLabel: "Placement & Higher Ed Rate",
-    description: "Graduates recruited by Siemens Healthineers, GE Healthcare, Philips, or pursuing fully-funded MS/PhD degrees at NUS, Johns Hopkins, & Europe.",
-    icon: Globe,
-    color: "bg-purple-50/50 hover:bg-purple-50",
-    borderColor: "border-purple-200",
-    iconColor: "text-purple-600",
-  },
-];
 
 export const USPTiles: React.FC = () => {
-  const partners = [
-    { name: "APEX MULTI-SPECIALITY", desc: "Clinical Ward Rotations" },
-    { name: "BIOMETRICS INDIA", desc: "Medical Sensors & IoT" },
-    { name: "NATIONAL NEURO CENTRE", desc: "BCI & EEG Analysis" },
-    { name: "EASTERN MEDTECH HUB", desc: "Prototyping & Testing" },
-  ];
-
-  const recruiters = ["GE Healthcare", "Siemens Healthineers", "Apollo Hospitals", "Philips BioMed", "Medtronic"];
-
   return (
     <div className="space-y-0">
-      
-      {/* 2. Internships & Placements */}
+      {/* Internships & Placements */}
       <section className="bg-gradient-to-br from-slate-50 via-teal-50/30 to-amber-50/20 py-12 lg:py-16 border-b border-slate-200 relative overflow-hidden">
         {/* Glowing Glass Ambient Orbs */}
         <div className="absolute top-10 left-10 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -81,7 +18,7 @@ export const USPTiles: React.FC = () => {
               CAREER PATHWAYS
             </div>
             <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
-              Internships & Placements
+              Internships & Hospital Rotations
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-1 max-w-3xl font-sans">
               Students complete compulsory clinical rotations in super-specialty hospitals and secure roles in biomedical instrumentation, clinical trials, and diagnostics.
@@ -109,7 +46,7 @@ export const USPTiles: React.FC = () => {
               ]).map((card, index) => (
                 <div
                   key={index}
-                  className="w-[300px] sm:w-[360px] flex-shrink-0 glass-card p-6 rounded-2xl space-y-4"
+                  className="w-[300px] sm:w-[360px] flex-shrink-0 glass-card p-6 rounded-2xl space-y-4 hover:shadow-lg transition-all"
                 >
                   <div className="w-10 h-10 rounded-lg bg-[#F8F5EE] border border-[#D5D0C5] flex items-center justify-center text-xs font-bold text-[#103E3B]">
                     {card.id}
@@ -138,7 +75,6 @@ export const USPTiles: React.FC = () => {
 
         </div>
       </section>
-
     </div>
   );
 };

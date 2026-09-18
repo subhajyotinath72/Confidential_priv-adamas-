@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { Calendar, Sparkles, Bell, Award, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { EcgDivider } from "@/components/shared/EcgDivider";
 
 interface NewsAndEventsProps {
   showFullArchive?: boolean;
@@ -130,7 +132,13 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="flex items-end justify-between mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4"
+        >
           <div>
             <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
               UPDATES & COLLOQUIA
@@ -144,12 +152,12 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
           </div>
           <Link
             href="/news"
-            className="text-xs font-bold text-[#103E3B] uppercase tracking-wider hover:underline flex items-center space-x-1"
+            className="text-xs font-bold text-[#103E3B] uppercase tracking-wider hover:text-[#B58A28] transition-colors flex items-center space-x-1 self-start sm:self-auto"
           >
-            <span>VIEW ARCHIVE</span>
+            <span>VIEW ALL UPDATES</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
-        </div>
+        </motion.div>
 
         {/* Animated Horizontal Ticker */}
         <div className="overflow-x-auto pb-4 scrollbar-thin">
@@ -198,6 +206,9 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
         </div>
 
       </div>
+
+      {/* Subtle ECG Pulse Divider */}
+      <EcgDivider className="mt-8" color="#103E3B" />
     </section>
   );
 };

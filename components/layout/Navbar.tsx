@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion, useScroll, useSpring } from "framer-motion";
 import {
   ChevronDown,
   Menu,
@@ -16,6 +17,14 @@ export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const pathname = usePathname();
+
+  // Scroll Progress Bar
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,6 +81,11 @@ export const Navbar: React.FC = () => {
           : "bg-[#103E3B] text-[#F7D6C8] py-2 border-b border-white/10"
         }`}
     >
+      {/* 2.5px Interactive Scroll Progress Indicator */}
+      <motion.div
+        className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-[#B58A28] via-[#E6CA65] to-[#B58A28] origin-left z-50 pointer-events-none"
+        style={{ scaleX }}
+      />
       <div className="w-full px-2 sm:px-4 lg:px-6">
         <div className="flex items-center justify-between gap-2 lg:gap-4">
 
@@ -167,7 +181,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-2 flex-shrink-0">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-3 xl:px-4 py-1.5 text-[11px] xl:text-xs font-bold tracking-wider text-[#103E3B] bg-[#F7D6C8] hover:bg-[#FCECE4] rounded-full shadow-md uppercase transition-all whitespace-nowrap"
+              className="shine-sweep inline-flex items-center justify-center px-3 xl:px-4 py-1.5 text-[11px] xl:text-xs font-bold tracking-wider text-[#103E3B] bg-[#F7D6C8] hover:bg-[#FCECE4] rounded-full shadow-md uppercase transition-all whitespace-nowrap"
             >
               CONTACT US
             </Link>

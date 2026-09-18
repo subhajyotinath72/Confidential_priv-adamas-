@@ -6,7 +6,6 @@ import { USPTiles } from "@/components/home/USPTiles";
 import { HoDQuote } from "@/components/home/HoDQuote";
 import { AcademicPrograms } from "@/components/home/AcademicPrograms";
 import { NewsAndEvents } from "@/components/home/NewsAndEvents";
-import { Spotlight } from "@/components/home/Spotlight";
 import { ContactSection } from "@/components/home/ContactSection";
 
 export default function Home() {
@@ -33,10 +32,7 @@ export default function Home() {
       {/* 5. News & Events Section */}
       <NewsAndEvents />
 
-      {/* 6. Faculty Spotlight */}
-      <Spotlight />
-
-      {/* 7. Connect with Department & Inquiry */}
+      {/* 6. Connect with Department & Inquiry */}
       <ContactSection />
     </div>
   );

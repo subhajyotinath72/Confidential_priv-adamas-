@@ -5,62 +5,25 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #000000;
-    color: #00204a;
+    background-color: #ffffff;
+    color: #103E3B;
   }
 
   body {
-    @apply bg-black text-[#00204a] font-sans antialiased selection:bg-[#103E3B] selection:text-[#eaf6f6];
-    background-color: #000000;
-    color: #eaf6f6;
+    @apply bg-white text-[#103E3B] font-sans antialiased selection:bg-[#103E3B] selection:text-white;
+    background-color: #ffffff;
+    color: #103E3B;
   }
 
   /* Global Headings & Paragraphs color fallback */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: #ffc93c;
-  }
-
-  p {
-    color: #080a00;
+  h1, h2, h3, h4, h5, h6 {
+    color: #103E3B;
   }
 
   /* Accessibility focus states */
   *:focus-visible {
-    @apply outline-none ring-2 ring-[#eaf6f6] ring-offset-2 ring-offset-black;
+    @apply outline-none ring-2 ring-[#103E3B] ring-offset-2 ring-offset-white;
   }
-}
-
-/* Light Ice-Mint Font Color Theme (#eaf6f6) */
-.text-\[\#103E3B\] {
-  color: #eaf6f6;
-}
-
-.text-\[\#103E3B\]\/90 {
-  color: rgba(234, 246, 246, 0.9);
-}
-
-.text-\[\#103E3B\]\/80 {
-  color: rgba(234, 246, 246, 0.8);
-}
-
-.text-\[\#103E3B\]\/70 {
-  color: rgba(234, 246, 246, 0.7);
-}
-
-/* Preserve dark text for light badges, pills and tags */
-.bg-\[\#F7D6C8\].text-\[\#103E3B\],
-.bg-\[\#F7D6C8\] .text-\[\#103E3B\],
-.bg-\[\#FCECE4\].text-\[\#103E3B\],
-.bg-\[\#F8F5EE\] .text-\[\#103E3B\],
-button.bg-\[\#F7D6C8\],
-a.bg-\[\#F7D6C8\],
-.bg-teal-50 .text-\[\#103E3B\] {
-  color: #103E3B;
 }
 
 /* Custom Webkit Scrollbars */
@@ -152,7 +115,6 @@ a.bg-\[\#F7D6C8\],
   0% {
     transform: translateY(0%);
   }
-
   100% {
     transform: translateY(-50%);
   }
@@ -170,7 +132,6 @@ a.bg-\[\#F7D6C8\],
   0% {
     transform: translateX(0%);
   }
-
   100% {
     transform: translateX(-50%);
   }
@@ -328,4 +289,3 @@ a.bg-\[\#F7D6C8\],
 .animate-pulse-glow {
   animation: pulseGlow 2.5s ease-in-out infinite;
 }
-

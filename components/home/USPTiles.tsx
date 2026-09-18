@@ -6,10 +6,10 @@ export const USPTiles: React.FC = () => {
   return (
     <div className="space-y-0">
       {/* Internships & Placements */}
-      <section className="bg-gradient-to-br from-black via-[#081a19] to-black py-12 lg:py-16 border-b border-white/10 relative overflow-hidden">
-        {/* Glowing Glass Ambient Orbs */}
-        <div className="absolute top-10 left-10 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+      <section className="bg-gradient-to-br from-slate-50 via-teal-50/30 to-amber-50/20 py-12 lg:py-16 border-b border-slate-200 relative overflow-hidden">
+        {/* Soft Ambient Orbs */}
+        <div className="absolute top-10 left-10 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
@@ -17,10 +17,10 @@ export const USPTiles: React.FC = () => {
             <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
               CAREER PATHWAYS
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#eaf6f6] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
               Internships & Hospital Rotations
             </h2>
-            <p className="text-sm sm:text-base text-[#eaf6f6]/70 mt-1 max-w-3xl font-sans">
+            <p className="text-sm sm:text-base text-[#103E3B]/80 mt-1 max-w-3xl font-sans">
               Students complete compulsory clinical rotations in super-specialty hospitals and secure roles in biomedical instrumentation, clinical trials, and diagnostics.
             </p>
           </div>
@@ -46,23 +46,23 @@ export const USPTiles: React.FC = () => {
               ]).map((card, index) => (
                 <div
                   key={index}
-                  className="w-[300px] sm:w-[360px] flex-shrink-0 glass-dark p-6 rounded-2xl space-y-4 hover:shadow-lg transition-all border border-white/10"
+                  className="w-[300px] sm:w-[360px] flex-shrink-0 glass-card p-6 rounded-2xl space-y-4 hover:shadow-md transition-all border border-slate-200 bg-white"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-xs font-bold text-[#eaf6f6]">
+                  <div className="w-10 h-10 rounded-lg bg-[#103E3B] text-white flex items-center justify-center text-xs font-bold shadow-xs">
                     {card.id}
                   </div>
-                  <h3 className="text-lg font-serif font-bold text-[#eaf6f6]">
+                  <h3 className="text-lg font-serif font-bold text-[#103E3B]">
                     {card.title}
                   </h3>
                   {card.desc && (
-                    <p className="text-xs text-[#eaf6f6]/75 leading-relaxed font-sans">
+                    <p className="text-xs text-[#103E3B]/80 leading-relaxed font-sans">
                       {card.desc}
                     </p>
                   )}
                   {card.recruiters && (
                     <div className="flex flex-wrap gap-2 pt-1">
                       {card.recruiters.map((r, i) => (
-                        <span key={i} className="px-2.5 py-1 bg-white/5 text-[10px] font-bold text-amber-300 border border-white/10 rounded">
+                        <span key={i} className="px-2.5 py-1 bg-amber-50 text-[10px] font-bold text-[#B58A28] border border-amber-200/80 rounded shadow-xs">
                           {r}
                         </span>
                       ))}

@@ -6,7 +6,7 @@ import { Camera, Image as ImageIcon } from "lucide-react";
 
 export default function GalleryPage() {
   return (
-    <div className="bg-slate-50 min-h-screen pb-20 space-y-12">
+    <div className="bg-transparent min-h-screen pb-20 space-y-12">
       
       {/* Header Banner */}
       <section className="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-800">

@@ -65,7 +65,7 @@ export const HeroCarousel: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white text-[#103E3B] py-12 lg:py-20 border-b border-slate-200 relative overflow-hidden">
+    <section className="bg-white/40 backdrop-blur-[1px] text-[#103E3B] py-12 lg:py-20 border-b border-slate-200/80 relative overflow-hidden">
       {/* Subtle Ambient Background Mesh */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />

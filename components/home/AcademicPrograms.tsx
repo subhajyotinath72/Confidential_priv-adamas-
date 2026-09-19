@@ -69,7 +69,7 @@ export const AcademicPrograms: React.FC = () => {
   const active = programData[activeTab];
 
   return (
-    <section id="programs" className="bg-gradient-to-br from-white via-slate-50 to-teal-50/20 text-[#103E3B] py-12 lg:py-20 border-b border-slate-200 relative overflow-hidden">
+    <section id="programs" className="bg-white/40 backdrop-blur-[1px] text-[#103E3B] py-12 lg:py-20 border-b border-slate-200/80 relative overflow-hidden">
       {/* Background Ambient Orbs */}
       <div className="absolute top-10 right-10 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 left-10 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />

@@ -50,7 +50,7 @@ export const ProgramDetailView: React.FC = () => {
   };
 
   return (
-    <div className="bg-slate-50 min-h-screen py-10 font-sans">
+    <div className="bg-transparent min-h-screen py-10 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main 2-Column Grid Layout */}

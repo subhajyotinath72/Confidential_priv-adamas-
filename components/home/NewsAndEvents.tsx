@@ -70,7 +70,7 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
 
   if (showFullArchive) {
     return (
-      <section id="news" className="bg-white py-12 lg:py-16 border-b border-slate-200">
+      <section id="news" className="bg-white/40 backdrop-blur-[1px] py-12 lg:py-16 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-8">
             <div>
@@ -124,7 +124,7 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
   const marqueeItems = [...items, ...items];
 
   return (
-    <section id="news" className="bg-gradient-to-br from-slate-100/80 via-white to-teal-50/30 py-12 lg:py-16 border-b border-slate-200 overflow-hidden relative">
+    <section id="news" className="bg-white/40 backdrop-blur-[1px] py-12 lg:py-16 border-b border-slate-200/80 overflow-hidden relative">
       {/* Background Glass Ambient Blobs */}
       <div className="absolute top-1/2 right-0 w-80 h-80 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />

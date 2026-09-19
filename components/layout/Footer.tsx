@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
     "https://www.bing.com/maps/search?name=Adamas+University&trfc=&mepi=0%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&ss=id.ypid%3AYNB328D7AD71F2FCAD&q=Adamas+University&ppois=22.73830795288086_88.45661926269531_Adamas+University&cp=22.738308%7E88.456619&lvl=15";
 
   return (
-    <footer className="bg-[#103E3B] text-[#c2f0fc] border-t border-white/10 pt-12 pb-8 font-sans">
+    <footer className="relative z-20 bg-[#103E3B] text-[#c2f0fc] border-t border-white/10 pt-12 pb-8 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
 
         {/* Main Footer Row */}

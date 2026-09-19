@@ -6,7 +6,7 @@ import { GraduationCap } from "lucide-react";
 
 export default function ProgramsPage() {
   return (
-    <div className="bg-slate-50 min-h-screen">
+    <div className="bg-transparent min-h-screen">
       
       {/* Page Header Banner */}
       <section className="bg-[#103E3B] py-12 px-4 sm:px-6 lg:px-8 border-b border-white/10 text-white">

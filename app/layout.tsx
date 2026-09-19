@@ -4,6 +4,7 @@ import "./globals.css";
 import { TopBar } from "@/components/layout/TopBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { MainLayoutWrapper } from "@/components/layout/MainLayoutWrapper";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -77,12 +78,12 @@ export default function RootLayout({
       </head>
       <body
         id="top"
-        className="min-h-screen flex flex-col bg-white text-[#103E3B] font-sans antialiased selection:bg-[#103E3B] selection:text-white"
+        className="min-h-screen flex flex-col bg-white text-[#103E3B] font-sans antialiased selection:bg-[#103E3B] selection:text-white relative"
         suppressHydrationWarning
       >
         <TopBar />
         <Navbar />
-        <main className="flex-grow bg-white text-[#103E3B]">{children}</main>
+        <MainLayoutWrapper>{children}</MainLayoutWrapper>
         <Footer />
       </body>
     </html>

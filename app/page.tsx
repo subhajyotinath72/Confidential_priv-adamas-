@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { FrontVideo } from "@/components/home/FrontVideo";
 import { RollingTicker } from "@/components/home/RollingTicker";
@@ -10,29 +12,21 @@ import { ContactSection } from "@/components/home/ContactSection";
 
 export default function Home() {
   return (
-    <div className="bg-white text-[#103E3B] space-y-0">
+    <div className="bg-transparent text-[#103E3B] space-y-0">
       {/* 0. Front Page Auto-Playing Video Section */}
       <FrontVideo />
 
       {/* 0.5 Linear Infinite Text Motion Ticker */}
       <RollingTicker />
 
-      {/* 1. Hero Section */}
+      {/* MAIN BODY: All Sections */}
       <HeroCarousel />
-
-      {/* 2. HoD Leadership & Vision Section */}
       <HoDQuote />
-
-      {/* 3. Academic Programs & Admissions Section */}
       <AcademicPrograms />
-
-      {/* 4. USP Tiles / Hospital & Industry Partners */}
       <USPTiles />
-
-      {/* 5. News & Events Section */}
       <NewsAndEvents />
 
-      {/* 6. Connect with Department & Inquiry */}
+      {/* 6. Connect with Department & Inquiry (Contact Details Section - Untouched & Solid) */}
       <ContactSection />
     </div>
   );

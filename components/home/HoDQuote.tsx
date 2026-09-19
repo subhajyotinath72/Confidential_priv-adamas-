@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export const HoDQuote: React.FC = () => {
   return (
-    <section className="bg-white text-[#103E3B] py-12 lg:py-20 border-b border-slate-200 relative overflow-hidden">
+    <section className="bg-white/40 backdrop-blur-[1px] text-[#103E3B] py-12 lg:py-20 border-b border-slate-200/80 relative overflow-hidden">
       {/* Background Ambient Glow */}
       <div className="absolute top-1/2 left-0 w-80 h-80 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
 

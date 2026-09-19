@@ -18,7 +18,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="bg-white text-[#103E3B] py-12 lg:py-16 border-b border-slate-200">
+    <section id="contact" className="relative z-20 bg-white text-[#103E3B] py-12 lg:py-16 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">

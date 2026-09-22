@@ -54,7 +54,6 @@ export const Navbar: React.FC = () => {
       dropdown: [
         { name: "Faculty Directory", href: "/people#faculty", desc: "Professors & Academic Leads" },
         { name: "Research Scholars", href: "/people#scholars", desc: "Ph.D. & M.Tech Researchers" },
-        { name: "Technical & Lab Staff", href: "/people#staff", desc: "Cleanroom & Electronics Engineers" },
         { name: "Distinguished Alumni", href: "/people#alumni", desc: "MedTech & Academia Leaders" },
       ],
     },
@@ -92,11 +91,11 @@ export const Navbar: React.FC = () => {
           {/* Brand Logo */}
           <Link href="/" className="flex items-center space-x-2.5 sm:space-x-3 group flex-shrink-0">
             {/* Adamas NAAC Grade A Logo */}
-            <div className="h-11 sm:h-13 md:h-14 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-[44px] md:h-[44px] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
               <img
-                src="/adamas-logo-light.png"
+                src="/adamas-round-logo.png"
                 alt="Adamas University NAAC Grade A Logo"
-                className="h-full w-auto object-contain scale-105"
+                className="w-full h-full object-contain aspect-square"
               />
             </div>
 

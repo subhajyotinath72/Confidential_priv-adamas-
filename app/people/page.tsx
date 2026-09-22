@@ -1,16 +1,28 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FACULTY_MEMBERS, Faculty } from "@/data/faculty";
 import { Users, Search, Mail, Phone, MapPin, Award, BookOpen, Filter } from "lucide-react";
 import { Modal } from "@/components/ui/Modal";
 
 export default function PeoplePage() {
+  const [facultyList, setFacultyList] = useState<Faculty[]>(FACULTY_MEMBERS);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTrack, setSelectedTrack] = useState<string>("all");
   const [selectedFaculty, setSelectedFaculty] = useState<Faculty | null>(null);
 
-  const filteredFaculty = FACULTY_MEMBERS.filter((fac) => {
+  useEffect(() => {
+    fetch("/api/admin/content")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.faculty && data.faculty.length > 0) {
+          setFacultyList(data.faculty);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  const filteredFaculty = facultyList.filter((fac) => {
     const matchesSearch =
       fac.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       fac.specialization.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -25,17 +37,17 @@ export default function PeoplePage() {
     <div className="bg-transparent min-h-screen pb-20">
       
       {/* Header Banner */}
-      <section className="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+      <section className="bg-[#103E3B] py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10 text-white">
         <div className="max-w-7xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold uppercase tracking-wider border border-teal-500/30">
-            <Users className="w-4 h-4 text-adamas-gold" />
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 text-[#F7D6C8] text-xs font-bold uppercase tracking-wider border border-white/20">
+            <Users className="w-4 h-4 text-amber-400" />
             <span>Academic Leadership & Scholars</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-serif">
             People & Faculty Directory
           </h1>
-          <p className="text-sm sm:text-base text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Meet the researchers, clinicians, scholars, and lab engineers driving biomedical innovation at Adamas University, Kolkata.
+          <p className="text-sm sm:text-base text-[#F7D6C8]/90 max-w-3xl mx-auto leading-relaxed">
+            Meet the researchers, clinicians, scholars, and educators driving biomedical innovation at Adamas University, Kolkata.
           </p>
         </div>
       </section>
@@ -111,7 +123,7 @@ export default function PeoplePage() {
             No people found matching your search query.
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className={`grid grid-cols-1 md:grid-cols-2 ${filteredFaculty.length > 2 ? 'lg:grid-cols-4 max-w-7xl' : 'max-w-4xl'} mx-auto gap-8`}>
             {filteredFaculty.map((fac) => (
               <div
                 key={fac.id}

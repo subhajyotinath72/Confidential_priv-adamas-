@@ -8,32 +8,32 @@ import Link from "next/link";
 export const Spotlight: React.FC = () => {
   const facultyMentors = [
     {
-      initials: "AB",
-      name: "Prof. (Dr.) Semanti Chakraborty",
-      designation: "Head of Dept",
+      initials: "AH",
+      name: "Prof. (Dr.) Animesh Halder",
+      designation: "Assoc. Prof",
       specialization: "Microfluidics & Point-of-Care Biosensors",
       href: "/people#fac-1",
     },
     {
-      initials: "SM",
+      initials: "SC",
+      name: "Prof. (Dr.) Sayanti Chowdhury",
+      designation: "Assoc. Prof",
+      specialization: "Medical Image AI & Biosignal Processing",
+      href: "/people#fac-2",
+    },
+    {
+      initials: "HB",
       name: "Prof. (Dr.) Howa Begum",
       designation: "Assoc. Prof",
       specialization: "Orthopedic Biomechanics & Gait Analysis",
       href: "/people#fac-2",
     },
     {
-      initials: "PB",
-      name: "Prof. (Dr.) Sayanti Chowdhury",
-      designation: "Asst. Prof",
-      specialization: "Medical Image AI & Brain MRI Reconstruction",
-      href: "/people#fac-3",
-    },
-    {
-      initials: "RG",
-      name: "Prof. (Dr.) Animesh Halder",
+      initials: "SK",
+      name: "Prof. (Dr.) Semanti Chakraborty",
       designation: "Senior Fellow",
       specialization: "Biomaterials & Injectable Tissue Scaffolds",
-      href: "/people#fac-4",
+      href: "/people#fac-2",
     },
   ];
 

@@ -9,16 +9,16 @@ export default function OpportunitiesPage() {
     <div className="bg-transparent min-h-screen pb-20">
       
       {/* Header Banner */}
-      <section className="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+      <section className="bg-[#103E3B] py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10 text-white">
         <div className="max-w-7xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold uppercase tracking-wider border border-teal-500/30">
-            <Sparkles className="w-4 h-4 text-adamas-gold" />
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 text-[#F7D6C8] text-xs font-bold uppercase tracking-wider border border-white/20">
+            <Sparkles className="w-4 h-4 text-amber-400" />
             <span>Student & Career Growth</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-serif">
             Opportunities & Careers
           </h1>
-          <p className="text-sm sm:text-base text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-[#F7D6C8]/90 max-w-3xl mx-auto leading-relaxed">
             Discover funded research fellowships, hospital clinical rotations, undergraduate seed grants, and academic career openings at Adamas Biomedical Engineering.
           </p>
         </div>

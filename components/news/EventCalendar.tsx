@@ -42,7 +42,7 @@ const INITIAL_EVENTS: EventItem[] = [
     time: "10:00 AM - 12:30 PM",
     title: "Cardiovascular AI Telemetry Grant Secured",
     location: "SET Bio-Computing Lab 401",
-    speaker: "Dr. Sunita Roy & Department Faculty",
+    speaker: "Dr. Sayanti Chowdhury & Department Faculty",
     category: "Research",
     desc: "National funding awarded for wearable photoplethysmography sensor systems engineered by the department faculty."
   },
@@ -54,7 +54,7 @@ const INITIAL_EVENTS: EventItem[] = [
     time: "02:00 PM - 04:00 PM",
     title: "DST-SERB Grant for 3D Bioprinting Research Announcement",
     location: "Auditorium Hall A",
-    speaker: "Dr. Sunita Roy",
+    speaker: "Dr. Sayanti Chowdhury",
     category: "Research",
     desc: "Developing vascularized 3D tissue constructs for cardiac tissue engineering."
   },

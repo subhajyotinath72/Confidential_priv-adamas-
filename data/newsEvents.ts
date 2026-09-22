@@ -28,7 +28,7 @@ export const RECENT_NEWS: NewsItem[] = [
     title: "Adamas Biomedical Engineering Faculty Secures DST-SERB Grant for 3D Bioprinting Research",
     date: "August 28, 2026",
     category: "Research",
-    summary: "Dr. Sunita Roy and her research team have been awarded a prestigious ₹42 Lakh research grant by DST-SERB to develop vascularized 3D tissue constructs for cardiac repair.",
+    summary: "Dr. Sayanti Chowdhury and her research team have been awarded a prestigious ₹42 Lakh research grant by DST-SERB to develop vascularized 3D tissue constructs for cardiac repair.",
     image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600",
     author: "Department R&D Cell",
     readTime: "3 min read"

@@ -36,7 +36,7 @@ export const TESTIMONIALS: Testimonial[] = [
     batch: "Class of 2022",
     currentRole: "Postdoctoral Research Fellow",
     companyOrUniversity: "National University of Singapore (NUS)",
-    quote: "Adamas provided an exceptional research atmosphere. Under Dr. Sunita Roy's guidance, my master's thesis on 3D bioprinted hydrogels led to two international journal publications and my PhD fellowship abroad.",
+    quote: "Adamas provided an exceptional research atmosphere. Under Dr. Sayanti Chowdhury's guidance, my master's thesis on 3D bioprinted hydrogels led to two international journal publications and my PhD fellowship abroad.",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300"
   },
   {

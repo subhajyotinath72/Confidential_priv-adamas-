@@ -46,7 +46,7 @@ export default function AdminResearchPage() {
       name: "",
       code: "01",
       focus: "",
-      lead: "Dr. Arindam Banerjee",
+      lead: "Dr. Animesh Halder",
       funding: "DST-SERB, Govt. of India",
       icon: "Activity",
       specs: "High-speed bioprinters, biosensor testing suites",

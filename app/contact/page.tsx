@@ -24,16 +24,16 @@ export default function ContactPage() {
     <div className="bg-transparent min-h-screen pb-20">
       
       {/* Header Banner */}
-      <section className="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+      <section className="bg-[#103E3B] py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10 text-white">
         <div className="max-w-7xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold uppercase tracking-wider border border-teal-500/30">
-            <MapPin className="w-4 h-4 text-adamas-gold" />
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 text-[#F7D6C8] text-xs font-bold uppercase tracking-wider border border-white/20">
+            <MapPin className="w-4 h-4 text-amber-400" />
             <span>Adamas University • Kolkata, West Bengal</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-serif">
             Contact & Admissions Helpline
           </h1>
-          <p className="text-sm sm:text-base text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-[#F7D6C8]/90 max-w-3xl mx-auto leading-relaxed">
             Have questions about B.Tech, M.Tech, or Ph.D. admissions, research collaborations, or hospital clinical partnerships? Get in touch with our department office.
           </p>
         </div>
@@ -98,9 +98,9 @@ export default function ContactPage() {
               </h3>
               <div className="space-y-3 text-xs">
                 <div className="border-b border-slate-100 pb-2">
-                  <div className="font-bold text-slate-900">Dr. Arindam Banerjee</div>
+                  <div className="font-bold text-slate-900">Dr. Animesh Halder</div>
                   <div className="text-[11px] text-teal-700 font-semibold">Head of Department</div>
-                  <div className="text-[10px] text-slate-500">arindam.banerjee@adamasuniversity.ac.in</div>
+                  <div className="text-[10px] text-slate-500">animesh.halder@adamasuniversity.ac.in</div>
                 </div>
                 <div className="border-b border-slate-100 pb-2">
                   <div className="font-bold text-slate-900">Prof. Sourav Chakraborty</div>

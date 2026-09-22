@@ -83,7 +83,7 @@ export const RESEARCH_CENTERS: ResearchCenter[] = [
     name: "Center for Advanced Bio-Imaging & Sensing",
     shortDesc: "Developing ultra-sensitive biosensors, microfluidic chips, and non-invasive diagnostic imaging tools.",
     fullDesc: "Equipped with state-of-the-art optical spectroscopy, microfluidic lithography, and high-frequency ultrasound characterization suites.",
-    headName: "Dr. Arindam Banerjee",
+    headName: "Dr. Animesh Halder",
     established: "2021",
     focusArea: "Biomedical Instrumentation",
     icon: "Scan"
@@ -93,7 +93,7 @@ export const RESEARCH_CENTERS: ResearchCenter[] = [
     name: "Tissue Engineering & Regenerative Medicine Lab",
     shortDesc: "Synthesizing bio-inks, polymeric scaffolds, and patient-specific implant biomaterials.",
     fullDesc: "Housing Class-1000 cleanroom environments, multi-axis 3D bioprinters, and cell incubator facilities for regenerative medicine research.",
-    headName: "Dr. Sunita Roy",
+    headName: "Dr. Sayanti Chowdhury",
     established: "2020",
     focusArea: "Biomaterials",
     icon: "Layers"

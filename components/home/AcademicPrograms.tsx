@@ -98,9 +98,9 @@ export const AcademicPrograms: React.FC = () => {
           <div className="flex flex-wrap gap-2 pt-6">
             {(["btech", "phd", "mtech"] as const).map((tabKey) => {
               const labels = {
-                btech: "B.Tech (Honors)",
-                phd: "Ph.D. Doctoral Research",
-                mtech: "M.Tech (Advanced)",
+                btech: "B.Tech",
+                phd: "PhD",
+                mtech: "M.Tech",
               };
               const isSelected = activeTab === tabKey;
               return (

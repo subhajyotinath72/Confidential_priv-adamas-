@@ -20,16 +20,16 @@ export default function AdmissionPage() {
     <div className="bg-transparent min-h-screen pb-20">
       
       {/* Header Banner */}
-      <section className="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+      <section className="bg-[#103E3B] py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10 text-white">
         <div className="max-w-7xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold uppercase tracking-wider border border-teal-500/30">
-            <GraduationCap className="w-4 h-4 text-adamas-gold" />
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 text-[#F7D6C8] text-xs font-bold uppercase tracking-wider border border-white/20">
+            <GraduationCap className="w-4 h-4 text-amber-400" />
             <span>School of Engineering & Technology • Adamas University</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-serif">
             Admissions & Academic Curricula 2026
           </h1>
-          <p className="text-sm sm:text-base text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-[#F7D6C8]/90 max-w-3xl mx-auto leading-relaxed">
             Apply to the AICTE-approved B.Tech in Biomedical Engineering at the Department of Biomedical Engineering.
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function AdmissionPage() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200">
               <div className="space-y-1">
                 <div className="flex items-center space-x-3">
-                  <span className="text-xs font-bold text-white bg-slate-900 px-3 py-1 rounded-md">
+                  <span className="text-xs font-bold text-white bg-[#103E3B] px-3 py-1 rounded-md">
                     {program.degree}
                   </span>
                   <span className="text-xs font-bold text-teal-700">
@@ -159,7 +159,7 @@ export default function AdmissionPage() {
             </div>
             <div className="pt-2 flex justify-end space-x-3">
               <button type="button" onClick={() => setDownloadModalOpen(false)} className="px-4 py-2 rounded-lg text-xs font-semibold text-slate-600">Cancel</button>
-              <button type="submit" className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-slate-900 hover:bg-slate-800">Download PDF</button>
+              <button type="submit" className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-[#103E3B] hover:bg-[#0D3330]">Download PDF</button>
             </div>
           </form>
         </div>

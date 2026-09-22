@@ -4,7 +4,10 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 const InteractiveBlockGrid = dynamic(
-  () => import("@/components/ui/InteractiveBlockGrid"),
+  () =>
+    import("@/components/ui/InteractiveBlockGrid").then((mod) => ({
+      default: mod.default || mod.InteractiveBlockGrid,
+    })),
   { ssr: false }
 );
 

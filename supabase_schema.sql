@@ -142,37 +142,37 @@ INSERT INTO faculty (id, name, designation, track_id, degrees, alma_mater, speci
 VALUES
 (
     'fac-1',
-    'Dr. Arindam Banerjee',
-    'Professor & Head of Department',
+    'Dr. Animesh Halder',
+    'Associate Professor',
     '01',
-    'Ph.D. in Biomedical Instrumentation, M.Tech (IIT Kharagpur)',
+    'Ph.D. in Biomedical Applications, M.Tech (Tezpur Univ)',
     'Adamas University / Formerly Research Fellow at IISc',
     'Biosensors, Non-Invasive Diagnostics, Neural Signal Processing',
-    'arindam.banerjee@adamasuniversity.ac.in',
+    'animesh.halder@adamasuniversity.ac.in',
     '+91 (033) 2587-9001',
     'SET Building, Room 302',
-    'Dr. Arindam Banerjee has over 18 years of academic and clinical research experience in biomedical signal processing and wearable biosensor systems. He leads the Center for Advanced Bio-Imaging & Sensing at Adamas University.',
+    'Dr. Animesh Halder has extensive academic and clinical research experience in biomedical signal processing and wearable biosensor systems. He leads the Center for Advanced Bio-Imaging & Sensing at Adamas University.',
     '["Cardiovascular Signal Analytics", "Wearable ECG & EEG Sensors", "Point-of-Care Diagnostics"]'::jsonb,
     68,
     5,
-    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400'
+    '/faculty/animesh-halder.jpg'
 ),
 (
     'fac-2',
-    'Dr. Sunita Roy',
+    'Dr. Sayanti Chowdhury',
     'Associate Professor',
     '02',
-    'Ph.D. in Biomaterials Engineering (NITH), M.S. (Calcutta Univ)',
-    'Adamas University / Former Scientist at CSIR-CGCRI',
+    'Ph.D. in Signal Processing (Jadavpur Univ), M.Tech (Calcutta Univ)',
+    'Adamas University / Formerly Jadavpur University',
     'Bioceramics, 3D Bioprinting Scaffolds, Controlled Drug Delivery',
-    'sunita.roy@adamasuniversity.ac.in',
+    'sayanti.chowdhury@adamasuniversity.ac.in',
     '+91 (033) 2587-9002',
     'SET Building, Room 305',
-    'Dr. Sunita Roy specializes in tissue scaffolding for orthopedic repair and bio-ink formulation for 3D bioprinting. She collaborates extensively with leading hospitals in Kolkata for clinical translational studies.',
-    '["Polymeric Tissue Scaffolds", "Nanomedicine & Targeted Delivery", "Bio-Ink Synthesis"]'::jsonb,
+    'Dr. Sayanti Chowdhury specializes in biomedical engineering, signal processing, and medical instrumentation. She collaborates extensively with researchers and clinical partners on translational health technologies.',
+    '["Biomedical Signal Processing", "Medical Image AI", "Point-of-Care Diagnostics"]'::jsonb,
     45,
     3,
-    'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400'
+    '/faculty/sayanti-chowdhury.jpg'
 ),
 (
     'fac-3',
@@ -204,7 +204,7 @@ VALUES
     '01',
     'Center for Advanced Bio-Imaging & Sensing',
     'Non-invasive optical diagnostics, wearable telemetry, and microfluidic biosensors.',
-    'Dr. Arindam Banerjee',
+    'Dr. Animesh Halder',
     'DST-SERB & ICMR',
     'Activity',
     '["High-speed digitizers", "Microfluidic printers", "Cleanroom suite"]'::jsonb
@@ -214,7 +214,7 @@ VALUES
     '02',
     'Tissue Engineering & Biomaterials Scaffold Hub',
     '3D bioprinting bio-inks, polymeric bone scaffolds, and drug delivery nanocarriers.',
-    'Dr. Sunita Roy',
+    'Dr. Sayanti Chowdhury',
     'CSIR & University Seed Grant',
     'FlaskConical',
     '["Dual-head extrusion bioprinter", "SEM imaging suite", "Biomechanics tester"]'::jsonb

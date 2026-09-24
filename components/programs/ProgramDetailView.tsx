@@ -302,7 +302,7 @@ export const ProgramDetailView: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-xs font-bold text-slate-900">Dr. Animesh Halder</h4>
-                    <p className="text-[11px] text-teal-700 font-semibold">Associate Professor</p>
+                    <p className="text-[11px] text-teal-700 font-semibold">Assistant Professor - III</p>
                     <p className="text-[10px] text-slate-500">Ph.D. Calcutta Univ • Biosensors & Devices</p>
                   </div>
                 </div>

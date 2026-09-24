@@ -13,7 +13,17 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const current = getStoreData();
 
-    const { collection, item, action, fullStore } = body;
+    const { collection, item, action, fullStore, siteSettings } = body;
+
+    if (siteSettings) {
+      current.siteSettings = siteSettings;
+      saveStoreData(current);
+      return NextResponse.json({
+        success: true,
+        message: "Site appearance and settings updated successfully.",
+        siteSettings: current.siteSettings,
+      });
+    }
 
     if (fullStore) {
       saveStoreData(fullStore);

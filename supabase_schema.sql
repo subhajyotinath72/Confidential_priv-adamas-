@@ -143,7 +143,7 @@ VALUES
 (
     'fac-1',
     'Dr. Animesh Halder',
-    'Associate Professor',
+    'Assistant Professor - III',
     '01',
     'Ph.D. in Biomedical Applications, M.Tech (Tezpur Univ)',
     'Adamas University / Formerly Research Fellow at IISc',
@@ -160,7 +160,7 @@ VALUES
 (
     'fac-2',
     'Dr. Sayanti Chowdhury',
-    'Associate Professor',
+    'Assistant Professor - I',
     '02',
     'Ph.D. in Signal Processing (Jadavpur Univ), M.Tech (Calcutta Univ)',
     'Adamas University / Formerly Jadavpur University',

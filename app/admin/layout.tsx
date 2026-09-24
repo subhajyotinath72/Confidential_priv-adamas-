@@ -15,6 +15,9 @@ import {
   Menu,
   X,
   ChevronRight,
+  Camera,
+  RefreshCw,
+  Palette,
 } from "lucide-react";
 
 export default function AdminLayout({
@@ -45,10 +48,12 @@ export default function AdminLayout({
 
   const navItems = [
     { name: "Dashboard Overview", href: "/admin", icon: LayoutDashboard },
+    { name: "Site Appearance & Details", href: "/admin/settings", icon: Palette },
     { name: "Faculty & Staff Directory", href: "/admin/faculty", icon: Users },
     { name: "News, Events & MoUs", href: "/admin/news", icon: Newspaper },
     { name: "Research & Labs", href: "/admin/research", icon: FlaskConical },
-    { name: "Image & Media Gallery", href: "/admin/media", icon: ImageIcon },
+    { name: "Photo Gallery", href: "/admin/gallery", icon: Camera },
+    { name: "Image & Media Hub", href: "/admin/media", icon: ImageIcon },
   ];
 
   return (

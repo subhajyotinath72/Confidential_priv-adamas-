@@ -5,6 +5,7 @@ import { TopBar } from "@/components/layout/TopBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { MainLayoutWrapper } from "@/components/layout/MainLayoutWrapper";
+import { SiteSettingsProvider } from "@/components/providers/SiteSettingsContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -55,7 +56,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${outfit.variable} ${playfair.variable} scroll-smooth bg-white text-[#103E3B]`}
+      className={`${inter.variable} ${outfit.variable} ${playfair.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <head>
@@ -78,13 +79,15 @@ export default function RootLayout({
       </head>
       <body
         id="top"
-        className="min-h-screen flex flex-col bg-white text-[#103E3B] font-sans antialiased selection:bg-[#103E3B] selection:text-white relative"
+        className="min-h-screen flex flex-col font-sans antialiased relative transition-colors duration-200"
         suppressHydrationWarning
       >
-        <TopBar />
-        <Navbar />
-        <MainLayoutWrapper>{children}</MainLayoutWrapper>
-        <Footer />
+        <SiteSettingsProvider>
+          <TopBar />
+          <Navbar />
+          <MainLayoutWrapper>{children}</MainLayoutWrapper>
+          <Footer />
+        </SiteSettingsProvider>
       </body>
     </html>
   );

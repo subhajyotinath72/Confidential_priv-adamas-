@@ -2,28 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #103E3B;
+  --color-primary-dark: #0D3330;
+  --color-accent: #B58A28;
+  --color-accent-light: #C59B27;
+  --color-bg-page: #ffffff;
+  --color-text-main: #103E3B;
+  --color-heading: #103E3B;
+  --font-heading-family: var(--font-outfit), Outfit, serif;
+  --font-body-family: var(--font-inter), Inter, sans-serif;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #ffffff;
-    color: #103E3B;
+    background-color: var(--color-bg-page, #ffffff);
+    color: var(--color-text-main, #103E3B);
   }
 
   body {
-    @apply bg-white text-[#103E3B] font-sans antialiased selection:bg-[#103E3B] selection:text-white;
-    background-color: #ffffff;
-    color: #103E3B;
+    background-color: var(--color-bg-page, #ffffff);
+    color: var(--color-text-main, #103E3B);
+    font-family: var(--font-body-family, sans-serif);
   }
 
-  /* Global Headings & Paragraphs color fallback */
+  /* Global Headings color & font fallback */
   h1, h2, h3, h4, h5, h6 {
-    color: #103E3B;
+    color: var(--color-heading, #103E3B);
+    font-family: var(--font-heading-family, serif);
   }
 
   /* Accessibility focus states */
   *:focus-visible {
     @apply outline-none ring-2 ring-[#103E3B] ring-offset-2 ring-offset-white;
   }
+}
+
+/* Dynamic theme helper utility classes */
+.bg-site-primary {
+  background-color: var(--color-primary, #103E3B);
+}
+.bg-site-primary-dark {
+  background-color: var(--color-primary-dark, #0D3330);
+}
+.text-site-primary {
+  color: var(--color-primary, #103E3B);
+}
+.border-site-primary {
+  border-color: var(--color-primary, #103E3B);
+}
+.bg-site-accent {
+  background-color: var(--color-accent, #B58A28);
+}
+.text-site-accent {
+  color: var(--color-accent, #B58A28);
+}
+.border-site-accent {
+  border-color: var(--color-accent, #B58A28);
+}
+.font-heading-dynamic {
+  font-family: var(--font-heading-family, serif);
+}
+.font-body-dynamic {
+  font-family: var(--font-body-family, sans-serif);
 }
 
 /* Custom Webkit Scrollbars */

@@ -9,15 +9,15 @@ export const Spotlight: React.FC = () => {
   const facultyMentors = [
     {
       initials: "AH",
-      name: "Prof. (Dr.) Animesh Halder",
-      designation: "Assoc. Prof",
+      name: "Dr. Animesh Halder",
+      designation: "Asst. Prof - III",
       specialization: "Microfluidics & Point-of-Care Biosensors",
       href: "/people#fac-1",
     },
     {
       initials: "SC",
-      name: "Prof. (Dr.) Sayanti Chowdhury",
-      designation: "Assoc. Prof",
+      name: "Dr. Sayanti Chowdhury",
+      designation: "Asst. Prof - I",
       specialization: "Medical Image AI & Biosignal Processing",
       href: "/people#fac-2",
     },

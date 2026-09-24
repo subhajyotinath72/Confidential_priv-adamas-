@@ -10,6 +10,9 @@ import {
   Search,
   ExternalLink,
   Sparkles,
+  Camera,
+  X,
+  Plus,
 } from "lucide-react";
 
 export default function AdminMediaPage() {
@@ -18,6 +21,23 @@ export default function AdminMediaPage() {
   const [uploading, setUploading] = useState(false);
   const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
+
+  // Quick Add to Gallery Modal State
+  const [isGalleryModalOpen, setIsGalleryModalOpen] = useState(false);
+  const [galleryFormData, setGalleryFormData] = useState({
+    title: "",
+    category: "Research Labs",
+    image: "",
+    caption: "",
+  });
+  const [savingGallery, setSavingGallery] = useState(false);
+
+  const categories = [
+    "Research Labs",
+    "Clinical Rotations",
+    "Events & Seminars",
+    "Student Life",
+  ];
 
   const fetchMedia = async () => {
     setLoading(true);
@@ -94,22 +114,76 @@ export default function AdminMediaPage() {
     setTimeout(() => setCopiedUrl(null), 2000);
   };
 
+  const openAddToGalleryModal = (fileUrl: string, fileName: string) => {
+    // Generate human readable title from filename
+    const cleanTitle = fileName
+      .replace(/\.[^/.]+$/, "")
+      .replace(/_[0-9]+$/, "")
+      .replace(/[-_]/g, " ")
+      .replace(/\b\w/g, (c) => c.toUpperCase());
+
+    setGalleryFormData({
+      title: cleanTitle,
+      category: "Research Labs",
+      image: fileUrl,
+      caption: "",
+    });
+    setIsGalleryModalOpen(true);
+  };
+
+  const handleSaveToGallery = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!galleryFormData.title || !galleryFormData.image) {
+      alert("Please provide a title and image URL.");
+      return;
+    }
+
+    setSavingGallery(true);
+    try {
+      const res = await fetch("/api/admin/content", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          collection: "gallery",
+          action: "create",
+          item: {
+            ...galleryFormData,
+            id: `g-${Date.now()}`,
+          },
+        }),
+      });
+
+      if (res.ok) {
+        setIsGalleryModalOpen(false);
+        alert("Image successfully added to the live website Gallery!");
+      } else {
+        alert("Failed to add image to gallery.");
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setSavingGallery(false);
+    }
+  };
+
   const filteredFiles = files.filter((f) =>
     f.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div className="space-y-6">
-      
       {/* Header & Upload Box */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-6 border border-slate-200 rounded-2xl shadow-sm">
         <div>
-          <h1 className="text-xl font-bold font-serif text-slate-900 flex items-center">
-            <ImageIcon className="w-5 h-5 mr-2 text-[#1B365D]" />
+          <div className="flex items-center space-x-2 text-xs font-bold text-[#C59B27] uppercase tracking-wider mb-1">
+            <ImageIcon className="w-4 h-4" />
+            <span>Digital Asset Manager</span>
+          </div>
+          <h1 className="text-xl sm:text-2xl font-bold font-serif text-[#1B365D]">
             Image & Media Gallery Hub
           </h1>
           <p className="text-xs text-slate-500 mt-1">
-            Upload custom photos for faculty profiles, research lab equipment, and news updates.
+            Upload custom photos for faculty profiles, research lab equipment, news updates, or publish directly into the photo gallery.
           </p>
         </div>
 
@@ -157,33 +231,47 @@ export default function AdminMediaPage() {
               return (
                 <div
                   key={file.name}
-                  className="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden group hover:border-[#1B365D] transition-all shadow-sm"
+                  className="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden group hover:border-[#1B365D] transition-all shadow-sm flex flex-col justify-between"
                 >
-                  <div className="h-40 relative bg-slate-900 overflow-hidden flex items-center justify-center">
-                    <img
-                      src={file.url}
-                      alt={file.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                  <div>
+                    <div className="h-44 relative bg-slate-900 overflow-hidden flex items-center justify-center">
+                      <img
+                        src={file.url}
+                        alt={file.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+
+                    <div className="p-3 space-y-2">
+                      <div className="text-[11px] font-bold text-slate-800 truncate" title={file.name}>
+                        {file.name}
+                      </div>
+                      <div className="text-[10px] text-slate-400 flex items-center justify-between">
+                        <span>{file.sizeKb} KB</span>
+                        <a
+                          href={file.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-slate-500 hover:text-[#1B365D]"
+                          title="Open full size"
+                        >
+                          <ExternalLink className="w-3 h-3" />
+                        </a>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="p-3 space-y-2">
-                    <div className="text-[11px] font-bold text-slate-800 truncate" title={file.name}>
-                      {file.name}
-                    </div>
-                    <div className="text-[10px] text-slate-400 flex items-center justify-between">
-                      <span>{file.sizeKb} KB</span>
-                      <a
-                        href={file.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-slate-500 hover:text-[#1B365D]"
-                      >
-                        <ExternalLink className="w-3 h-3" />
-                      </a>
-                    </div>
+                  <div className="p-3 pt-0 space-y-2">
+                    {/* Add to Gallery quick button */}
+                    <button
+                      onClick={() => openAddToGalleryModal(file.url, file.name)}
+                      className="w-full inline-flex items-center justify-center py-1.5 rounded-lg text-[10px] font-bold bg-[#103E3B]/10 text-[#103E3B] hover:bg-[#103E3B] hover:text-white transition-all cursor-pointer"
+                    >
+                      <Camera className="w-3 h-3 mr-1" />
+                      <span>Publish to Gallery</span>
+                    </button>
 
-                    <div className="flex items-center space-x-1 pt-1 border-t border-slate-200">
+                    <div className="flex items-center space-x-1 border-t border-slate-200 pt-2">
                       <button
                         onClick={() => copyToClipboard(file.url)}
                         className={`flex-1 inline-flex items-center justify-center py-1.5 rounded-lg text-[10px] font-bold transition-colors cursor-pointer ${
@@ -195,12 +283,12 @@ export default function AdminMediaPage() {
                         {isCopied ? (
                           <>
                             <Check className="w-3 h-3 mr-1" />
-                            <span>URL Copied</span>
+                            <span>Copied</span>
                           </>
                         ) : (
                           <>
                             <Copy className="w-3 h-3 mr-1" />
-                            <span>Copy Image URL</span>
+                            <span>Copy URL</span>
                           </>
                         )}
                       </button>
@@ -221,6 +309,106 @@ export default function AdminMediaPage() {
         )}
       </div>
 
+      {/* Quick Add To Gallery Modal */}
+      {isGalleryModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+          <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
+            <button
+              onClick={() => setIsGalleryModalOpen(false)}
+              className="absolute top-5 right-5 p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 cursor-pointer"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="mb-4">
+              <h2 className="text-lg font-serif font-bold text-[#1B365D] flex items-center">
+                <Camera className="w-4 h-4 mr-2 text-[#C59B27]" />
+                Publish Image to Gallery
+              </h2>
+              <p className="text-xs text-slate-500 mt-0.5">
+                Add this uploaded image to the website's visual showcase.
+              </p>
+            </div>
+
+            <form onSubmit={handleSaveToGallery} className="space-y-3">
+              <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden bg-slate-100 border border-slate-200">
+                <img
+                  src={galleryFormData.image}
+                  alt="Preview"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">
+                  Photo Title *
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={galleryFormData.title}
+                  onChange={(e) =>
+                    setGalleryFormData({ ...galleryFormData, title: e.target.value })
+                  }
+                  placeholder="e.g. Cleanroom Micro-Fabrication"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-[#103E3B]"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">
+                  Gallery Category *
+                </label>
+                <select
+                  value={galleryFormData.category}
+                  onChange={(e) =>
+                    setGalleryFormData({ ...galleryFormData, category: e.target.value })
+                  }
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-800 bg-white focus:outline-none focus:border-[#103E3B]"
+                >
+                  {categories.map((c) => (
+                    <option key={c} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">
+                  Caption / Description
+                </label>
+                <textarea
+                  rows={2}
+                  value={galleryFormData.caption}
+                  onChange={(e) =>
+                    setGalleryFormData({ ...galleryFormData, caption: e.target.value })
+                  }
+                  placeholder="Short description of this moment or equipment..."
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-[#103E3B]"
+                />
+              </div>
+
+              <div className="flex items-center justify-end space-x-2 pt-3 border-t border-slate-100">
+                <button
+                  type="button"
+                  onClick={() => setIsGalleryModalOpen(false)}
+                  className="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:bg-slate-100 cursor-pointer"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={savingGallery}
+                  className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#103E3B] hover:bg-[#103E3B]/90 shadow-sm cursor-pointer"
+                >
+                  {savingGallery ? "Publishing..." : "Add to Gallery"}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

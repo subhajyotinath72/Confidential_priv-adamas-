@@ -2,8 +2,10 @@
 
 import React, { useState } from "react";
 import { CustomMap } from "@/components/shared/CustomMap";
+import { useSiteSettings } from "@/components/providers/SiteSettingsContext";
 
 export const ContactSection: React.FC = () => {
+  const { settings } = useSiteSettings();
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
@@ -16,6 +18,11 @@ export const ContactSection: React.FC = () => {
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 5000);
   };
+
+  const contactAddress = settings?.contact?.address || "Floor 3, School of Engineering, Adamas University Campus, Barasat, Kolkata 700126, India.";
+  const contactEmail = settings?.contact?.email || "biomedical@adamasuniversity.ac.in";
+  const contactPhone = settings?.contact?.phone || "+91 33 6811 4500 (Ext. 248)";
+  const contactHours = settings?.contact?.hours || "Monday – Friday, 09:30 AM – 05:30 PM IST";
 
   return (
     <section id="contact" className="relative z-20 bg-white text-[#103E3B] py-12 lg:py-16 border-b border-slate-200">
@@ -39,19 +46,19 @@ export const ContactSection: React.FC = () => {
 
             <div className="space-y-3 text-xs sm:text-sm text-slate-700 font-sans leading-relaxed">
               <div>
-                <strong className="text-[#103E3B]">Location:</strong> Floor 3, School of Engineering, Adamas University Campus, Barasat, Kolkata 700126, India.
+                <strong className="text-[#103E3B]">Location:</strong> {contactAddress}
               </div>
               <div>
                 <strong className="text-[#103E3B]">Email:</strong>{" "}
-                <a href="mailto:biomedical.dept@adamasuniversity.ac.in" className="hover:underline text-[#103E3B] font-medium">
-                  biomedical.dept@adamasuniversity.ac.in
+                <a href={`mailto:${contactEmail}`} className="hover:underline text-[#103E3B] font-medium">
+                  {contactEmail}
                 </a>
               </div>
               <div>
-                <strong className="text-[#103E3B]">Telephone:</strong> +91 33 6811 4500 (Ext. 248)
+                <strong className="text-[#103E3B]">Telephone:</strong> {contactPhone}
               </div>
               <div>
-                <strong className="text-[#103E3B]">Hours:</strong> Monday – Friday, 09:30 AM – 05:30 PM IST
+                <strong className="text-[#103E3B]">Hours:</strong> {contactHours}
               </div>
             </div>
           </div>

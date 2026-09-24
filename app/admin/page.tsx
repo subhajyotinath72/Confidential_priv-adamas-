@@ -12,6 +12,9 @@ import {
   ShieldCheck,
   Sparkles,
   RefreshCw,
+  Camera,
+  Calendar,
+  Palette,
 } from "lucide-react";
 
 export default function AdminDashboardPage() {
@@ -39,6 +42,14 @@ export default function AdminDashboardPage() {
 
   const stats = [
     {
+      title: "Theme & Details",
+      count: "Colors/Fonts",
+      icon: Palette,
+      color: "bg-rose-50 text-rose-600 border-rose-200",
+      href: "/admin/settings",
+      action: "Customize Site",
+    },
+    {
       title: "Faculty Members",
       count: data?.faculty?.length || 0,
       icon: Users,
@@ -55,18 +66,26 @@ export default function AdminDashboardPage() {
       action: "Manage Updates",
     },
     {
-      title: "Research Centers & Areas",
+      title: "Research Centers & Labs",
       count: (data?.researchAreas?.length || 0) + (data?.centers?.length || 0),
       icon: FlaskConical,
       color: "bg-purple-50 text-purple-600 border-purple-200",
       href: "/admin/research",
-      action: "Manage Research",
+      action: "Manage Labs",
     },
     {
-      title: "Media Gallery",
+      title: "Photo Gallery",
+      count: data?.gallery?.length || 0,
+      icon: Camera,
+      color: "bg-amber-50 text-amber-600 border-amber-200",
+      href: "/admin/gallery",
+      action: "Manage Gallery",
+    },
+    {
+      title: "Media Hub",
       count: "Uploads",
       icon: ImageIcon,
-      color: "bg-amber-50 text-amber-600 border-amber-200",
+      color: "bg-indigo-50 text-indigo-600 border-indigo-200",
       href: "/admin/media",
       action: "Open Media Hub",
     },
@@ -93,7 +112,7 @@ export default function AdminDashboardPage() {
       </div>
 
       {/* Quick Stats Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         {stats.map((stat, idx) => {
           const Icon = stat.icon;
           return (
@@ -143,7 +162,7 @@ export default function AdminDashboardPage() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           
           <Link
             href="/admin/faculty"
@@ -180,6 +199,23 @@ export default function AdminDashboardPage() {
           </Link>
 
           <Link
+            href="/admin/gallery"
+            className="p-4 rounded-xl border border-slate-200 hover:border-[#103E3B] bg-slate-50/50 hover:bg-slate-50 transition-all group flex items-center space-x-3"
+          >
+            <div className="w-9 h-9 rounded-lg bg-[#103E3B] text-amber-400 flex items-center justify-center font-bold">
+              <Camera className="w-4 h-4" />
+            </div>
+            <div>
+              <div className="text-xs font-bold text-slate-900 group-hover:text-[#103E3B]">
+                Publish Gallery Photo
+              </div>
+              <div className="text-[11px] text-slate-500">
+                Add showcase images to website
+              </div>
+            </div>
+          </Link>
+
+          <Link
             href="/admin/media"
             className="p-4 rounded-xl border border-slate-200 hover:border-[#1B365D] bg-slate-50/50 hover:bg-slate-50 transition-all group flex items-center space-x-3"
           >
@@ -191,7 +227,7 @@ export default function AdminDashboardPage() {
                 Upload Website Image
               </div>
               <div className="text-[11px] text-slate-500">
-                Upload new photos to gallery
+                Manage digital asset library
               </div>
             </div>
           </Link>

@@ -4,47 +4,15 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, BookOpen, Activity, Sparkles, ChevronLeft, ChevronRight, ShieldCheck } from "lucide-react";
-
-const HERO_SLIDES = [
-  {
-    id: 1,
-    title: "Engineering the Future of Healthcare",
-    subtitle: "Where Biomedical Innovation Meets Human Impact",
-    description: "Pioneering non-invasive medical diagnostic devices, smart biosensors, 3D bioprinting scaffolds, and healthcare artificial intelligence at Adamas University, Kolkata.",
-    bgImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1920",
-    tag: "School of Engineering & Technology",
-    primaryCtaText: "Explore Research Tracks",
-    primaryCtaLink: "/research",
-    secondaryCtaText: "View Academic Programs",
-    secondaryCtaLink: "/admission",
-  },
-  {
-    id: 2,
-    title: "Advanced 3D Bioprinting & Tissue Engineering",
-    subtitle: "Cellular Scaffolds & Regenerative Medicine",
-    description: "Developing biomimetic polymer matrices, bio-inks, and customized orthopedic implants in collaboration with Kolkata's leading clinical research networks.",
-    bgImage: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80&w=1920",
-    tag: "02 Biomaterials & Scaffolds",
-    primaryCtaText: "Biomaterials Lab",
-    primaryCtaLink: "/research#02",
-    secondaryCtaText: "Faculty Profiles",
-    secondaryCtaLink: "/people",
-  },
-  {
-    id: 3,
-    title: "AI-Powered Diagnostics & Medical Imaging",
-    subtitle: "Deep Learning for Radiological Excellence",
-    description: "Training neural vision models for automated MRI segmentation, tele-ICU patient monitoring, and low-cost rural screening tools.",
-    bgImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1920",
-    tag: "03 Health Informatics & AI",
-    primaryCtaText: "Explore Bio-AI Track",
-    primaryCtaLink: "/research#03",
-    secondaryCtaText: "Apply Now 2026",
-    secondaryCtaLink: "https://adamasuniversity.ac.in/adamas-university/#",
-  },
-];
+import { useSiteSettings } from "@/components/providers/SiteSettingsContext";
 
 export const HeroCarousel: React.FC = () => {
+  const { settings } = useSiteSettings();
+
+  const heroTitle = settings?.general?.departmentName || "Biomedical Engineering";
+  const heroSubtitle = settings?.general?.tagline || "Bridging Engineering, Biology & Healthcare.";
+  const schoolName = settings?.general?.schoolName || "SCHOOL OF ENGINEERING AND TECHNOLOGY";
+
   const labGridItems = [
     {
       title: "NEURAL IMAGING & AI",
@@ -85,7 +53,7 @@ export const HeroCarousel: React.FC = () => {
             {/* Gold Eyebrow */}
             <div className="inline-flex items-center space-x-2 text-[11px] font-bold tracking-widest text-[#B58A28] uppercase bg-amber-50/80 px-2.5 py-1 rounded-full border border-amber-200/80">
               <span className="w-1.5 h-1.5 rounded-full bg-[#B58A28] animate-pulse" />
-              <span>SCHOOL OF ENGINEERING AND TECHNOLOGY</span>
+              <span>{schoolName}</span>
             </div>
 
             {/* Serif Main Heading */}
@@ -98,7 +66,7 @@ export const HeroCarousel: React.FC = () => {
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl font-serif italic text-[#103E3B]/80">
-              Bridging Engineering, Biology & Healthcare.
+              {heroSubtitle}
             </p>
 
             {/* Feature Badges */}
@@ -120,7 +88,8 @@ export const HeroCarousel: React.FC = () => {
                 href="https://adamasuniversity.ac.in/adamas-university/#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shine-sweep inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#103E3B] hover:bg-[#0D3330] shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
+                className="shine-sweep inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
+                style={{ backgroundColor: "var(--color-primary, #103E3B)" }}
               >
                 APPLY FOR ADMISSIONS <span className="ml-2">→</span>
               </a>

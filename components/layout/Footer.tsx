@@ -1,13 +1,24 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { Activity, MapPin } from "lucide-react";
+import { useSiteSettings } from "@/components/providers/SiteSettingsContext";
 
 export const Footer: React.FC = () => {
-  const BING_MAP_URL =
-    "https://www.bing.com/maps/search?name=Adamas+University&trfc=&mepi=0%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&ss=id.ypid%3AYNB328D7AD71F2FCAD&q=Adamas+University&ppois=22.73830795288086_88.45661926269531_Adamas+University&cp=22.738308%7E88.456619&lvl=15";
+  const { settings } = useSiteSettings();
+
+  const universityName = settings?.general?.universityName || "ADAMAS UNIVERSITY";
+  const departmentName = settings?.general?.departmentName || "Department of Biomedical Engineering";
+  const tagline = settings?.general?.tagline || "Advancing clinical diagnostics, medical robotics, 3D bioprinting, and biosensors through integrated engineering education.";
+  const address = settings?.contact?.address || "Barasat–Barrackpore Road, Kolkata 700126";
+  const mapUrl = settings?.contact?.mapUrl || "https://www.bing.com/maps/search?name=Adamas+University&trfc=&mepi=0%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&ss=id.ypid%3AYNB328D7AD71F2FCAD&q=Adamas+University&ppois=22.73830795288086_88.45661926269531_Adamas+University&cp=22.738308%7E88.456619&lvl=15";
 
   return (
-    <footer className="relative z-20 bg-[#103E3B] text-[#c2f0fc] border-t border-white/10 pt-12 pb-8 font-sans">
+    <footer
+      className="relative z-20 text-[#c2f0fc] border-t border-white/10 pt-12 pb-8 font-sans transition-colors"
+      style={{ backgroundColor: "var(--color-primary-dark, #0D3330)" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
 
         {/* Main Footer Row */}
@@ -27,16 +38,16 @@ export const Footer: React.FC = () => {
 
               <div>
                 <span className="text-[9px] font-bold tracking-widest text-[#F7D6C8] uppercase block">
-                  ADAMAS UNIVERSITY
+                  {universityName}
                 </span>
                 <span className="text-base font-serif font-semibold text-white">
-                  Department of Biomedical Engineering
+                  {departmentName}
                 </span>
               </div>
             </div>
 
             <p className="text-xs text-[#F7D6C8]/80 leading-relaxed max-w-md font-sans">
-              Advancing clinical diagnostics, medical robotics, 3D bioprinting, and biosensors through integrated engineering education.
+              {tagline}
             </p>
           </div>
 
@@ -104,13 +115,13 @@ export const Footer: React.FC = () => {
             © 2025 Department of Biomedical Engineering, Adamas University. All rights reserved.
           </p>
           <a
-            href={BING_MAP_URL}
+            href={mapUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center hover:text-white transition-colors text-[#F7D6C8]"
           >
             <MapPin className="w-3.5 h-3.5 mr-1.5 text-[#F7D6C8]" />
-            <span>Barasat–Barrackpore Road, Kolkata 700126 (View Map ↗)</span>
+            <span>{address} (View Map ↗)</span>
           </a>
         </div>
 

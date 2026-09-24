@@ -39,7 +39,7 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
   ]);
 
   useEffect(() => {
-    fetch("/api/admin/content")
+    fetch("/api/content")
       .then((res) => res.json())
       .then((data) => {
         if (data.news && Array.isArray(data.news) && data.news.length > 0) {

@@ -11,12 +11,17 @@ import {
   Activity,
   Sparkles
 } from "lucide-react";
+import { useSiteSettings } from "@/components/providers/SiteSettingsContext";
 
 export const Navbar: React.FC = () => {
+  const { settings } = useSiteSettings();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const pathname = usePathname();
+
+  const universityName = settings?.general?.universityName || "ADAMAS UNIVERSITY";
+  const departmentName = settings?.general?.departmentName || "Department of Biomedical Engineering";
 
   // Scroll Progress Bar
   const { scrollYProgress } = useScroll();
@@ -76,9 +81,10 @@ export const Navbar: React.FC = () => {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
-        ? "bg-[#103E3B]/95 text-white backdrop-blur-md shadow-xl py-1.5 border-b border-white/10"
-        : "bg-[#103E3B] text-white py-2 border-b border-white/10"
+        ? "text-white backdrop-blur-md shadow-xl py-1.5 border-b border-white/10"
+        : "text-white py-2 border-b border-white/10"
         }`}
+      style={{ backgroundColor: "var(--color-primary, #103E3B)" }}
     >
       {/* 2.5px Interactive Scroll Progress Indicator */}
       <motion.div
@@ -101,10 +107,10 @@ export const Navbar: React.FC = () => {
 
             <div className="flex flex-col">
               <span className="text-xs sm:text-sm md:text-base font-extrabold tracking-wider text-white uppercase leading-tight whitespace-nowrap">
-                ADAMAS UNIVERSITY
+                {universityName}
               </span>
-              <span className="text-[8px] sm:text-[9px] md:text-[10px] font-extrabold tracking-widest text-[#ff7844] uppercase leading-none whitespace-nowrap hidden sm:block">
-                Department of Biomedical Engineering
+              <span className="text-[8px] sm:text-[9px] md:text-[10px] font-extrabold tracking-widest text-[#F7D6C8] uppercase leading-none whitespace-nowrap hidden sm:block">
+                {departmentName}
               </span>
             </div>
           </Link>

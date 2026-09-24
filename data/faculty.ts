@@ -21,7 +21,7 @@ export const FACULTY_MEMBERS: Faculty[] = [
   {
     id: "fac-1",
     name: "Dr. Animesh Halder",
-    designation: "Associate Professor",
+    designation: "Assistant Professor - III",
     trackId: "01",
     degrees: "Ph.D. in Biomedical Applications, M.Tech (Tezpur Univ)",
     almaMater: "Adamas University / Formerly Research Fellow at IISc",
@@ -42,7 +42,7 @@ export const FACULTY_MEMBERS: Faculty[] = [
   {
     id: "fac-2",
     name: "Dr. Sayanti Chowdhury",
-    designation: "Associate Professor",
+    designation: "Assistant Professor - I",
     trackId: "02",
     degrees: "Ph.D. in Signal Processing (Jadavpur Univ), M.Tech (Calcutta Univ)",
     almaMater: "Adamas University / Formerly Jadavpur University",

@@ -12,7 +12,7 @@ export default function PeoplePage() {
   const [selectedFaculty, setSelectedFaculty] = useState<Faculty | null>(null);
 
   useEffect(() => {
-    fetch("/api/admin/content")
+    fetch("/api/content")
       .then((res) => res.json())
       .then((data) => {
         if (data.faculty && data.faculty.length > 0) {
@@ -123,7 +123,7 @@ export default function PeoplePage() {
             No people found matching your search query.
           </div>
         ) : (
-          <div className={`grid grid-cols-1 md:grid-cols-2 ${filteredFaculty.length > 2 ? 'lg:grid-cols-4 max-w-7xl' : 'max-w-4xl'} mx-auto gap-8`}>
+          <div className={`grid grid-cols-1 md:grid-cols-2 ${filteredFaculty.length > 2 ? 'lg:grid-cols-4 max-w-7xl' : 'max-w-3xl'} mx-auto gap-8`}>
             {filteredFaculty.map((fac) => (
               <div
                 key={fac.id}
@@ -131,7 +131,7 @@ export default function PeoplePage() {
                 className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:border-teal-500 hover:shadow-lg transition-all flex flex-col justify-between group scroll-mt-36 text-slate-900"
               >
                 <div>
-                  <div className="relative h-56 overflow-hidden bg-slate-100">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
                     <img
                       src={fac.avatar}
                       alt={fac.name}
@@ -199,7 +199,7 @@ export default function PeoplePage() {
               <img
                 src={selectedFaculty.avatar}
                 alt={selectedFaculty.name}
-                className="w-24 h-24 rounded-2xl object-cover border-2 border-adamas-gold"
+                className="w-24 h-24 rounded-2xl object-cover object-center border-2 border-adamas-gold"
               />
               <div className="space-y-1 text-center sm:text-left">
                 <h3 className="text-xl font-bold text-slate-900">{selectedFaculty.name}</h3>

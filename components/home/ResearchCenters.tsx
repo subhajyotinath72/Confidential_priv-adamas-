@@ -1,38 +1,57 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { RESEARCH_CENTERS } from "@/data/research";
 import { Scan, Layers, Cpu, HeartPulse, Microscope, Footprints, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
+const DEFAULT_LABS = [
+  {
+    id: "LAB 01",
+    title: "Bio-Electronics & Sensors Lab",
+    desc: "ECG, EEG, and wearable biosensor testing suites.",
+    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=600",
+  },
+  {
+    id: "LAB 02",
+    title: "3D Bioprinting & Biomaterials Suite",
+    desc: "Hydrogel bio-ink extruders and tissue scaffolding printers.",
+    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600",
+  },
+  {
+    id: "LAB 03",
+    title: "Medical Image AI & Telemedicine Hub",
+    desc: "High-performance GPU clusters for radiology vision transformers.",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600",
+  },
+  {
+    id: "LAB 04",
+    title: "Prosthetics & Gait Analysis Lab",
+    desc: "Motion capture cameras, force plates, and EMG analyzers.",
+    image: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80&w=600",
+  },
+];
+
 export const ResearchCenters: React.FC = () => {
-  const labs = [
-    {
-      id: "LAB 01",
-      title: "Bio-Electronics & Sensors Lab",
-      desc: "ECG, EEG, and wearable biosensor testing suites.",
-      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=600",
-    },
-    {
-      id: "LAB 02",
-      title: "3D Bioprinting & Biomaterials Suite",
-      desc: "Hydrogel bio-ink extruders and tissue scaffolding printers.",
-      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600",
-    },
-    {
-      id: "LAB 03",
-      title: "Medical Image AI & Telemedicine Hub",
-      desc: "High-performance GPU clusters for radiology vision transformers.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600",
-    },
-    {
-      id: "LAB 04",
-      title: "Prosthetics & Gait Analysis Lab",
-      desc: "Motion capture cameras, force plates, and EMG analyzers.",
-      image: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80&w=600",
-    },
-  ];
+  const [labs, setLabs] = useState(DEFAULT_LABS);
+
+  useEffect(() => {
+    fetch("/api/content")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.centers && Array.isArray(data.centers) && data.centers.length > 0) {
+          const mapped = data.centers.map((c: any, idx: number) => ({
+            id: c.code ? `LAB ${c.code}` : `LAB 0${idx + 1}`,
+            title: c.name || "Research Lab",
+            desc: c.focus || (Array.isArray(c.specs) ? c.specs.join(", ") : ""),
+            image: c.image || DEFAULT_LABS[idx % DEFAULT_LABS.length]?.image || DEFAULT_LABS[0].image,
+          }));
+          setLabs(mapped);
+        }
+      })
+      .catch((err) => console.error("Could not fetch live research centers:", err));
+  }, []);
 
   return (
     <section id="centers" className="bg-[#F8F5EE] py-12 lg:py-16 border-b border-[#E2DDD3]">

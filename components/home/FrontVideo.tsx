@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import Link from "next/link";
 import { ChevronRight, ArrowRight, Radio } from "lucide-react";
+import { useSiteSettings } from "@/components/providers/SiteSettingsContext";
 
 interface FrontVideoProps {
   src?: string;
@@ -43,13 +44,20 @@ const LATEST_ANNOUNCEMENTS = [
 ];
 
 export const FrontVideo: React.FC<FrontVideoProps> = ({
-  src = "/adamas-virtual-tour.mp4",
-  poster = "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1920",
+  src,
+  poster,
 }) => {
+  const { settings } = useSiteSettings();
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  const videoSrc = src || settings?.frontVideo?.url || "/adamas-virtual-tour.mp4";
+  const posterSrc = poster || settings?.frontVideo?.poster || "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1920";
+
   return (
-    <section className="w-full relative overflow-hidden bg-[#103E3B] border-b border-white/10">
+    <section
+      className="w-full relative overflow-hidden border-b border-white/10 transition-colors"
+      style={{ backgroundColor: "var(--color-primary, #103E3B)" }}
+    >
       {/* 2-Column Split Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full items-center">
         
@@ -57,8 +65,8 @@ export const FrontVideo: React.FC<FrontVideoProps> = ({
         <div className="relative w-full aspect-video bg-black overflow-hidden border-r border-white/10 flex items-center justify-center hud-bracket group">
           <video
             ref={videoRef}
-            src={src}
-            poster={poster}
+            src={videoSrc}
+            poster={posterSrc}
             autoPlay
             loop
             muted

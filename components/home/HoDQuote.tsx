@@ -2,10 +2,19 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Quote, Award, CheckCircle2, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Quote } from "lucide-react";
+import { useSiteSettings } from "@/components/providers/SiteSettingsContext";
 
 export const HoDQuote: React.FC = () => {
+  const { settings } = useSiteSettings();
+
+  const hodName = settings?.hod?.name || "Dr. Semanti Chakraborty";
+  const hodDesignation = settings?.hod?.designation || "Head, Department of Biomedical Engineering";
+  const hodQualifications = settings?.hod?.qualifications || "Ph.D., IIT Kharagpur | Senior Member, IEEE EMBS";
+  const hodPhoto = settings?.hod?.photo || "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800";
+  const hodQuote = settings?.hod?.quote || "Biomedical Engineering is not merely a technical discipline — it is a sacred contract with humanity to ease clinical suffering through scientific precision.";
+  const hodMessage = settings?.hod?.message || "Through immersive hands-on training across advanced cleanrooms, bio-MEMS sensors, medical robotics, and direct clinical internships in top-tier hospital wards, our scholars bridge theory with bedside clinical impact. We invite you to explore our vibrant labs, collaborate on translational discoveries, and shape the next horizon of healthcare engineering.";
+
   return (
     <section className="bg-white/40 backdrop-blur-[1px] text-[#103E3B] py-12 lg:py-20 border-b border-slate-200/80 relative overflow-hidden">
       {/* Background Ambient Glow */}
@@ -30,8 +39,8 @@ export const HoDQuote: React.FC = () => {
 
               <div className="relative overflow-hidden rounded-xl h-80 sm:h-96 bg-slate-200 border border-slate-300">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
-                  alt="Dr. Semanti Chakraborty - Head of Department"
+                  src={hodPhoto}
+                  alt={`${hodName} - Head of Department`}
                   className="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#103E3B]/80 via-transparent to-transparent pointer-events-none" />
@@ -44,13 +53,13 @@ export const HoDQuote: React.FC = () => {
 
               <div className="mt-4 space-y-1">
                 <h3 className="text-xl font-serif font-bold text-[#103E3B]">
-                  Dr. Semanti Chakraborty
+                  {hodName}
                 </h3>
                 <p className="text-xs font-bold text-[#B58A28] uppercase tracking-wider">
-                  Head, Department of Biomedical Engineering
+                  {hodDesignation}
                 </p>
                 <p className="text-xs text-[#103E3B]/80 font-sans">
-                  Ph.D., IIT Kharagpur | Senior Member, IEEE EMBS
+                  {hodQualifications}
                 </p>
               </div>
             </div>
@@ -79,16 +88,15 @@ export const HoDQuote: React.FC = () => {
               Welcome to Biomedical Engineering at Adamas University
             </h2>
 
+            {/* Featured Quote */}
+            <blockquote className="p-4 rounded-xl bg-amber-50/50 border-l-4 border-[#B58A28] text-sm sm:text-base font-serif italic text-[#103E3B] leading-relaxed">
+              &ldquo;{hodQuote}&rdquo;
+            </blockquote>
+
             {/* Body Text */}
-            <p className="text-sm sm:text-base text-[#103E3B]/90 leading-relaxed font-sans">
-              At the nexus of engineering innovation, computing, and life sciences, Biomedical Engineering stands as one of the most consequential disciplines of modern society. Here at Adamas University, our curriculum and research suites are purposely built to turn inquisitive students into visionary problem-solvers.
-            </p>
             <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-sans">
-              Through immersive hands-on training across advanced cleanrooms, bio-MEMS sensors, medical robotics, and direct clinical internships in top-tier hospital wards, our scholars bridge theory with bedside clinical impact. We invite you to explore our vibrant labs, collaborate on translational discoveries, and shape the next horizon of healthcare engineering.
+              {hodMessage}
             </p>
-
-
-
           </motion.div>
 
         </div>

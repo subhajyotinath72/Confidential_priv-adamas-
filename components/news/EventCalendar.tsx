@@ -158,16 +158,41 @@ export const EventCalendar: React.FC = () => {
 
   // Fetch live events from API if available
   useEffect(() => {
-    fetch("/api/admin/content")
+    fetch("/api/content")
       .then((res) => res.json())
       .then((data) => {
+        const loadedEvents: EventItem[] = [];
+
+        // 1. Process explicit events from data.events
+        if (data.events && Array.isArray(data.events) && data.events.length > 0) {
+          data.events.forEach((e: any, idx: number) => {
+            const dateParts = e.date ? e.date.split(" ") : ["SEP", "15", "2026"];
+            const monthIdx = MONTH_NAMES.findIndex(
+              (m) => m.toLowerCase().startsWith((dateParts[0] || "sep").toLowerCase().slice(0, 3))
+            );
+            loadedEvents.push({
+              id: e.id || `api-evt-${idx}`,
+              day: parseInt(dateParts[1]?.replace(",", "") || "15", 10),
+              month: monthIdx !== -1 ? monthIdx : 8,
+              year: parseInt(dateParts[2] || "2026", 10),
+              time: e.time || "10:00 AM - 12:00 PM",
+              title: e.title,
+              category: e.category || "Research",
+              desc: e.desc || e.summary || "",
+              location: e.location || "Adamas University BME",
+              speaker: e.speaker || "Faculty / Guest Speaker",
+            });
+          });
+        }
+
+        // 2. Process news items with calendar dates
         if (data.news && Array.isArray(data.news) && data.news.length > 0) {
-          const apiItems: EventItem[] = data.news.map((n: any, idx: number) => {
+          data.news.forEach((n: any, idx: number) => {
             const dateParts = n.date ? n.date.split(" ") : ["SEP", "15", "2026"];
             const monthIdx = MONTH_NAMES.findIndex(
               (m) => m.toLowerCase().startsWith((dateParts[0] || "sep").toLowerCase().slice(0, 3))
             );
-            return {
+            loadedEvents.push({
               id: `api-news-${idx}`,
               day: parseInt(dateParts[1]?.replace(",", "") || "15", 10),
               month: monthIdx !== -1 ? monthIdx : 8,
@@ -178,12 +203,14 @@ export const EventCalendar: React.FC = () => {
               desc: n.summary,
               location: "Adamas Department of BME",
               speaker: n.author || "Department Faculty"
-            };
+            });
           });
-          // Merge unique events
+        }
+
+        if (loadedEvents.length > 0) {
           setEvents((prev) => {
             const combined = [...prev];
-            apiItems.forEach((item) => {
+            loadedEvents.forEach((item) => {
               if (!combined.some((c) => c.title === item.title)) {
                 combined.push(item);
               }

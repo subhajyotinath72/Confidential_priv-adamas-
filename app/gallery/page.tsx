@@ -2,7 +2,7 @@
 
 import React from "react";
 import { GalleryGrid } from "@/components/gallery/GalleryGrid";
-import { Camera, Image as ImageIcon } from "lucide-react";
+import { Camera } from "lucide-react";
 
 export default function GalleryPage() {
   return (
@@ -24,7 +24,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Gallery Grid */}
+      {/* Department Classified Photo Archives */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <GalleryGrid />
       </div>

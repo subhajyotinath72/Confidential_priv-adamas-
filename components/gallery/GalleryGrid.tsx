@@ -100,14 +100,26 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
 ];
 
 export const GalleryGrid: React.FC = () => {
+  const [photos, setPhotos] = useState<GalleryPhoto[]>(GALLERY_PHOTOS);
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [selectedPhoto, setSelectedPhoto] = useState<GalleryPhoto | null>(null);
+
+  React.useEffect(() => {
+    fetch("/api/content")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.gallery && Array.isArray(data.gallery) && data.gallery.length > 0) {
+          setPhotos(data.gallery);
+        }
+      })
+      .catch((err) => console.error("Could not fetch live gallery:", err));
+  }, []);
 
   const categories = ["All", "Research Labs", "Clinical Rotations", "Events & Seminars", "Student Life"];
 
   const filteredPhotos = activeCategory === "All"
-    ? GALLERY_PHOTOS
-    : GALLERY_PHOTOS.filter((p) => p.category === activeCategory);
+    ? photos
+    : photos.filter((p) => p.category === activeCategory);
 
   return (
     <div className="space-y-8">

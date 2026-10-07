@@ -1,554 +1,596 @@
 {
-  "faculty": [
-    {
-      "id": "fac-1",
-      "name": "Dr. Animesh Halder",
-      "designation": "Assistant Professor - III",
-      "trackId": "01",
-      "degrees": "Ph.D. in Biomedical Applications, M.Tech (Tezpur Univ)",
-      "almaMater": "Adamas University / Formerly Research Fellow at IISc",
-      "specialization": "Biosensors, Non-Invasive Diagnostics, Neural Signal Processing",
-      "email": "animesh.halder@adamasuniversity.ac.in",
-      "phone": "123456789",
-      "room": "SET Building, Room 302",
-      "bio": "Dr. Animesh Halder has extensive academic and clinical research experience in biomedical signal processing and wearable biosensor systems. He leads the Center for Advanced Bio-Imaging & Sensing at Adamas University.",
-      "researchFocus": [
-        "Cardiovascular Signal Analytics",
-        "Wearable ECG & EEG Sensors",
-        "Point-of-Care Diagnostics"
-      ],
-      "publicationsCount": 68,
-      "patentsCount": 5,
-      "avatar": "/faculty/animesh-halder.jpg",
-      "featuredPublications": [
-        "Halder, A. et al. (2025). High-Resolution Wearable ECG Sensing Array for Early Arrhythmia Detection. IEEE Trans. Biomed. Eng.",
-        "Halder, A. & Roy, S. (2024). Wavelet-Based Denoising Algorithms for Ambulatory EEG Monitoring. Biosensors Journal."
-      ]
-    },
-    {
-      "id": "fac-2",
-      "name": "Dr. Sayanti Chowdhury",
-      "designation": "Assistant Professor - I",
-      "trackId": "02",
-      "degrees": "Ph.D. in Signal Processing (Jadavpur Univ), M.Tech (Calcutta Univ)",
-      "almaMater": "Adamas University / Formerly Jadavpur University",
-      "specialization": "Bioceramics, 3D Bioprinting Scaffolds, Controlled Drug Delivery",
-      "email": "sayanti.chowdhury@adamasuniversity.ac.in",
-      "phone": "+91 (033) 2587-9002",
-      "room": "SET Building, Room 305",
-      "bio": "Dr. Sayanti Chowdhury specializes in biomedical engineering, signal processing, and medical instrumentation. She collaborates extensively with researchers and clinical partners on translational health technologies.",
-      "researchFocus": [
-        "Biomedical Signal Processing",
-        "Medical Image AI",
-        "Point-of-Care Diagnostics"
-      ],
-      "publicationsCount": 45,
-      "patentsCount": 3,
-      "avatar": "/faculty/sayanti-chowdhury.jpg",
-      "featuredPublications": [
-        "Chowdhury, S. et al. (2025). Advanced Signal Analytics for Non-Invasive Clinical Monitoring. IEEE Trans. Biomed. Eng.",
-        "Chowdhury, S. & Halder, A. (2024). Wavelet-Based Biosignal Feature Extraction for Diagnostic Screening. Biosensors Journal."
-      ]
-    }
-  ],
-  "news": [
-    {
-      "id": "news-1",
-      "title": "Adamas Biomedical Engineering Faculty Secures DST-SERB Grant for 3D Bioprinting Research",
-      "date": "August 28, 2026",
-      "category": "Research",
-      "summary": "Dr. Sayanti Chowdhury and her research team have been awarded a prestigious ₹42 Lakh research grant by DST-SERB to develop vascularized 3D tissue constructs for cardiac repair.",
-      "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600",
-      "author": "Department R&D Cell",
-      "readTime": "3 min read"
-    },
-    {
-      "id": "news-2",
-      "title": "MoU Signed with Leading Super-Specialty Hospital Network for Student Clinical Rotations",
-      "date": "July 15, 2026",
-      "category": "MoU",
-      "summary": "School of Engineering & Technology, Adamas University has entered into a strategic collaboration with premier Kolkata hospitals to provide B.Tech students with hands-on hospital ICU and radiology equipment training.",
-      "image": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600",
-      "author": "Admissions & Placements Desk",
-      "readTime": "4 min read"
-    },
-    {
-      "id": "news-3",
-      "title": "Biomedical Students Win Top Honor at National Healthcare Hackathon 2026",
-      "date": "June 02, 2026",
-      "category": "Achievement",
-      "summary": "A 4-member student team from Adamas Department of Biomedical Engineering bagged the 1st prize for creating 'StethoAI' — a low-cost digital stethoscope with automated murmur detection.",
-      "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600",
-      "author": "Student Affairs Cell",
-      "readTime": "2 min read"
-    }
-  ],
-  "events": [
-    {
-      "id": "evt-1",
-      "day": "28",
-      "month": "SEP",
-      "year": "2026",
-      "time": "10:30 AM - 1:00 PM",
-      "title": "International Webinar on AI-Driven Cancer Radiology Screening",
-      "location": "Auditorium Hall B & Online Zoom",
-      "speaker": "Dr. Marcus Vance (Johns Hopkins University)",
-      "category": "Webinar",
-      "registrationLink": "#"
-    },
-    {
-      "id": "evt-2",
-      "day": "14",
-      "month": "OCT",
-      "year": "2026",
-      "time": "09:00 AM - 04:30 PM",
-      "title": "Hands-On Workshop on Microfluidic Biosensor Fabrication",
-      "location": "SET Bio-Electronics Lab 302",
-      "speaker": "Dr. Ananya Mukherjee & Technical Specialists",
-      "category": "Workshop",
-      "registrationLink": "#"
-    },
-    {
-      "id": "evt-3",
-      "day": "05",
-      "month": "NOV",
-      "year": "2026",
-      "time": "11:00 AM - 03:00 PM",
-      "title": "Biomedical Industry-Academia Conclave & MedTech Expo 2026",
-      "location": "Adamas Convention Center",
-      "speaker": "Leaders from Siemens Healthineers, Philips & Medtronic",
-      "category": "Conference",
-      "registrationLink": "#"
-    },
-    {
-      "id": "evt-4",
-      "day": "20",
-      "month": "NOV",
-      "year": "2026",
-      "time": "02:00 PM - 04:00 PM",
-      "title": "Guest Lecture: ISO 13485 Medical Device Regulatory Pathways",
-      "location": "Seminar Room 104",
-      "speaker": "Prof. Sourav Chakraborty",
-      "category": "Seminar",
-      "registrationLink": "#"
-    }
-  ],
-  "researchTracks": [
-    {
-      "id": "01",
-      "number": "01",
-      "title": "Biomedical Instrumentation & Signal Processing",
-      "subtitle": "Biosensors, Medical Imaging, Diagnostic Systems & Electrophysiology",
-      "description": "Focuses on designing next-generation electronic sensors, microfluidic chips, and advanced physiological signal processing algorithms. Researchers develop non-invasive diagnostic tools, wireless ECG/EEG monitoring systems, and optical biosensors for point-of-care disease screening.",
-      "tags": [
-        "ECG / EEG / EMG Analytics",
-        "Point-of-Care Biosensors",
-        "Medical Ultrasound & MRI",
-        "Lab-on-a-Chip Systems",
-        "Optoelectronic Diagnostics",
-        "Embedded Medical Systems"
-      ],
-      "keyLabs": [
-        "Advanced Bio-Imaging & Sensing Lab",
-        "Biosensor Development Suite",
-        "Medical Electronics & Prototyping Workshop"
-      ],
-      "leadFacultyIds": [
-        "fac-1",
-        "fac-4",
-        "fac-7"
-      ],
-      "iconName": "Activity",
-      "bgGradient": "from-teal-500/10 via-emerald-500/5 to-transparent",
-      "highlights": [
-        {
-          "label": "Active Patents",
-          "value": "11+"
-        },
-        {
-          "label": "Clinical Trials",
-          "value": "4 Ongoing"
-        },
-        {
-          "label": "Lab Equipment",
-          "value": "High-Speed Digitizers, Microfluidic Printers"
-        }
-      ]
-    },
-    {
-      "id": "02",
-      "number": "02",
-      "title": "Biomaterials & Tissue Engineering",
-      "subtitle": "3D Bioprinting, Regenerative Medicine, Implants & Drug Delivery",
-      "description": "Combines polymer science, cell biology, and 3D printing technology to fabricate bio-inspired materials for damaged organ repair, bone defect fillers, and patient-tailored prosthetic implants. Includes targeted nanomedicine for localized drug release with minimal side effects.",
-      "tags": [
-        "3D Bioprinting & Bio-Inks",
-        "Polymeric Scaffolds",
-        "Targeted Drug Delivery",
-        "Orthopedic & Dental Implants",
-        "Antimicrobial Coatings",
-        "Stem Cell Culture"
-      ],
-      "keyLabs": [
-        "Tissue Engineering & Regenerative Medicine Suite",
-        "Biomaterials Synthesis & Characterization Lab",
-        "Biomechanics & Gait Analytics Hub"
-      ],
-      "leadFacultyIds": [
-        "fac-2",
-        "fac-5",
-        "fac-8"
-      ],
-      "iconName": "Dna",
-      "bgGradient": "from-amber-500/10 via-orange-500/5 to-transparent",
-      "highlights": [
-        {
-          "label": "Bioprinting Resolution",
-          "value": "10 Microns"
-        },
-        {
-          "label": "Industry MoUs",
-          "value": "3 Implant Makers"
-        },
-        {
-          "label": "Tissue Models",
-          "value": "Cartilage, Skin, Vascular"
-        }
-      ]
-    },
-    {
-      "id": "03",
-      "number": "03",
-      "title": "Health Informatics & AI in Medicine",
-      "subtitle": "Medical AI/ML, Telemedicine, Wearable Tech & Rehabilitation Robotics",
-      "description": "Leverages artificial intelligence, computer vision, and IoT connectivity to build intelligent diagnostic assistants, tele-ICU monitoring infrastructure, wearable stroke recovery bands, and assistive exoskeletons for neuro-rehabilitation.",
-      "tags": [
-        "Deep Learning in Radiology",
-        "Telemedicine Platforms",
-        "Wearable Health Monitors",
-        "Rehabilitation Robotics",
-        "Clinical NLP & EHR Mining",
-        "Edge-AI Medical Devices"
-      ],
-      "keyLabs": [
-        "Healthcare AI & Neural Engineering Hub",
-        "Clinical Informatics & Tele-Health Lab",
-        "Assistive Robotics & Motion Analysis Studio"
-      ],
-      "leadFacultyIds": [
-        "fac-3",
-        "fac-6"
-      ],
-      "iconName": "Brain",
-      "bgGradient": "from-blue-500/10 via-indigo-500/5 to-transparent",
-      "highlights": [
-        {
-          "label": "AI Datasets",
-          "value": "50,000+ Anonymized Scans"
-        },
-        {
-          "label": "Accuracy Rate",
-          "value": "98.4% on Diagnostic Models"
-        },
-        {
-          "label": "Tele-Health Reach",
-          "value": "25+ Rural Health Centers"
-        }
-      ]
-    }
-  ],
-  "programs": [
-    {
-      "id": "btech-bme",
-      "degree": "B.Tech",
-      "title": "B.Tech in Biomedical Engineering",
-      "level": "Undergraduate",
-      "duration": "4 Years (8 Semesters)",
-      "intake": "60 Seats",
-      "affiliation": "School of Engineering & Technology, Adamas University | AICTE Approved",
-      "shortDesc": "A flagship 4-year undergraduate program combining fundamental engineering principles with biology, medical instrumentation, biomaterials, and clinical healthcare systems.",
-      "fullDesc": "The B.Tech in Biomedical Engineering at Adamas University equips students with deep interdisciplinary training in electronic instrumentation, human physiology, medical imaging, 3D bioprinting, and bio-AI. Students gain extensive hands-on experience in state-of-the-art department laboratories and undertake clinical internships at leading super-specialty hospitals in Kolkata.",
-      "highlights": [
-        "AICTE & UGC Recognized 4-Year Honors Degree",
-        "Mandatory 6-Month Clinical / MedTech Industry Internship",
-        "Specialization Tracks in Bio-AI, Instrumentation, and Biomaterials",
-        "Hands-on Training with Medical Ultrasound, ECG/EEG, and 3D Bioprinters",
-        "Preparation for GATE, GRE, and Global Higher Studies"
-      ],
-      "eligibility": "Passed 10+2 examination with Physics, Mathematics, and Chemistry/Biology/Computer Science with minimum 50% marks (45% for reserved category). Valid score in WBJEE / JEE Main / Adamas University Engineering Admission Test (AUAT).",
-      "careerOutcomes": [
-        "Biomedical Equipment Engineer (Siemens, Philips, GE Healthcare)",
-        "Clinical Engineer in Multi-Specialty Hospitals",
-        "R&D MedTech Product Designer",
-        "Bio-Signal & AI Data Analyst",
-        "Regulatory Affairs Specialist for Medical Devices",
-        "Graduate Studies (MS / M.Tech) in Top Global Universities"
-      ],
-      "curriculumOverview": [
-        {
-          "yearOrSem": "Year 1 (Semesters 1 & 2)",
-          "courses": [
-            "Engineering Mathematics I & II",
-            "Basic Electrical & Bio-Electronics",
-            "Human Anatomy & Physiology for Engineers",
-            "Engineering Physics",
-            "Python Programming for Engineers"
-          ]
-        },
-        {
-          "yearOrSem": "Year 2 (Semesters 3 & 4)",
-          "courses": [
-            "Biomedical Sensors & Transducers",
-            "Biophysical Signals & Systems",
-            "Biomaterials & Biocompatibility",
-            "Analog & Digital Circuits",
-            "Biomechanics & Gait Analysis"
-          ]
-        },
-        {
-          "yearOrSem": "Year 3 (Semesters 5 & 6)",
-          "courses": [
-            "Medical Imaging Systems (X-Ray, CT, MRI, Ultrasound)",
-            "Biomedical Signal & Image Processing",
-            "Tissue Engineering & 3D Bioprinting",
-            "Healthcare AI & Machine Learning",
-            "Medical Device Safety & Regulations"
-          ]
-        },
-        {
-          "yearOrSem": "Year 4 (Semesters 7 & 8)",
-          "courses": [
-            "Clinical Engineering & Hospital Management",
-            "Prosthetics & Rehabilitation Engineering",
-            "Major Capstone Project I & II",
-            "Hospital / Industry Internship",
-            "Elective: Telemedicine & IoT"
-          ]
-        }
-      ],
-      "isFlagship": true
-    }
-  ],
-  "testimonials": [
-    {
-      "id": "test-1",
-      "name": "Subhashis Roy",
-      "degree": "B.Tech in Biomedical Engineering",
-      "batch": "Class of 2024",
-      "currentRole": "Clinical Systems Specialist",
-      "companyOrUniversity": "GE HealthCare, India",
-      "quote": "The practical exposure in medical instrumentation labs at Adamas University gave me a massive head start. Working directly with ultrasound digitizers and patient monitors prepared me for real hospital deployments from day one.",
-      "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=300"
-    },
-    {
-      "id": "test-2",
-      "name": "Dr. Sayani Dutta",
-      "degree": "M.Tech in Biomedical Engineering",
-      "batch": "Class of 2022",
-      "currentRole": "Postdoctoral Research Fellow",
-      "companyOrUniversity": "National University of Singapore (NUS)",
-      "quote": "Adamas provided an exceptional research atmosphere. Under Dr. Sayanti Chowdhury's guidance, my master's thesis on 3D bioprinted hydrogels led to two international journal publications and my PhD fellowship abroad.",
-      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300"
-    },
-    {
-      "id": "test-3",
-      "name": "Rohan Bhattacharya",
-      "degree": "B.Tech in Biomedical Engineering",
-      "batch": "Class of 2025",
-      "currentRole": "Healthcare AI Engineer",
-      "companyOrUniversity": "Philips Innovation Campus",
-      "quote": "The integration of AI modules alongside core biomedical curriculum at Adamas SET is unmatched. I gained deep hands-on expertise in PyTorch and DICOM medical imaging analytics during my capstone project.",
-      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300"
-    }
-  ],
-  "centers": [
-    {
-      "id": "center-1",
-      "code": "01",
-      "name": "Center for Advanced Bio-Imaging & Sensing",
-      "focus": "Non-invasive optical diagnostics, wearable telemetry, and microfluidic biosensors.",
-      "lead": "Dr. Animesh Halder",
-      "funding": "DST-SERB & ICMR",
-      "icon": "Activity",
-      "specs": [
-        "High-speed digitizers",
-        "Microfluidic printers",
-        "Cleanroom suite"
-      ]
-    },
-    {
-      "id": "center-2",
-      "code": "02",
-      "name": "Tissue Engineering & Biomaterials Scaffold Hub",
-      "focus": "3D bioprinting bio-inks, polymeric bone scaffolds, and drug delivery nanocarriers.",
-      "lead": "Dr. Sayanti Chowdhury",
-      "funding": "CSIR & University Seed Grant",
-      "icon": "FlaskConical",
-      "specs": [
-        "Dual-head extrusion bioprinter",
-        "SEM imaging suite",
-        "Biomechanics tester"
-      ]
-    },
-    {
-      "id": "center-3",
-      "code": "03",
-      "name": "Healthcare AI & Medical Robotics Lab",
-      "focus": "Deep learning for MRI/CT, tele-ICU monitoring, and surgical haptic manipulators.",
-      "lead": "Dr. Subhajit Roy",
-      "funding": "MeitY & Industry Partners",
-      "icon": "Cpu",
-      "specs": [
-        "GPU acceleration cluster",
-        "Haptic arm manipulators",
-        "Telemetry suite"
-      ]
-    }
-  ],
-  "gallery": [
-    {
-      "id": "g-1",
-      "title": "Neural Imaging & Bio-AI Analytics",
-      "category": "Research Labs",
-      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
-      "caption": "Students analyzing high-speed electroencephalogram and neuro-imaging datasets using deep learning clusters."
-    },
-    {
-      "id": "g-2",
-      "title": "Microfluidic Biosensor Fabrication",
-      "category": "Research Labs",
-      "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800",
-      "caption": "Cleanroom micro-lithography and microfluidic channel fabrication for point-of-care diagnostic chips."
-    },
-    {
-      "id": "g-3",
-      "title": "3D Cellular Tissue Bioprinting",
-      "category": "Research Labs",
-      "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800",
-      "caption": "DST-SERB funded bio-ink extrusion bioprinter creating vascularized cardiac tissue constructs."
-    },
-    {
-      "id": "g-4",
-      "title": "Neuro-Prosthetics & Rehabilitation",
-      "category": "Research Labs",
-      "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800",
-      "caption": "Electromyography (EMG) surface sensor calibration for bionic prosthetic limbs."
-    },
-    {
-      "id": "g-5",
-      "title": "Confocal Fluorescence Microscopy",
-      "category": "Research Labs",
-      "image": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800",
-      "caption": "High-resolution cellular imaging of fluorescently tagged biomaterial scaffold matrices."
-    },
-    {
-      "id": "g-6",
-      "title": "EEG Signal Processing Workshop",
-      "category": "Events & Seminars",
-      "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800",
-      "caption": "Hands-on signal acquisition workshop featuring multichannel brain-computer interface headsets."
-    },
-    {
-      "id": "g-7",
-      "title": "Neonatal Incubator Prototyping",
-      "category": "Student Life",
-      "image": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800",
-      "caption": "Student design team calibrating thermal sensors for low-cost infant incubators."
-    },
-    {
-      "id": "g-8",
-      "title": "Hospital ICU Clinical Rotation",
-      "category": "Clinical Rotations",
-      "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800",
-      "caption": "3rd-year B.Tech students performing diagnostic equipment audits in partner super-specialty hospitals."
-    }
-  ],
-  "siteSettings": {
-    "theme": {
-      "primaryColor": "#103E3B",
-      "primaryDarkColor": "#0D3330",
-      "accentColor": "#B58A28",
-      "accentLightColor": "#C59B27",
-      "backgroundColor": "#ffffff",
-      "textColor": "#103E3B",
-      "headingColor": "#103E3B",
-      "fontHeading": "Outfit",
-      "fontBody": "Inter"
-    },
-    "general": {
-      "departmentName": "Department of Biomedical Engineering",
-      "universityName": "Adamas University, Kolkata",
-      "schoolName": "School of Engineering & Technology",
-      "tagline": "Where Biomedical Innovation Meets Human Impact",
-      "portalUrl": "https://adamasuniversity.ac.in"
-    },
-    "contact": {
-      "email": "biomedical@adamasuniversity.ac.in",
-      "phone": "+91 33 6811 4500 (Ext. 248)",
-      "admissionHelpline": "18004197423",
-      "address": "Floor 3, School of Engineering, Adamas University Campus, Barasat, Kolkata 700126, India.",
-      "hours": "Monday – Friday, 09:30 AM – 05:30 PM IST",
-      "mapUrl": "https://www.bing.com/maps/search?name=Adamas+University&trfc=&mepi=0%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&ss=id.ypid%3AYNB328D7AD71F2FCAD&q=Adamas+University&ppois=22.73830795288086_88.45661926269531_Adamas+University&cp=22.738308%7E88.456619&lvl=15"
-    },
-    "ticker": [
-      "INNOVATION • RESEARCH • TRANSLATIONAL MEDICINE",
-      "AI-POWERED DIAGNOSTICS & TELE-ICU",
-      "CELLULAR 3D BIOPRINTING & TISSUE SCAFFOLDS",
-      "MICROFLUIDIC LAB-ON-A-CHIP BIOSENSORS",
-      "SUPER-SPECIALTY CLINICAL HOSPITAL ROTATIONS",
-      "ROBOTIC PROSTHETICS & NEURO-ENGINEERING"
-    ],
-    "heroSlides": [
-      {
-        "id": 1,
-        "title": "Engineering the Future of Healthcare",
-        "subtitle": "Where Biomedical Innovation Meets Human Impact",
-        "description": "Pioneering non-invasive medical diagnostic devices, smart biosensors, 3D bioprinting scaffolds, and healthcare artificial intelligence at Adamas University, Kolkata.",
-        "bgImage": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1920",
-        "tag": "School of Engineering & Technology",
-        "primaryCtaText": "Explore Research Tracks",
-        "primaryCtaLink": "/research",
-        "secondaryCtaText": "View Academic Programs",
-        "secondaryCtaLink": "/admission"
-      },
-      {
-        "id": 2,
-        "title": "Advanced 3D Bioprinting & Tissue Engineering",
-        "subtitle": "Cellular Scaffolds & Regenerative Medicine",
-        "description": "Developing biomimetic polymer matrices, bio-inks, and customized orthopedic implants in collaboration with Kolkata's leading clinical research networks.",
-        "bgImage": "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80&w=1920",
-        "tag": "02 Biomaterials & Scaffolds",
-        "primaryCtaText": "Biomaterials Lab",
-        "primaryCtaLink": "/research#02",
-        "secondaryCtaText": "Faculty Profiles",
-        "secondaryCtaLink": "/people"
-      },
-      {
-        "id": 3,
-        "title": "AI-Powered Diagnostics & Medical Imaging",
-        "subtitle": "Deep Learning for Radiological Excellence",
-        "description": "Training neural vision models for automated MRI segmentation, tele-ICU patient monitoring, and low-cost rural screening tools.",
-        "bgImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1920",
-        "tag": "03 Health Informatics & AI",
-        "primaryCtaText": "Explore Bio-AI Track",
-        "primaryCtaLink": "/research#03",
-        "secondaryCtaText": "Apply Now 2026",
-        "secondaryCtaLink": "https://adamasuniversity.ac.in/adamas-university/#"
-      }
-    ],
-    "frontVideo": {
-      "url": "/adamas-virtual-tour.mp4",
-      "poster": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1920",
-      "title": "Experience Adamas University",
-      "subtitle": "Virtual Tour & Advanced Research Facilities"
-    },
-    "hod": {
-      "name": "Dr. Semanti Chakraborty",
-      "designation": "Head, Department of Biomedical Engineering",
-      "qualifications": "Ph.D., IIT Kharagpur | Senior Member, IEEE EMBS",
-      "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800",
-      "quote": "Biomedical Engineering is not merely a technical discipline — it is a sacred contract with humanity to ease clinical suffering through scientific precision.",
-      "message": "Our curriculum bridges clinical hospital reality with cutting-edge micro-engineering, empowering our students to design life-saving diagnostics, prosthetics, and tissue-engineered implants for India and the world."
-    }
-  }
+    "faculty":  [
+                    {
+                        "id":  "fac-1",
+                        "name":  "Dr. Animesh Halder",
+                        "designation":  "Assistant Professor - III",
+                        "trackId":  "01",
+                        "degrees":  "Ph.D. in Biomedical Applications, M.Tech (Tezpur Univ)",
+                        "almaMater":  "Adamas University / Formerly Research Fellow at IISc",
+                        "specialization":  "Biosensors, Non-Invasive Diagnostics, Neural Signal Processing",
+                        "email":  "animesh.halder@adamasuniversity.ac.in",
+                        "phone":  "123456789",
+                        "room":  "SET Building, Room 302",
+                        "bio":  "Dr. Animesh Halder has extensive academic and clinical research experience in biomedical signal processing and wearable biosensor systems. He leads the Center for Advanced Bio-Imaging \u0026 Sensing at Adamas University.",
+                        "researchFocus":  [
+                                              "Cardiovascular Signal Analytics",
+                                              "Wearable ECG \u0026 EEG Sensors",
+                                              "Point-of-Care Diagnostics"
+                                          ],
+                        "publicationsCount":  68,
+                        "patentsCount":  5,
+                        "avatar":  "/faculty/animesh-halder.jpg",
+                        "featuredPublications":  [
+                                                     "Halder, A. et al. (2025). High-Resolution Wearable ECG Sensing Array for Early Arrhythmia Detection. IEEE Trans. Biomed. Eng.",
+                                                     "Halder, A. \u0026 Roy, S. (2024). Wavelet-Based Denoising Algorithms for Ambulatory EEG Monitoring. Biosensors Journal."
+                                                 ]
+                    },
+                    {
+                        "id":  "fac-2",
+                        "name":  "Dr. Sayanti Chowdhury",
+                        "designation":  "Assistant Professor - I",
+                        "trackId":  "02",
+                        "degrees":  "Ph.D. in Signal Processing (Jadavpur Univ), M.Tech (Calcutta Univ)",
+                        "almaMater":  "Adamas University / Formerly Jadavpur University",
+                        "specialization":  "Bioceramics, 3D Bioprinting Scaffolds, Controlled Drug Delivery",
+                        "email":  "sayanti.chowdhury@adamasuniversity.ac.in",
+                        "phone":  "+91 (033) 2587-9002",
+                        "room":  "SET Building, Room 305",
+                        "bio":  "Dr. Sayanti Chowdhury specializes in biomedical engineering, signal processing, and medical instrumentation. She collaborates extensively with researchers and clinical partners on translational health technologies.",
+                        "researchFocus":  [
+                                              "Biomedical Signal Processing",
+                                              "Medical Image AI",
+                                              "Point-of-Care Diagnostics"
+                                          ],
+                        "publicationsCount":  45,
+                        "patentsCount":  3,
+                        "avatar":  "/faculty/sayanti-chowdhury.jpg",
+                        "featuredPublications":  [
+                                                     "Chowdhury, S. et al. (2025). Advanced Signal Analytics for Non-Invasive Clinical Monitoring. IEEE Trans. Biomed. Eng.",
+                                                     "Chowdhury, S. \u0026 Halder, A. (2024). Wavelet-Based Biosignal Feature Extraction for Diagnostic Screening. Biosensors Journal."
+                                                 ]
+                    }
+                ],
+    "news":  [
+                 {
+                     "id":  "news-1",
+                     "title":  "Adamas Biomedical Engineering Faculty Secures DST-SERB Grant for 3D Bioprinting Research",
+                     "date":  "August 28, 2026",
+                     "category":  "Research",
+                     "summary":  "Dr. Sayanti Chowdhury and her research team have been awarded a prestigious ₹42 Lakh research grant by DST-SERB to develop vascularized 3D tissue constructs for cardiac repair.",
+                     "image":  "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format\u0026fit=crop\u0026q=80\u0026w=600",
+                     "author":  "Department R\u0026D Cell",
+                     "readTime":  "3 min read"
+                 },
+                 {
+                     "id":  "news-2",
+                     "title":  "MoU Signed with Leading Super-Specialty Hospital Network for Student Clinical Rotations",
+                     "date":  "July 15, 2026",
+                     "category":  "MoU",
+                     "summary":  "School of Engineering \u0026 Technology, Adamas University has entered into a strategic collaboration with premier Kolkata hospitals to provide B.Tech students with hands-on hospital ICU and radiology equipment training.",
+                     "image":  "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format\u0026fit=crop\u0026q=80\u0026w=600",
+                     "author":  "Admissions \u0026 Placements Desk",
+                     "readTime":  "4 min read"
+                 },
+                 {
+                     "id":  "news-3",
+                     "title":  "Biomedical Students Win Top Honor at National Healthcare Hackathon 2026",
+                     "date":  "June 02, 2026",
+                     "category":  "Achievement",
+                     "summary":  "A 4-member student team from Adamas Department of Biomedical Engineering bagged the 1st prize for creating \u0027StethoAI\u0027 — a low-cost digital stethoscope with automated murmur detection.",
+                     "image":  "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format\u0026fit=crop\u0026q=80\u0026w=600",
+                     "author":  "Student Affairs Cell",
+                     "readTime":  "2 min read"
+                 }
+             ],
+    "events":  [
+                   {
+                       "id":  "evt-1",
+                       "day":  "28",
+                       "month":  "SEP",
+                       "year":  "2026",
+                       "time":  "10:30 AM - 1:00 PM",
+                       "title":  "International Webinar on AI-Driven Cancer Radiology Screening",
+                       "location":  "Auditorium Hall B \u0026 Online Zoom",
+                       "speaker":  "Dr. Marcus Vance (Johns Hopkins University)",
+                       "category":  "Webinar",
+                       "registrationLink":  "#"
+                   },
+                   {
+                       "id":  "evt-2",
+                       "day":  "14",
+                       "month":  "OCT",
+                       "year":  "2026",
+                       "time":  "09:00 AM - 04:30 PM",
+                       "title":  "Hands-On Workshop on Microfluidic Biosensor Fabrication",
+                       "location":  "SET Bio-Electronics Lab 302",
+                       "speaker":  "Dr. Ananya Mukherjee \u0026 Technical Specialists",
+                       "category":  "Workshop",
+                       "registrationLink":  "#"
+                   },
+                   {
+                       "id":  "evt-3",
+                       "day":  "05",
+                       "month":  "NOV",
+                       "year":  "2026",
+                       "time":  "11:00 AM - 03:00 PM",
+                       "title":  "Biomedical Industry-Academia Conclave \u0026 MedTech Expo 2026",
+                       "location":  "Adamas Convention Center",
+                       "speaker":  "Leaders from Siemens Healthineers, Philips \u0026 Medtronic",
+                       "category":  "Conference",
+                       "registrationLink":  "#"
+                   },
+                   {
+                       "id":  "evt-4",
+                       "day":  "20",
+                       "month":  "NOV",
+                       "year":  "2026",
+                       "time":  "02:00 PM - 04:00 PM",
+                       "title":  "Guest Lecture: ISO 13485 Medical Device Regulatory Pathways",
+                       "location":  "Seminar Room 104",
+                       "speaker":  "Prof. Sourav Chakraborty",
+                       "category":  "Seminar",
+                       "registrationLink":  "#"
+                   }
+               ],
+    "researchTracks":  [
+                           {
+                               "id":  "01",
+                               "number":  "01",
+                               "title":  "Biomedical Instrumentation \u0026 Signal Processing",
+                               "subtitle":  "Biosensors, Medical Imaging, Diagnostic Systems \u0026 Electrophysiology",
+                               "description":  "Focuses on designing next-generation electronic sensors, microfluidic chips, and advanced physiological signal processing algorithms. Researchers develop non-invasive diagnostic tools, wireless ECG/EEG monitoring systems, and optical biosensors for point-of-care disease screening.",
+                               "tags":  [
+                                            "ECG / EEG / EMG Analytics",
+                                            "Point-of-Care Biosensors",
+                                            "Medical Ultrasound \u0026 MRI",
+                                            "Lab-on-a-Chip Systems",
+                                            "Optoelectronic Diagnostics",
+                                            "Embedded Medical Systems"
+                                        ],
+                               "keyLabs":  [
+                                               "Advanced Bio-Imaging \u0026 Sensing Lab",
+                                               "Biosensor Development Suite",
+                                               "Medical Electronics \u0026 Prototyping Workshop"
+                                           ],
+                               "leadFacultyIds":  [
+                                                      "fac-1",
+                                                      "fac-4",
+                                                      "fac-7"
+                                                  ],
+                               "iconName":  "Activity",
+                               "bgGradient":  "from-teal-500/10 via-emerald-500/5 to-transparent",
+                               "highlights":  [
+                                                  {
+                                                      "label":  "Active Patents",
+                                                      "value":  "11+"
+                                                  },
+                                                  {
+                                                      "label":  "Clinical Trials",
+                                                      "value":  "4 Ongoing"
+                                                  },
+                                                  {
+                                                      "label":  "Lab Equipment",
+                                                      "value":  "High-Speed Digitizers, Microfluidic Printers"
+                                                  }
+                                              ]
+                           },
+                           {
+                               "id":  "02",
+                               "number":  "02",
+                               "title":  "Biomaterials \u0026 Tissue Engineering",
+                               "subtitle":  "3D Bioprinting, Regenerative Medicine, Implants \u0026 Drug Delivery",
+                               "description":  "Combines polymer science, cell biology, and 3D printing technology to fabricate bio-inspired materials for damaged organ repair, bone defect fillers, and patient-tailored prosthetic implants. Includes targeted nanomedicine for localized drug release with minimal side effects.",
+                               "tags":  [
+                                            "3D Bioprinting \u0026 Bio-Inks",
+                                            "Polymeric Scaffolds",
+                                            "Targeted Drug Delivery",
+                                            "Orthopedic \u0026 Dental Implants",
+                                            "Antimicrobial Coatings",
+                                            "Stem Cell Culture"
+                                        ],
+                               "keyLabs":  [
+                                               "Tissue Engineering \u0026 Regenerative Medicine Suite",
+                                               "Biomaterials Synthesis \u0026 Characterization Lab",
+                                               "Biomechanics \u0026 Gait Analytics Hub"
+                                           ],
+                               "leadFacultyIds":  [
+                                                      "fac-2",
+                                                      "fac-5",
+                                                      "fac-8"
+                                                  ],
+                               "iconName":  "Dna",
+                               "bgGradient":  "from-amber-500/10 via-orange-500/5 to-transparent",
+                               "highlights":  [
+                                                  {
+                                                      "label":  "Bioprinting Resolution",
+                                                      "value":  "10 Microns"
+                                                  },
+                                                  {
+                                                      "label":  "Industry MoUs",
+                                                      "value":  "3 Implant Makers"
+                                                  },
+                                                  {
+                                                      "label":  "Tissue Models",
+                                                      "value":  "Cartilage, Skin, Vascular"
+                                                  }
+                                              ]
+                           },
+                           {
+                               "id":  "03",
+                               "number":  "03",
+                               "title":  "Health Informatics \u0026 AI in Medicine",
+                               "subtitle":  "Medical AI/ML, Telemedicine, Wearable Tech \u0026 Rehabilitation Robotics",
+                               "description":  "Leverages artificial intelligence, computer vision, and IoT connectivity to build intelligent diagnostic assistants, tele-ICU monitoring infrastructure, wearable stroke recovery bands, and assistive exoskeletons for neuro-rehabilitation.",
+                               "tags":  [
+                                            "Deep Learning in Radiology",
+                                            "Telemedicine Platforms",
+                                            "Wearable Health Monitors",
+                                            "Rehabilitation Robotics",
+                                            "Clinical NLP \u0026 EHR Mining",
+                                            "Edge-AI Medical Devices"
+                                        ],
+                               "keyLabs":  [
+                                               "Healthcare AI \u0026 Neural Engineering Hub",
+                                               "Clinical Informatics \u0026 Tele-Health Lab",
+                                               "Assistive Robotics \u0026 Motion Analysis Studio"
+                                           ],
+                               "leadFacultyIds":  [
+                                                      "fac-3",
+                                                      "fac-6"
+                                                  ],
+                               "iconName":  "Brain",
+                               "bgGradient":  "from-blue-500/10 via-indigo-500/5 to-transparent",
+                               "highlights":  [
+                                                  {
+                                                      "label":  "AI Datasets",
+                                                      "value":  "50,000+ Anonymized Scans"
+                                                  },
+                                                  {
+                                                      "label":  "Accuracy Rate",
+                                                      "value":  "98.4% on Diagnostic Models"
+                                                  },
+                                                  {
+                                                      "label":  "Tele-Health Reach",
+                                                      "value":  "25+ Rural Health Centers"
+                                                  }
+                                              ]
+                           }
+                       ],
+    "programs":  [
+                     {
+                         "id":  "btech-bme",
+                         "degree":  "B.Tech",
+                         "title":  "B.Tech in Biomedical Engineering",
+                         "level":  "Undergraduate",
+                         "duration":  "4 Years (8 Semesters)",
+                         "intake":  "60 Seats",
+                         "affiliation":  "School of Engineering \u0026 Technology, Adamas University | AICTE Approved",
+                         "shortDesc":  "A flagship 4-year undergraduate program combining fundamental engineering principles with biology, medical instrumentation, biomaterials, and clinical healthcare systems.",
+                         "fullDesc":  "The B.Tech in Biomedical Engineering at Adamas University equips students with deep interdisciplinary training in electronic instrumentation, human physiology, medical imaging, 3D bioprinting, and bio-AI. Students gain extensive hands-on experience in state-of-the-art department laboratories and undertake clinical internships at leading super-specialty hospitals in Kolkata.",
+                         "highlights":  [
+                                            "AICTE \u0026 UGC Recognized 4-Year Honors Degree",
+                                            "Mandatory 6-Month Clinical / MedTech Industry Internship",
+                                            "Specialization Tracks in Bio-AI, Instrumentation, and Biomaterials",
+                                            "Hands-on Training with Medical Ultrasound, ECG/EEG, and 3D Bioprinters",
+                                            "Preparation for GATE, GRE, and Global Higher Studies"
+                                        ],
+                         "eligibility":  "Passed 10+2 examination with Physics, Mathematics, and Chemistry/Biology/Computer Science with minimum 50% marks (45% for reserved category). Valid score in WBJEE / JEE Main / Adamas University Engineering Admission Test (AUAT).",
+                         "careerOutcomes":  [
+                                                "Biomedical Equipment Engineer (Siemens, Philips, GE Healthcare)",
+                                                "Clinical Engineer in Multi-Specialty Hospitals",
+                                                "R\u0026D MedTech Product Designer",
+                                                "Bio-Signal \u0026 AI Data Analyst",
+                                                "Regulatory Affairs Specialist for Medical Devices",
+                                                "Graduate Studies (MS / M.Tech) in Top Global Universities"
+                                            ],
+                         "curriculumOverview":  [
+                                                    {
+                                                        "yearOrSem":  "Year 1 (Semesters 1 \u0026 2)",
+                                                        "courses":  [
+                                                                        "Engineering Mathematics I \u0026 II",
+                                                                        "Basic Electrical \u0026 Bio-Electronics",
+                                                                        "Human Anatomy \u0026 Physiology for Engineers",
+                                                                        "Engineering Physics",
+                                                                        "Python Programming for Engineers"
+                                                                    ]
+                                                    },
+                                                    {
+                                                        "yearOrSem":  "Year 2 (Semesters 3 \u0026 4)",
+                                                        "courses":  [
+                                                                        "Biomedical Sensors \u0026 Transducers",
+                                                                        "Biophysical Signals \u0026 Systems",
+                                                                        "Biomaterials \u0026 Biocompatibility",
+                                                                        "Analog \u0026 Digital Circuits",
+                                                                        "Biomechanics \u0026 Gait Analysis"
+                                                                    ]
+                                                    },
+                                                    {
+                                                        "yearOrSem":  "Year 3 (Semesters 5 \u0026 6)",
+                                                        "courses":  [
+                                                                        "Medical Imaging Systems (X-Ray, CT, MRI, Ultrasound)",
+                                                                        "Biomedical Signal \u0026 Image Processing",
+                                                                        "Tissue Engineering \u0026 3D Bioprinting",
+                                                                        "Healthcare AI \u0026 Machine Learning",
+                                                                        "Medical Device Safety \u0026 Regulations"
+                                                                    ]
+                                                    },
+                                                    {
+                                                        "yearOrSem":  "Year 4 (Semesters 7 \u0026 8)",
+                                                        "courses":  [
+                                                                        "Clinical Engineering \u0026 Hospital Management",
+                                                                        "Prosthetics \u0026 Rehabilitation Engineering",
+                                                                        "Major Capstone Project I \u0026 II",
+                                                                        "Hospital / Industry Internship",
+                                                                        "Elective: Telemedicine \u0026 IoT"
+                                                                    ]
+                                                    }
+                                                ],
+                         "isFlagship":  true
+                     }
+                 ],
+    "testimonials":  [
+                         {
+                             "id":  "test-1",
+                             "name":  "Subhashis Roy",
+                             "degree":  "B.Tech in Biomedical Engineering",
+                             "batch":  "Class of 2024",
+                             "currentRole":  "Clinical Systems Specialist",
+                             "companyOrUniversity":  "GE HealthCare, India",
+                             "quote":  "The practical exposure in medical instrumentation labs at Adamas University gave me a massive head start. Working directly with ultrasound digitizers and patient monitors prepared me for real hospital deployments from day one.",
+                             "avatar":  "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format\u0026fit=crop\u0026q=80\u0026w=300"
+                         },
+                         {
+                             "id":  "test-2",
+                             "name":  "Dr. Sayani Dutta",
+                             "degree":  "M.Tech in Biomedical Engineering",
+                             "batch":  "Class of 2022",
+                             "currentRole":  "Postdoctoral Research Fellow",
+                             "companyOrUniversity":  "National University of Singapore (NUS)",
+                             "quote":  "Adamas provided an exceptional research atmosphere. Under Dr. Sayanti Chowdhury\u0027s guidance, my master\u0027s thesis on 3D bioprinted hydrogels led to two international journal publications and my PhD fellowship abroad.",
+                             "avatar":  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format\u0026fit=crop\u0026q=80\u0026w=300"
+                         },
+                         {
+                             "id":  "test-3",
+                             "name":  "Rohan Bhattacharya",
+                             "degree":  "B.Tech in Biomedical Engineering",
+                             "batch":  "Class of 2025",
+                             "currentRole":  "Healthcare AI Engineer",
+                             "companyOrUniversity":  "Philips Innovation Campus",
+                             "quote":  "The integration of AI modules alongside core biomedical curriculum at Adamas SET is unmatched. I gained deep hands-on expertise in PyTorch and DICOM medical imaging analytics during my capstone project.",
+                             "avatar":  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format\u0026fit=crop\u0026q=80\u0026w=300"
+                         }
+                     ],
+    "centers":  [
+                    {
+                        "id":  "center-1",
+                        "code":  "01",
+                        "name":  "Center for Advanced Bio-Imaging \u0026 Sensing",
+                        "focus":  "Non-invasive optical diagnostics, wearable telemetry, and microfluidic biosensors.",
+                        "lead":  "Dr. Animesh Halder",
+                        "funding":  "DST-SERB \u0026 ICMR",
+                        "icon":  "Activity",
+                        "specs":  [
+                                      "High-speed digitizers",
+                                      "Microfluidic printers",
+                                      "Cleanroom suite"
+                                  ]
+                    },
+                    {
+                        "id":  "center-2",
+                        "code":  "02",
+                        "name":  "Tissue Engineering \u0026 Biomaterials Scaffold Hub",
+                        "focus":  "3D bioprinting bio-inks, polymeric bone scaffolds, and drug delivery nanocarriers.",
+                        "lead":  "Dr. Sayanti Chowdhury",
+                        "funding":  "CSIR \u0026 University Seed Grant",
+                        "icon":  "FlaskConical",
+                        "specs":  [
+                                      "Dual-head extrusion bioprinter",
+                                      "SEM imaging suite",
+                                      "Biomechanics tester"
+                                  ]
+                    },
+                    {
+                        "id":  "center-3",
+                        "code":  "03",
+                        "name":  "Healthcare AI \u0026 Medical Robotics Lab",
+                        "focus":  "Deep learning for MRI/CT, tele-ICU monitoring, and surgical haptic manipulators.",
+                        "lead":  "Dr. Subhajit Roy",
+                        "funding":  "MeitY \u0026 Industry Partners",
+                        "icon":  "Cpu",
+                        "specs":  [
+                                      "GPU acceleration cluster",
+                                      "Haptic arm manipulators",
+                                      "Telemetry suite"
+                                  ]
+                    }
+                ],
+    "gallery":  [
+                    {
+                        "caption":  "State-of-the-art biomedical engineering laboratory for research and innovation.",
+                        "title":  "Biomedical Engineering Laboratory",
+                        "category":  "Research Labs",
+                        "id":  "g-1",
+                        "image":  "/Biomedical Engineering Laboratory.jpeg"
+                    },
+                    {
+                        "caption":  "Advanced laboratory facilities supporting cutting-edge clinical research.",
+                        "title":  "Advanced Laboratory Facilities",
+                        "category":  "Research Labs",
+                        "id":  "g-4",
+                        "image":  "/Advanced Laboratory Facilities.jpeg"
+                    },
+                    {
+                        "caption":  "Modern biomedical laboratory environment for academic excellence.",
+                        "title":  "Biomedical Laboratory Environment",
+                        "category":  "Research Labs",
+                        "id":  "g-5",
+                        "image":  "/Biomedical Laboratory Environment.jpeg"
+                    },
+                    {
+                        "caption":  "Comprehensive research and instrumentation laboratory.",
+                        "title":  "Research \u0026 Instrumentation Laboratory",
+                        "category":  "Research Labs",
+                        "id":  "g-6",
+                        "image":  "/Research \u0026 Instrumentation Laboratory.jpeg"
+                    },
+                    {
+                        "caption":  "Hands-on biomedical training with advanced clinical equipment.",
+                        "title":  "Hands-on Biomedical Training",
+                        "category":  "Practical Training",
+                        "id":  "g-8",
+                        "image":  "/Hands-on Biomedical Training.jpeg"
+                    },
+                    {
+                        "caption":  "Biomedical engineering practical sessions for skill development.",
+                        "title":  "Biomedical Engineering Practical",
+                        "category":  "Practical Training",
+                        "id":  "g-9",
+                        "image":  "/Biomedical Engineering Practical.jpeg"
+                    },
+                    {
+                        "caption":  "Interactive laboratory practical session under faculty guidance.",
+                        "title":  "Laboratory Practical Session",
+                        "category":  "Practical Training",
+                        "id":  "g-10",
+                        "image":  "/Laboratory Practical Session.jpeg"
+                    },
+                    {
+                        "caption":  "Departmental academic seminar featuring industry experts.",
+                        "title":  "Academic Seminar",
+                        "category":  "Events \u0026 Seminars",
+                        "id":  "g-12",
+                        "image":  "/Academic Seminar.jpeg"
+                    },
+                    {
+                        "caption":  "Interactive departmental academic session and presentation.",
+                        "title":  "Departmental Academic Session",
+                        "category":  "Events \u0026 Seminars",
+                        "id":  "g-13",
+                        "image":  "/Departmental Academic Session.jpeg"
+                    },
+                    {
+                        "caption":  "Annual academic event showcasing research and innovation.",
+                        "title":  "Academic Event",
+                        "category":  "Events \u0026 Seminars",
+                        "id":  "g-14",
+                        "image":  "/Academic Event.jpeg"
+                    },
+                    {
+                        "caption":  "Departmental seminar on emerging biomedical technologies.",
+                        "title":  "Departmental Seminar",
+                        "category":  "Events \u0026 Seminars",
+                        "id":  "g-15",
+                        "image":  "/Departmental Seminar.jpeg"
+                    },
+                    {
+                        "caption":  "Students collaborating on innovative biomedical projects.",
+                        "title":  "Student Collaboration",
+                        "category":  "Student Life",
+                        "id":  "g-16",
+                        "image":  "/Student Collaboration.jpeg"
+                    },
+                    {
+                        "caption":  "Engaging student academic activity within the campus.",
+                        "title":  "Student Academic Activity",
+                        "category":  "Student Life",
+                        "id":  "g-17",
+                        "image":  "/Student Academic Activity.jpeg"
+                    },
+                    {
+                        "caption":  "Active student participation in departmental events.",
+                        "title":  "Student Participation",
+                        "category":  "Student Life",
+                        "id":  "g-18",
+                        "image":  "/Student Participation.jpeg"
+                    }
+                ],
+    "siteSettings":  {
+                         "theme":  {
+                                       "primaryColor":  "#103E3B",
+                                       "primaryDarkColor":  "#0D3330",
+                                       "accentColor":  "#B58A28",
+                                       "accentLightColor":  "#C59B27",
+                                       "backgroundColor":  "#ffffff",
+                                       "textColor":  "#103E3B",
+                                       "headingColor":  "#103E3B",
+                                       "fontHeading":  "Outfit",
+                                       "fontBody":  "Inter"
+                                   },
+                         "general":  {
+                                         "departmentName":  "Department of Biomedical Engineering",
+                                         "universityName":  "Adamas University, Kolkata",
+                                         "schoolName":  "School of Engineering \u0026 Technology",
+                                         "tagline":  "Where Biomedical Innovation Meets Human Impact",
+                                         "portalUrl":  "https://adamasuniversity.ac.in"
+                                     },
+                         "contact":  {
+                                         "email":  "biomedical@adamasuniversity.ac.in",
+                                         "phone":  "+91 33 6811 4500 (Ext. 248)",
+                                         "admissionHelpline":  "18004197423",
+                                         "address":  "Floor 3, School of Engineering, Adamas University Campus, Barasat, Kolkata 700126, India.",
+                                         "hours":  "Monday – Friday, 09:30 AM – 05:30 PM IST",
+                                         "mapUrl":  "https://www.bing.com/maps/search?name=Adamas+University\u0026trfc=\u0026mepi=0%7E%7EEmbedded%7ELargeMapLink\u0026FORM=MPSRPL\u0026style=r\u0026ss=id.ypid%3AYNB328D7AD71F2FCAD\u0026q=Adamas+University\u0026ppois=22.73830795288086_88.45661926269531_Adamas+University\u0026cp=22.738308%7E88.456619\u0026lvl=15"
+                                     },
+                         "ticker":  [
+                                        "INNOVATION • RESEARCH • TRANSLATIONAL MEDICINE",
+                                        "AI-POWERED DIAGNOSTICS \u0026 TELE-ICU",
+                                        "CELLULAR 3D BIOPRINTING \u0026 TISSUE SCAFFOLDS",
+                                        "MICROFLUIDIC LAB-ON-A-CHIP BIOSENSORS",
+                                        "SUPER-SPECIALTY CLINICAL HOSPITAL ROTATIONS",
+                                        "ROBOTIC PROSTHETICS \u0026 NEURO-ENGINEERING"
+                                    ],
+                         "heroSlides":  [
+                                            {
+                                                "id":  1,
+                                                "title":  "Engineering the Future of Healthcare",
+                                                "subtitle":  "Where Biomedical Innovation Meets Human Impact",
+                                                "description":  "Pioneering non-invasive medical diagnostic devices, smart biosensors, 3D bioprinting scaffolds, and healthcare artificial intelligence at Adamas University, Kolkata.",
+                                                "bgImage":  "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format\u0026fit=crop\u0026q=80\u0026w=1920",
+                                                "tag":  "School of Engineering \u0026 Technology",
+                                                "primaryCtaText":  "Explore Research Tracks",
+                                                "primaryCtaLink":  "/research",
+                                                "secondaryCtaText":  "View Academic Programs",
+                                                "secondaryCtaLink":  "/admission"
+                                            },
+                                            {
+                                                "id":  2,
+                                                "title":  "Advanced 3D Bioprinting \u0026 Tissue Engineering",
+                                                "subtitle":  "Cellular Scaffolds \u0026 Regenerative Medicine",
+                                                "description":  "Developing biomimetic polymer matrices, bio-inks, and customized orthopedic implants in collaboration with Kolkata\u0027s leading clinical research networks.",
+                                                "bgImage":  "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format\u0026fit=crop\u0026q=80\u0026w=1920",
+                                                "tag":  "02 Biomaterials \u0026 Scaffolds",
+                                                "primaryCtaText":  "Biomaterials Lab",
+                                                "primaryCtaLink":  "/research#02",
+                                                "secondaryCtaText":  "Faculty Profiles",
+                                                "secondaryCtaLink":  "/people"
+                                            },
+                                            {
+                                                "id":  3,
+                                                "title":  "AI-Powered Diagnostics \u0026 Medical Imaging",
+                                                "subtitle":  "Deep Learning for Radiological Excellence",
+                                                "description":  "Training neural vision models for automated MRI segmentation, tele-ICU patient monitoring, and low-cost rural screening tools.",
+                                                "bgImage":  "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format\u0026fit=crop\u0026q=80\u0026w=1920",
+                                                "tag":  "03 Health Informatics \u0026 AI",
+                                                "primaryCtaText":  "Explore Bio-AI Track",
+                                                "primaryCtaLink":  "/research#03",
+                                                "secondaryCtaText":  "Apply Now 2026",
+                                                "secondaryCtaLink":  "https://adamasuniversity.ac.in/adamas-university/#"
+                                            }
+                                        ],
+                         "frontVideo":  {
+                                            "url":  "/adamas-virtual-tour.mp4",
+                                            "poster":  "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format\u0026fit=crop\u0026q=80\u0026w=1920",
+                                            "title":  "Experience Adamas University",
+                                            "subtitle":  "Virtual Tour \u0026 Advanced Research Facilities"
+                                        },
+                         "hod":  {
+                                     "name":  "Dr. Semanti Chakraborty",
+                                     "designation":  "Head, Department of Biomedical Engineering",
+                                     "qualifications":  "Ph.D., IIT Kharagpur | Senior Member, IEEE EMBS",
+                                     "photo":  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format\u0026fit=crop\u0026q=80\u0026w=800",
+                                     "quote":  "Biomedical Engineering is not merely a technical discipline — it is a sacred contract with humanity to ease clinical suffering through scientific precision.",
+                                     "message":  "Our curriculum bridges clinical hospital reality with cutting-edge micro-engineering, empowering our students to design life-saving diagnostics, prosthetics, and tissue-engineered implants for India and the world."
+                                 }
+                     }
 }

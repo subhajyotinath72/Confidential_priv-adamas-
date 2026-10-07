@@ -828,8 +828,8 @@ export const ProgramDetailView: React.FC = () => {
                 <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-3 hover:border-teal-500 transition-colors group">
                   <div className="relative h-44 w-full rounded-xl overflow-hidden bg-slate-200 border border-slate-200 shadow-xs">
                     <img
-                      src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=600"
-                      alt="Bio-Electronics & Sensors Lab"
+                      src="/Biomedical Engineering Laboratory.jpeg"
+                      alt="Biomedical Engineering Laboratory"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-2 left-2">
@@ -839,7 +839,7 @@ export const ProgramDetailView: React.FC = () => {
                     </div>
                   </div>
                   <div className="space-y-1">
-                    <h4 className="text-sm font-bold text-slate-900 font-serif">1. Bio-Electronics & Sensors Lab</h4>
+                    <h4 className="text-sm font-bold text-slate-900 font-serif">1. Biomedical Engineering Laboratory</h4>
                     <p className="text-xs text-slate-600 leading-relaxed">ECG, EEG, EMG telemetry kits, DSO oscilloscopes, and FPGA bio-amplifiers.</p>
                   </div>
                 </div>
@@ -848,8 +848,8 @@ export const ProgramDetailView: React.FC = () => {
                 <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-3 hover:border-teal-500 transition-colors group">
                   <div className="relative h-44 w-full rounded-xl overflow-hidden bg-slate-200 border border-slate-200 shadow-xs">
                     <img
-                      src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600"
-                      alt="3D Bioprinting & Biomaterials Suite"
+                      src="/Chemistry & Biochemistry Laboratory.jpeg"
+                      alt="Chemistry & Biochemistry Laboratory"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-2 left-2">
@@ -859,7 +859,7 @@ export const ProgramDetailView: React.FC = () => {
                     </div>
                   </div>
                   <div className="space-y-1">
-                    <h4 className="text-sm font-bold text-slate-900 font-serif">2. 3D Bioprinting & Biomaterials Suite</h4>
+                    <h4 className="text-sm font-bold text-slate-900 font-serif">2. Chemistry & Biochemistry Laboratory</h4>
                     <p className="text-xs text-slate-600 leading-relaxed">Extrusion bioprinters, hydrogel formulation, and CO2 incubator facilities.</p>
                   </div>
                 </div>
@@ -868,8 +868,8 @@ export const ProgramDetailView: React.FC = () => {
                 <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-3 hover:border-teal-500 transition-colors group">
                   <div className="relative h-44 w-full rounded-xl overflow-hidden bg-slate-200 border border-slate-200 shadow-xs">
                     <img
-                      src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600"
-                      alt="Medical Imaging & PACS Simulation"
+                      src="/Electrical & Measurement Laboratory.jpeg"
+                      alt="Electrical & Measurement Laboratory"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-2 left-2">
@@ -879,7 +879,7 @@ export const ProgramDetailView: React.FC = () => {
                     </div>
                   </div>
                   <div className="space-y-1">
-                    <h4 className="text-sm font-bold text-slate-900 font-serif">3. Medical Imaging & PACS Simulation</h4>
+                    <h4 className="text-sm font-bold text-slate-900 font-serif">3. Electrical & Measurement Laboratory</h4>
                     <p className="text-xs text-slate-600 leading-relaxed">DICOM processing workstations, ultrasound phantoms, and MATLAB imaging suites.</p>
                   </div>
                 </div>
@@ -888,8 +888,8 @@ export const ProgramDetailView: React.FC = () => {
                 <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-3 hover:border-teal-500 transition-colors group">
                   <div className="relative h-44 w-full rounded-xl overflow-hidden bg-slate-200 border border-slate-200 shadow-xs">
                     <img
-                      src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80&w=600"
-                      alt="Clinical Virtual ICU Simulator"
+                      src="/Electronics & Instrumentation Laboratory.jpeg"
+                      alt="Electronics & Instrumentation Laboratory"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-2 left-2">
@@ -899,7 +899,7 @@ export const ProgramDetailView: React.FC = () => {
                     </div>
                   </div>
                   <div className="space-y-1">
-                    <h4 className="text-sm font-bold text-slate-900 font-serif">4. Clinical Virtual ICU Simulator</h4>
+                    <h4 className="text-sm font-bold text-slate-900 font-serif">4. Electronics & Instrumentation Laboratory</h4>
                     <p className="text-xs text-slate-600 leading-relaxed">Multi-para monitors, defibrillator testers, and patient simulation mannequins.</p>
                   </div>
                 </div>

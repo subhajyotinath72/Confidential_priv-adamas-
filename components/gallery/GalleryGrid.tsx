@@ -7,100 +7,122 @@ import { Maximize2, X, Sparkles, Camera } from "lucide-react";
 export interface GalleryPhoto {
   id: string;
   title: string;
-  category: "Research Labs" | "Clinical Rotations" | "Events & Seminars" | "Student Life";
+  category: "Research Labs" | "Practical Training" | "Events & Seminars" | "Student Life";
   image: string;
   caption?: string;
 }
 
 export const GALLERY_PHOTOS: GalleryPhoto[] = [
+  // Research Labs (4)
   {
     id: "g-1",
-    title: "Neural Imaging & Bio-AI Analytics",
+    title: "Biomedical Engineering Laboratory",
     category: "Research Labs",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
-    caption: "Students analyzing high-speed electroencephalogram and neuro-imaging datasets using deep learning clusters."
-  },
-  {
-    id: "g-2",
-    title: "Microfluidic Biosensor Fabrication",
-    category: "Research Labs",
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800",
-    caption: "Cleanroom micro-lithography and microfluidic channel fabrication for point-of-care diagnostic chips."
-  },
-  {
-    id: "g-3",
-    title: "3D Cellular Tissue Bioprinting",
-    category: "Research Labs",
-    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800",
-    caption: "DST-SERB funded bio-ink extrusion bioprinter creating vascularized cardiac tissue constructs."
+    image: "/Biomedical Engineering Laboratory.jpeg",
+    caption: "State-of-the-art biomedical engineering laboratory for research and innovation."
   },
   {
     id: "g-4",
-    title: "Neuro-Prosthetics & Rehabilitation",
+    title: "Advanced Laboratory Facilities",
     category: "Research Labs",
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800",
-    caption: "Electromyography (EMG) surface sensor calibration for bionic prosthetic limbs."
+    image: "/Advanced Laboratory Facilities.jpeg",
+    caption: "Advanced laboratory facilities supporting cutting-edge clinical research."
   },
   {
     id: "g-5",
-    title: "Confocal Fluorescence Microscopy",
+    title: "Biomedical Laboratory Environment",
     category: "Research Labs",
-    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800",
-    caption: "High-resolution cellular imaging of fluorescently tagged biomaterial scaffold matrices."
+    image: "/Biomedical Laboratory Environment.jpeg",
+    caption: "Modern biomedical laboratory environment for academic excellence."
   },
   {
     id: "g-6",
-    title: "EEG Signal Processing Workshop",
-    category: "Events & Seminars",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800",
-    caption: "Hands-on signal acquisition workshop featuring multichannel brain-computer interface headsets."
+    title: "Research & Instrumentation Laboratory",
+    category: "Research Labs",
+    image: "/Research & Instrumentation Laboratory.jpeg",
+    caption: "Comprehensive research and instrumentation laboratory."
   },
-  {
-    id: "g-7",
-    title: "Neonatal Incubator Prototyping",
-    category: "Student Life",
-    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800",
-    caption: "Student design team calibrating thermal sensors for low-cost infant incubators."
-  },
+  
+  // Practical Training (4)
   {
     id: "g-8",
-    title: "Hospital ICU Clinical Rotation",
-    category: "Clinical Rotations",
-    image: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800",
-    caption: "3rd-year B.Tech students performing diagnostic equipment audits in partner super-specialty hospitals."
+    title: "Hands-on Biomedical Training",
+    category: "Practical Training",
+    image: "/Hands-on Biomedical Training.jpeg",
+    caption: "Hands-on biomedical training with advanced clinical equipment."
   },
   {
     id: "g-9",
-    title: "Biomaterials Polymer Synthesis",
-    category: "Research Labs",
-    image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=800",
-    caption: "Polymer scaffold synthesis for drug delivery nanocarriers."
+    title: "Biomedical Engineering Practical",
+    category: "Practical Training",
+    image: "/Biomedical Engineering Practical.jpeg",
+    caption: "Biomedical engineering practical sessions for skill development."
   },
   {
     id: "g-10",
-    title: "Prosthetic Arm EMG Calibration",
-    category: "Research Labs",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800",
-    caption: "Biomedical hardware lab setup for multi-channel sensor digitizing."
+    title: "Laboratory Practical Session",
+    category: "Practical Training",
+    image: "/Laboratory Practical Session.jpeg",
+    caption: "Interactive laboratory practical session under faculty guidance."
   },
-  {
-    id: "g-11",
-    title: "MedTech Hackathon & Expo",
-    category: "Events & Seminars",
-    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800",
-    caption: "Annual MedTech innovation competition showcasing student healthcare prototypes."
-  },
+
+  // Events & Seminars (4)
   {
     id: "g-12",
-    title: "Radiology Equipment Calibration",
-    category: "Clinical Rotations",
-    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800",
-    caption: "Clinical rotation training at CT & MRI imaging centers."
+    title: "Academic Seminar",
+    category: "Events & Seminars",
+    image: "/Academic Seminar.jpeg",
+    caption: "Departmental academic seminar featuring industry experts."
+  },
+  {
+    id: "g-13",
+    title: "Departmental Academic Session",
+    category: "Events & Seminars",
+    image: "/Departmental Academic Session.jpeg",
+    caption: "Interactive departmental academic session and presentation."
+  },
+  {
+    id: "g-14",
+    title: "Academic Event",
+    category: "Events & Seminars",
+    image: "/Academic Event.jpeg",
+    caption: "Annual academic event showcasing research and innovation."
+  },
+  {
+    id: "g-15",
+    title: "Departmental Seminar",
+    category: "Events & Seminars",
+    image: "/Departmental Seminar.jpeg",
+    caption: "Departmental seminar on emerging biomedical technologies."
+  },
+
+  // Student Life (3)
+  {
+    id: "g-16",
+    title: "Student Collaboration",
+    category: "Student Life",
+    image: "/Student Collaboration.jpeg",
+    caption: "Students collaborating on innovative biomedical projects."
+  },
+  {
+    id: "g-17",
+    title: "Student Academic Activity",
+    category: "Student Life",
+    image: "/Student Academic Activity.jpeg",
+    caption: "Engaging student academic activity within the campus."
+  },
+  {
+    id: "g-18",
+    title: "Student Participation",
+    category: "Student Life",
+    image: "/Student Participation.jpeg",
+    caption: "Active student participation in departmental events."
   }
 ];
 
 export const GalleryGrid: React.FC = () => {
   const [photos, setPhotos] = useState<GalleryPhoto[]>(GALLERY_PHOTOS);
+  const [shuffledAll, setShuffledAll] = useState<GalleryPhoto[]>(GALLERY_PHOTOS);
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [selectedPhoto, setSelectedPhoto] = useState<GalleryPhoto | null>(null);
 
@@ -115,10 +137,15 @@ export const GalleryGrid: React.FC = () => {
       .catch((err) => console.error("Could not fetch live gallery:", err));
   }, []);
 
-  const categories = ["All", "Research Labs", "Clinical Rotations", "Events & Seminars", "Student Life"];
+  React.useEffect(() => {
+    // Shuffle photos randomly whenever the underlying photos array changes
+    setShuffledAll([...photos].sort(() => Math.random() - 0.5));
+  }, [photos]);
+
+  const categories = ["All", "Research Labs", "Practical Training", "Events & Seminars", "Student Life"];
 
   const filteredPhotos = activeCategory === "All"
-    ? photos
+    ? shuffledAll
     : photos.filter((p) => p.category === activeCategory);
 
   return (

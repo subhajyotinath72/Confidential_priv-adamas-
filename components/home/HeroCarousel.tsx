@@ -15,20 +15,20 @@ export const HeroCarousel: React.FC = () => {
 
   const labGridItems = [
     {
-      title: "NEURAL IMAGING & AI",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600",
+      title: "Electronics & Measurements",
+      image: "/Electronics & Measurements.jpeg",
     },
     {
-      title: "NEURO-PROSTHETICS LAB",
-      image: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80&w=600",
+      title: "Research & Practical Training",
+      image: "/Biomedical Research & Practical Training.jpeg",
     },
     {
-      title: "3D CELLULAR BIOPRINTING",
-      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600",
+      title: "BIOMEDICAL TEACHING LABORATORIES",
+      image: "/Biomedical Teaching Laboratories.jpeg",
     },
     {
-      title: "MICROFLUIDIC BIOSENSORS",
-      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=600",
+      title: "BIOMEDICAL INSTRUMENTATION",
+      image: "/Biomedical Instrumentation.jpeg",
     },
   ];
 

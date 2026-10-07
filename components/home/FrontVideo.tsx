@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useRef } from "react";
+import React from "react";
 import Link from "next/link";
 import { ChevronRight, ArrowRight, Radio } from "lucide-react";
-import { useSiteSettings } from "@/components/providers/SiteSettingsContext";
 
 interface FrontVideoProps {
   src?: string;
@@ -43,16 +42,7 @@ const LATEST_ANNOUNCEMENTS = [
   },
 ];
 
-export const FrontVideo: React.FC<FrontVideoProps> = ({
-  src,
-  poster,
-}) => {
-  const { settings } = useSiteSettings();
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const videoSrc = src || settings?.frontVideo?.url || "/adamas-virtual-tour.mp4";
-  const posterSrc = poster || settings?.frontVideo?.poster || "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1920";
-
+export const FrontVideo: React.FC<FrontVideoProps> = () => {
   return (
     <section
       className="w-full relative overflow-hidden border-b border-white/10 transition-colors"
@@ -61,30 +51,8 @@ export const FrontVideo: React.FC<FrontVideoProps> = ({
       {/* 2-Column Split Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full items-center">
         
-        {/* Left Half: Video Player Container */}
-        <div className="relative w-full aspect-video bg-black overflow-hidden border-r border-white/10 flex items-center justify-center hud-bracket group">
-          <video
-            ref={videoRef}
-            src={videoSrc}
-            poster={posterSrc}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-contain"
-          />
-
-          {/* Cinematic Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#103E3B]/70 via-transparent to-black/40 pointer-events-none" />
-
-          {/* Top-Left HUD Status Tag */}
-          <div className="absolute top-3 left-3 z-20 flex items-center space-x-2 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/15">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-[9px] font-bold uppercase tracking-widest text-white/90">
-              CAMPUS & LAB TOUR
-            </span>
-          </div>
-        </div>
+        {/* Left Half: Blank Container */}
+        <div className="w-full aspect-video hidden lg:block" />
 
         {/* Right Half: NTA-Style LATEST @ BME Ticker Box */}
         <div className="w-full aspect-video bg-[#0D3330] p-3 sm:p-5 flex flex-col justify-between relative overflow-hidden border-l border-white/10">

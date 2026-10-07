@@ -45,13 +45,13 @@ export const ResearchAreas: React.FC = () => {
             <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
               STUDENT RESEARCH & INNOVATION
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#1B365D] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
               BIOALGORITHM <span className="text-sm font-sans font-normal text-slate-600 italic block sm:inline">Research & Projects by students</span>
             </h2>
           </div>
           <Link
             href="/research"
-            className="text-xs font-bold text-[#1B365D] uppercase tracking-wider hover:underline"
+            className="text-xs font-bold text-[#103E3B] uppercase tracking-wider hover:underline"
           >
             VIEW ALL PROJECTS →
           </Link>
@@ -62,10 +62,10 @@ export const ResearchAreas: React.FC = () => {
           {studentProjects.map((p, idx) => (
             <div
               key={idx}
-              className="bg-[#EFECE6] p-4 rounded-2xl border border-[#E2DDD3] shadow-xs flex flex-col justify-between space-y-4 hover:border-[#1B365D] transition-colors"
+              className="bg-[#EFECE6] p-4 rounded-2xl border border-[#E2DDD3] shadow-xs flex flex-col justify-between space-y-4 hover:border-[#103E3B] transition-colors"
             >
-              {/* Blue Header Box */}
-              <div className="bg-[#1B365D] h-40 rounded-xl p-4 flex flex-col justify-between text-white relative">
+              {/* Teal Header Box */}
+              <div className="bg-[#103E3B] h-40 rounded-xl p-4 flex flex-col justify-between text-white relative">
                 <div className="flex justify-between items-center text-[9px] font-bold text-[#C59B27] uppercase tracking-widest">
                   <span>{p.badge}</span>
                   <span>{p.subBadge}</span>
@@ -77,7 +77,7 @@ export const ResearchAreas: React.FC = () => {
 
               {/* Text */}
               <div className="space-y-1">
-                <h3 className="text-base font-serif font-bold text-[#1B365D]">
+                <h3 className="text-base font-serif font-bold text-[#103E3B]">
                   {p.title}
                 </h3>
                 <p className="text-xs text-slate-600 font-sans leading-relaxed">

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ACADEMIC_PROGRAMS, SPECIALIZATION_CHIPS } from "@/data/programs";
 import { GraduationCap, Clock, Award, ArrowRight, CheckCircle, Sparkles, BookOpen, Layers, Microscope, Activity, BrainCircuit, Stethoscope } from "lucide-react";
-import { EcgDivider } from "@/components/shared/EcgDivider";
 
 const ICON_MAP: Record<string, any> = {
   Stethoscope,
@@ -285,8 +284,6 @@ export const AcademicPrograms: React.FC = () => {
 
       </div>
 
-      {/* Signature Animated MedTech ECG Wave Divider */}
-      <EcgDivider className="mt-12" color="#103E3B" />
     </section>
   );
 };

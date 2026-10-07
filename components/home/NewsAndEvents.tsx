@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { Calendar, Sparkles, Bell, Award, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { EcgDivider } from "@/components/shared/EcgDivider";
 
 interface NewsAndEventsProps {
   showFullArchive?: boolean;
@@ -207,8 +206,6 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
 
       </div>
 
-      {/* Subtle ECG Pulse Divider */}
-      <EcgDivider className="mt-8" color="#103E3B" />
     </section>
   );
 };

@@ -104,22 +104,34 @@ ALTER TABLE media_gallery ENABLE ROW LEVEL SECURITY;
 ALTER TABLE site_store ENABLE ROW LEVEL SECURITY;
 
 -- Create Policies for Public Read & Service-Role/Authenticated Write
+DROP POLICY IF EXISTS "Public Read Access Faculty" ON faculty;
 CREATE POLICY "Public Read Access Faculty" ON faculty FOR SELECT USING (true);
+DROP POLICY IF EXISTS "Admin All Access Faculty" ON faculty;
 CREATE POLICY "Admin All Access Faculty" ON faculty FOR ALL USING (true);
 
+DROP POLICY IF EXISTS "Public Read Access News" ON news_events;
 CREATE POLICY "Public Read Access News" ON news_events FOR SELECT USING (true);
+DROP POLICY IF EXISTS "Admin All Access News" ON news_events;
 CREATE POLICY "Admin All Access News" ON news_events FOR ALL USING (true);
 
+DROP POLICY IF EXISTS "Public Read Access Research" ON research_centers;
 CREATE POLICY "Public Read Access Research" ON research_centers FOR SELECT USING (true);
+DROP POLICY IF EXISTS "Admin All Access Research" ON research_centers;
 CREATE POLICY "Admin All Access Research" ON research_centers FOR ALL USING (true);
 
+DROP POLICY IF EXISTS "Public Read Access Programs" ON academic_programs;
 CREATE POLICY "Public Read Access Programs" ON academic_programs FOR SELECT USING (true);
+DROP POLICY IF EXISTS "Admin All Access Programs" ON academic_programs;
 CREATE POLICY "Admin All Access Programs" ON academic_programs FOR ALL USING (true);
 
+DROP POLICY IF EXISTS "Public Read Access Media" ON media_gallery;
 CREATE POLICY "Public Read Access Media" ON media_gallery FOR SELECT USING (true);
+DROP POLICY IF EXISTS "Admin All Access Media" ON media_gallery;
 CREATE POLICY "Admin All Access Media" ON media_gallery FOR ALL USING (true);
 
+DROP POLICY IF EXISTS "Public Read Access Site Store" ON site_store;
 CREATE POLICY "Public Read Access Site Store" ON site_store FOR SELECT USING (true);
+DROP POLICY IF EXISTS "Admin All Access Site Store" ON site_store;
 CREATE POLICY "Admin All Access Site Store" ON site_store FOR ALL USING (true);
 
 -- ====================================================================
@@ -129,8 +141,11 @@ INSERT INTO storage.buckets (id, name, public)
 VALUES ('bme-uploads', 'bme-uploads', true)
 ON CONFLICT (id) DO NOTHING;
 
+DROP POLICY IF EXISTS "Public Storage Read" ON storage.objects;
 CREATE POLICY "Public Storage Read" ON storage.objects FOR SELECT USING (bucket_id = 'bme-uploads');
+DROP POLICY IF EXISTS "Public Storage Insert" ON storage.objects;
 CREATE POLICY "Public Storage Insert" ON storage.objects FOR INSERT WITH CHECK (bucket_id = 'bme-uploads');
+DROP POLICY IF EXISTS "Public Storage Delete" ON storage.objects;
 CREATE POLICY "Public Storage Delete" ON storage.objects FOR DELETE USING (bucket_id = 'bme-uploads');
 
 -- ====================================================================

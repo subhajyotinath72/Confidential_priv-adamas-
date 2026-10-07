@@ -63,13 +63,13 @@ export const ResearchCenters: React.FC = () => {
             <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
               ADVANCED INFRASTRUCTURE
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#1B365D] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
               BIOMEDICAL RESEARCH LABORATORIES <span className="text-sm font-sans font-normal text-slate-600 italic block sm:inline">Cleanrooms & Core Suites</span>
             </h2>
           </div>
           <Link
             href="/research#centers"
-            className="text-xs font-bold text-[#1B365D] uppercase tracking-wider hover:underline"
+            className="text-xs font-bold text-[#103E3B] uppercase tracking-wider hover:underline"
           >
             VIEW ALL LABS →
           </Link>
@@ -80,7 +80,7 @@ export const ResearchCenters: React.FC = () => {
           {labs.map((lab, idx) => (
             <div
               key={idx}
-              className="bg-[#EFECE6] p-4 rounded-2xl border border-[#E2DDD3] shadow-xs flex flex-col justify-between space-y-4 hover:border-[#1B365D] transition-colors group"
+              className="bg-[#EFECE6] p-4 rounded-2xl border border-[#E2DDD3] shadow-xs flex flex-col justify-between space-y-4 hover:border-[#103E3B] transition-colors group"
             >
               <div className="relative h-44 rounded-xl overflow-hidden bg-slate-200 border border-[#D5D0C5]">
                 <img
@@ -89,14 +89,14 @@ export const ResearchCenters: React.FC = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-2 left-2">
-                  <span className="px-2.5 py-1 bg-[#1B365D] text-[9px] font-bold text-white uppercase tracking-wider rounded border border-white/10">
+                  <span className="px-2.5 py-1 bg-[#103E3B] text-[9px] font-bold text-white uppercase tracking-wider rounded border border-white/10">
                     {lab.id}
                   </span>
                 </div>
               </div>
 
               <div className="space-y-1">
-                <h3 className="text-base font-serif font-bold text-[#1B365D]">
+                <h3 className="text-base font-serif font-bold text-[#103E3B]">
                   {lab.title}
                 </h3>
                 <p className="text-xs text-slate-600 font-sans leading-relaxed">

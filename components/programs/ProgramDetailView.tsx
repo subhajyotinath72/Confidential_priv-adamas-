@@ -848,7 +848,7 @@ export const ProgramDetailView: React.FC = () => {
                 <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-3 hover:border-teal-500 transition-colors group">
                   <div className="relative h-44 w-full rounded-xl overflow-hidden bg-slate-200 border border-slate-200 shadow-xs">
                     <img
-                      src="/Chemistry & Biochemistry Laboratory.jpeg"
+                      src="/Biomedical Laboratory Environment.jpeg"
                       alt="Chemistry & Biochemistry Laboratory"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />

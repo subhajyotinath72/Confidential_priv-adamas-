@@ -272,55 +272,7 @@ export const ProgramDetailView: React.FC = () => {
               </div>
             </div>
 
-            {/* 3. Faculty Members Section */}
-            <div
-              id="faculty-members"
-              className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm space-y-6 scroll-mt-24 text-slate-800"
-            >
-              <div className="flex items-center justify-between border-b border-slate-200 pb-4">
-                <div>
-                  <span className="text-[10px] font-bold text-teal-700 uppercase tracking-widest block">
-                    Academic Leadership
-                  </span>
-                  <h2 className="text-2xl font-bold text-slate-900 font-serif">
-                    Department Faculty Members
-                  </h2>
-                </div>
-                <Link
-                  href="/people"
-                  className="text-xs font-bold text-teal-800 hover:underline flex items-center"
-                >
-                  <span>Full Directory</span>
-                  <ChevronRight className="w-3.5 h-3.5 ml-1" />
-                </Link>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-sm">
-                    AH
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold text-slate-900">Dr. Animesh Halder</h4>
-                    <p className="text-[11px] text-teal-700 font-semibold">Assistant Professor - III</p>
-                    <p className="text-[10px] text-slate-500">Ph.D. Calcutta Univ • Biosensors & Devices</p>
-                  </div>
-                </div>
-
-                <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-sm">
-                    SC
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold text-slate-900">Prof. Sourav Chakraborty</h4>
-                    <p className="text-[11px] text-teal-700 font-semibold">Assistant Professor & Clinical Placement Lead</p>
-                    <p className="text-[10px] text-slate-500">M.Tech Jadavpur • Medical Instrumentation</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* 4. Courses Offered & Curriculum Section (Imported from Adamas University Official Website) */}
+            {/* Courses Offered & Curriculum Section (Imported from Adamas University Official Website) */}
             <div
               id="courses-offered"
               className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm space-y-8 scroll-mt-24 text-slate-800"

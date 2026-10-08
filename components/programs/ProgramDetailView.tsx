@@ -68,8 +68,14 @@ export const ProgramDetailView: React.FC = () => {
             <div className="bg-white/95 backdrop-blur-md border border-slate-200/80 rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 transition-all">
               
               {/* Header Strip with Gold Accent & Gradient */}
-              <div className="relative bg-gradient-to-r from-[#103E3B] via-[#164e4a] to-[#0D3330] text-white p-4 sm:p-5 overflow-hidden">
-                <div className="absolute -right-6 -top-6 w-24 h-24 bg-teal-400/10 rounded-full blur-xl pointer-events-none" />
+              <div
+                className="relative text-white p-4 sm:p-5 overflow-hidden transition-colors"
+                style={{
+                  background:
+                    "linear-gradient(to right, var(--color-primary, #103E3B), var(--color-primary-dark, #0D3330))",
+                }}
+              >
+                <div className="absolute -right-6 -top-6 w-24 h-24 bg-white/5 rounded-full blur-xl pointer-events-none" />
                 <div className="absolute left-0 top-0 w-full h-[3px] bg-gradient-to-r from-[#B58A28] via-amber-300 to-[#B58A28]" />
 
                 <div className="flex items-center justify-between relative z-10">
@@ -86,7 +92,7 @@ export const ProgramDetailView: React.FC = () => {
                       </h3>
                     </div>
                   </div>
-                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-white/10 text-teal-100 border border-white/15">
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-white/10 text-white border border-white/15">
                     {quickLinks.length} Sections
                   </span>
                 </div>
@@ -104,7 +110,7 @@ export const ProgramDetailView: React.FC = () => {
                           className={`w-7 h-7 rounded-lg flex items-center justify-center transition-all ${
                             isActive
                               ? "bg-amber-300/20 text-amber-300"
-                              : "bg-slate-100 group-hover:bg-teal-100/60 text-slate-500 group-hover:text-[#103E3B]"
+                              : "bg-slate-100 group-hover:bg-amber-50 text-slate-500"
                           }`}
                         >
                           <Icon className="w-3.5 h-3.5" />
@@ -117,7 +123,7 @@ export const ProgramDetailView: React.FC = () => {
                             className={`w-3.5 h-3.5 transition-all ${
                               isActive
                                 ? "text-amber-300"
-                                : "text-slate-300 group-hover:text-[#103E3B] group-hover:translate-x-0.5"
+                                : "text-slate-300 group-hover:translate-x-0.5"
                             }`}
                           />
                         ) : (
@@ -125,7 +131,7 @@ export const ProgramDetailView: React.FC = () => {
                             className={`w-3.5 h-3.5 transition-all ${
                               isActive
                                 ? "text-amber-300 translate-x-0.5"
-                                : "text-slate-300 group-hover:text-[#103E3B] group-hover:translate-x-0.5"
+                                : "text-slate-300 group-hover:translate-x-0.5"
                             }`}
                           />
                         )}
@@ -138,10 +144,18 @@ export const ProgramDetailView: React.FC = () => {
                       <Link
                         key={link.id}
                         href={link.href}
+                        style={
+                          isActive
+                            ? {
+                                background:
+                                  "linear-gradient(to right, var(--color-primary, #103E3B), var(--color-primary-dark, #0D3330))",
+                              }
+                            : undefined
+                        }
                         className={`w-full px-3.5 py-2.5 rounded-xl flex items-center justify-between text-left transition-all duration-200 group ${
                           isActive
-                            ? "bg-gradient-to-r from-[#103E3B] to-[#164e4a] text-white shadow-md shadow-teal-950/20 translate-x-1 font-semibold"
-                            : "text-slate-700 hover:text-[#103E3B] hover:bg-slate-100/80 hover:translate-x-1"
+                            ? "text-white shadow-md translate-x-1 font-semibold"
+                            : "text-slate-700 hover:bg-slate-100/80 hover:translate-x-1"
                         }`}
                       >
                         {content}
@@ -152,10 +166,18 @@ export const ProgramDetailView: React.FC = () => {
                     <button
                       key={link.id}
                       onClick={() => handleScrollTo(link.id)}
+                      style={
+                        isActive
+                          ? {
+                              background:
+                                "linear-gradient(to right, var(--color-primary, #103E3B), var(--color-primary-dark, #0D3330))",
+                            }
+                          : undefined
+                      }
                       className={`w-full px-3.5 py-2.5 rounded-xl flex items-center justify-between text-left transition-all duration-200 group ${
                         isActive
-                          ? "bg-gradient-to-r from-[#103E3B] to-[#164e4a] text-white shadow-md shadow-teal-950/20 translate-x-1 font-semibold"
-                          : "text-slate-700 hover:text-[#103E3B] hover:bg-slate-100/80 hover:translate-x-1"
+                          ? "text-white shadow-md translate-x-1 font-semibold"
+                          : "text-slate-700 hover:bg-slate-100/80 hover:translate-x-1"
                       }`}
                     >
                       {content}

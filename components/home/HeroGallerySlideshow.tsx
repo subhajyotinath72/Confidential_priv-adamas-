@@ -78,7 +78,8 @@ export const HeroGallerySlideshow: React.FC = () => {
 
   return (
     <div
-      className="relative w-full h-full overflow-hidden group select-none bg-[#092220]"
+      className="relative w-full h-full overflow-hidden group select-none"
+      style={{ backgroundColor: "var(--color-primary-dark, #0D3330)" }}
       aria-label="Department Gallery Slideshow"
     >
       {/* Cycling Images with Smooth Ken Burns Fade Transition */}
@@ -100,7 +101,13 @@ export const HeroGallerySlideshow: React.FC = () => {
       </AnimatePresence>
 
       {/* Subtle Tint & Gradient Overlay for Contrast and Readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0A2624]/95 via-[#0A2624]/35 to-black/30 pointer-events-none" />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(var(--color-primary-dark-rgb, 13, 51, 48), 0.95), rgba(var(--color-primary-dark-rgb, 13, 51, 48), 0.35), rgba(0, 0, 0, 0.3))",
+        }}
+      />
 
       {/* Top Banner: Badge, Live Indicator, Slide Counter */}
       <div className="absolute top-3 sm:top-4 left-3 sm:left-4 right-3 sm:right-4 flex items-center justify-between z-20 pointer-events-none">

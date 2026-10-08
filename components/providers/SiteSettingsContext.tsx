@@ -17,6 +17,24 @@ const SiteSettingsContext = createContext<SiteSettingsContextType>({
   loading: true,
 });
 
+const hexToRgb = (hex?: string, fallback: string = "16, 62, 59"): string => {
+  if (!hex) return fallback;
+  const cleanHex = hex.replace("#", "").trim();
+  if (cleanHex.length === 3) {
+    const r = parseInt(cleanHex[0] + cleanHex[0], 16);
+    const g = parseInt(cleanHex[1] + cleanHex[1], 16);
+    const b = parseInt(cleanHex[2] + cleanHex[2], 16);
+    return `${r}, ${g}, ${b}`;
+  }
+  if (cleanHex.length === 6) {
+    const r = parseInt(cleanHex.substring(0, 2), 16);
+    const g = parseInt(cleanHex.substring(2, 4), 16);
+    const b = parseInt(cleanHex.substring(4, 6), 16);
+    return `${r}, ${g}, ${b}`;
+  }
+  return fallback;
+};
+
 export const SiteSettingsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<SiteSettings>(DEFAULT_SITE_SETTINGS);
   const [loading, setLoading] = useState(true);
@@ -25,13 +43,23 @@ export const SiteSettingsProvider: React.FC<{ children: React.ReactNode }> = ({ 
     if (typeof window === "undefined") return;
     const root = document.documentElement;
 
-    root.style.setProperty("--color-primary", theme.primaryColor || "#103E3B");
-    root.style.setProperty("--color-primary-dark", theme.primaryDarkColor || "#0D3330");
-    root.style.setProperty("--color-accent", theme.accentColor || "#B58A28");
+    const primary = theme.primaryColor || "#103E3B";
+    const primaryDark = theme.primaryDarkColor || "#0D3330";
+    const heading = theme.headingColor || primary;
+    const accent = theme.accentColor || "#B58A28";
+    const textMain = theme.textColor || "#103E3B";
+
+    root.style.setProperty("--color-primary", primary);
+    root.style.setProperty("--color-primary-dark", primaryDark);
+    root.style.setProperty("--color-primary-rgb", hexToRgb(primary, "16, 62, 59"));
+    root.style.setProperty("--color-primary-dark-rgb", hexToRgb(primaryDark, "13, 51, 48"));
+    root.style.setProperty("--color-accent", accent);
     root.style.setProperty("--color-accent-light", theme.accentLightColor || "#C59B27");
+    root.style.setProperty("--color-accent-rgb", hexToRgb(accent, "181, 138, 40"));
     root.style.setProperty("--color-bg-page", theme.backgroundColor || "#ffffff");
-    root.style.setProperty("--color-text-main", theme.textColor || "#103E3B");
-    root.style.setProperty("--color-heading", theme.headingColor || "#103E3B");
+    root.style.setProperty("--color-text-main", textMain);
+    root.style.setProperty("--color-heading", heading);
+    root.style.setProperty("--color-heading-rgb", hexToRgb(heading, hexToRgb(primary, "16, 62, 59")));
     root.style.setProperty("--font-heading-family", `"${theme.fontHeading || 'Outfit'}", serif`);
     root.style.setProperty("--font-body-family", `"${theme.fontBody || 'Inter'}", sans-serif`);
 

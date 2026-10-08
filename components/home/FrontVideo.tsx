@@ -54,17 +54,26 @@ export const FrontVideo: React.FC<FrontVideoProps> = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full items-center">
         
         {/* Left Half: Cycling Gallery Photo Slideshow */}
-        <div className="w-full aspect-video relative overflow-hidden bg-[#092220]">
+        <div
+          className="w-full aspect-video relative overflow-hidden"
+          style={{ backgroundColor: "var(--color-primary-dark, #0D3330)" }}
+        >
           <HeroGallerySlideshow />
         </div>
 
         {/* Right Half: NTA-Style LATEST @ BME Ticker Box */}
-        <div className="w-full aspect-video bg-[#0D3330] p-3 sm:p-5 flex flex-col justify-between relative overflow-hidden border-l border-white/10">
+        <div
+          className="w-full aspect-video p-3 sm:p-5 flex flex-col justify-between relative overflow-hidden border-l border-white/10"
+          style={{ backgroundColor: "var(--color-primary-dark, #0D3330)" }}
+        >
           
           <div className="bg-white rounded-2xl shadow-2xl flex flex-col h-full overflow-hidden border border-slate-200">
             
             {/* Header Banner */}
-            <div className="bg-[#0B2A28] text-white px-5 py-3 flex items-center justify-between border-b border-white/10">
+            <div
+              className="text-white px-5 py-3 flex items-center justify-between border-b border-white/10"
+              style={{ backgroundColor: "var(--color-primary-dark, #0D3330)" }}
+            >
               <div className="flex items-center space-x-2">
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
@@ -84,7 +93,10 @@ export const FrontVideo: React.FC<FrontVideoProps> = () => {
               <div className="animate-vertical-ticker space-y-4">
                 {[...LATEST_ANNOUNCEMENTS, ...LATEST_ANNOUNCEMENTS].map((item, idx) => (
                   <div key={idx} className="flex items-start space-x-2 text-xs text-slate-800 border-b border-slate-100 pb-3 hover:bg-amber-50/40 rounded transition-colors px-1">
-                    <ChevronRight className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
+                    <ChevronRight
+                      className="w-4 h-4 flex-shrink-0 mt-0.5"
+                      style={{ color: "var(--color-primary, #103E3B)" }}
+                    />
                     <div className="flex-1 leading-snug">
                       <span className="font-semibold text-slate-800">
                         {item.title}
@@ -111,7 +123,8 @@ export const FrontVideo: React.FC<FrontVideoProps> = () => {
               <span className="text-[10px] text-slate-500 font-medium hidden sm:inline">Hover ticker to pause scroll</span>
               <Link
                 href="/news"
-                className="shine-sweep inline-flex items-center px-4 py-1.5 rounded-lg text-xs font-bold text-white bg-[#103E3B] hover:bg-[#0C2E2C] transition-colors shadow-sm ml-auto"
+                className="shine-sweep inline-flex items-center px-4 py-1.5 rounded-lg text-xs font-bold text-white transition-colors shadow-sm ml-auto hover:opacity-90"
+                style={{ backgroundColor: "var(--color-primary, #103E3B)" }}
               >
                 <span>ARCHIVE / VIEW ALL</span>
                 <ArrowRight className="w-3.5 h-3.5 ml-1 text-amber-300" />

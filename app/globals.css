@@ -5,11 +5,15 @@
 :root {
   --color-primary: #103E3B;
   --color-primary-dark: #0D3330;
+  --color-primary-rgb: 16, 62, 59;
+  --color-primary-dark-rgb: 13, 51, 48;
   --color-accent: #B58A28;
   --color-accent-light: #C59B27;
+  --color-accent-rgb: 181, 138, 40;
   --color-bg-page: #ffffff;
   --color-text-main: #103E3B;
   --color-heading: #103E3B;
+  --color-heading-rgb: 16, 62, 59;
   --font-heading-family: var(--font-outfit), Outfit, serif;
   --font-body-family: var(--font-inter), Inter, sans-serif;
 }
@@ -41,31 +45,138 @@
 
 /* Dynamic theme helper utility classes */
 .bg-site-primary {
-  background-color: var(--color-primary, #103E3B);
+  background-color: var(--color-primary, #103E3B) !important;
 }
 .bg-site-primary-dark {
-  background-color: var(--color-primary-dark, #0D3330);
+  background-color: var(--color-primary-dark, #0D3330) !important;
 }
 .text-site-primary {
-  color: var(--color-primary, #103E3B);
+  color: var(--color-primary, #103E3B) !important;
 }
 .border-site-primary {
-  border-color: var(--color-primary, #103E3B);
+  border-color: var(--color-primary, #103E3B) !important;
 }
 .bg-site-accent {
-  background-color: var(--color-accent, #B58A28);
+  background-color: var(--color-accent, #B58A28) !important;
 }
 .text-site-accent {
-  color: var(--color-accent, #B58A28);
+  color: var(--color-accent, #B58A28) !important;
 }
 .border-site-accent {
-  border-color: var(--color-accent, #B58A28);
+  border-color: var(--color-accent, #B58A28) !important;
 }
 .font-heading-dynamic {
   font-family: var(--font-heading-family, serif);
 }
 .font-body-dynamic {
   font-family: var(--font-body-family, sans-serif);
+}
+
+/* ============================================================
+   GLOBAL DYNAMIC THEME OVERRIDES FOR LEGACY BRAND GREEN CLASSES
+   ============================================================ */
+.bg-\[\#103E3B\],
+.bg-\[\#103e3b\],
+.bg-\[\#0E3835\],
+.bg-\[\#0e3835\] {
+  background-color: var(--color-primary, #103E3B) !important;
+}
+
+.bg-\[\#0D3330\],
+.bg-\[\#0d3330\],
+.bg-\[\#0B2A28\],
+.bg-\[\#0b2a28\],
+.bg-\[\#092220\],
+.bg-\[\#0A2624\],
+.bg-\[\#0a2624\],
+.bg-\[\#0C2E2C\],
+.bg-\[\#0c2e2c\] {
+  background-color: var(--color-primary-dark, #0D3330) !important;
+}
+
+.text-\[\#103E3B\],
+.text-\[\#103e3b\] {
+  color: var(--color-heading, var(--color-primary, #103E3B)) !important;
+}
+
+.text-\[\#0D3330\],
+.text-\[\#0d3330\],
+.text-\[\#0B2A28\],
+.text-\[\#0b2a28\] {
+  color: var(--color-primary-dark, #0D3330) !important;
+}
+
+.border-\[\#103E3B\],
+.border-\[\#103e3b\] {
+  border-color: var(--color-primary, #103E3B) !important;
+}
+
+.border-\[\#0D3330\],
+.border-\[\#0d3330\] {
+  border-color: var(--color-primary-dark, #0D3330) !important;
+}
+
+/* Opacity variants for backgrounds */
+.bg-\[\#103E3B\]\/90, .bg-\[\#103e3b\]\/90 {
+  background-color: rgb(var(--color-primary-rgb, 16 62 59) / 0.9) !important;
+}
+.bg-\[\#103E3B\]\/85, .bg-\[\#103e3b\]\/85 {
+  background-color: rgb(var(--color-primary-rgb, 16 62 59) / 0.85) !important;
+}
+.bg-\[\#103E3B\]\/80, .bg-\[\#103e3b\]\/80 {
+  background-color: rgb(var(--color-primary-rgb, 16 62 59) / 0.8) !important;
+}
+.bg-\[\#103E3B\]\/70, .bg-\[\#103e3b\]\/70 {
+  background-color: rgb(var(--color-primary-rgb, 16 62 59) / 0.7) !important;
+}
+
+/* Opacity variants for text */
+.text-\[\#103E3B\]\/90, .text-\[\#103e3b\]\/90 {
+  color: rgb(var(--color-heading-rgb, 16 62 59) / 0.9) !important;
+}
+.text-\[\#103E3B\]\/85, .text-\[\#103e3b\]\/85 {
+  color: rgb(var(--color-heading-rgb, 16 62 59) / 0.85) !important;
+}
+.text-\[\#103E3B\]\/80, .text-\[\#103e3b\]\/80 {
+  color: rgb(var(--color-heading-rgb, 16 62 59) / 0.8) !important;
+}
+.text-\[\#103E3B\]\/70, .text-\[\#103e3b\]\/70 {
+  color: rgb(var(--color-heading-rgb, 16 62 59) / 0.7) !important;
+}
+
+/* Hover variants */
+.hover\:bg-\[\#0D3330\]:hover,
+.hover\:bg-\[\#0d3330\]:hover,
+.hover\:bg-\[\#0C2E2C\]:hover,
+.hover\:bg-\[\#0c2e2c\]:hover {
+  background-color: var(--color-primary-dark, #0D3330) !important;
+}
+
+.hover\:text-\[\#103E3B\]:hover,
+.hover\:text-\[\#103e3b\]:hover {
+  color: var(--color-primary, #103E3B) !important;
+}
+
+/* Gradient stops */
+.from-\[\#103E3B\],
+.from-\[\#103e3b\] {
+  --tw-gradient-from: var(--color-primary, #103E3B) var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(var(--color-primary-rgb, 16 62 59) / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.from-\[\#103E3B\]\/90,
+.from-\[\#103e3b\]\/90 {
+  --tw-gradient-from: rgb(var(--color-primary-rgb, 16 62 59) / 0.9) var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(var(--color-primary-rgb, 16 62 59) / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.to-\[\#0D3330\],
+.to-\[\#0d3330\],
+.to-\[\#164e4a\],
+.to-\[\#164E4A\] {
+  --tw-gradient-to: var(--color-primary-dark, #0D3330) var(--tw-gradient-to-position) !important;
 }
 
 /* Custom Webkit Scrollbars */

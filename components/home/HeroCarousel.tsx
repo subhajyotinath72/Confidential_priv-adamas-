@@ -57,29 +57,49 @@ export const HeroCarousel: React.FC = () => {
             </div>
 
             {/* Serif Main Heading */}
-            <h1 className="text-4xl sm:text-6xl font-serif font-semibold text-[#103E3B] tracking-tight leading-[1.1]">
+            <h1
+              className="text-4xl sm:text-6xl font-serif font-semibold tracking-tight leading-[1.1]"
+              style={{ color: "var(--color-heading, #103E3B)" }}
+            >
               Biomedical <br />
-              <span className="bg-gradient-to-r from-[#103E3B] via-teal-700 to-[#B58A28] bg-clip-text text-transparent">
+              <span
+                className="bg-clip-text text-transparent"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(to right, var(--color-primary, #103E3B), var(--color-accent, #B58A28))",
+                }}
+              >
                 Engineering
               </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl font-serif italic text-[#103E3B]/80">
+            <p
+              className="text-lg sm:text-xl font-serif italic"
+              style={{ color: "var(--color-text-main, #103E3B)" }}
+            >
               {heroSubtitle}
             </p>
 
             {/* Feature Badges */}
-            <div className="flex flex-wrap gap-2 pt-1 text-xs text-[#103E3B]/90 font-medium">
-              <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-teal-50/80 border border-teal-200/80 text-[#103E3B]">
-                ✓ AICTE & UGC Recognized
-              </span>
-              <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-teal-50/80 border border-teal-200/80 text-[#103E3B]">
-                ✓ 100% Hospital Clinical Rotations
-              </span>
-              <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-teal-50/80 border border-teal-200/80 text-[#103E3B]">
-                ✓ Class-1000 Cleanrooms
-              </span>
+            <div className="flex flex-wrap gap-2 pt-1 text-xs font-medium">
+              {[
+                "✓ AICTE & UGC Recognized",
+                "✓ 100% Hospital Clinical Rotations",
+                "✓ Class-1000 Cleanrooms",
+              ].map((badgeText, bIdx) => (
+                <span
+                  key={bIdx}
+                  className="inline-flex items-center px-2.5 py-1 rounded-md border"
+                  style={{
+                    color: "var(--color-heading, #103E3B)",
+                    backgroundColor: "rgba(var(--color-primary-rgb, 16 62 59), 0.06)",
+                    borderColor: "rgba(var(--color-primary-rgb, 16 62 59), 0.2)",
+                  }}
+                >
+                  {badgeText}
+                </span>
+              ))}
             </div>
 
             {/* CTA Buttons */}
@@ -96,7 +116,8 @@ export const HeroCarousel: React.FC = () => {
 
               <Link
                 href="/gallery"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-[#103E3B] bg-[#EFECE6] border border-[#D5D0C5] hover:bg-[#E5E0D5] transition-all hover:scale-[1.02]"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider bg-[#EFECE6] border border-[#D5D0C5] hover:bg-[#E5E0D5] transition-all hover:scale-[1.02]"
+                style={{ color: "var(--color-heading, #103E3B)" }}
               >
                 VIEW DEPARTMENT GALLERY
               </Link>
@@ -123,18 +144,41 @@ export const HeroCarousel: React.FC = () => {
                       alt={lab.title}
                       className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#103E3B]/90 via-black/20 to-transparent" />
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background:
+                          "linear-gradient(to top, rgba(var(--color-primary-rgb, 16 62 59), 0.9) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)",
+                      }}
+                    />
                     
                     {/* Top Status Dot */}
                     <div className="absolute top-2 right-2 opacity-80 group-hover:opacity-100 transition-opacity">
-                      <span className="inline-flex items-center px-1.5 py-0.5 rounded bg-[#103E3B]/80 text-[8px] font-bold text-emerald-300 border border-white/20 uppercase backdrop-blur-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1 animate-pulse" />
+                      <span
+                        className="inline-flex items-center px-1.5 py-0.5 rounded text-[8px] font-bold text-white border border-white/20 uppercase backdrop-blur-sm"
+                        style={{
+                          backgroundColor:
+                            "rgba(var(--color-primary-rgb, 16 62 59), 0.85)",
+                        }}
+                      >
+                        <span
+                          className="w-1.5 h-1.5 rounded-full mr-1 animate-pulse"
+                          style={{
+                            backgroundColor: "var(--color-accent, #B58A28)",
+                          }}
+                        />
                         ACTIVE
                       </span>
                     </div>
 
                     <div className="absolute bottom-2 left-2 right-2">
-                      <span className="inline-block px-2 py-1 bg-[#103E3B]/90 text-[9px] font-bold text-white uppercase tracking-wider rounded backdrop-blur-sm border border-white/10 group-hover:border-amber-400/50 transition-colors">
+                      <span
+                        className="inline-block px-2 py-1 text-[9px] font-bold text-white uppercase tracking-wider rounded backdrop-blur-sm border border-white/10 group-hover:border-amber-400/50 transition-colors"
+                        style={{
+                          backgroundColor:
+                            "rgba(var(--color-primary-rgb, 16 62 59), 0.92)",
+                        }}
+                      >
                         {lab.title}
                       </span>
                     </div>

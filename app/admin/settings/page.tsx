@@ -164,6 +164,7 @@ export default function AdminSettingsPage() {
         backgroundColor: p.bg,
         textColor: p.text,
         headingColor: p.heading,
+        navDropdownColor: p.primaryDark,
       },
     }));
   };
@@ -510,6 +511,40 @@ export default function AdminSettingsPage() {
                     setSettings({
                       ...settings,
                       theme: { ...settings.theme, primaryDarkColor: e.target.value },
+                    })
+                  }
+                  className="flex-grow px-3 py-2 border border-slate-200 rounded-xl text-xs font-mono uppercase font-bold text-slate-700"
+                />
+              </div>
+            </div>
+
+            {/* Navbar Dropdown / Menu Color */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-3">
+              <label className="text-xs font-bold text-slate-700 block uppercase tracking-wider">
+                Navbar Dropdown / Menu Color
+              </label>
+              <p className="text-[11px] text-slate-500">
+                Navbar dropdown menus (Admission, People, Research) and mobile drawer background.
+              </p>
+              <div className="flex items-center space-x-3">
+                <input
+                  type="color"
+                  value={settings.theme.navDropdownColor || settings.theme.primaryDarkColor || settings.theme.primaryColor || "#103E3B"}
+                  onChange={(e) =>
+                    setSettings({
+                      ...settings,
+                      theme: { ...settings.theme, navDropdownColor: e.target.value },
+                    })
+                  }
+                  className="w-12 h-12 rounded-xl cursor-pointer border-0 p-0 shadow-sm"
+                />
+                <input
+                  type="text"
+                  value={settings.theme.navDropdownColor || settings.theme.primaryDarkColor || settings.theme.primaryColor || "#103E3B"}
+                  onChange={(e) =>
+                    setSettings({
+                      ...settings,
+                      theme: { ...settings.theme, navDropdownColor: e.target.value },
                     })
                   }
                   className="flex-grow px-3 py-2 border border-slate-200 rounded-xl text-xs font-mono uppercase font-bold text-slate-700"

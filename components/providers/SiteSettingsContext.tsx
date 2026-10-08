@@ -48,11 +48,14 @@ export const SiteSettingsProvider: React.FC<{ children: React.ReactNode }> = ({ 
     const heading = theme.headingColor || primary;
     const accent = theme.accentColor || "#D4AF37";
     const textMain = theme.textColor || "#330E1A";
+    const navDropdown = theme.navDropdownColor || primaryDark || primary;
 
     root.style.setProperty("--color-primary", primary);
     root.style.setProperty("--color-primary-dark", primaryDark);
     root.style.setProperty("--color-primary-rgb", hexToRgb(primary, "74, 21, 37"));
     root.style.setProperty("--color-primary-dark-rgb", hexToRgb(primaryDark, "51, 14, 26"));
+    root.style.setProperty("--color-nav-dropdown", navDropdown);
+    root.style.setProperty("--color-nav-dropdown-rgb", hexToRgb(navDropdown, hexToRgb(primaryDark, "51, 14, 26")));
     root.style.setProperty("--color-accent", accent);
     root.style.setProperty("--color-accent-light", theme.accentLightColor || "#E8C860");
     root.style.setProperty("--color-accent-rgb", hexToRgb(accent, "212, 175, 55"));

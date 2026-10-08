@@ -515,7 +515,8 @@
       "textColor": "#330E1A",
       "headingColor": "#4A1525",
       "fontHeading": "Outfit",
-      "fontBody": "Inter"
+      "fontBody": "Inter",
+      "navDropdownColor": "#330E1A"
     },
     "general": {
       "departmentName": "Department of Biomedical Engineering",

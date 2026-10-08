@@ -142,7 +142,13 @@ export const Navbar: React.FC = () => {
                     {/* Mega-menu Dropdown */}
                     {activeDropdown === link.name && (
                       <div className="absolute left-0 top-full pt-2 w-72 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
-                        <div className="bg-[#4A1525]/95 border border-white/20 rounded-xl shadow-2xl p-2.5 backdrop-blur-xl">
+                        <div
+                          className="border border-white/20 rounded-xl shadow-2xl p-2.5 backdrop-blur-xl"
+                          style={{
+                            backgroundColor:
+                              "rgba(var(--color-nav-dropdown-rgb, 51, 14, 26), 0.96)",
+                          }}
+                        >
                           <div className="text-[10px] font-bold text-white uppercase px-2 py-1 mb-1 border-b border-white/10">
                             {link.name} Options
                           </div>
@@ -207,7 +213,13 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#4A1525]/95 backdrop-blur-xl border-b border-white/10 px-4 pt-2 pb-6 space-y-2 animate-in slide-in-from-top duration-200">
+        <div
+          className="lg:hidden backdrop-blur-xl border-b border-white/10 px-4 pt-2 pb-6 space-y-2 animate-in slide-in-from-top duration-200"
+          style={{
+            backgroundColor:
+              "rgba(var(--color-nav-dropdown-rgb, 51, 14, 26), 0.96)",
+          }}
+        >
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (

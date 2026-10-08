@@ -8,6 +8,7 @@ export interface SiteTheme {
   headingColor: string;
   fontHeading: string;
   fontBody: string;
+  navDropdownColor?: string;
 }
 
 export interface SiteGeneral {

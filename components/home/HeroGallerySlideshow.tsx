@@ -95,6 +95,7 @@ export const HeroGallerySlideshow: React.FC = () => {
           <img
             src={currentPhoto.image}
             alt={currentPhoto.title}
+            decoding="async"
             className="w-full h-full object-cover object-center"
           />
         </motion.div>

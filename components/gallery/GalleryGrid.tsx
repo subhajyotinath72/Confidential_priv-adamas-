@@ -172,24 +172,25 @@ export const GalleryGrid: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {filteredPhotos.map((photo) => (
           <motion.div
-            layout
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.3 }}
+            exit={{ opacity: 0, scale: 0.96 }}
+            transition={{ duration: 0.2 }}
             key={photo.id}
             onClick={() => setSelectedPhoto(photo)}
-            className="group relative h-64 rounded-2xl overflow-hidden bg-slate-100 border border-[#E2DDD3] shadow-xs cursor-pointer"
+            className="group relative h-64 rounded-2xl overflow-hidden bg-slate-100 border border-[#E2DDD3] shadow-xs cursor-pointer transform-gpu"
           >
             <img
               src={photo.image}
               alt={photo.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
             />
             
             {/* Hover Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#4A1525]/90 via-[#4A1525]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-end space-y-2">
-              <span className="self-start px-2.5 py-0.5 rounded-full text-[9px] font-bold text-[#F7D6C8] bg-white/20 backdrop-blur-md uppercase tracking-wider">
+            <div className="absolute inset-0 bg-gradient-to-t from-[#4A1525]/90 via-[#4A1525]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-end space-y-2 pointer-events-none">
+              <span className="self-start px-2.5 py-0.5 rounded-full text-[9px] font-bold text-[#F7D6C8] bg-black/40 backdrop-blur-sm uppercase tracking-wider">
                 {photo.category}
               </span>
               <h4 className="text-sm font-serif font-bold text-white leading-snug">

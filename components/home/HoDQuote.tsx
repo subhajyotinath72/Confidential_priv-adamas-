@@ -16,7 +16,7 @@ export const HoDQuote: React.FC = () => {
   const hodMessage = settings?.hod?.message || "Through immersive hands-on training across advanced cleanrooms, bio-MEMS sensors, medical robotics, and direct clinical internships in top-tier hospital wards, our scholars bridge theory with bedside clinical impact. We invite you to explore our vibrant labs, collaborate on translational discoveries, and shape the next horizon of healthcare engineering.";
 
   return (
-    <section className="bg-white/40 backdrop-blur-[1px] text-[#103E3B] py-12 lg:py-20 border-b border-slate-200/80 relative overflow-hidden">
+    <section className="bg-white/40 backdrop-blur-[1px] text-[#4A1525] py-12 lg:py-20 border-b border-slate-200/80 relative overflow-hidden">
       {/* Background Ambient Glow */}
       <div className="absolute top-1/2 left-0 w-80 h-80 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -32,10 +32,10 @@ export const HoDQuote: React.FC = () => {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5"
           >
-            <div className="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm relative group hover:border-[#B58A28]/50 transition-colors">
+            <div className="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm relative group hover:border-[#D4AF37]/50 transition-colors">
               
               {/* Gold Top Accent Line */}
-              <div className="absolute top-0 left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-[#B58A28] to-transparent" />
+              <div className="absolute top-0 left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
 
               <div className="relative overflow-hidden rounded-xl h-80 sm:h-96 bg-slate-200 border border-slate-300">
                 <img
@@ -43,22 +43,22 @@ export const HoDQuote: React.FC = () => {
                   alt={`${hodName} - Head of Department`}
                   className="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#103E3B]/80 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#4A1525]/80 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-3 left-3">
-                  <span className="px-3 py-1 bg-[#103E3B] text-[9px] font-bold text-white uppercase tracking-widest rounded border border-white/20 backdrop-blur-sm shadow-xs">
+                  <span className="px-3 py-1 bg-[#4A1525] text-[9px] font-bold text-white uppercase tracking-widest rounded border border-white/20 backdrop-blur-sm shadow-xs">
                     OFFICE OF THE HOD
                   </span>
                 </div>
               </div>
 
               <div className="mt-4 space-y-1">
-                <h3 className="text-xl font-serif font-bold text-[#103E3B]">
+                <h3 className="text-xl font-serif font-bold text-[#4A1525]">
                   {hodName}
                 </h3>
-                <p className="text-xs font-bold text-[#B58A28] uppercase tracking-wider">
+                <p className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">
                   {hodDesignation}
                 </p>
-                <p className="text-xs text-[#103E3B]/80 font-sans">
+                <p className="text-xs text-[#4A1525]/80 font-sans">
                   {hodQualifications}
                 </p>
               </div>
@@ -79,17 +79,17 @@ export const HoDQuote: React.FC = () => {
             </div>
 
             {/* Gold Eyebrow */}
-            <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase">
+            <div className="text-[11px] font-bold tracking-widest text-[#D4AF37] uppercase">
               LEADERSHIP & VISION
             </div>
 
             {/* Title */}
-            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight leading-[1.15]">
+            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#4A1525] tracking-tight leading-[1.15]">
               Welcome to Biomedical Engineering at Adamas University
             </h2>
 
             {/* Featured Quote */}
-            <blockquote className="p-4 rounded-xl bg-amber-50/50 border-l-4 border-[#B58A28] text-sm sm:text-base font-serif italic text-[#103E3B] leading-relaxed">
+            <blockquote className="p-4 rounded-xl bg-amber-50/50 border-l-4 border-[#D4AF37] text-sm sm:text-base font-serif italic text-[#4A1525] leading-relaxed">
               &ldquo;{hodQuote}&rdquo;
             </blockquote>
 

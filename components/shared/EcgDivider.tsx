@@ -9,7 +9,7 @@ interface EcgDividerProps {
 
 export const EcgDivider: React.FC<EcgDividerProps> = ({
   className = "",
-  color = "#103E3B",
+  color = "#4A1525",
 }) => {
   const rawId = useId();
   // Sanitize id for SVG url references
@@ -59,7 +59,7 @@ export const EcgDivider: React.FC<EcgDividerProps> = ({
             {/* Glowing gradient for the traveling highlight wave */}
             <linearGradient id={`glowGrad-${uniqueId}`} x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor={color} stopOpacity="0.3" />
-              <stop offset="50%" stopColor="#B58A28" stopOpacity="0.9" />
+              <stop offset="50%" stopColor="#D4AF37" stopOpacity="0.9" />
               <stop offset="100%" stopColor={color} stopOpacity="0.3" />
             </linearGradient>
           </defs>

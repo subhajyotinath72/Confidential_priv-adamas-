@@ -12,7 +12,7 @@ import { ContactSection } from "@/components/home/ContactSection";
 
 export default function Home() {
   return (
-    <div className="bg-transparent text-[#103E3B] space-y-0">
+    <div className="bg-transparent text-[#330E1A] space-y-0">
       {/* 0. Front Page Auto-Playing Video Section */}
       <FrontVideo />
 

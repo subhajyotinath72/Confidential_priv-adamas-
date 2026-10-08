@@ -68,13 +68,13 @@ export interface SiteSettings {
 
 export const DEFAULT_SITE_SETTINGS: SiteSettings = {
   theme: {
-    primaryColor: "#103E3B",
-    primaryDarkColor: "#0D3330",
-    accentColor: "#B58A28",
-    accentLightColor: "#C59B27",
-    backgroundColor: "#ffffff",
-    textColor: "#103E3B",
-    headingColor: "#103E3B",
+    primaryColor: "#4A1525",
+    primaryDarkColor: "#330E1A",
+    accentColor: "#D4AF37",
+    accentLightColor: "#E8C860",
+    backgroundColor: "#FCFBF7",
+    textColor: "#330E1A",
+    headingColor: "#4A1525",
     fontHeading: "Outfit",
     fontBody: "Inter",
   },

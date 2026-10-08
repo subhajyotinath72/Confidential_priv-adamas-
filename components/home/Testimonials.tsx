@@ -16,16 +16,16 @@ export const Testimonials: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
           <div>
-            <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
+            <div className="text-[11px] font-bold tracking-widest text-[#D4AF37] uppercase mb-1">
               VISUAL SHOWCASE
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#4A1525] tracking-tight">
               Our Memories
             </h2>
           </div>
           <Link
             href="/gallery"
-            className="inline-flex items-center text-xs font-bold text-[#103E3B] uppercase tracking-wider hover:text-[#B58A28] transition-colors group"
+            className="inline-flex items-center text-xs font-bold text-[#4A1525] uppercase tracking-wider hover:text-[#D4AF37] transition-colors group"
           >
             <span>VIEW FULL GALLERY</span>
             <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform group-hover:translate-x-1" />
@@ -45,7 +45,7 @@ export const Testimonials: React.FC = () => {
                 alt={photo.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#103E3B]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#4A1525]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-end">
                 <span className="text-[9px] font-bold text-amber-300 uppercase tracking-wider block mb-1">
                   {photo.category}
                 </span>

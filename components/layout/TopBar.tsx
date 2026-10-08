@@ -16,7 +16,7 @@ export const TopBar: React.FC = () => {
   return (
     <div
       className="relative z-30 text-[#ffffff] text-xs py-2 border-b border-white/10 hidden md:block font-sans transition-colors"
-      style={{ backgroundColor: "var(--color-primary-dark, #0D3330)" }}
+      style={{ backgroundColor: "var(--color-primary-dark, #330E1A)" }}
     >
       <div className="w-full px-2 sm:px-4 lg:px-6 flex flex-wrap items-center justify-between gap-4">
         {/* Left: Institution context & location */}

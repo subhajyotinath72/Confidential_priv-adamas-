@@ -37,7 +37,7 @@ export default function FacultyPage() {
     <div className="bg-slate-50 min-h-screen pb-20">
       
       {/* Header Banner */}
-      <section className="bg-[#103E3B] py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10 text-white">
+      <section className="bg-[#4A1525] py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10 text-white">
         <div className="max-w-7xl mx-auto text-center space-y-4">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 text-[#F7D6C8] text-xs font-bold uppercase tracking-wider border border-white/20">
             <Users className="w-4 h-4 text-amber-400" />
@@ -133,16 +133,13 @@ export default function FacultyPage() {
                 className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:border-teal-500 hover:shadow-lg transition-all flex flex-col justify-between group scroll-mt-36 text-slate-900"
               >
                 <div>
-                  {/* Photo & Track Badge */}
+                  {/* Photo */}
                   <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
                     <img
                       src={fac.avatar}
                       alt={fac.name}
                       className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />
-                    <span className="absolute top-3 right-3 bg-slate-900/90 text-white text-[10px] font-bold px-2.5 py-1 rounded-md border border-slate-700">
-                      Track {fac.trackId}
-                    </span>
                   </div>
 
                   {/* Body Content */}

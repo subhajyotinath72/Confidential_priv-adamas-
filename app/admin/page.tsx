@@ -200,13 +200,13 @@ export default function AdminDashboardPage() {
 
           <Link
             href="/admin/gallery"
-            className="p-4 rounded-xl border border-slate-200 hover:border-[#103E3B] bg-slate-50/50 hover:bg-slate-50 transition-all group flex items-center space-x-3"
+            className="p-4 rounded-xl border border-slate-200 hover:border-[#4A1525] bg-slate-50/50 hover:bg-slate-50 transition-all group flex items-center space-x-3"
           >
-            <div className="w-9 h-9 rounded-lg bg-[#103E3B] text-amber-400 flex items-center justify-center font-bold">
+            <div className="w-9 h-9 rounded-lg bg-[#4A1525] text-amber-400 flex items-center justify-center font-bold">
               <Camera className="w-4 h-4" />
             </div>
             <div>
-              <div className="text-xs font-bold text-slate-900 group-hover:text-[#103E3B]">
+              <div className="text-xs font-bold text-slate-900 group-hover:text-[#4A1525]">
                 Publish Gallery Photo
               </div>
               <div className="text-[11px] text-slate-500">

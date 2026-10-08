@@ -16,8 +16,8 @@ export const Footer: React.FC = () => {
 
   return (
     <footer
-      className="relative z-20 text-[#c2f0fc] border-t border-white/10 pt-12 pb-8 font-sans transition-colors"
-      style={{ backgroundColor: "var(--color-primary-dark, #0D3330)" }}
+      className="relative z-20 text-[#F7D6C8]/90 border-t border-white/10 pt-12 pb-8 font-sans transition-colors"
+      style={{ backgroundColor: "var(--color-primary-dark, #330E1A)" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
 

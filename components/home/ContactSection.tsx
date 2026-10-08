@@ -25,7 +25,7 @@ export const ContactSection: React.FC = () => {
   const contactHours = settings?.contact?.hours || "Monday – Friday, 09:30 AM – 05:30 PM IST";
 
   return (
-    <section id="contact" className="relative z-20 bg-white text-[#103E3B] py-12 lg:py-16 border-b border-slate-200">
+    <section id="contact" className="relative z-20 bg-white text-[#4A1525] py-12 lg:py-16 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -33,32 +33,32 @@ export const ContactSection: React.FC = () => {
           {/* Left Details */}
           <div className="lg:col-span-7 space-y-6">
             <div>
-              <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
+              <div className="text-[11px] font-bold tracking-widest text-[#D4AF37] uppercase mb-1">
                 GET IN TOUCH
               </div>
-              <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
+              <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#4A1525] tracking-tight">
                 Connect with the Department
               </h2>
-              <p className="text-sm sm:text-base text-[#103E3B]/80 mt-2 font-sans">
+              <p className="text-sm sm:text-base text-[#4A1525]/80 mt-2 font-sans">
                 Inquiries regarding student admissions, hospital collaboration, or lab facilities access:
               </p>
             </div>
 
             <div className="space-y-3 text-xs sm:text-sm text-slate-700 font-sans leading-relaxed">
               <div>
-                <strong className="text-[#103E3B]">Location:</strong> {contactAddress}
+                <strong className="text-[#4A1525]">Location:</strong> {contactAddress}
               </div>
               <div>
-                <strong className="text-[#103E3B]">Email:</strong>{" "}
-                <a href={`mailto:${contactEmail}`} className="hover:underline text-[#103E3B] font-medium">
+                <strong className="text-[#4A1525]">Email:</strong>{" "}
+                <a href={`mailto:${contactEmail}`} className="hover:underline text-[#4A1525] font-medium">
                   {contactEmail}
                 </a>
               </div>
               <div>
-                <strong className="text-[#103E3B]">Telephone:</strong> {contactPhone}
+                <strong className="text-[#4A1525]">Telephone:</strong> {contactPhone}
               </div>
               <div>
-                <strong className="text-[#103E3B]">Hours:</strong> {contactHours}
+                <strong className="text-[#4A1525]">Hours:</strong> {contactHours}
               </div>
             </div>
           </div>
@@ -66,18 +66,18 @@ export const ContactSection: React.FC = () => {
           {/* Right Form Card */}
           <div className="lg:col-span-5">
             <div className="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-5">
-              <h3 className="text-xl font-serif font-bold text-[#103E3B]">
+              <h3 className="text-xl font-serif font-bold text-[#4A1525]">
                 Quick Department Inquiry
               </h3>
 
               {submitted ? (
-                <div className="bg-[#103E3B] text-white p-4 rounded-xl text-center text-xs font-bold uppercase tracking-wider">
+                <div className="bg-[#4A1525] text-white p-4 rounded-xl text-center text-xs font-bold uppercase tracking-wider">
                   ✓ Inquiry Received! We will respond shortly.
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#103E3B] mb-1">
+                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#4A1525] mb-1">
                       YOUR NAME
                     </label>
                     <input
@@ -86,12 +86,12 @@ export const ContactSection: React.FC = () => {
                       placeholder="Full Name"
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      className="w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-xs text-[#103E3B] placeholder-slate-400 focus:outline-none focus:border-[#103E3B]"
+                      className="w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-xs text-[#4A1525] placeholder-slate-400 focus:outline-none focus:border-[#4A1525]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#103E3B] mb-1">
+                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#4A1525] mb-1">
                       EMAIL ADDRESS
                     </label>
                     <input
@@ -100,18 +100,18 @@ export const ContactSection: React.FC = () => {
                       placeholder="you@domain.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-xs text-[#103E3B] placeholder-slate-400 focus:outline-none focus:border-[#103E3B]"
+                      className="w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-xs text-[#4A1525] placeholder-slate-400 focus:outline-none focus:border-[#4A1525]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#103E3B] mb-1">
+                    <label className="block text-[10px] font-bold uppercase tracking-wider text-[#4A1525] mb-1">
                       INQUIRY TYPE
                     </label>
                     <select
                       value={formData.inquiryType}
                       onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
-                      className="w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-xs text-[#103E3B] focus:outline-none focus:border-[#103E3B]"
+                      className="w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-xs text-[#4A1525] focus:outline-none focus:border-[#4A1525]"
                     >
                       <option value="Admissions & Eligibility">Admissions & Eligibility</option>
                       <option value="Hospital & Industry Collaboration">Hospital & Industry Collaboration</option>
@@ -122,7 +122,7 @@ export const ContactSection: React.FC = () => {
 
                   <button
                     type="submit"
-                    className="shine-sweep w-full py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#103E3B] hover:bg-[#0D3330] shadow-md hover:shadow-lg transition-all"
+                    className="shine-sweep w-full py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#4A1525] hover:bg-[#330E1A] shadow-md hover:shadow-lg transition-all"
                   >
                     SUBMIT INQUIRY →
                   </button>

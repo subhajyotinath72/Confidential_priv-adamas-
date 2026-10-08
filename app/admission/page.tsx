@@ -20,7 +20,7 @@ export default function AdmissionPage() {
     <div className="bg-transparent min-h-screen pb-20">
       
       {/* Header Banner */}
-      <section className="bg-[#103E3B] py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10 text-white">
+      <section className="bg-[#4A1525] py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10 text-white">
         <div className="max-w-7xl mx-auto text-center space-y-4">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 text-[#F7D6C8] text-xs font-bold uppercase tracking-wider border border-white/20">
             <GraduationCap className="w-4 h-4 text-amber-400" />
@@ -47,7 +47,7 @@ export default function AdmissionPage() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200">
               <div className="space-y-1">
                 <div className="flex items-center space-x-3">
-                  <span className="text-xs font-bold text-white bg-[#103E3B] px-3 py-1 rounded-md">
+                  <span className="text-xs font-bold text-white bg-[#4A1525] px-3 py-1 rounded-md">
                     {program.degree}
                   </span>
                   <span className="text-xs font-bold text-teal-700">
@@ -159,7 +159,7 @@ export default function AdmissionPage() {
             </div>
             <div className="pt-2 flex justify-end space-x-3">
               <button type="button" onClick={() => setDownloadModalOpen(false)} className="px-4 py-2 rounded-lg text-xs font-semibold text-slate-600">Cancel</button>
-              <button type="submit" className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-[#103E3B] hover:bg-[#0D3330]">Download PDF</button>
+              <button type="submit" className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-[#4A1525] hover:bg-[#330E1A]">Download PDF</button>
             </div>
           </form>
         </div>

@@ -257,7 +257,7 @@ export const InteractiveBlockGrid: React.FC<InteractiveBlockGridProps> = ({
             const shadowOffsetY = 3 + elevation * 1.2;
             const shadowOpacity = 0.05 + normElev * 0.14;
 
-            ctx.shadowColor = `rgba(16, 62, 59, ${shadowOpacity})`;
+            ctx.shadowColor = `rgba(74, 21, 37, ${shadowOpacity})`;
             ctx.shadowBlur = shadowBlur;
             ctx.shadowOffsetX = 0;
             ctx.shadowOffsetY = shadowOffsetY;
@@ -306,7 +306,7 @@ export const InteractiveBlockGrid: React.FC<InteractiveBlockGridProps> = ({
             ctx.fillStyle = "rgba(255, 255, 255, 0.55)";
             ctx.fill();
 
-            ctx.strokeStyle = "rgba(16, 62, 59, 0.06)";
+            ctx.strokeStyle = "rgba(74, 21, 37, 0.06)";
             ctx.lineWidth = 1;
             ctx.stroke();
           }

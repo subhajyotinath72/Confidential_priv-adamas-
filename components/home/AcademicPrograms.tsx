@@ -68,7 +68,7 @@ export const AcademicPrograms: React.FC = () => {
   const active = programData[activeTab];
 
   return (
-    <section id="programs" className="bg-white/40 backdrop-blur-[1px] text-[#103E3B] py-12 lg:py-20 border-b border-slate-200/80 relative overflow-hidden">
+    <section id="programs" className="bg-white/40 backdrop-blur-[1px] text-[#4A1525] py-12 lg:py-20 border-b border-slate-200/80 relative overflow-hidden">
       {/* Background Ambient Orbs */}
       <div className="absolute top-10 right-10 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 left-10 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -83,18 +83,18 @@ export const AcademicPrograms: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
+          <div className="text-[11px] font-bold tracking-widest text-[#D4AF37] uppercase mb-1">
             ACADEMIC EXCELLENCE
           </div>
           <h2
             className="text-3xl sm:text-5xl font-serif font-semibold tracking-tight"
-            style={{ color: "var(--color-heading, #103E3B)" }}
+            style={{ color: "var(--color-heading, #4A1525)" }}
           >
             Programs & Curriculum
           </h2>
           <p
             className="text-sm sm:text-base mt-1 max-w-3xl font-sans"
-            style={{ color: "var(--color-text-main, #103E3B)" }}
+            style={{ color: "var(--color-text-main, #330E1A)" }}
           >
             Rigorous undergraduate, postgraduate, and doctoral training engineered for clinical diagnostics, medical hardware, and healthcare computing.
           </p>
@@ -115,14 +115,14 @@ export const AcademicPrograms: React.FC = () => {
                   className="relative px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer shadow-xs border"
                   style={{
                     backgroundColor: isSelected
-                      ? "var(--color-primary, #103E3B)"
+                      ? "var(--color-primary, #4A1525)"
                       : "#ffffff",
                     borderColor: isSelected
-                      ? "var(--color-primary, #103E3B)"
-                      : "#E2E8F0",
+                      ? "var(--color-primary, #4A1525)"
+                      : "#E2DDD3",
                     color: isSelected
                       ? "#ffffff"
-                      : "var(--color-heading, #103E3B)",
+                      : "var(--color-heading, #4A1525)",
                   }}
                 >
                   {labels[tabKey]}
@@ -130,7 +130,7 @@ export const AcademicPrograms: React.FC = () => {
                     <motion.div
                       layoutId="programTabIndicator"
                       className="absolute bottom-0 left-2 right-2 h-[2px] rounded-full"
-                      style={{ backgroundColor: "var(--color-accent, #B58A28)" }}
+                      style={{ backgroundColor: "var(--color-accent, #D4AF37)" }}
                       transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
@@ -156,25 +156,25 @@ export const AcademicPrograms: React.FC = () => {
                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200/80 pb-4">
                   <span
                     className="px-3 py-1 rounded text-white text-[10px] font-bold uppercase tracking-wider shadow-xs"
-                    style={{ backgroundColor: "var(--color-primary, #103E3B)" }}
+                    style={{ backgroundColor: "var(--color-primary, #4A1525)" }}
                   >
                     {active.duration}
                   </span>
-                  <span className="text-xs font-bold text-[#B58A28]">
+                  <span className="text-xs font-bold text-[#D4AF37]">
                     {active.eligibility}
                   </span>
                 </div>
 
                 <h3
                   className="text-2xl sm:text-3xl font-serif font-bold"
-                  style={{ color: "var(--color-heading, #103E3B)" }}
+                  style={{ color: "var(--color-heading, #4A1525)" }}
                 >
                   {active.degree}
                 </h3>
 
                 <p
                   className="text-sm leading-relaxed font-sans"
-                  style={{ color: "var(--color-text-main, #103E3B)" }}
+                  style={{ color: "var(--color-text-main, #330E1A)" }}
                 >
                   {active.shortDesc}
                 </p>
@@ -182,7 +182,7 @@ export const AcademicPrograms: React.FC = () => {
                 <div className="space-y-2 pt-2">
                   <div
                     className="text-xs font-bold uppercase tracking-wider flex items-center gap-1.5"
-                    style={{ color: "var(--color-heading, #103E3B)" }}
+                    style={{ color: "var(--color-heading, #4A1525)" }}
                   >
                     <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                     <span>Curriculum Focus & Research Tracks:</span>
@@ -191,12 +191,12 @@ export const AcademicPrograms: React.FC = () => {
                     {active.tracks.map((track, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center space-x-2 text-xs bg-slate-50 p-2.5 rounded-lg border border-slate-200 hover:border-[#B58A28]/50 transition-colors"
-                        style={{ color: "var(--color-heading, #103E3B)" }}
+                        className="flex items-center space-x-2 text-xs bg-slate-50 p-2.5 rounded-lg border border-slate-200 hover:border-[#D4AF37]/50 transition-colors"
+                        style={{ color: "var(--color-heading, #4A1525)" }}
                       >
                         <span
                           className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                          style={{ backgroundColor: "var(--color-primary, #103E3B)" }}
+                          style={{ backgroundColor: "var(--color-primary, #4A1525)" }}
                         />
                         <span>{track}</span>
                       </div>
@@ -212,7 +212,7 @@ export const AcademicPrograms: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="shine-sweep w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
-                    style={{ backgroundColor: "var(--color-primary, #103E3B)" }}
+                    style={{ backgroundColor: "var(--color-primary, #4A1525)" }}
                   >
                     {active.ctaText} <span className="ml-2">→</span>
                   </a>
@@ -220,7 +220,7 @@ export const AcademicPrograms: React.FC = () => {
                   <Link
                     href={active.ctaHref}
                     className="shine-sweep w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
-                    style={{ backgroundColor: "var(--color-primary, #103E3B)" }}
+                    style={{ backgroundColor: "var(--color-primary, #4A1525)" }}
                   >
                     {active.ctaText} <span className="ml-2">→</span>
                   </Link>
@@ -229,7 +229,7 @@ export const AcademicPrograms: React.FC = () => {
                 <Link
                   href="/programs"
                   className="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 rounded-md text-xs font-bold uppercase tracking-wider bg-slate-100 border border-slate-300 hover:bg-slate-200 transition-all"
-                  style={{ color: "var(--color-heading, #103E3B)" }}
+                  style={{ color: "var(--color-heading, #4A1525)" }}
                 >
                   FULL SYLLABUS & MODULES
                 </Link>
@@ -248,7 +248,7 @@ export const AcademicPrograms: React.FC = () => {
             <div className="glass-beige p-6 rounded-2xl shadow-sm flex flex-col justify-between h-full space-y-6 border border-[#E2DDD3]/90 bg-[#EFECE6]/85">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-bold text-[#B58A28] uppercase tracking-wider">
+                  <span className="text-[10px] font-bold text-[#D4AF37] uppercase tracking-wider">
                     IMPORTANT SCHEDULE
                   </span>
                   <span
@@ -269,7 +269,7 @@ export const AcademicPrograms: React.FC = () => {
                 
                 <h3
                   className="text-2xl font-serif font-bold"
-                  style={{ color: "var(--color-heading, #103E3B)" }}
+                  style={{ color: "var(--color-heading, #4A1525)" }}
                 >
                   Intake Deadlines 2026
                 </h3>
@@ -279,7 +279,7 @@ export const AcademicPrograms: React.FC = () => {
                     <div className="flex items-center justify-between">
                       <span
                         className="text-xs font-bold"
-                        style={{ color: "var(--color-heading, #103E3B)" }}
+                        style={{ color: "var(--color-heading, #4A1525)" }}
                       >
                         Phase 1 Counseling:
                       </span>
@@ -292,7 +292,7 @@ export const AcademicPrograms: React.FC = () => {
                     <div className="flex items-center justify-between">
                       <span
                         className="text-xs font-bold"
-                        style={{ color: "var(--color-heading, #103E3B)" }}
+                        style={{ color: "var(--color-heading, #4A1525)" }}
                       >
                         Phase 2 Applications:
                       </span>
@@ -306,7 +306,7 @@ export const AcademicPrograms: React.FC = () => {
                 <div className="pt-2">
                   <div
                     className="text-[11px] font-bold uppercase tracking-wider mb-2"
-                    style={{ color: "var(--color-heading, #103E3B)" }}
+                    style={{ color: "var(--color-heading, #4A1525)" }}
                   >
                     5 Cutting-Edge Specializations:
                   </div>
@@ -317,10 +317,10 @@ export const AcademicPrograms: React.FC = () => {
                         <span
                           key={idx}
                           title={chip.desc}
-                          className="inline-flex items-center px-2 py-1 bg-white text-[10px] font-semibold border border-slate-200 rounded-md shadow-xs hover:border-[#B58A28]/50 hover:text-[#B58A28] transition-colors cursor-help"
-                          style={{ color: "var(--color-heading, #103E3B)" }}
+                          className="inline-flex items-center px-2 py-1 bg-white text-[10px] font-semibold border border-slate-200 rounded-md shadow-xs hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition-colors cursor-help"
+                          style={{ color: "var(--color-heading, #4A1525)" }}
                         >
-                          <Icon className="w-2.5 h-2.5 mr-1 text-[#B58A28]" />
+                          <Icon className="w-2.5 h-2.5 mr-1 text-[#D4AF37]" />
                           {chip.name}
                         </span>
                       );
@@ -333,7 +333,7 @@ export const AcademicPrograms: React.FC = () => {
                 <a
                   href="/admission#syllabus"
                   className="shine-sweep w-full inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider bg-white border border-slate-300 hover:bg-slate-100 transition-all shadow-xs"
-                  style={{ color: "var(--color-heading, #103E3B)" }}
+                  style={{ color: "var(--color-heading, #4A1525)" }}
                 >
                   DOWNLOAD SYLLABUS & PROSPECTUS
                 </a>

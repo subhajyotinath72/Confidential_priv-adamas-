@@ -48,7 +48,7 @@ export const FrontVideo: React.FC<FrontVideoProps> = () => {
   return (
     <section
       className="w-full relative overflow-hidden border-b border-white/10 transition-colors"
-      style={{ backgroundColor: "var(--color-primary, #103E3B)" }}
+      style={{ backgroundColor: "var(--color-primary, #4A1525)" }}
     >
       {/* 2-Column Split Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full items-center">
@@ -56,7 +56,7 @@ export const FrontVideo: React.FC<FrontVideoProps> = () => {
         {/* Left Half: Cycling Gallery Photo Slideshow */}
         <div
           className="w-full aspect-video relative overflow-hidden"
-          style={{ backgroundColor: "var(--color-primary-dark, #0D3330)" }}
+          style={{ backgroundColor: "var(--color-primary-dark, #330E1A)" }}
         >
           <HeroGallerySlideshow />
         </div>
@@ -64,7 +64,7 @@ export const FrontVideo: React.FC<FrontVideoProps> = () => {
         {/* Right Half: NTA-Style LATEST @ BME Ticker Box */}
         <div
           className="w-full aspect-video p-3 sm:p-5 flex flex-col justify-between relative overflow-hidden border-l border-white/10"
-          style={{ backgroundColor: "var(--color-primary-dark, #0D3330)" }}
+          style={{ backgroundColor: "var(--color-primary-dark, #330E1A)" }}
         >
           
           <div className="bg-white rounded-2xl shadow-2xl flex flex-col h-full overflow-hidden border border-slate-200">
@@ -72,7 +72,7 @@ export const FrontVideo: React.FC<FrontVideoProps> = () => {
             {/* Header Banner */}
             <div
               className="text-white px-5 py-3 flex items-center justify-between border-b border-white/10"
-              style={{ backgroundColor: "var(--color-primary-dark, #0D3330)" }}
+              style={{ backgroundColor: "var(--color-primary-dark, #330E1A)" }}
             >
               <div className="flex items-center space-x-2">
                 <span className="relative flex h-2.5 w-2.5">
@@ -95,7 +95,7 @@ export const FrontVideo: React.FC<FrontVideoProps> = () => {
                   <div key={idx} className="flex items-start space-x-2 text-xs text-slate-800 border-b border-slate-100 pb-3 hover:bg-amber-50/40 rounded transition-colors px-1">
                     <ChevronRight
                       className="w-4 h-4 flex-shrink-0 mt-0.5"
-                      style={{ color: "var(--color-primary, #103E3B)" }}
+                      style={{ color: "var(--color-primary, #4A1525)" }}
                     />
                     <div className="flex-1 leading-snug">
                       <span className="font-semibold text-slate-800">
@@ -124,7 +124,7 @@ export const FrontVideo: React.FC<FrontVideoProps> = () => {
               <Link
                 href="/news"
                 className="shine-sweep inline-flex items-center px-4 py-1.5 rounded-lg text-xs font-bold text-white transition-colors shadow-sm ml-auto hover:opacity-90"
-                style={{ backgroundColor: "var(--color-primary, #103E3B)" }}
+                style={{ backgroundColor: "var(--color-primary, #4A1525)" }}
               >
                 <span>ARCHIVE / VIEW ALL</span>
                 <ArrowRight className="w-3.5 h-3.5 ml-1 text-amber-300" />

@@ -25,20 +25,20 @@ export const RollingTicker: React.FC = () => {
   return (
     <div
       className="w-full text-[#F7D6C8] border-y border-white/10 py-3.5 overflow-hidden relative shadow-md transition-colors"
-      style={{ backgroundColor: "var(--color-primary-dark, #0D3330)" }}
+      style={{ backgroundColor: "var(--color-primary-dark, #330E1A)" }}
     >
       
       {/* Subtle Side Fade Overlays for Smooth Edge Transitions */}
       <div
         className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
         style={{
-          background: "linear-gradient(to right, var(--color-primary-dark, #0D3330), transparent)",
+          background: "linear-gradient(to right, var(--color-primary-dark, #330E1A), transparent)",
         }}
       />
       <div
         className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
         style={{
-          background: "linear-gradient(to left, var(--color-primary-dark, #0D3330), transparent)",
+          background: "linear-gradient(to left, var(--color-primary-dark, #330E1A), transparent)",
         }}
       />
 
@@ -63,7 +63,7 @@ export const RollingTicker: React.FC = () => {
               >
                 <span
                   className="p-1 rounded-full border border-amber-400/30 text-amber-300 group-hover:scale-110 transition-transform"
-                  style={{ backgroundColor: "var(--color-primary, #103E3B)" }}
+                  style={{ backgroundColor: "var(--color-primary, #4A1525)" }}
                 >
                   <Icon className="w-3.5 h-3.5" />
                 </span>

@@ -84,11 +84,11 @@ export const Navbar: React.FC = () => {
         ? "text-white backdrop-blur-md shadow-xl py-1.5 border-b border-white/10"
         : "text-white py-2 border-b border-white/10"
         }`}
-      style={{ backgroundColor: "var(--color-primary, #103E3B)" }}
+      style={{ backgroundColor: "var(--color-primary, #4A1525)" }}
     >
       {/* 2.5px Interactive Scroll Progress Indicator */}
       <motion.div
-        className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-[#B58A28] via-[#E6CA65] to-[#B58A28] origin-left z-50 pointer-events-none"
+        className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-[#D4AF37] via-[#E6CA65] to-[#D4AF37] origin-left z-50 pointer-events-none"
         style={{ scaleX }}
       />
       <div className="w-full px-2 sm:px-4 lg:px-6">
@@ -142,7 +142,7 @@ export const Navbar: React.FC = () => {
                     {/* Mega-menu Dropdown */}
                     {activeDropdown === link.name && (
                       <div className="absolute left-0 top-full pt-2 w-72 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
-                        <div className="bg-[#103E3B]/95 border border-white/20 rounded-xl shadow-2xl p-2.5 backdrop-blur-xl">
+                        <div className="bg-[#4A1525]/95 border border-white/20 rounded-xl shadow-2xl p-2.5 backdrop-blur-xl">
                           <div className="text-[10px] font-bold text-white uppercase px-2 py-1 mb-1 border-b border-white/10">
                             {link.name} Options
                           </div>
@@ -207,7 +207,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#103E3B]/95 backdrop-blur-xl border-b border-white/10 px-4 pt-2 pb-6 space-y-2 animate-in slide-in-from-top duration-200">
+        <div className="lg:hidden bg-[#4A1525]/95 backdrop-blur-xl border-b border-white/10 px-4 pt-2 pb-6 space-y-2 animate-in slide-in-from-top duration-200">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (

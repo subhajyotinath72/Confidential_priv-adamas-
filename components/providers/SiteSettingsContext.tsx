@@ -17,7 +17,7 @@ const SiteSettingsContext = createContext<SiteSettingsContextType>({
   loading: true,
 });
 
-const hexToRgb = (hex?: string, fallback: string = "16, 62, 59"): string => {
+const hexToRgb = (hex?: string, fallback: string = "74, 21, 37"): string => {
   if (!hex) return fallback;
   const cleanHex = hex.replace("#", "").trim();
   if (cleanHex.length === 3) {
@@ -43,23 +43,23 @@ export const SiteSettingsProvider: React.FC<{ children: React.ReactNode }> = ({ 
     if (typeof window === "undefined") return;
     const root = document.documentElement;
 
-    const primary = theme.primaryColor || "#103E3B";
-    const primaryDark = theme.primaryDarkColor || "#0D3330";
+    const primary = theme.primaryColor || "#4A1525";
+    const primaryDark = theme.primaryDarkColor || "#330E1A";
     const heading = theme.headingColor || primary;
-    const accent = theme.accentColor || "#B58A28";
-    const textMain = theme.textColor || "#103E3B";
+    const accent = theme.accentColor || "#D4AF37";
+    const textMain = theme.textColor || "#330E1A";
 
     root.style.setProperty("--color-primary", primary);
     root.style.setProperty("--color-primary-dark", primaryDark);
-    root.style.setProperty("--color-primary-rgb", hexToRgb(primary, "16, 62, 59"));
-    root.style.setProperty("--color-primary-dark-rgb", hexToRgb(primaryDark, "13, 51, 48"));
+    root.style.setProperty("--color-primary-rgb", hexToRgb(primary, "74, 21, 37"));
+    root.style.setProperty("--color-primary-dark-rgb", hexToRgb(primaryDark, "51, 14, 26"));
     root.style.setProperty("--color-accent", accent);
-    root.style.setProperty("--color-accent-light", theme.accentLightColor || "#C59B27");
-    root.style.setProperty("--color-accent-rgb", hexToRgb(accent, "181, 138, 40"));
-    root.style.setProperty("--color-bg-page", theme.backgroundColor || "#ffffff");
+    root.style.setProperty("--color-accent-light", theme.accentLightColor || "#E8C860");
+    root.style.setProperty("--color-accent-rgb", hexToRgb(accent, "212, 175, 55"));
+    root.style.setProperty("--color-bg-page", theme.backgroundColor || "#FCFBF7");
     root.style.setProperty("--color-text-main", textMain);
     root.style.setProperty("--color-heading", heading);
-    root.style.setProperty("--color-heading-rgb", hexToRgb(heading, hexToRgb(primary, "16, 62, 59")));
+    root.style.setProperty("--color-heading-rgb", hexToRgb(heading, hexToRgb(primary, "74, 21, 37")));
     root.style.setProperty("--font-heading-family", `"${theme.fontHeading || 'Outfit'}", serif`);
     root.style.setProperty("--font-body-family", `"${theme.fontBody || 'Inter'}", sans-serif`);
 

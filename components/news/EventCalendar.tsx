@@ -259,11 +259,11 @@ export const EventCalendar: React.FC = () => {
       {/* Top Header & Category Filter Pills */}
       <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 border-b border-slate-100 pb-6">
         <div>
-          <div className="flex items-center space-x-2 text-xs font-bold text-[#B58A28] uppercase tracking-widest mb-1">
+          <div className="flex items-center space-x-2 text-xs font-bold text-[#D4AF37] uppercase tracking-widest mb-1">
             <CalendarIcon className="w-4 h-4" />
             <span>ACADEMIC & RESEARCH CALENDAR</span>
           </div>
-          <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#103E3B]">
+          <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#4A1525]">
             Interactive Event Schedule
           </h3>
           <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
@@ -279,8 +279,8 @@ export const EventCalendar: React.FC = () => {
               onClick={() => setSelectedCategory(cat)}
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
                 selectedCategory === cat
-                  ? "bg-[#103E3B] text-white shadow-xs"
-                  : "text-slate-600 hover:text-[#103E3B] hover:bg-white/60"
+                  ? "bg-[#4A1525] text-white shadow-xs"
+                  : "text-slate-600 hover:text-[#4A1525] hover:bg-white/60"
               }`}
             >
               {cat}
@@ -297,21 +297,21 @@ export const EventCalendar: React.FC = () => {
           
           {/* Calendar Month Navigation */}
           <div className="flex items-center justify-between">
-            <h4 className="text-lg font-serif font-bold text-[#103E3B] flex items-center space-x-2">
+            <h4 className="text-lg font-serif font-bold text-[#4A1525] flex items-center space-x-2">
               <span>{MONTH_NAMES[currentMonth]}</span>
-              <span className="text-[#B58A28]">{currentYear}</span>
+              <span className="text-[#D4AF37]">{currentYear}</span>
             </h4>
             <div className="flex items-center space-x-1.5">
               <button
                 onClick={handlePrevMonth}
-                className="p-2 rounded-xl bg-white border border-slate-200 text-[#103E3B] hover:bg-slate-100 hover:border-[#103E3B] transition-colors"
+                className="p-2 rounded-xl bg-white border border-slate-200 text-[#4A1525] hover:bg-slate-100 hover:border-[#4A1525] transition-colors"
                 title="Previous Month"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={handleNextMonth}
-                className="p-2 rounded-xl bg-white border border-slate-200 text-[#103E3B] hover:bg-slate-100 hover:border-[#103E3B] transition-colors"
+                className="p-2 rounded-xl bg-white border border-slate-200 text-[#4A1525] hover:bg-slate-100 hover:border-[#4A1525] transition-colors"
                 title="Next Month"
               >
                 <ChevronRight className="w-4 h-4" />
@@ -322,7 +322,7 @@ export const EventCalendar: React.FC = () => {
           {/* Weekday Labels */}
           <div className="grid grid-cols-7 text-center">
             {WEEKDAYS.map((day) => (
-              <div key={day} className="text-[11px] font-bold text-[#103E3B]/70 uppercase tracking-wider py-1">
+              <div key={day} className="text-[11px] font-bold text-[#4A1525]/70 uppercase tracking-wider py-1">
                 {day}
               </div>
             ))}
@@ -352,9 +352,9 @@ export const EventCalendar: React.FC = () => {
                   onClick={() => setSelectedDate(isSelected ? null : dayNum)}
                   className={`h-12 sm:h-14 rounded-xl p-1.5 flex flex-col justify-between items-center transition-all relative group ${
                     isSelected
-                      ? "bg-[#103E3B] text-white ring-2 ring-[#B58A28] shadow-md scale-105 z-10"
+                      ? "bg-[#4A1525] text-white ring-2 ring-[#D4AF37] shadow-md scale-105 z-10"
                       : hasEvents
-                      ? `${catColors?.bg || "bg-teal-50"} border border-slate-200 hover:border-[#103E3B]`
+                      ? `${catColors?.bg || "bg-teal-50"} border border-slate-200 hover:border-[#4A1525]`
                       : "bg-white border border-slate-100 hover:bg-slate-100/70 text-slate-700"
                   }`}
                 >
@@ -363,7 +363,7 @@ export const EventCalendar: React.FC = () => {
                       isSelected
                         ? "text-white"
                         : hasEvents
-                        ? catColors?.text || "text-[#103E3B]"
+                        ? catColors?.text || "text-[#4A1525]"
                         : "text-slate-700"
                     }`}
                   >
@@ -379,7 +379,7 @@ export const EventCalendar: React.FC = () => {
                           <span
                             key={idx}
                             className={`w-2 h-2 rounded-full ${
-                              isSelected ? "bg-[#B58A28]" : evtColors.dot
+                              isSelected ? "bg-[#D4AF37]" : evtColors.dot
                             } animate-pulse`}
                           />
                         );
@@ -401,7 +401,7 @@ export const EventCalendar: React.FC = () => {
 
           {/* Color Legend */}
           <div className="pt-2 flex flex-wrap items-center gap-3 border-t border-slate-200/80 text-[11px] text-slate-600">
-            <span className="font-bold text-[#103E3B]">Categories:</span>
+            <span className="font-bold text-[#4A1525]">Categories:</span>
             {Object.entries(CATEGORY_COLORS).map(([cat, col]) => (
               <div key={cat} className="flex items-center space-x-1">
                 <span className={`w-2 h-2 rounded-full ${col.dot}`} />

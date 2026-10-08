@@ -47,14 +47,14 @@ const FONT_OPTIONS_BODY = [
 
 const PRESET_PALETTES = [
   {
-    name: "Adamas Emerald & Gold",
-    primary: "#103E3B",
-    primaryDark: "#0D3330",
-    accent: "#B58A28",
-    accentLight: "#C59B27",
-    bg: "#ffffff",
-    text: "#103E3B",
-    heading: "#103E3B",
+    name: "Adamas Burgundy & Gold",
+    primary: "#4A1525",
+    primaryDark: "#330E1A",
+    accent: "#D4AF37",
+    accentLight: "#E8C860",
+    bg: "#FCFBF7",
+    text: "#330E1A",
+    heading: "#4A1525",
   },
   {
     name: "Royal Navy & Bronze",
@@ -172,7 +172,7 @@ export default function AdminSettingsPage() {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="flex items-center space-x-3 text-slate-500 text-sm">
-          <RefreshCw className="w-5 h-5 animate-spin text-[#B58A28]" />
+          <RefreshCw className="w-5 h-5 animate-spin text-[#D4AF37]" />
           <span>Loading Site Settings & Theme...</span>
         </div>
       </div>
@@ -212,7 +212,7 @@ export default function AdminSettingsPage() {
           <button
             onClick={handleSave}
             disabled={saving}
-            className="inline-flex items-center px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#C59B27] hover:bg-[#B58A28] shadow-lg transition-all cursor-pointer disabled:opacity-50"
+            className="inline-flex items-center px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#C59B27] hover:bg-[#D4AF37] shadow-lg transition-all cursor-pointer disabled:opacity-50"
           >
             {saving ? (
               <RefreshCw className="w-4 h-4 mr-1.5 animate-spin" />
@@ -523,7 +523,7 @@ export default function AdminSettingsPage() {
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-6">
             <div>
               <h3 className="text-base font-bold text-slate-800 flex items-center gap-2">
-                <Type className="w-4 h-4 text-[#B58A28]" />
+                <Type className="w-4 h-4 text-[#D4AF37]" />
                 <span>Typography & Font Families</span>
               </h3>
               <p className="text-xs text-slate-500">
@@ -772,7 +772,7 @@ export default function AdminSettingsPage() {
           {/* Front Video Settings */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
             <h3 className="text-base font-bold text-slate-800 flex items-center gap-2">
-              <Video className="w-4 h-4 text-[#B58A28]" />
+              <Video className="w-4 h-4 text-[#D4AF37]" />
               <span>Front Auto-Playing Video Section</span>
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -962,7 +962,7 @@ export default function AdminSettingsPage() {
       {activeTab === "hod" && (
         <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-5">
           <h3 className="text-base font-bold text-slate-800 flex items-center gap-2">
-            <User className="w-4 h-4 text-[#B58A28]" />
+            <User className="w-4 h-4 text-[#D4AF37]" />
             <span>Head of Department (HoD) Profile & Quote</span>
           </h3>
 
@@ -1064,7 +1064,7 @@ export default function AdminSettingsPage() {
       {activeTab === "contact" && (
         <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-5">
           <h3 className="text-base font-bold text-slate-800 flex items-center gap-2">
-            <Phone className="w-4 h-4 text-[#B58A28]" />
+            <Phone className="w-4 h-4 text-[#D4AF37]" />
             <span>Official Contact, Admission Helpline & Location</span>
           </h3>
 
@@ -1170,7 +1170,7 @@ export default function AdminSettingsPage() {
         <button
           onClick={handleSave}
           disabled={saving}
-          className="inline-flex items-center px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-[#103E3B] hover:bg-[#0D3330] shadow-md transition-all cursor-pointer disabled:opacity-50"
+          className="inline-flex items-center px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-[#4A1525] hover:bg-[#330E1A] shadow-md transition-all cursor-pointer disabled:opacity-50"
         >
           {saving ? (
             <RefreshCw className="w-4 h-4 mr-2 animate-spin" />

@@ -14,13 +14,13 @@ export const USPTiles: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           <div className="mb-8">
-            <div className="text-[11px] font-bold tracking-widest text-[#B58A28] uppercase mb-1">
+            <div className="text-[11px] font-bold tracking-widest text-[#D4AF37] uppercase mb-1">
               CAREER PATHWAYS
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#103E3B] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#4A1525] tracking-tight">
               Internships & Hospital Rotations
             </h2>
-            <p className="text-sm sm:text-base text-[#103E3B]/80 mt-1 max-w-3xl font-sans">
+            <p className="text-sm sm:text-base text-[#4A1525]/80 mt-1 max-w-3xl font-sans">
               Students complete compulsory clinical rotations in super-specialty hospitals and secure roles in biomedical instrumentation, clinical trials, and diagnostics.
             </p>
           </div>
@@ -48,21 +48,21 @@ export const USPTiles: React.FC = () => {
                   key={index}
                   className="w-[300px] sm:w-[360px] flex-shrink-0 glass-card p-6 rounded-2xl space-y-4 hover:shadow-md transition-all border border-slate-200 bg-white"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[#103E3B] text-white flex items-center justify-center text-xs font-bold shadow-xs">
+                  <div className="w-10 h-10 rounded-lg bg-[#4A1525] text-white flex items-center justify-center text-xs font-bold shadow-xs">
                     {card.id}
                   </div>
-                  <h3 className="text-lg font-serif font-bold text-[#103E3B]">
+                  <h3 className="text-lg font-serif font-bold text-[#4A1525]">
                     {card.title}
                   </h3>
                   {card.desc && (
-                    <p className="text-xs text-[#103E3B]/80 leading-relaxed font-sans">
+                    <p className="text-xs text-[#4A1525]/80 leading-relaxed font-sans">
                       {card.desc}
                     </p>
                   )}
                   {card.recruiters && (
                     <div className="flex flex-wrap gap-2 pt-1">
                       {card.recruiters.map((r, i) => (
-                        <span key={i} className="px-2.5 py-1 bg-amber-50 text-[10px] font-bold text-[#B58A28] border border-amber-200/80 rounded shadow-xs">
+                        <span key={i} className="px-2.5 py-1 bg-amber-50 text-[10px] font-bold text-[#D4AF37] border border-amber-200/80 rounded shadow-xs">
                           {r}
                         </span>
                       ))}

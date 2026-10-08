@@ -265,7 +265,7 @@ export default function AdminMediaPage() {
                     {/* Add to Gallery quick button */}
                     <button
                       onClick={() => openAddToGalleryModal(file.url, file.name)}
-                      className="w-full inline-flex items-center justify-center py-1.5 rounded-lg text-[10px] font-bold bg-[#103E3B]/10 text-[#103E3B] hover:bg-[#103E3B] hover:text-white transition-all cursor-pointer"
+                      className="w-full inline-flex items-center justify-center py-1.5 rounded-lg text-[10px] font-bold bg-[#4A1525]/10 text-[#4A1525] hover:bg-[#4A1525] hover:text-white transition-all cursor-pointer"
                     >
                       <Camera className="w-3 h-3 mr-1" />
                       <span>Publish to Gallery</span>
@@ -351,7 +351,7 @@ export default function AdminMediaPage() {
                     setGalleryFormData({ ...galleryFormData, title: e.target.value })
                   }
                   placeholder="e.g. Cleanroom Micro-Fabrication"
-                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-[#103E3B]"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-[#4A1525]"
                 />
               </div>
 
@@ -364,7 +364,7 @@ export default function AdminMediaPage() {
                   onChange={(e) =>
                     setGalleryFormData({ ...galleryFormData, category: e.target.value })
                   }
-                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-800 bg-white focus:outline-none focus:border-[#103E3B]"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-800 bg-white focus:outline-none focus:border-[#4A1525]"
                 >
                   {categories.map((c) => (
                     <option key={c} value={c}>
@@ -385,7 +385,7 @@ export default function AdminMediaPage() {
                     setGalleryFormData({ ...galleryFormData, caption: e.target.value })
                   }
                   placeholder="Short description of this moment or equipment..."
-                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-[#103E3B]"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-[#4A1525]"
                 />
               </div>
 
@@ -400,7 +400,7 @@ export default function AdminMediaPage() {
                 <button
                   type="submit"
                   disabled={savingGallery}
-                  className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#103E3B] hover:bg-[#103E3B]/90 shadow-sm cursor-pointer"
+                  className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#4A1525] hover:bg-[#4A1525]/90 shadow-sm cursor-pointer"
                 >
                   {savingGallery ? "Publishing..." : "Add to Gallery"}
                 </button>

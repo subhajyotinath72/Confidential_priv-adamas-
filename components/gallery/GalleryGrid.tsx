@@ -159,7 +159,7 @@ export const GalleryGrid: React.FC = () => {
             onClick={() => setActiveCategory(cat)}
             className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
               activeCategory === cat
-                ? "bg-[#103E3B] text-white shadow-md scale-105"
+                ? "bg-[#4A1525] text-white shadow-md scale-105"
                 : "bg-white text-slate-700 border border-slate-200 hover:bg-slate-100"
             }`}
           >
@@ -188,7 +188,7 @@ export const GalleryGrid: React.FC = () => {
             />
             
             {/* Hover Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#103E3B]/90 via-[#103E3B]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-end space-y-2">
+            <div className="absolute inset-0 bg-gradient-to-t from-[#4A1525]/90 via-[#4A1525]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-end space-y-2">
               <span className="self-start px-2.5 py-0.5 rounded-full text-[9px] font-bold text-[#F7D6C8] bg-white/20 backdrop-blur-md uppercase tracking-wider">
                 {photo.category}
               </span>

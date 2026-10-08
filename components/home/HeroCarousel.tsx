@@ -33,7 +33,7 @@ export const HeroCarousel: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white/40 backdrop-blur-[1px] text-[#103E3B] py-12 lg:py-20 border-b border-slate-200/80 relative overflow-hidden">
+    <section className="bg-white/40 backdrop-blur-[1px] text-[#4A1525] py-12 lg:py-20 border-b border-slate-200/80 relative overflow-hidden">
       {/* Subtle Ambient Background Mesh */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -51,22 +51,22 @@ export const HeroCarousel: React.FC = () => {
           >
             
             {/* Gold Eyebrow */}
-            <div className="inline-flex items-center space-x-2 text-[11px] font-bold tracking-widest text-[#B58A28] uppercase bg-amber-50/80 px-2.5 py-1 rounded-full border border-amber-200/80">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#B58A28] animate-pulse" />
+            <div className="inline-flex items-center space-x-2 text-[11px] font-bold tracking-widest text-[#D4AF37] uppercase bg-amber-50/80 px-2.5 py-1 rounded-full border border-amber-200/80">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
               <span>{schoolName}</span>
             </div>
 
             {/* Serif Main Heading */}
             <h1
               className="text-4xl sm:text-6xl font-serif font-semibold tracking-tight leading-[1.1]"
-              style={{ color: "var(--color-heading, #103E3B)" }}
+              style={{ color: "var(--color-heading, #4A1525)" }}
             >
               Biomedical <br />
               <span
                 className="bg-clip-text text-transparent"
                 style={{
                   backgroundImage:
-                    "linear-gradient(to right, var(--color-primary, #103E3B), var(--color-accent, #B58A28))",
+                    "linear-gradient(to right, var(--color-primary, #4A1525), var(--color-accent, #D4AF37))",
                 }}
               >
                 Engineering
@@ -76,7 +76,7 @@ export const HeroCarousel: React.FC = () => {
             {/* Subtitle */}
             <p
               className="text-lg sm:text-xl font-serif italic"
-              style={{ color: "var(--color-text-main, #103E3B)" }}
+              style={{ color: "var(--color-text-main, #330E1A)" }}
             >
               {heroSubtitle}
             </p>
@@ -92,9 +92,9 @@ export const HeroCarousel: React.FC = () => {
                   key={bIdx}
                   className="inline-flex items-center px-2.5 py-1 rounded-md border"
                   style={{
-                    color: "var(--color-heading, #103E3B)",
-                    backgroundColor: "rgba(var(--color-primary-rgb, 16 62 59), 0.06)",
-                    borderColor: "rgba(var(--color-primary-rgb, 16 62 59), 0.2)",
+                    color: "var(--color-heading, #4A1525)",
+                    backgroundColor: "rgba(var(--color-primary-rgb, 74 21 37), 0.06)",
+                    borderColor: "rgba(var(--color-primary-rgb, 74 21 37), 0.2)",
                   }}
                 >
                   {badgeText}
@@ -109,7 +109,7 @@ export const HeroCarousel: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="shine-sweep inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-white shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
-                style={{ backgroundColor: "var(--color-primary, #103E3B)" }}
+                style={{ backgroundColor: "var(--color-primary, #4A1525)" }}
               >
                 APPLY FOR ADMISSIONS <span className="ml-2">→</span>
               </a>
@@ -117,7 +117,7 @@ export const HeroCarousel: React.FC = () => {
               <Link
                 href="/gallery"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider bg-[#EFECE6] border border-[#D5D0C5] hover:bg-[#E5E0D5] transition-all hover:scale-[1.02]"
-                style={{ color: "var(--color-heading, #103E3B)" }}
+                style={{ color: "var(--color-heading, #4A1525)" }}
               >
                 VIEW DEPARTMENT GALLERY
               </Link>
@@ -148,7 +148,7 @@ export const HeroCarousel: React.FC = () => {
                       className="absolute inset-0"
                       style={{
                         background:
-                          "linear-gradient(to top, rgba(var(--color-primary-rgb, 16 62 59), 0.9) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)",
+                          "linear-gradient(to top, rgba(var(--color-primary-rgb, 74 21 37), 0.9) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)",
                       }}
                     />
                     
@@ -158,13 +158,13 @@ export const HeroCarousel: React.FC = () => {
                         className="inline-flex items-center px-1.5 py-0.5 rounded text-[8px] font-bold text-white border border-white/20 uppercase backdrop-blur-sm"
                         style={{
                           backgroundColor:
-                            "rgba(var(--color-primary-rgb, 16 62 59), 0.85)",
+                            "rgba(var(--color-primary-rgb, 74 21 37), 0.85)",
                         }}
                       >
                         <span
                           className="w-1.5 h-1.5 rounded-full mr-1 animate-pulse"
                           style={{
-                            backgroundColor: "var(--color-accent, #B58A28)",
+                            backgroundColor: "var(--color-accent, #D4AF37)",
                           }}
                         />
                         ACTIVE
@@ -176,7 +176,7 @@ export const HeroCarousel: React.FC = () => {
                         className="inline-block px-2 py-1 text-[9px] font-bold text-white uppercase tracking-wider rounded backdrop-blur-sm border border-white/10 group-hover:border-amber-400/50 transition-colors"
                         style={{
                           backgroundColor:
-                            "rgba(var(--color-primary-rgb, 16 62 59), 0.92)",
+                            "rgba(var(--color-primary-rgb, 74 21 37), 0.92)",
                         }}
                       >
                         {lab.title}

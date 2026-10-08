@@ -4,6 +4,8 @@ import React from "react";
 import Link from "next/link";
 import { ChevronRight, ArrowRight, Radio } from "lucide-react";
 
+import { HeroGallerySlideshow } from "./HeroGallerySlideshow";
+
 interface FrontVideoProps {
   src?: string;
   poster?: string;
@@ -51,8 +53,10 @@ export const FrontVideo: React.FC<FrontVideoProps> = () => {
       {/* 2-Column Split Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full items-center">
         
-        {/* Left Half: Blank Container */}
-        <div className="w-full aspect-video hidden lg:block" />
+        {/* Left Half: Cycling Gallery Photo Slideshow */}
+        <div className="w-full aspect-video relative overflow-hidden bg-[#092220]">
+          <HeroGallerySlideshow />
+        </div>
 
         {/* Right Half: NTA-Style LATEST @ BME Ticker Box */}
         <div className="w-full aspect-video bg-[#0D3330] p-3 sm:p-5 flex flex-col justify-between relative overflow-hidden border-l border-white/10">

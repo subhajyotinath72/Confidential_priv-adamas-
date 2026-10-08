@@ -66,32 +66,32 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     caption: "Interactive laboratory practical session under faculty guidance."
   },
 
-  // Events & Seminars (4)
+  // Events & Seminars (Moved to Practical Training)
   {
     id: "g-12",
     title: "Academic Seminar",
-    category: "Events & Seminars",
+    category: "Practical Training",
     image: "/Academic Seminar.jpeg",
     caption: "Departmental academic seminar featuring industry experts."
   },
   {
     id: "g-13",
     title: "Departmental Academic Session",
-    category: "Events & Seminars",
+    category: "Practical Training",
     image: "/Departmental Academic Session.jpeg",
     caption: "Interactive departmental academic session and presentation."
   },
   {
     id: "g-14",
     title: "Academic Event",
-    category: "Events & Seminars",
+    category: "Practical Training",
     image: "/Academic Event.jpeg",
     caption: "Annual academic event showcasing research and innovation."
   },
   {
     id: "g-15",
     title: "Departmental Seminar",
-    category: "Events & Seminars",
+    category: "Practical Training",
     image: "/Departmental Seminar.jpeg",
     caption: "Departmental seminar on emerging biomedical technologies."
   },

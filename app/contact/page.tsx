@@ -102,15 +102,10 @@ export default function ContactPage() {
                   <div className="text-[11px] text-teal-700 font-semibold">Head of Department</div>
                   <div className="text-[10px] text-slate-500">animesh.halder@adamasuniversity.ac.in</div>
                 </div>
-                <div className="border-b border-slate-100 pb-2">
-                  <div className="font-bold text-slate-900">Prof. Sourav Chakraborty</div>
-                  <div className="text-[11px] text-teal-700 font-semibold">Industry & Clinical Placement Lead</div>
-                  <div className="text-[10px] text-slate-500">sourav.chakraborty@adamasuniversity.ac.in</div>
-                </div>
                 <div>
-                  <div className="font-bold text-slate-900">Mr. Sujoy Sarkar</div>
-                  <div className="text-[11px] text-teal-700 font-semibold">Department Academic Executive</div>
-                  <div className="text-[10px] text-slate-500">bme.office@adamasuniversity.ac.in</div>
+                  <div className="font-bold text-slate-900">Dr. Sayanti Chowdhury</div>
+                  <div className="text-[11px] text-teal-700 font-semibold">Assistant Professor & Academic Coordinator</div>
+                  <div className="text-[10px] text-slate-500">sayanti.chowdhury@adamasuniversity.ac.in</div>
                 </div>
               </div>
             </div>

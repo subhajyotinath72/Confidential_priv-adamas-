@@ -29,10 +29,10 @@ export const Spotlight: React.FC = () => {
       href: "/people#fac-2",
     },
     {
-      initials: "SK",
-      name: "Prof. (Dr.) Semanti Chakraborty",
-      designation: "Senior Fellow",
-      specialization: "Biomaterials & Injectable Tissue Scaffolds",
+      initials: "SC",
+      name: "Prof. Sourav Chakraborty",
+      designation: "Professor",
+      specialization: "Clinical Instrumentation & Hospital Systems",
       href: "/people#fac-2",
     },
   ];

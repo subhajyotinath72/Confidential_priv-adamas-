@@ -2,16 +2,16 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
+import { Quote, User } from "lucide-react";
 import { useSiteSettings } from "@/components/providers/SiteSettingsContext";
 
 export const HoDQuote: React.FC = () => {
   const { settings } = useSiteSettings();
 
-  const hodName = settings?.hod?.name || "Dr. Semanti Chakraborty";
+  const hodName = settings?.hod?.name || "Dr. Animesh Halder";
   const hodDesignation = settings?.hod?.designation || "Head, Department of Biomedical Engineering";
   const hodQualifications = settings?.hod?.qualifications || "Ph.D., IIT Kharagpur | Senior Member, IEEE EMBS";
-  const hodPhoto = settings?.hod?.photo || "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800";
+  const hodPhoto = settings?.hod?.photo || "";
   const hodQuote = settings?.hod?.quote || "Biomedical Engineering is not merely a technical discipline — it is a sacred contract with humanity to ease clinical suffering through scientific precision.";
   const hodMessage = settings?.hod?.message || "Through immersive hands-on training across advanced cleanrooms, bio-MEMS sensors, medical robotics, and direct clinical internships in top-tier hospital wards, our scholars bridge theory with bedside clinical impact. We invite you to explore our vibrant labs, collaborate on translational discoveries, and shape the next horizon of healthcare engineering.";
 
@@ -37,13 +37,29 @@ export const HoDQuote: React.FC = () => {
               {/* Gold Top Accent Line */}
               <div className="absolute top-0 left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
 
-              <div className="relative overflow-hidden rounded-xl h-80 sm:h-96 bg-slate-200 border border-slate-300">
-                <img
-                  src={hodPhoto}
-                  alt={`${hodName} - Head of Department`}
-                  className="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#4A1525]/80 via-transparent to-transparent pointer-events-none" />
+              <div className="relative overflow-hidden rounded-xl h-80 sm:h-96 bg-slate-100 border border-slate-300">
+                {hodPhoto ? (
+                  <>
+                    <img
+                      src={hodPhoto}
+                      alt={`${hodName} - Head of Department`}
+                      className="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#4A1525]/80 via-transparent to-transparent pointer-events-none" />
+                  </>
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200/80 flex flex-col items-center justify-center p-6 text-center border-2 border-dashed border-slate-300/80 rounded-xl group-hover:border-[#D4AF37]/50 transition-colors">
+                    <div className="w-20 h-20 rounded-2xl bg-white shadow-xs border border-slate-200 flex items-center justify-center text-slate-400 mb-3 group-hover:scale-105 transition-transform">
+                      <User className="w-10 h-10 text-slate-400" />
+                    </div>
+                    <span className="text-xs font-bold text-slate-600 uppercase tracking-wider">
+                      HOD Photograph
+                    </span>
+                    <span className="text-[11px] text-slate-400 mt-1 max-w-[180px] leading-snug">
+                      Space reserved for photo upload
+                    </span>
+                  </div>
+                )}
                 <div className="absolute bottom-3 left-3">
                   <span className="px-3 py-1 bg-[#4A1525] text-[9px] font-bold text-white uppercase tracking-widest rounded border border-white/20 backdrop-blur-sm shadow-xs">
                     OFFICE OF THE HOD

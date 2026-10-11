@@ -147,10 +147,10 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
     subtitle: "Virtual Tour & Advanced Research Facilities",
   },
   hod: {
-    name: "Dr. Semanti Chakraborty",
+    name: "Dr. Animesh Halder",
     designation: "Head, Department of Biomedical Engineering",
     qualifications: "Ph.D., IIT Kharagpur | Senior Member, IEEE EMBS",
-    photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800",
+    photo: "",
     quote: "Biomedical Engineering is not merely a technical discipline — it is a sacred contract with humanity to ease clinical suffering through scientific precision.",
     message: "Our curriculum bridges clinical hospital reality with cutting-edge micro-engineering, empowering our students to design life-saving diagnostics, prosthetics, and tissue-engineered implants for India and the world.",
   },

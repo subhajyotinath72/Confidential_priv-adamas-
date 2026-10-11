@@ -43,7 +43,7 @@ export const ProgramDetailView: React.FC = () => {
     { id: "faculty-members", label: "Faculty Members", href: "/people", icon: Users },
     { id: "courses-offered", label: "Courses Offered", icon: GraduationCap },
     { id: "laboratories", label: "Laboratories", icon: FlaskConical },
-    { id: "events-activities", label: "Events and Activities", href: "/news", icon: Calendar },
+    { id: "events-activities", label: "Events & Activities", href: "/news", icon: Calendar },
     { id: "awards-honours", label: "Awards & Honours", icon: Award },
     { id: "sriti-alumni", label: "SRITI - Alumni Reunion", icon: Sparkles },
   ];
@@ -234,12 +234,6 @@ export const ProgramDetailView: React.FC = () => {
 
               {/* Bottom Action Buttons */}
               <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-100">
-                <button
-                  onClick={() => handleScrollTo("courses-offered")}
-                  className="px-5 py-2.5 rounded-full text-xs font-bold border border-slate-300 text-slate-800 hover:bg-slate-100 transition-colors shadow-2xs"
-                >
-                  View Full Curriculum
-                </button>
                 <Link
                   href="/contact#apply"
                   className="px-6 py-2.5 rounded-full text-xs font-bold bg-[#4A1525] text-white hover:bg-[#330E1A] transition-colors shadow-md"
@@ -422,75 +416,7 @@ export const ProgramDetailView: React.FC = () => {
                 </div>
               </div>
 
-              {/* Subjects Covered (Core Curriculum) */}
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center">
-                    <BookOpen className="w-4 h-4 mr-2 text-teal-600" />
-                    Subjects Covered (Core Curriculum)
-                  </h3>
-                  <span className="text-[11px] text-teal-800 font-semibold bg-teal-50 px-2.5 py-0.5 rounded-full border border-teal-200">
-                    15 Core Disciplines
-                  </span>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  {[
-                    "Engineering Mathematics",
-                    "Control Theory",
-                    "Analog and Digital Electronics",
-                    "Basic Clinical Science",
-                    "Anatomy & Physiology",
-                    "Digital Signal Processing",
-                    "Signals and Network Analysis",
-                    "Microcontroller Based Systems",
-                    "MATLAB & Simulink",
-                    "Hospital Management",
-                    "Biomechanics",
-                    "Digital Image Processing",
-                    "Biomedical Instrumentation",
-                    "Engg. Economics and Financial Management",
-                    "Digital System Design",
-                  ].map((sub, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-center p-3 bg-slate-50 border border-slate-200/80 rounded-xl hover:border-teal-300 hover:bg-teal-50/30 transition-colors"
-                    >
-                      <span className="w-5 h-5 rounded-md bg-teal-100/80 text-[#4A1525] text-[10px] font-bold flex items-center justify-center mr-2.5 flex-shrink-0">
-                        {idx + 1}
-                      </span>
-                      <span className="text-xs font-semibold text-slate-800 leading-snug">{sub}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
 
-              {/* Open Electives (Theory) */}
-              <div className="space-y-3">
-                <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center">
-                  <Compass className="w-4 h-4 mr-2 text-amber-600" />
-                  Open Electives (Theory)
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "Data Structures and Algorithms / FEA-CFD",
-                    "Machine Learning",
-                    "Mobile Communication",
-                    "Fundamentals of Electrical Machines",
-                    "Biomedical Design",
-                    "Cloud Computing",
-                    "Optical Communication",
-                    "Introduction to Control Systems",
-                    "Conservation of Water Resources",
-                  ].map((elective, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-50 border border-slate-200 text-slate-800 hover:border-amber-300 hover:bg-amber-50/40 transition-colors"
-                    >
-                      {elective}
-                    </span>
-                  ))}
-                </div>
-              </div>
 
               {/* Specialization Tracks */}
               <div className="space-y-4">
@@ -558,7 +484,7 @@ export const ProgramDetailView: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
                       {selectedSpecialization === 0 && "Biomedical Data Science Courses"}
-                      {selectedSpecialization === 1 && "Genomics and Systems Biology Courses"}
+                      {selectedSpecialization === 1 && "Genomics & Systems Biology Courses"}
                       {selectedSpecialization === 2 && "Computational Medicine Courses"}
                     </h4>
                     <span className="text-[11px] text-teal-700 font-semibold">Specialized Electives</span>
@@ -943,6 +869,15 @@ export const ProgramDetailView: React.FC = () => {
               <p className="text-xs text-[#F7D6C8]/90 leading-relaxed">
                 SRITI connects BME graduates working across leading multinational healthcare enterprises (Siemens, Philips, GE, Medtronic) and top research institutes worldwide. Alumni actively mentor current students for placements, higher studies (GATE/GRE), and startup incubation.
               </p>
+              <div className="pt-2">
+                <Link
+                  href="/people/alumni"
+                  className="inline-flex items-center px-6 py-2.5 rounded-full text-xs font-bold bg-[#D4AF37] text-[#330E1A] hover:bg-[#E8C860] transition-all shadow-md group"
+                >
+                  <span>View Alumni</span>
+                  <ArrowRight className="w-3.5 h-3.5 ml-1.5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </div>
 
           </div>

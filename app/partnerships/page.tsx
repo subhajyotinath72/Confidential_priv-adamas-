@@ -16,7 +16,7 @@ export default function PartnershipsPage() {
             <span>Clinical & Industry Network</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-serif">
-            Partnerships & Collaborations
+            Partnerships and Collaborations
           </h1>
           <p className="text-sm sm:text-base text-[#F7D6C8]/90 max-w-3xl mx-auto leading-relaxed">
             Connecting academic engineering with clinical practice, global MedTech enterprises, and healthcare startup incubation in Kolkata, West Bengal.

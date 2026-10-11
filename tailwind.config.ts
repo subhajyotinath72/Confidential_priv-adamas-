@@ -42,9 +42,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
-        heading: ["var(--font-outfit)", "Outfit", "system-ui", "sans-serif"],
-        serif: ["var(--font-serif)", "Georgia", "Cambria", "Times New Roman", "serif"],
+        sans: ["CleanAmpersand", "var(--font-inter)", "Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        heading: ["CleanAmpersand", "var(--font-outfit)", "Outfit", "system-ui", "sans-serif"],
+        serif: ["CleanAmpersand", "var(--font-serif)", "Georgia", "Cambria", "Times New Roman", "serif"],
       },
       boxShadow: {
         glass: "0 8px 32px 0 rgba(74, 21, 37, 0.08)",

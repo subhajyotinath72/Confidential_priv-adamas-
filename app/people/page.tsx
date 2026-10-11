@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { FACULTY_MEMBERS, Faculty } from "@/data/faculty";
 import { Users, Search, Mail, Phone, MapPin, Award, BookOpen, Filter } from "lucide-react";
 import { Modal } from "@/components/ui/Modal";
@@ -54,6 +55,24 @@ export default function PeoplePage() {
 
       {/* Search & Filter Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-7 z-20 relative">
+        {/* Sub-section Navigation Tabs */}
+        <div className="flex items-center space-x-2 mb-3">
+          <Link
+            href="/people"
+            className="px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-white bg-[#4A1525] shadow-xs flex items-center space-x-1.5"
+          >
+            <Users className="w-3.5 h-3.5 text-white" />
+            <span>Faculty Directory</span>
+          </Link>
+          <Link
+            href="/people/alumni"
+            className="px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-700 bg-white hover:bg-slate-100 transition-colors border border-slate-200 shadow-xs flex items-center space-x-1.5"
+          >
+            <Award className="w-3.5 h-3.5 text-amber-500" />
+            <span>Distinguished Alumni</span>
+          </Link>
+        </div>
+
         <div className="bg-white border border-slate-200 rounded-2xl p-4 sm:p-6 shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4">
           
           <div className="relative w-full sm:w-96">

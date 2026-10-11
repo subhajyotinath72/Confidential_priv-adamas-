@@ -34,7 +34,7 @@ export default function ContactPage() {
             Contact & Admissions Helpline
           </h1>
           <p className="text-sm sm:text-base text-[#F7D6C8]/90 max-w-3xl mx-auto leading-relaxed">
-            Have questions about B.Tech, M.Tech, or Ph.D. admissions, research collaborations, or hospital clinical partnerships? Get in touch with our department office.
+            Have questions about B.Tech admissions, research collaborations, or hospital clinical partnerships? Get in touch with our department office.
           </p>
         </div>
       </section>

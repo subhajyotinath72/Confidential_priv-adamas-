@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ACADEMIC_PROGRAMS, SPECIALIZATION_CHIPS } from "@/data/programs";
 import { GraduationCap, Clock, Award, ArrowRight, CheckCircle, Sparkles, BookOpen, Layers, Microscope, Activity, BrainCircuit, Stethoscope } from "lucide-react";
 
@@ -15,57 +15,21 @@ const ICON_MAP: Record<string, any> = {
 };
 
 export const AcademicPrograms: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<"btech" | "phd" | "mtech">("btech");
-
-  const programData = {
-    btech: {
-      degree: "B.Tech in Biomedical Engineering",
-      duration: "4 Years (8 Semesters)",
-      eligibility: "10+2 with PCM/B (Min 50%) + WBJEE / JEE / AUAT",
-      shortDesc: "A flagship 4-year undergraduate honors degree combining core electrical, computing, and mechanical engineering with clinical biology, bio-MEMS sensors, 3D bioprinting, and medical artificial intelligence.",
-      tracks: [
-        "Medical Hardware & Diagnostic Instrumentation",
-        "Healthcare AI, Deep Learning & Telemetry",
-        "Tissue Scaffolds & 3D Cellular Bioprinting",
-        "Clinical Engineering & Hospital ICU Management",
-      ],
-      ctaText: "APPLY FOR B.TECH ADMISSIONS",
-      ctaHref: "https://adamasuniversity.ac.in/adamas-university/#",
-      isExternal: true,
-    },
-    phd: {
-      degree: "Ph.D. in Biomedical Engineering",
-      duration: "3 - 5 Years (Full / Part-Time)",
-      eligibility: "Master's Degree (M.Tech/ME/M.Sc) with min 55% marks + RET / UGC-NET / GATE",
-      shortDesc: "Advanced doctoral research program dedicated to translational breakthroughs in biosensors, nano-biomaterials, neuro-prosthetics, and algorithmic radiology with funded fellowship opportunities.",
-      tracks: [
-        "DST-SERB & ICMR Funded Doctoral Fellowships",
-        "Translational Clinical Trials with Super-Specialty Hospitals",
-        "Patent Commercialization & Seed Incubation Support",
-        "Scopus & SCI Indexed High-Impact Journal Publishing",
-      ],
-      ctaText: "EXPLORE PH.D. RESEARCH PORTAL",
-      ctaHref: "/research",
-      isExternal: false,
-    },
-    mtech: {
-      degree: "M.Tech in Biomedical Instrumentation",
-      duration: "2 Years (4 Semesters)",
-      eligibility: "B.Tech/BE in BME, ECE, EE, or CSE with valid GATE / AUAT Score",
-      shortDesc: "Postgraduate specialization focusing on embedded medical devices, advanced digital signal processing, regulatory compliance (ISO 13485/FDA), and clinical robotics.",
-      tracks: [
-        "Wearable Photoplethysmography & Sensor Systems",
-        "Robotic Micro-Laparoscopy Control Systems",
-        "Deep Learning for MRI/CT Segmentation",
-        "Industrial Co-op Placement at GE & Siemens",
-      ],
-      ctaText: "APPLY FOR M.TECH PROGRAM",
-      ctaHref: "/admission#mtech",
-      isExternal: false,
-    },
+  const active = {
+    degree: "B.Tech in Biomedical Engineering",
+    duration: "4 Years (8 Semesters)",
+    eligibility: "10+2 with PCM/B (Min 50%) + WBJEE / JEE / AUAT",
+    shortDesc: "A flagship 4-year undergraduate honors degree combining core electrical, computing, and mechanical engineering with clinical biology, bio-MEMS sensors, 3D bioprinting, and medical artificial intelligence.",
+    tracks: [
+      "Medical Hardware & Diagnostic Instrumentation",
+      "Healthcare AI, Deep Learning & Telemetry",
+      "Tissue Scaffolds & 3D Cellular Bioprinting",
+      "Clinical Engineering & Hospital ICU Management",
+    ],
+    ctaText: "APPLY FOR B.TECH ADMISSIONS",
+    ctaHref: "https://adamasuniversity.ac.in/adamas-university/#",
+    isExternal: true,
   };
-
-  const active = programData[activeTab];
 
   return (
     <section id="programs" className="bg-white/40 backdrop-blur-[1px] text-[#4A1525] py-12 lg:py-20 border-b border-slate-200/80 relative overflow-hidden">
@@ -90,53 +54,26 @@ export const AcademicPrograms: React.FC = () => {
             className="text-3xl sm:text-5xl font-serif font-semibold tracking-tight"
             style={{ color: "var(--color-heading, #4A1525)" }}
           >
-            Programs & Curriculum
+            Programs and Curriculum
           </h2>
           <p
             className="text-sm sm:text-base mt-1 max-w-3xl font-sans"
             style={{ color: "var(--color-text-main, #330E1A)" }}
           >
-            Rigorous undergraduate, postgraduate, and doctoral training engineered for clinical diagnostics, medical hardware, and healthcare computing.
+            Rigorous 4-year undergraduate honors engineering training engineered for clinical diagnostics, medical hardware, and healthcare computing.
           </p>
 
-          {/* Interactive Degree Switcher Tabs */}
-          <div className="flex flex-wrap gap-2 pt-6">
-            {(["btech", "phd", "mtech"] as const).map((tabKey) => {
-              const labels = {
-                btech: "B.Tech",
-                phd: "PhD",
-                mtech: "M.Tech",
-              };
-              const isSelected = activeTab === tabKey;
-              return (
-                <button
-                  key={tabKey}
-                  onClick={() => setActiveTab(tabKey)}
-                  className="relative px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer shadow-xs border"
-                  style={{
-                    backgroundColor: isSelected
-                      ? "var(--color-primary, #4A1525)"
-                      : "#ffffff",
-                    borderColor: isSelected
-                      ? "var(--color-primary, #4A1525)"
-                      : "#E2DDD3",
-                    color: isSelected
-                      ? "#ffffff"
-                      : "var(--color-heading, #4A1525)",
-                  }}
-                >
-                  {labels[tabKey]}
-                  {isSelected && (
-                    <motion.div
-                      layoutId="programTabIndicator"
-                      className="absolute bottom-0 left-2 right-2 h-[2px] rounded-full"
-                      style={{ backgroundColor: "var(--color-accent, #D4AF37)" }}
-                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                    />
-                  )}
-                </button>
-              );
-            })}
+          {/* Program Degree Badge */}
+          <div className="flex flex-wrap items-center gap-2 pt-6">
+            <span
+              className="px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider text-white shadow-xs"
+              style={{ backgroundColor: "var(--color-primary, #4A1525)" }}
+            >
+              B.Tech in Biomedical Engineering
+            </span>
+            <span className="px-3.5 py-2 rounded-lg text-xs font-semibold text-slate-700 bg-slate-100 border border-slate-200">
+              AICTE Approved • 4-Year Honors Degree
+            </span>
           </div>
         </motion.div>
 
@@ -145,10 +82,10 @@ export const AcademicPrograms: React.FC = () => {
           
           {/* Left Main Card: Program Details */}
           <motion.div
-            key={activeTab}
             initial={{ opacity: 0, x: -16 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5 }}
             className="lg:col-span-7"
           >
             <div className="glass-card p-6 sm:p-8 rounded-2xl h-full space-y-6 flex flex-col justify-between border border-slate-200 shadow-sm bg-white">

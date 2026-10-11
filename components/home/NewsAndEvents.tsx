@@ -77,7 +77,7 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
                 UPDATES & COLLOQUIA
               </div>
               <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#4A1525] tracking-tight">
-                News & Events
+                News and Events
               </h2>
             </div>
           </div>
@@ -143,7 +143,7 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({ showFullArchive = 
               UPDATES & COLLOQUIA
             </div>
             <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#4A1525] tracking-tight">
-              News & Events Overview
+              News and Events Overview
             </h2>
             <p className="text-xs sm:text-sm text-[#4A1525]/70 mt-1">
               Click on any event card to open the complete News & Events section.

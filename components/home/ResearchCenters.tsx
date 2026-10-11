@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { RESEARCH_CENTERS } from "@/data/research";
 import { Scan, Layers, Cpu, HeartPulse, Microscope, Footprints, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 
 const DEFAULT_LABS = [
   {
@@ -58,21 +57,13 @@ export const ResearchCenters: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="flex items-end justify-between mb-8">
-          <div>
-            <div className="text-[11px] font-bold tracking-widest text-[#D4AF37] uppercase mb-1">
-              ADVANCED INFRASTRUCTURE
-            </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#4A1525] tracking-tight">
-              BIOMEDICAL RESEARCH LABORATORIES <span className="text-sm font-sans font-normal text-slate-600 italic block sm:inline">Cleanrooms & Core Suites</span>
-            </h2>
+        <div className="mb-8">
+          <div className="text-[11px] font-bold tracking-widest text-[#D4AF37] uppercase mb-1">
+            ADVANCED INFRASTRUCTURE
           </div>
-          <Link
-            href="/research#centers"
-            className="text-xs font-bold text-[#4A1525] uppercase tracking-wider hover:underline"
-          >
-            VIEW ALL LABS →
-          </Link>
+          <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#4A1525] tracking-tight">
+            BIOMEDICAL RESEARCH LABORATORIES <span className="text-sm font-sans font-normal text-slate-600 italic block sm:inline">Cleanrooms & Core Suites</span>
+          </h2>
         </div>
 
         {/* 4 Lab Cards */}

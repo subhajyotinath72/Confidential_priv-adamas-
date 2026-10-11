@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Universal clean, simple ampersand (&) for all typography across the website */
+@font-face {
+  font-family: 'CleanAmpersand';
+  src: local('Arial'), local('Segoe UI'), local('Helvetica Neue'), local('Inter'), local('sans-serif');
+  font-weight: 300 500;
+  font-style: normal;
+  unicode-range: U+0026;
+}
+
+@font-face {
+  font-family: 'CleanAmpersand';
+  src: local('Arial Bold'), local('Arial-BoldMT'), local('Segoe UI Bold'), local('Arial');
+  font-weight: 600 900;
+  font-style: normal;
+  unicode-range: U+0026;
+}
+
+@font-face {
+  font-family: 'CleanAmpersand';
+  src: local('Arial'), local('Segoe UI'), local('sans-serif');
+  font-style: italic;
+  unicode-range: U+0026;
+}
+
 :root {
   --color-primary: #4A1525;
   --color-primary-dark: #330E1A;
@@ -16,8 +40,9 @@
   --color-text-main: #330E1A;
   --color-heading: #4A1525;
   --color-heading-rgb: 74, 21, 37;
-  --font-heading-family: var(--font-outfit), Outfit, serif;
-  --font-body-family: var(--font-inter), Inter, sans-serif;
+  --font-heading-family: CleanAmpersand, var(--font-outfit), Outfit, serif;
+  --font-body-family: CleanAmpersand, var(--font-inter), Inter, sans-serif;
+  --font-serif-family: CleanAmpersand, var(--font-serif), Georgia, serif;
 }
 
 @layer base {

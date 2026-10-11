@@ -18,7 +18,7 @@ export const USPTiles: React.FC = () => {
               CAREER PATHWAYS
             </div>
             <h2 className="text-3xl sm:text-5xl font-serif font-semibold text-[#4A1525] tracking-tight">
-              Internships & Hospital Rotations
+              Internships and Hospital Rotations
             </h2>
             <p className="text-sm sm:text-base text-[#4A1525]/80 mt-1 max-w-3xl font-sans">
               Students complete compulsory clinical rotations in super-specialty hospitals and secure roles in biomedical instrumentation, clinical trials, and diagnostics.

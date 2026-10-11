@@ -8,9 +8,9 @@ import { useSiteSettings } from "@/components/providers/SiteSettingsContext";
 export const Footer: React.FC = () => {
   const { settings } = useSiteSettings();
 
-  const universityName = settings?.general?.universityName || "ADAMAS UNIVERSITY";
+  const universityName = settings?.general?.universityName || "Adamas University, Kolkata";
   const departmentName = settings?.general?.departmentName || "Department of Biomedical Engineering";
-  const tagline = settings?.general?.tagline || "Advancing clinical diagnostics, medical robotics, 3D bioprinting, and biosensors through integrated engineering education.";
+  const tagline = settings?.general?.tagline || "Where Biomedical Innovation Meets Human Impact";
   const address = settings?.contact?.address || "Barasat–Barrackpore Road, Kolkata 700126";
   const mapUrl = settings?.contact?.mapUrl || "https://www.bing.com/maps/search?name=Adamas+University&trfc=&mepi=0%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&ss=id.ypid%3AYNB328D7AD71F2FCAD&q=Adamas+University&ppois=22.73830795288086_88.45661926269531_Adamas+University&cp=22.738308%7E88.456619&lvl=15";
 
@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
 
           {/* Brand Info (Left 6 cols) */}
           <div className="md:col-span-6 space-y-4">
-            <div className="flex items-center space-x-2.5">
+            <div className="flex items-start space-x-3">
               {/* Adamas NAAC Grade A Logo */}
               <div className="w-12 h-12 sm:w-14 sm:h-14 py-0.5 flex items-center justify-center flex-shrink-0">
                 <img
@@ -40,15 +40,14 @@ export const Footer: React.FC = () => {
                 <span className="text-[9px] font-bold tracking-widest text-[#F7D6C8] uppercase block">
                   {universityName}
                 </span>
-                <span className="text-base font-serif font-semibold text-white">
+                <span className="text-base font-serif font-semibold text-white block">
                   {departmentName}
                 </span>
+                <p className="text-xs text-[#F7D6C8]/80 leading-relaxed max-w-md font-sans mt-1">
+                  {tagline}
+                </p>
               </div>
             </div>
-
-            <p className="text-xs text-[#F7D6C8]/80 leading-relaxed max-w-md font-sans">
-              {tagline}
-            </p>
           </div>
 
           {/* Quick Navigation (3 cols) */}

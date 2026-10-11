@@ -55,7 +55,7 @@ export default function OpportunitiesPage() {
               </span>
               <h3 className="text-sm font-bold text-slate-900">GATE Teaching Assistantships</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Monthly stipend for eligible GATE-qualified M.Tech candidates assisting in bio-electronics laboratory courses.
+                Monthly stipend for eligible GATE-qualified teaching assistants assisting in bio-electronics laboratory courses.
               </p>
             </div>
 

@@ -17,7 +17,7 @@ export default function ResearchPage() {
             <span>Pioneering Healthcare Engineering</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-serif">
-            Research Tracks & Centers
+            Research Tracks and Centers
           </h1>
           <p className="text-sm sm:text-base text-[#F7D6C8]/90 max-w-3xl mx-auto leading-relaxed">
             Interdisciplinary R&D spanning Biomedical Instrumentation, 3D Bioprinting, Regenerative Scaffolds, and Healthcare Artificial Intelligence.

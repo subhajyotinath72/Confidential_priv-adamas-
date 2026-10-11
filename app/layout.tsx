@@ -32,14 +32,12 @@ export const viewport = {
 
 export const metadata: Metadata = {
   title: "Department of Biomedical Engineering | Adamas University Kolkata",
-  description: "Official Website of the Department of Biomedical Engineering under the School of Engineering & Technology (SET), Adamas University, Kolkata. Offering B.Tech, M.Tech, and Ph.D. in Biosensors, 3D Bioprinting, Biomaterials, and Healthcare AI.",
+  description: "Official Website of the Department of Biomedical Engineering under the School of Engineering & Technology (SET), Adamas University, Kolkata. Offering B.Tech in Biosensors, 3D Bioprinting, Biomaterials, and Healthcare AI.",
   keywords: [
     "Adamas University",
     "Biomedical Engineering Kolkata",
     "School of Engineering and Technology",
     "B.Tech Biomedical Engineering",
-    "M.Tech Biomedical",
-    "Ph.D. Biomedical R&D",
     "3D Bioprinting Scaffolds",
     "Biosensors and Medical AI",
     "Healthcare Instrumentation",
@@ -56,7 +54,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${outfit.variable} ${playfair.variable} scroll-smooth`}
+      className={`${inter.variable} ${outfit.variable} ${playfair.variable}`}
       suppressHydrationWarning
     >
       <head>

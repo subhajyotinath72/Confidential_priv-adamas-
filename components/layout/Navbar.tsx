@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { motion, useScroll, useSpring } from "framer-motion";
 import {
   ChevronDown,
@@ -19,8 +19,9 @@ export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const pathname = usePathname();
+  const router = useRouter();
 
-  const universityName = settings?.general?.universityName || "ADAMAS UNIVERSITY";
+  const universityName = settings?.general?.universityName || "Adamas University, Kolkata";
   const departmentName = settings?.general?.departmentName || "Department of Biomedical Engineering";
 
   // Scroll Progress Bar
@@ -43,6 +44,30 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Proactively prefetch tab routes so tab switching is instantaneous with zero delay
+  useEffect(() => {
+    const routesToPrefetch = [
+      "/",
+      "/programs",
+      "/admission",
+      "/people",
+      "/people/alumni",
+      "/research",
+      "/partnerships",
+      "/news",
+      "/gallery",
+      "/admin",
+      "/contact"
+    ];
+    routesToPrefetch.forEach((route) => {
+      try {
+        router.prefetch(route);
+      } catch {
+        // ignore
+      }
+    });
+  }, [router]);
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Programs", href: "/programs" },
@@ -59,7 +84,7 @@ export const Navbar: React.FC = () => {
       dropdown: [
         { name: "Faculty Directory", href: "/people#faculty", desc: "Professors & Academic Leads" },
         { name: "Research Scholars", href: "/people#scholars", desc: "Ph.D. & M.Tech Researchers" },
-        { name: "Distinguished Alumni", href: "/people#alumni", desc: "MedTech & Academia Leaders" },
+        { name: "Distinguished Alumni", href: "/people/alumni", desc: "MedTech & Academia Leaders" },
       ],
     },
 
@@ -68,9 +93,7 @@ export const Navbar: React.FC = () => {
       href: "/research",
       dropdown: [
         { name: "Research Tracks & Centers", href: "/research", desc: "Biomedical R&D, 3D Bioprinting & AI" },
-        { name: "Hospital Clinical MoUs", href: "/partnerships#hospitals", desc: "Super-Specialty Hospital Networks" },
-        { name: "MedTech Industry Leaders", href: "/partnerships#industry", desc: "Siemens, GE, Philips & Medtronic" },
-        { name: "MedTech Startup Incubator", href: "/partnerships#incubator", desc: "Seed Grants & Patenting Cell" },
+        { name: "Hospital Partners", href: "/partnerships", desc: "Super-Specialty Clinical & Healthcare Networks" },
       ],
     },
     { name: "News & Events", href: "/news" },
@@ -81,8 +104,8 @@ export const Navbar: React.FC = () => {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
-        ? "text-white backdrop-blur-md shadow-xl py-1.5 border-b border-white/10"
-        : "text-white py-2 border-b border-white/10"
+        ? "text-white backdrop-blur-md shadow-xl py-1 border-b border-white/10"
+        : "text-white py-1.5 border-b border-white/10"
         }`}
       style={{ backgroundColor: "var(--color-primary, #4A1525)" }}
     >
@@ -91,13 +114,13 @@ export const Navbar: React.FC = () => {
         className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-[#D4AF37] via-[#E6CA65] to-[#D4AF37] origin-left z-50 pointer-events-none"
         style={{ scaleX }}
       />
-      <div className="w-full px-2 sm:px-4 lg:px-6">
-        <div className="flex items-center justify-between gap-2 lg:gap-4">
+      <div className="w-full px-2 sm:px-3 lg:px-2.5 xl:px-4 2xl:px-6">
+        <div className="flex items-center justify-between gap-1 xl:gap-2">
 
           {/* Brand Logo */}
-          <Link href="/" className="flex items-center space-x-2.5 sm:space-x-3 group flex-shrink-0">
+          <Link href="/" prefetch={true} className="flex items-center space-x-1.5 xl:space-x-2 group flex-shrink-0">
             {/* Adamas NAAC Grade A Logo */}
-            <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-[44px] md:h-[44px] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-[38px] md:h-[38px] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
               <img
                 src="/adamas-round-logo.png"
                 alt="Adamas University NAAC Grade A Logo"
@@ -106,17 +129,17 @@ export const Navbar: React.FC = () => {
             </div>
 
             <div className="flex flex-col">
-              <span className="text-xs sm:text-sm md:text-base font-extrabold tracking-wider text-white uppercase leading-tight whitespace-nowrap">
-                {universityName}
-              </span>
-              <span className="text-[8px] sm:text-[9px] md:text-[10px] font-extrabold tracking-widest text-[#F7D6C8] uppercase leading-none whitespace-nowrap hidden sm:block">
+              <span className="text-[10px] sm:text-xs lg:text-[11px] xl:text-[12px] 2xl:text-[13.5px] font-extrabold tracking-tight text-white uppercase leading-tight whitespace-nowrap">
                 {departmentName}
+              </span>
+              <span className="text-[7px] sm:text-[8px] lg:text-[7.5px] xl:text-[8.5px] 2xl:text-[9px] font-bold tracking-wider text-[#F7D6C8] uppercase leading-none whitespace-nowrap">
+                {universityName}
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center space-x-0.5 xl:space-x-1.5 flex-shrink">
+          <nav className="hidden lg:flex items-center space-x-0.5 xl:space-x-1 flex-shrink-0">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
 
@@ -125,18 +148,22 @@ export const Navbar: React.FC = () => {
                   <div
                     key={link.name}
                     className="relative"
-                    onMouseEnter={() => setActiveDropdown(link.name)}
+                    onMouseEnter={() => {
+                      setActiveDropdown(link.name);
+                      router.prefetch(link.href);
+                    }}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
                     <Link
                       href={link.href}
-                      className={`flex items-center px-2.5 xl:px-3 py-1.5 rounded-lg text-[10px] xl:text-[11px] font-bold tracking-wider uppercase transition-all duration-200 whitespace-nowrap ${isActive
+                      prefetch={true}
+                      className={`flex items-center px-1 lg:px-1.5 xl:px-2 py-1 xl:py-1.5 rounded-lg text-[9px] lg:text-[9.5px] xl:text-[10.5px] 2xl:text-[11.5px] font-bold tracking-tight xl:tracking-normal uppercase transition-all duration-200 whitespace-nowrap ${isActive
                         ? "text-white bg-white/20 backdrop-blur-md border border-white/30 shadow-xs"
                         : "text-white/90 hover:text-white hover:bg-white/15 hover:backdrop-blur-md border border-transparent hover:border-white/20"
                         }`}
                     >
                       <span>{link.name}</span>
-                      <ChevronDown className="w-2.5 h-2.5 ml-0.5 xl:ml-1 text-white/80 group-hover:text-white" />
+                      <ChevronDown className="w-2.5 h-2.5 ml-0.5 text-white/80 group-hover:text-white" />
                     </Link>
 
                     {/* Mega-menu Dropdown */}
@@ -153,9 +180,11 @@ export const Navbar: React.FC = () => {
                             {link.name} Options
                           </div>
                           {link.dropdown.map((item) => (
-                            <a
+                            <Link
                               key={item.name}
                               href={item.href}
+                              prefetch={true}
+                              onClick={() => setActiveDropdown(null)}
                               className="block p-2 rounded-lg hover:bg-white/15 hover:backdrop-blur-md transition-all duration-200 group border border-transparent hover:border-white/15"
                             >
                               <div className="text-xs font-bold text-white group-hover:text-white">
@@ -164,7 +193,7 @@ export const Navbar: React.FC = () => {
                               <div className="text-[10px] text-white/80 line-clamp-1 mt-0.5">
                                 {item.desc}
                               </div>
-                            </a>
+                            </Link>
                           ))}
                         </div>
                       </div>
@@ -177,7 +206,9 @@ export const Navbar: React.FC = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-2.5 xl:px-3 py-1.5 rounded-lg text-[10px] xl:text-[11px] font-bold tracking-wider uppercase transition-all duration-200 whitespace-nowrap ${isActive
+                  prefetch={true}
+                  onMouseEnter={() => router.prefetch(link.href)}
+                  className={`px-1 lg:px-1.5 xl:px-2 py-1 xl:py-1.5 rounded-lg text-[9px] lg:text-[9.5px] xl:text-[10.5px] 2xl:text-[11.5px] font-bold tracking-tight xl:tracking-normal uppercase transition-all duration-200 whitespace-nowrap ${isActive
                     ? "text-white bg-white/20 backdrop-blur-md border border-white/30 shadow-xs"
                     : "text-white/90 hover:text-white hover:bg-white/15 hover:backdrop-blur-md border border-transparent hover:border-white/20"
                     }`}
@@ -189,10 +220,12 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Desktop Right CTA Button */}
-          <div className="hidden lg:flex items-center space-x-2 flex-shrink-0">
+          <div className="hidden lg:flex items-center flex-shrink-0">
             <Link
               href="/contact"
-              className="shine-sweep inline-flex items-center justify-center px-3.5 xl:px-4.5 py-1.5 text-[11px] xl:text-xs font-bold tracking-wider text-white bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/25 hover:border-white/40 rounded-full shadow-md uppercase transition-all duration-200 whitespace-nowrap hover:shadow-lg hover:scale-[1.02]"
+              prefetch={true}
+              onMouseEnter={() => router.prefetch("/contact")}
+              className="shine-sweep inline-flex items-center justify-center px-2.5 xl:px-3 py-1 xl:py-1.5 text-[9px] lg:text-[9.5px] xl:text-[10.5px] 2xl:text-[11px] font-bold tracking-normal xl:tracking-wider text-white bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/25 hover:border-white/40 rounded-full shadow-md uppercase transition-all duration-200 whitespace-nowrap hover:shadow-lg hover:scale-[1.02]"
             >
               CONTACT US
             </Link>
@@ -226,6 +259,7 @@ export const Navbar: React.FC = () => {
               <div key={link.name}>
                 <Link
                   href={link.href}
+                  prefetch={true}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block px-3 py-2 rounded-lg text-sm font-bold uppercase tracking-wider transition-all duration-200 ${isActive
                     ? "text-white bg-white/20 backdrop-blur-md border border-white/30"
@@ -237,14 +271,15 @@ export const Navbar: React.FC = () => {
                 {link.dropdown && (
                   <div className="pl-4 space-y-1 mt-1 border-l border-white/10 ml-2">
                     {link.dropdown.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
+                        prefetch={true}
                         onClick={() => setMobileMenuOpen(false)}
                         className="block px-3 py-1 rounded-md text-xs text-white/80 hover:text-white hover:bg-white/10 hover:backdrop-blur-sm transition-colors"
                       >
                         • {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}
@@ -254,6 +289,7 @@ export const Navbar: React.FC = () => {
           <div className="pt-3 border-t border-white/10">
             <Link
               href="/contact"
+              prefetch={true}
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center block py-2.5 text-xs font-bold text-white bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/25 hover:border-white/40 rounded-full shadow-md uppercase tracking-wider transition-all duration-200"
             >

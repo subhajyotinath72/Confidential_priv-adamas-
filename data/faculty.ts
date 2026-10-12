@@ -68,7 +68,7 @@ export const FACULTY_MEMBERS: Faculty[] = [
     ],
     publicationsCount: 6,
     patentsCount: 0,
-    avatar: "/faculty/sayanti-chowdhury.jpg",
+    avatar: "/faculty/sayanti-chaudhuri.jpg",
     featuredPublications: [
       "Ganguly, B., Chaudhuri, S. et al. (2020). Wavelet kernel-based convolutional neural network for localization of partial discharge sources within a power apparatus. IEEE Transactions on Industrial Informatics, 17(3), 1831-1841.",
       "Chaudhuri, S., Ghosh, S. et al. (2023). Denoising of partial discharge signal using a hybrid framework of total variation denoising-autoencoder. Measurement, 223, 113674.",

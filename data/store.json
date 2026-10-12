@@ -33,25 +33,14 @@
       "id": "fac-2",
       "name": "Dr. Sayanti Chaudhuri",
       "designation": "Assistant Professor - I",
-<<<<<<< HEAD
       "trackId": "01",
       "degrees": "Ph.D. in Electrical Engg (Jadavpur Univ), M.E. in Biomedical Engg (Jadavpur Univ)",
       "almaMater": "Jadavpur University | Calcutta Institute of Engg & Management (WBUT)",
       "specialization": "Acoustic Signal Processing, Digital Signal Processing (DSP), Bio-Signals & Embedded Systems",
-      "email": "sayanti.chowdhury@adamasuniversity.ac.in",
+      "email": "sayanti.chaudhuri@adamasuniversity.ac.in",
       "phone": "+91 9432470022",
       "room": "SET Building, Room 305",
-      "bio": "Dr. Sayanti Chowdhury (Chaudhuri) is an Assistant Professor in the Department of Biomedical Engineering at Adamas University, Kolkata. With over a decade of combined academic, research, and laboratory mentoring experience, her expertise centers on digital signal processing (DSP), acoustic signal processing, embedded systems, and AI/ML algorithms for audio and bio-signal enhancement. She holds a Ph.D. in Electrical Engineering and an M.E. in Biomedical Engineering from Jadavpur University, along with a B.Tech in Instrumentation & Control Engineering. Previously, she served as a doctoral researcher and teaching assistant at Jadavpur University, and as a Senior Research Fellow at the National Institute for the Orthopaedically Handicapped (NIOH), Kolkata, where she developed an indigenous pressure-sensing gait analyzer. Her research has been published in high-impact international journals including IEEE Transactions on Industrial Informatics, Measurement, and Biomedical Engineering Letters.",
-=======
-      "trackId": "02",
-      "degrees": "Ph.D. in Signal Processing (Jadavpur Univ), M.Tech (Calcutta Univ)",
-      "almaMater": "Adamas University / Formerly Jadavpur University",
-      "specialization": "Bioceramics, 3D Bioprinting Scaffolds, Controlled Drug Delivery",
-      "email": "sayanti.chaudhuri@adamasuniversity.ac.in",
-      "phone": "+91 (033) 2587-9002",
-      "room": "SET Building, Room 305",
-      "bio": "Dr. Sayanti Chaudhuri specializes in biomedical engineering, signal processing, and medical instrumentation. She collaborates extensively with researchers and clinical partners on translational health technologies.",
->>>>>>> 1464380 (Update faculty name spelling to Dr. Sayanti Chaudhuri)
+      "bio": "Dr. Sayanti Chaudhuri is an Assistant Professor in the Department of Biomedical Engineering at Adamas University, Kolkata. With over a decade of combined academic, research, and laboratory mentoring experience, her expertise centers on digital signal processing (DSP), acoustic signal processing, embedded systems, and AI/ML algorithms for audio and bio-signal enhancement. She holds a Ph.D. in Electrical Engineering and an M.E. in Biomedical Engineering from Jadavpur University, along with a B.Tech in Instrumentation & Control Engineering. Previously, she served as a doctoral researcher and teaching assistant at Jadavpur University, and as a Senior Research Fellow at the National Institute for the Orthopaedically Handicapped (NIOH), Kolkata, where she developed an indigenous pressure-sensing gait analyzer. Her research has been published in high-impact international journals including IEEE Transactions on Industrial Informatics, Measurement, and Biomedical Engineering Letters.",
       "researchFocus": [
         "Digital Signal Processing (DSP) & Acoustic Measurements",
         "Bio-Signal Acquisition & Denoising Algorithms",
@@ -61,17 +50,12 @@
       ],
       "publicationsCount": 6,
       "patentsCount": 0,
-      "avatar": "/faculty/sayanti-chowdhury.jpg",
+      "avatar": "/faculty/sayanti-chaudhuri.jpg",
       "featuredPublications": [
-<<<<<<< HEAD
         "Ganguly, B., Chaudhuri, S. et al. (2020). Wavelet kernel-based convolutional neural network for localization of partial discharge sources within a power apparatus. IEEE Transactions on Industrial Informatics, 17(3), 1831-1841.",
         "Chaudhuri, S., Ghosh, S. et al. (2023). Denoising of partial discharge signal using a hybrid framework of total variation denoising-autoencoder. Measurement, 223, 113674.",
         "Dey, D., Chaudhuri, S., & Munshi, S. (2018). Obstructive sleep apnoea detection using a convolutional neural network based deep learning framework. Biomedical Engineering Letters, 8, 95-100.",
         "Chaudhuri, S., Dey, D., & Munshi, S. (2022). Room Response Equalization of Non-Minimum Phase Systems Using Kautz Filter and Sparse Autoencoder: A Hybrid Approach. IETE Journal of Research."
-=======
-        "Chaudhuri, S. et al. (2025). Advanced Signal Analytics for Non-Invasive Clinical Monitoring. IEEE Trans. Biomed. Eng.",
-        "Chaudhuri, S. & Halder, A. (2024). Wavelet-Based Biosignal Feature Extraction for Diagnostic Screening. Biosensors Journal."
->>>>>>> 1464380 (Update faculty name spelling to Dr. Sayanti Chaudhuri)
       ]
     }
   ],

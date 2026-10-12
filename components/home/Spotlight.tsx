@@ -18,7 +18,7 @@ export const Spotlight: React.FC = () => {
       initials: "SC",
       name: "Dr. Sayanti Chowdhury",
       designation: "Asst. Prof - I",
-      specialization: "Medical Image AI & Biosignal Processing",
+      specialization: "Digital Signal Processing & Bio-Signals",
       href: "/people#fac-2",
     },
     {

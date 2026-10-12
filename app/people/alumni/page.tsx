@@ -130,7 +130,7 @@ export default function AlumniPage() {
         <div className="max-w-7xl mx-auto text-center space-y-4 relative z-10">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 text-[#F7D6C8] text-xs font-bold uppercase tracking-wider border border-white/20">
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            <span>SRITI • Biomedical Engineering Alumni Network</span>
+            <span>SMRITI • Biomedical Engineering Alumni Network</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-serif">
             Alumni & Graduating Batches
@@ -154,7 +154,7 @@ export default function AlumniPage() {
               <div className="text-[10px] sm:text-xs text-white/80 font-medium uppercase tracking-wider">Clinical & Core R&D</div>
             </div>
             <div className="bg-white/10 backdrop-blur-xs rounded-xl p-3 border border-white/10 text-center">
-              <div className="text-xl sm:text-2xl font-extrabold text-amber-300 font-serif">SRITI</div>
+              <div className="text-xl sm:text-2xl font-extrabold text-amber-300 font-serif">SMRITI</div>
               <div className="text-[10px] sm:text-xs text-white/80 font-medium uppercase tracking-wider">Verified Network</div>
             </div>
           </div>
@@ -509,7 +509,7 @@ export default function AlumniPage() {
                   <div className="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
                     <span className="text-teal-700 font-semibold flex items-center">
                       <Award className="w-3 h-3 mr-1" />
-                      SRITI Verified Alumnus
+                      SMRITI Verified Alumnus
                     </span>
                     <span className="text-[#4A1525] font-bold">Kolkata, WB</span>
                   </div>
@@ -533,7 +533,7 @@ export default function AlumniPage() {
               Are you an Adamas BME Alumnus?
             </h2>
             <p className="text-xs sm:text-sm text-[#F7D6C8]/90 leading-relaxed font-sans">
-              Connect with fellow graduates, mentor current students, offer internships, and participate in our annual SRITI reunion at Adamas University.
+              Connect with fellow graduates, mentor current students, offer internships, and participate in our annual SMRITI reunion at Adamas University.
             </p>
           </div>
 

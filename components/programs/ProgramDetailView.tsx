@@ -45,7 +45,7 @@ export const ProgramDetailView: React.FC = () => {
     { id: "laboratories", label: "Laboratories", icon: FlaskConical },
     { id: "events-activities", label: "Events & Activities", href: "/news", icon: Calendar },
     { id: "awards-honours", label: "Awards & Honours", icon: Award },
-    { id: "sriti-alumni", label: "SRITI - Alumni Reunion", icon: Sparkles },
+    { id: "smriti-alumni", label: "SMRITI - Alumni Reunion", icon: Sparkles },
   ];
 
   const handleScrollTo = (id: string) => {
@@ -854,9 +854,9 @@ export const ProgramDetailView: React.FC = () => {
               </div>
             </div>
 
-            {/* 7. SRITI - Alumni Reunion Section */}
+            {/* 7. SMRITI - Alumni Reunion Section */}
             <div
-              id="sriti-alumni"
+              id="smriti-alumni"
               className="bg-[#4A1525] text-white rounded-3xl p-6 sm:p-10 shadow-md space-y-4 scroll-mt-24"
             >
               <div className="flex items-center space-x-2 text-xs font-bold text-[#F7D6C8] uppercase tracking-widest">
@@ -864,10 +864,10 @@ export const ProgramDetailView: React.FC = () => {
                 <span>Alumni Network</span>
               </div>
               <h2 className="text-2xl font-bold text-white font-serif">
-                SRITI - Biomedical Engineering Alumni Network
+                SMRITI - Biomedical Engineering Alumni Network
               </h2>
               <p className="text-xs text-[#F7D6C8]/90 leading-relaxed">
-                SRITI connects BME graduates working across leading multinational healthcare enterprises (Siemens, Philips, GE, Medtronic) and top research institutes worldwide. Alumni actively mentor current students for placements, higher studies (GATE/GRE), and startup incubation.
+                SMRITI connects BME graduates working across leading multinational healthcare enterprises (Siemens, Philips, GE, Medtronic) and top research institutes worldwide. Alumni actively mentor current students for placements, higher studies (GATE/GRE), and startup incubation.
               </p>
               <div className="pt-2">
                 <Link

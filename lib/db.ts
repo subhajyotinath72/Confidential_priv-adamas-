@@ -38,7 +38,7 @@ const DEFAULT_CENTERS = [
     code: "02",
     name: "Tissue Engineering & Biomaterials Scaffold Hub",
     focus: "3D bioprinting bio-inks, polymeric bone scaffolds, and drug delivery nanocarriers.",
-    lead: "Dr. Sayanti Chowdhury",
+    lead: "Dr. Sayanti Chaudhuri",
     funding: "CSIR & University Seed Grant",
     icon: "FlaskConical",
     specs: ["Dual-head extrusion bioprinter", "SEM imaging suite", "Biomechanics tester"],

@@ -93,7 +93,7 @@ export const RESEARCH_CENTERS: ResearchCenter[] = [
     name: "Tissue Engineering & Regenerative Medicine Lab",
     shortDesc: "Synthesizing bio-inks, polymeric scaffolds, and patient-specific implant biomaterials.",
     fullDesc: "Housing Class-1000 cleanroom environments, multi-axis 3D bioprinters, and cell incubator facilities for regenerative medicine research.",
-    headName: "Dr. Sayanti Chowdhury",
+    headName: "Dr. Sayanti Chaudhuri",
     established: "2020",
     focusArea: "Biomaterials",
     icon: "Layers"

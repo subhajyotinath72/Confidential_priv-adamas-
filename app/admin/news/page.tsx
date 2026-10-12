@@ -45,7 +45,7 @@ export default function AdminNewsAndEventsPage() {
     date: "",
     time: "10:00 AM - 12:30 PM",
     location: "SET Bio-Computing Lab 401",
-    speaker: "Dr. Sayanti Chowdhury & Department Faculty",
+    speaker: "Dr. Sayanti Chaudhuri & Department Faculty",
     category: "Research",
     desc: "",
   });
@@ -572,7 +572,7 @@ export default function AdminNewsAndEventsPage() {
                       onChange={(e) =>
                         setEventForm({ ...eventForm, speaker: e.target.value })
                       }
-                      placeholder="e.g. Dr. Sayanti Chowdhury & Industry Mentors"
+                      placeholder="e.g. Dr. Sayanti Chaudhuri & Industry Mentors"
                       className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#1B365D]"
                     />
                   </div>
